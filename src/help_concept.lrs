@@ -1,0 +1,92 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tconcept_help','FORMDATA',[
+  'TPF0'#13'Tconcept_help'#12'concept_help'#4'Left'#3#191#1#6'Height'#3'^'#1#3
+  +'Top'#3#149#0#5'Width'#3#244#1#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7
+  +#8'bsDialog'#7'Caption'#6'/Help with some concepts (or: What is a ResRef?)'
+  +#12'ClientHeight'#3'^'#1#11'ClientWidth'#3#244#1#5'Color'#4'y'#149#223#0#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Po'
+  +'sition'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9.30'#0#5'TMemo'#5'Memo'
+  +'1'#4'Left'#2#25#6'Height'#3#4#1#3'Top'#2#25#5'Width'#3#194#1#5'Color'#7#8'c'
+  +'lInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2#245#9'Font.Name'
+  +#6#5'Arial'#13'Lines.Strings'#1#6#177'There are a few questions that have be'
+  +'en asked a lot, and this window covers what may be the most common of them '
+  +'-- the distinction between (and meanings of) "ResRef" and "Tag".'#6#0#6#7'R'
+  +'ESREF:'#12'7'#1#0#0'A ResRef (sometimes called "blueprint") identifies an e'
+  +'ntry in the palette -- the (standard or custom) lists of objects (creatures'
+  +', items, etc.) you can place in areas of your module. It can be up to 16 ch'
+  +'aracters long and never uses capital letters. It must be unique! ResRefs ar'
+  +'e used when creating an object.'#6#0#6#4'TAG:'#12'I'#1#0#0'A tag is used to'
+  +' locate objects in the game -- the things that you have either placed (thro'
+  +'ugh the Toolset) or spawned (via scripting or encounters) in the areas of y'
+  +'our module. It can be up to 32 characters long, and the case of letters mat'
+  +'ters. It does not need to be unique. Tags are used when dealing with an exi'
+  +'sting object.'#6#0#12'='#1#0#0'BioWare''s convention (often adopted by othe'
+  +'rs) is to have an object''s tag be its ResRef, usually in upper case. Howev'
+  +'er, this is just a convention. TAGS AND RESREFS DO NOT NEED TO BE THE SAME.'
+  +' In fact, there are times when intentionally making them different is usefu'
+  +'l (because ResRefs have a uniqueness requirement).'#6#0#12#129#1#0#0'Tags a'
+  +'re a way to tell the game that certain objects are "the same" for whatever '
+  +'purpose you have in mind. For example, your town can have a hundred guards '
+  +'running around, but maybe you do not want them to all look the same. You co'
+  +'uld create a couple of palette entries for the guards to have some variety,'
+  +' then just spawn/place a dozen or so of each. In this situation, you might '
+  +'have'#6#27'* 100 objects (the guards),'#6'9* 8 palette entries (assuming th'
+  +'at is how many you made),'#6'-* 8 ResRefs (one for each palette entry), and'
+  +#6#8'* 1 tag.'#12#240#3#0#0'When creating a guard, you need to specify a Res'
+  +'Ref. (You can have multiple creatures created from the same ResRef; the uni'
+  +'queness is on the palette, not on what gets placed in an area.) All creatur'
+  +'es created from the same palette entry will be identical, so the multiple R'
+  +'esRefs allow you to have some variety in the guards. However, if a citizen '
+  +'is supposed to run to the nearest guard, you want a simple way to find the '
+  +'guard, regardless of which blueprint it came from. That is where the tag co'
+  +'mes into play. If you give all 8 blueprints (hence all 100 guards) the same'
+  +' tag, then all you have to do is look for the nearest creature with that ta'
+  +'g. You could think of the ResRefs as "Guard Smith", "Guard Jones", etc., an'
+  +'d the tag as "Police Officer". (Not literally, though, since ResRefs cannot'
+  +' have capital letters.) You would use the ResRef when you want a particular'
+  +' type of guard to appear ("Guard Smith, report for duty"), and the tag when'
+  +' you just need a guard ("go to the nearest Police Officer").'#6#0#12#139#2#0
+  +#0'ResRefs are a way to tell the game what kind of object to create. Compute'
+  +'rs are rather picky, and NWN does not know how to fill in missing details. '
+  +'You cannot tell the game "create a horse" because that leaves too many deta'
+  +'ils unspecified (starting with, but not limited to, which horse appearance '
+  +'to use). Instead you have to be more specific: "create x3_horse001", which '
+  +'tells the game to get all the necessary details from the palette entry call'
+  +'ed "x3_horse001". This is why ResRefs need to be unique. If two palette ent'
+  +'ries had the same name, the game would not know which to use, so we would b'
+  +'e back to not knowing how to fill in missing details.'#6#0#12#150#2#0#0'A c'
+  +'ommon problem with ResRefs is that they can be tricky to find. One reliable'
+  +' method is to place an object in an area, then check that object''s propert'
+  +'ies. The easily messed up method is to edit the palette entry itself. The p'
+  +'roblem here is that you must choose "Edit", not "Edit Copy". The problem is'
+  +' compounded for the standard palette because there is no "Edit" option ther'
+  +'e, only "Edit Copy" (which is no good for finding the ResRef). Why is "Edit'
+  +' Copy" bad? Because that means you are creating a new palette entry, which '
+  +'must have its own unique ResRef. The Toolset knows this and automatically g'
+  +'enerates a new ResRef before giving you a chance to edit it.'#6#0#6'AFor fu'
+  ,'rther information, check the Lexicon or the BioWare forums.'#6#13'Lexicon 1'
+  +'.69:'#6'2* http://palmergames.com/Lexicon/Lexicon_1_69.html'#6#13'Lexicon 1'
+  +'.68:'#6#28'* http://www.nwnlexicon.com/'#6#28'New BioWare scripting forum:'
+  +#6'6* http://social.bioware.com/forum/1/category/192/index'#6#28'Old BioWare'
+  +' scripting forum:'#6'7* http://nwn.bioware.com/forums/viewforum.html?forum='
+  +'47'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVertical'#8'TabO'
+  +'rder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3'c'#1#6'Height'#2'('#3'Top'#3
+  +','#1#5'Width'#2'x'#6'Cancel'#9#7'Caption'#6#5'Close'#7'Default'#9#10'Glyph.'
+  +'Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0
+  +#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  +#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11
+  +'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240
+  +#145#17#17#17#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  +#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'
+  +#240#144#176#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17
+  +'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'
+  +#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153
+  +#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255
+  +#255#255#255#7'pwx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'Moda'
+  +'lResult'#2#1#7'Spacing'#2#15#8'TabOrder'#2#1#0#0#0
+]);

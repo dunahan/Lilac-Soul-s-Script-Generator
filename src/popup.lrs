@@ -1,0 +1,35 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tpopup_ev','FORMDATA',[
+  'TPF0'#9'Tpopup_ev'#8'popup_ev'#4'Left'#3#191#1#6'Height'#3#205#0#3'Top'#3'W'
+  +#1#5'Width'#3'w'#1#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDialog'
+  +#7'Caption'#6#20'You are ready, then!'#12'ClientHeight'#3#205#0#11'ClientWid'
+  +'th'#3'w'#1#5'Color'#4'y'#149#223#0#11'Font.Height'#2#245#9'Font.Name'#6#5'A'
+  +'rial'#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9.30'#0#5'TMe'
+  +'mo'#5'Memo1'#4'Left'#2#15#6'Height'#2'x'#3'Top'#2#16#5'Width'#3'Y'#1#5'Colo'
+  +'r'#7#8'clInfoBk'#13'Lines.Strings'#1#6'.You are now ready to create the act'
+  +'ual script!'#6#0#6'wIf you supplied any conditions before this, the rest of'
+  +' the script will run only for players who meet those conditions.'#6#0#6'VCl'
+  +'ick "close" to start the scripting of the events or actions that you want t'
+  +'o happen.'#0#8'ReadOnly'#9#8'TabOrder'#2#1#0#0#9'TCheckBox'#9'CheckBox1'#4
+  +'Left'#2#15#6'Height'#2#22#3'Top'#3#163#0#5'Width'#3#135#0#7'Caption'#6#22'N'
+  +'ever show this again!'#8'TabOrder'#2#2#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3
+  +#247#0#6'Height'#2'!'#3'Top'#3#157#0#5'Width'#2'q'#6'Cancel'#9#7'Caption'#6#5
+  +'Close'#7'Default'#9#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0
+  +#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0
+  +#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0
+  +#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255
+  +#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'
+  +#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17
+  +#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7
+  +'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240
+  +#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#1#17
+  +#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17
+  +#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'
+  +#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17
+  +#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17
+  +#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'
+  +#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136#136#136#136#136#7'pw'
+  +'wwwwwwwwwwp'#11'ModalResult'#2#1#7'OnClick'#7#10'NeverAgain'#7'Spacing'#2#20
+  +#8'TabOrder'#2#0#0#0#0
+]);

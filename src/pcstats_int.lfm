@@ -1,0 +1,1524 @@
+object pcstats: Tpcstats
+  Left = 447
+  Height = 540
+  Top = 192
+  Width = 550
+  ActiveControl = gender.RadioButton0
+  BorderStyle = bsDialog
+  Caption = 'Check PC stats'
+  ClientHeight = 540
+  ClientWidth = 550
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object BitBtn1: TBitBtn
+    Left = 16
+    Height = 33
+    Top = 210
+    Width = 97
+    Caption = 'Okay'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    OnClick = ButtonClick
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 16
+    Height = 33
+    Top = 210
+    Width = 97
+    Caption = 'Next'
+    Glyph.Data = {
+      16020000424D160200000000000076000000280000001A0000001A0000000100
+      040000000000A001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      7777777777777700000077777777777777777777777777000000777777777777
+      7777777777777700000077777777777777777777777777000000777777777777
+      7777777777777700000077787777777787777777777777000000777888777777
+      88877777777777000000777A88887777A8888777777777000000777AAA888877
+      AAA88887777777000000777AAAAA8888AAAAA888877777000000777AAAAAAA88
+      AAAAAAA8887777000000777AAAAAAAAAAAAAAAAAA87777000000777AAAAAAAAA
+      AAAAAAAAAAA777000000777AAAAAAAAAAAAAAAAAAAA777000000777AAAAAAAAA
+      AAAAAAAAA77777000000777AAAAAAA77AAAAAAA7777777000000777AAAAA7777
+      AAAAA777777777000000777AAA777777AAA77777777777000000777A77777777
+      A777777777777700000077777777777777777777777777000000777777777777
+      7777777777777700000077777777777777777777777777000000777777777777
+      7777777777777700000077777777777777777777777777000000777777777777
+      7777777777777700000077777777777777777777777777000000
+    }
+    OnClick = ButtonClick
+    TabOrder = 1
+  end
+  object PanelAbilities: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 362
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 362
+    FullRepaint = False
+    TabOrder = 2
+    Visible = False
+    object abilitychoice: TRadioGroup
+      Left = 16
+      Height = 65
+      Top = 10
+      Width = 330
+      AutoFill = True
+      Caption = 'Ability'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 49
+      ClientWidth = 326
+      Color = 16311256
+      Columns = 3
+      ItemIndex = 0
+      Items.Strings = (
+        'Charisma'
+        'Constitution'
+        'Dexterity'
+        'Intelligence'
+        'Strength'
+        'Wisdom'
+      )
+      ParentColor = False
+      TabOrder = 0
+    end
+    object abilitycondition: TRadioGroup
+      Left = 50
+      Height = 34
+      Top = 80
+      Width = 180
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 30
+      ClientWidth = 176
+      Color = 16311256
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Minimum'
+        'Maximum'
+      )
+      ParentColor = False
+      TabOrder = 1
+    end
+    object abilityScore: TSpinEdit
+      Left = 256
+      Height = 25
+      Top = 85
+      Width = 50
+      Color = 16311256
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 255
+      MinValue = 3
+      ParentFont = False
+      TabOrder = 2
+      Value = 15
+    end
+    object abilitygroup: TRadioGroup
+      Left = 16
+      Height = 60
+      Top = 120
+      Width = 330
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 326
+      Color = 16311256
+      ItemIndex = 0
+      Items.Strings = (
+        'Current modified ability score (includes all bonuses)'
+        'Base ability score (without bonuses)'
+      )
+      ParentColor = False
+      TabOrder = 3
+    end
+  end
+  object PanelAlignment: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 430
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 430
+    FullRepaint = False
+    TabOrder = 3
+    Visible = False
+    object LabelAlignment: TLabel
+      Left = 76
+      Height = 21
+      Top = 27
+      Width = 72
+      Caption = 'Alignment'
+      Font.Color = clMaroon
+      Font.Height = -17
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object BevelAlignment: TBevel
+      Left = 22
+      Height = 68
+      Top = 79
+      Width = 293
+      Style = bsRaised
+    end
+    object AlignmentShader: TShape
+      Left = 23
+      Height = 66
+      Top = 80
+      Width = 291
+      Brush.Color = 16311256
+      ParentShowHint = False
+    end
+    object alignmentconditional: TRadioGroup
+      Left = 226
+      Height = 36
+      Top = 18
+      Width = 190
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 32
+      ClientWidth = 186
+      Color = 16311256
+      Columns = 2
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'Must be'
+        'Must not be'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 0
+    end
+    object alignmentSelection: TRadioGroup
+      Left = 16
+      Height = 100
+      Top = 75
+      Width = 400
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousChildResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 4
+      ClientHeight = 96
+      ClientWidth = 396
+      Color = 14652793
+      Columns = 4
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 5
+      Items.Strings = (
+        'Lawful good'
+        'Neutral good'
+        'Chaotic good'
+        'Any good'
+        'Lawful neutral'
+        'True neutral'
+        'Chaotic neutral'
+        'Neutral (G/E)'
+        'Lawful evil'
+        'Neutral evil'
+        'Chaotic evil'
+        'Any evil'
+        'Any lawful'
+        'Neutral (L/C)'
+        'Any chaotic'
+        'Any neutral'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 1
+    end
+  end
+  object classrestriction: TPanel
+    Left = 16
+    Height = 180
+    Top = 8
+    Width = 518
+    ClientHeight = 180
+    ClientWidth = 518
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    Visible = False
+    object classcond: TRadioGroup
+      Left = 8
+      Height = 45
+      Top = 8
+      Width = 502
+      AutoFill = True
+      Caption = 'The PC'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 30
+      ClientWidth = 498
+      Columns = 2
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'must be one of these classes.'
+        'must not be any of these classes.'
+      )
+      ParentFont = False
+      TabOrder = 0
+    end
+    object FighterX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 134
+      Width = 62
+      Caption = 'Fighter'
+      TabOrder = 5
+    end
+    object BarbarianX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 54
+      Width = 78
+      Caption = 'Barbarian'
+      TabOrder = 1
+    end
+    object BardX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 74
+      Width = 50
+      Caption = 'Bard'
+      TabOrder = 2
+    end
+    object ClericX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 94
+      Width = 56
+      Caption = 'Cleric'
+      TabOrder = 3
+    end
+    object DruidX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 114
+      Width = 54
+      Caption = 'Druid'
+      TabOrder = 4
+    end
+    object RangerX: TCheckBox
+      Left = 114
+      Height = 22
+      Top = 74
+      Width = 65
+      Caption = 'Ranger'
+      TabOrder = 8
+    end
+    object PaladinX: TCheckBox
+      Left = 114
+      Height = 22
+      Top = 54
+      Width = 66
+      Caption = 'Paladin'
+      TabOrder = 7
+    end
+    object MonkX: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 154
+      Width = 53
+      Caption = 'Monk'
+      TabOrder = 6
+    end
+    object WizardX: TCheckBox
+      Left = 114
+      Height = 22
+      Top = 134
+      Width = 61
+      Caption = 'Wizard'
+      TabOrder = 11
+    end
+    object SorcererX: TCheckBox
+      Left = 114
+      Height = 22
+      Top = 114
+      Width = 71
+      Caption = 'Sorcerer'
+      TabOrder = 10
+    end
+    object RogueX: TCheckBox
+      Left = 114
+      Height = 22
+      Top = 94
+      Width = 61
+      Caption = 'Rogue'
+      TabOrder = 9
+    end
+    object arcanearcherx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 54
+      Width = 100
+      Caption = 'Arcane archer'
+      TabOrder = 12
+    end
+    object assassinx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 74
+      Width = 76
+      Caption = 'Assassin'
+      TabOrder = 13
+    end
+    object blackguardx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 94
+      Width = 86
+      Caption = 'Blackguard'
+      TabOrder = 14
+    end
+    object harperscoutx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 154
+      Width = 95
+      Caption = 'Harper scout'
+      TabOrder = 17
+    end
+    object shadowdancerx: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 114
+      Width = 107
+      Caption = 'Shadowdancer'
+      TabOrder = 21
+    end
+    object tormx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 114
+      Width = 126
+      Caption = 'Champion of Torm'
+      TabOrder = 15
+    end
+    object defenderx: TCheckBox
+      Left = 214
+      Height = 22
+      Top = 134
+      Width = 124
+      Caption = 'Dwarven defender'
+      TabOrder = 16
+    end
+    object palemasterx: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 54
+      Width = 91
+      Caption = 'Pale master'
+      TabOrder = 18
+    end
+    object dragonx: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 94
+      Width = 135
+      Caption = 'Red dragon disciple'
+      TabOrder = 20
+    end
+    object shifterx: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 134
+      Width = 59
+      Caption = 'Shifter'
+      TabOrder = 22
+    end
+    object weaponmasterx: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 154
+      Width = 112
+      Caption = 'Weapon master'
+      TabOrder = 23
+    end
+    object PurpleDragonX: TCheckBox
+      Left = 354
+      Height = 22
+      Top = 74
+      Width = 138
+      Caption = 'Purple dragon knight'
+      TabOrder = 19
+    end
+  end
+  object multiclass: TRadioGroup
+    Left = 16
+    Height = 80
+    Top = 56
+    Width = 330
+    AutoFill = True
+    Caption = 'The PC'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 65
+    ClientWidth = 326
+    Color = 16311256
+    Columns = 2
+    Font.Height = -10
+    Font.Name = 'Arial'
+    ItemIndex = 0
+    Items.Strings = (
+      'must be multiclassed.'
+      'must not be multiclassed.'
+      'must be triple classed.'
+      'must not be triple classed.'
+    )
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 5
+    Visible = False
+  end
+  object PanelDeity: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 220
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 220
+    FullRepaint = False
+    TabOrder = 6
+    Visible = False
+    object LabelDeity: TLabel
+      Left = 16
+      Height = 19
+      Top = 16
+      Width = 34
+      Caption = 'Deity'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object DeityConditional: TRadioGroup
+      Left = 16
+      Height = 41
+      Top = 50
+      Width = 188
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 37
+      ClientWidth = 184
+      Color = 16311256
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'must be'
+        'must not be'
+      )
+      ParentColor = False
+      TabOrder = 0
+    end
+    object DeityEdit: TEdit
+      Left = 16
+      Height = 24
+      Hint = 'The FEAT_* constant to check for. See lexicon for list of FEAT constants'
+      Top = 100
+      Width = 188
+      Color = 16311256
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxLength = 255
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object CheckBoxDeityCase: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 140
+      Width = 113
+      Caption = 'Case sensitive?'
+      Checked = True
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object PanelFeats: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 400
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 400
+    FullRepaint = False
+    TabOrder = 7
+    Visible = False
+    object LabelFeats: TLabel
+      Left = 16
+      Height = 19
+      Top = 10
+      Width = 34
+      Caption = 'Feat:'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 16
+      Height = 33
+      Top = 45
+      Width = 250
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 29
+      ClientWidth = 246
+      Color = 16311256
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Must have'
+        'Must not have'
+      )
+      ParentColor = False
+      TabOrder = 0
+    end
+    object featbox: TComboBox
+      Left = 16
+      Height = 31
+      Top = 95
+      Width = 368
+      AutoSize = False
+      Color = 16311256
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object RadioGroupFeatType: TRadioGroup
+      Left = 16
+      Height = 45
+      Top = 135
+      Width = 368
+      AutoFill = True
+      Caption = 'Feat type (affects what is in the drop-down)'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 30
+      ClientWidth = 364
+      Columns = 3
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'General feats'
+        'Special (class/race/etc.) feats'
+        'Epic feats'
+      )
+      OnClick = RadioGroupFeatTypeClick
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object gender: TRadioGroup
+    Left = 16
+    Height = 50
+    Top = 64
+    Width = 163
+    AutoFill = True
+    Caption = 'Gender'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 35
+    ClientWidth = 159
+    Color = 16311256
+    Columns = 2
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ItemIndex = 0
+    Items.Strings = (
+      'Female'
+      'Male'
+    )
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 8
+    Visible = False
+  end
+  object PanelLevels: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 220
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 220
+    TabOrder = 9
+    Visible = False
+    object Label1: TLabel
+      Left = 24
+      Height = 21
+      Top = 84
+      Width = 38
+      Caption = 'Level'
+      Font.Color = clMaroon
+      Font.Height = -17
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object levelcondition: TRadioGroup
+      Left = 16
+      Height = 33
+      Top = 30
+      Width = 188
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 29
+      ClientWidth = 184
+      Color = 16311256
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Minimum'
+        'Maximum'
+      )
+      ParentColor = False
+      TabOrder = 0
+    end
+    object level: TSpinEdit
+      Left = 90
+      Height = 28
+      Top = 80
+      Width = 48
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Arial'
+      MaxValue = 40
+      ParentFont = False
+      TabOrder = 1
+      Value = 10
+    end
+    object GroupPartyLevel: TRadioGroup
+      Left = 16
+      Height = 60
+      Top = 120
+      Width = 188
+      AutoFill = True
+      Caption = 'Check what?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 45
+      ClientWidth = 184
+      Color = 16311256
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'the PC''s level'
+        'the PC''s party''s average level'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 2
+    end
+  end
+  object levelbyclassrestriction: TPanel
+    Left = 16
+    Height = 145
+    Top = 30
+    Width = 377
+    ClientHeight = 145
+    ClientWidth = 377
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 10
+    Visible = False
+    object Label59: TLabel
+      Left = 102
+      Height = 19
+      Top = 79
+      Width = 54
+      Caption = 'levels of'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object levelclasscond: TRadioGroup
+      Left = 38
+      Height = 49
+      Top = 8
+      Width = 309
+      AutoFill = True
+      Caption = 'The PC must have'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 33
+      ClientWidth = 305
+      Columns = 3
+      ItemIndex = 0
+      Items.Strings = (
+        'Exactly'
+        'Less than'
+        'More than'
+      )
+      TabOrder = 0
+    end
+    object levels: TSpinEdit
+      Left = 38
+      Height = 24
+      Top = 76
+      Width = 57
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 40
+      ParentFont = False
+      TabOrder = 1
+      Value = 10
+    end
+    object levelclass: TComboBox
+      Left = 182
+      Height = 31
+      Top = 74
+      Width = 165
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Barbarian'
+        'Bard'
+        'Cleric'
+        'Druid'
+        'Fighter'
+        'Monk'
+        'Paladin'
+        'Ranger'
+        'Rogue'
+        'Sorcerer'
+        'Wizard'
+        'Arcane archer'
+        'Assassin'
+        'Blackguard'
+        'Champion of Torm'
+        'Dwarven defender'
+        'Harper scout'
+        'Pale master'
+        'Purple dragon knight'
+        'Red dragon disciple'
+        'Shadowdancer'
+        'Shifter'
+        'Weapon master'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 2
+      Text = 'Barbarian'
+    end
+  end
+  object PanelRace: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 380
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 380
+    TabOrder = 11
+    Visible = False
+    object LabelRace: TLabel
+      Left = 60
+      Height = 26
+      Top = 30
+      Width = 52
+      Caption = 'Race'
+      Font.Color = clMaroon
+      Font.Height = -22
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object BevelRace: TBevel
+      Left = 16
+      Height = 70
+      Top = 85
+      Width = 348
+    end
+    object racecondition: TRadioGroup
+      Left = 180
+      Height = 48
+      Top = 22
+      Width = 184
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 44
+      ClientWidth = 180
+      Color = 16311256
+      Columns = 2
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'Must be'
+        'Must not be'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 0
+    end
+    object CheckBoxDwarf: TCheckBox
+      Left = 24
+      Height = 22
+      Top = 94
+      Width = 56
+      Caption = 'Dwarf'
+      OnChange = RaceClick
+      TabOrder = 1
+    end
+    object CheckBoxElf: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 94
+      Width = 38
+      Caption = 'Elf'
+      OnChange = RaceClick
+      TabOrder = 2
+    end
+    object CheckBoxGnome: TCheckBox
+      Left = 190
+      Height = 22
+      Top = 94
+      Width = 65
+      Caption = 'Gnome'
+      OnChange = RaceClick
+      TabOrder = 3
+    end
+    object CheckBoxHalfling: TCheckBox
+      Left = 272
+      Height = 22
+      Top = 94
+      Width = 66
+      Caption = 'Halfling'
+      OnChange = RaceClick
+      TabOrder = 4
+    end
+    object CheckBoxHalfElf: TCheckBox
+      Left = 24
+      Height = 22
+      Top = 121
+      Width = 63
+      Caption = 'Half-elf'
+      OnChange = RaceClick
+      TabOrder = 5
+    end
+    object CheckBoxHalfOrc: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 121
+      Width = 67
+      Caption = 'Half-orc'
+      OnChange = RaceClick
+      TabOrder = 6
+    end
+    object CheckBoxHuman: TCheckBox
+      Left = 190
+      Height = 22
+      Top = 121
+      Width = 65
+      Caption = 'Human'
+      OnChange = RaceClick
+      TabOrder = 7
+    end
+  end
+  object PanelSubrace: TPanel
+    Left = 0
+    Height = 182
+    Top = 0
+    Width = 220
+    BevelOuter = bvNone
+    ClientHeight = 182
+    ClientWidth = 220
+    TabOrder = 12
+    Visible = False
+    object LabelSubrace: TLabel
+      Left = 16
+      Height = 19
+      Top = 16
+      Width = 56
+      Caption = 'Subrace'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object subraceconditional: TRadioGroup
+      Left = 16
+      Height = 41
+      Top = 50
+      Width = 188
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 37
+      ClientWidth = 184
+      Color = 16311256
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'must be'
+        'must not be'
+      )
+      ParentColor = False
+      TabOrder = 0
+    end
+    object subrace: TEdit
+      Left = 16
+      Height = 24
+      Hint = 'The FEAT_* constant to check for. See lexicon for list of FEAT constants'
+      Top = 100
+      Width = 188
+      Color = 16311256
+      MaxLength = 255
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object CheckBox1: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 140
+      Width = 113
+      Caption = 'Case sensitive?'
+      Checked = True
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object SaveRestriction: TPanel
+    Left = 16
+    Height = 177
+    Top = 8
+    Width = 372
+    ClientHeight = 177
+    ClientWidth = 372
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 13
+    Visible = False
+    object Label2: TLabel
+      Left = 24
+      Height = 20
+      Top = 5
+      Width = 273
+      Caption = 'The PC must pass these saving throws:'
+      Font.Color = clMaroon
+      Font.Height = -16
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 24
+      Height = 15
+      Top = 144
+      Width = 56
+      Caption = 'Save type:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object willDC: TSpinEdit
+      Left = 190
+      Height = 25
+      Top = 99
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 99
+      ParentFont = False
+      TabOrder = 0
+      Value = 15
+    end
+    object will: TCheckBox
+      Left = 24
+      Height = 22
+      Top = 102
+      Width = 109
+      Caption = 'Will, with a DC of:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object fortitude: TCheckBox
+      Left = 24
+      Height = 22
+      Top = 38
+      Width = 135
+      Caption = 'Fortitude, with a DC of:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+    end
+    object reflex: TCheckBox
+      Left = 24
+      Height = 22
+      Top = 70
+      Width = 124
+      Caption = 'Reflex, with a DC of:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 3
+    end
+    object fortitudeDC: TSpinEdit
+      Left = 190
+      Height = 25
+      Top = 35
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 99
+      ParentFont = False
+      TabOrder = 4
+      Value = 15
+    end
+    object reflexDC: TSpinEdit
+      Left = 190
+      Height = 25
+      Top = 67
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 99
+      ParentFont = False
+      TabOrder = 5
+      Value = 15
+    end
+    object SaveType: TComboBox
+      Left = 96
+      Height = 31
+      Top = 139
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 6
+    end
+  end
+  object Panel2: TPanel
+    Left = 216
+    Height = 510
+    Top = 15
+    Width = 245
+    ClientHeight = 510
+    ClientWidth = 245
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 14
+    Visible = False
+    object skilllabel: TLabel
+      Left = 24
+      Height = 19
+      Top = 16
+      Width = 168
+      Caption = 'PC must have the skill(s):'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckListBox2: TCheckListBox
+      Left = 24
+      Height = 205
+      Top = 60
+      Width = 197
+      Color = 16311256
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Items.Strings = (
+        'Animal empathy'
+        'Disable trap'
+        'Open lock'
+        'Perform'
+        'Pick pocket'
+        'Set trap'
+        'Spellcraft'
+        'Tumble'
+        'Use magic device'
+      )
+      ItemHeight = 20
+      ParentFont = False
+      TabOrder = 0
+      Data = {
+        09000000000000000000000000
+      }
+    end
+    object StaticTextHasSkill: TStaticText
+      Left = 24
+      Height = 125
+      Top = 330
+      Width = 197
+      BorderStyle = sbsSunken
+      Caption = 'This test is for whether or not a PC can use a skill, not for whether or not the PC has any ranks in the skill. As a result, this test is only useful for perform and the skills that require training.'
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 1
+    end
+  end
+  object Panel1: TPanel
+    Left = 216
+    Height = 510
+    Top = 15
+    Width = 245
+    ClientHeight = 510
+    ClientWidth = 245
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 15
+    Visible = False
+    object skilldclabel: TLabel
+      Left = 24
+      Height = 19
+      Top = 15
+      Width = 113
+      Caption = 'Require skill level'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckListBox1: TCheckListBox
+      Left = 24
+      Height = 375
+      Top = 50
+      Width = 197
+      Color = 16311256
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 173
+      Height = 24
+      Top = 12
+      Width = 48
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 255
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 10
+    end
+    object skillgroup: TRadioGroup
+      Left = 24
+      Height = 73
+      Top = 430
+      Width = 197
+      AutoFill = True
+      Caption = 'Include bonuses?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 57
+      ClientWidth = 193
+      Color = 16311256
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'Full skill level'
+        'Base skill ranks'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 2
+    end
+  end
+  object PanelSkillRoll: TPanel
+    Left = 216
+    Height = 510
+    Top = 15
+    Width = 245
+    ClientHeight = 510
+    ClientWidth = 245
+    Color = 16311256
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 16
+    Visible = False
+    object LabelSkillRoll: TLabel
+      Left = 65
+      Height = 19
+      Top = 15
+      Width = 80
+      Caption = 'Skill roll: DC'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckListSkillRoll: TCheckListBox
+      Left = 24
+      Height = 375
+      Top = 50
+      Width = 197
+      Color = 16311256
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object SpinEditSkillRoll: TSpinEdit
+      Left = 173
+      Height = 24
+      Top = 12
+      Width = 48
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 255
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 15
+    end
+    object RadioSkillRoll: TRadioGroup
+      Left = 24
+      Height = 73
+      Top = 430
+      Width = 197
+      AutoFill = True
+      Caption = 'Player sees the roll?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 58
+      ClientWidth = 193
+      Color = 16311256
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'Show the player the roll'
+        'Hide the roll from the player'
+      )
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 2
+    end
+  end
+  object RaceAdvisor: TStaticText
+    Left = 125
+    Height = 50
+    Top = 200
+    Width = 240
+    Alignment = taCenter
+    BorderStyle = sbsSingle
+    Caption = 'You may want to consider toggling the "must be"/"must not be" option so there are fewer races to test.'
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 17
+    Visible = False
+  end
+end

@@ -1,0 +1,455 @@
+inherited giveitem: Tgiveitem
+  Left = 447
+  Height = 400
+  Top = 210
+  Width = 600
+  ActiveControl = goldgive
+  BorderStyle = bsDialog
+  Caption = 'Give gold / XP / items'
+  ClientHeight = 400
+  ClientWidth = 600
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object Label2: TLabel[0]
+    Left = 310
+    Height = 17
+    Top = 15
+    Width = 153
+    Caption = 'ResRef of the item to give:'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelName: TLabel[1]
+    Left = 341
+    Height = 15
+    Top = 48
+    Width = 118
+    Caption = '(optional) item name:'
+    ParentColor = False
+  end
+  object LabelQueue: TLabel[2]
+    Left = 310
+    Height = 15
+    Top = 200
+    Width = 163
+    Caption = 'Items for the current recipient:'
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel[3]
+    Left = 20
+    Height = 17
+    Top = 50
+    Width = 125
+    Caption = 'Amount of XP to give:'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel[4]
+    Left = 20
+    Height = 17
+    Top = 10
+    Width = 133
+    Caption = 'Amount of gold to give:'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object resrefgive: TEdit[5]
+    Left = 470
+    Height = 24
+    Top = 12
+    Width = 110
+    Color = 16311256
+    CharCase = ecLowerCase
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    MaxLength = 16
+    OnChange = ToggleOkay
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Memo1: TMemo[6]
+    Left = 20
+    Height = 100
+    Top = 240
+    Width = 265
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Create your item, then click "Okay - and more!" to create another item, or "Okay - exit!" to make this the last item. '
+      ''
+      'Pressing "Close" will (only) clear out what you have entered since the last "Okay" button.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 7
+  end
+  object BitBtn1: TBitBtn[7]
+    Left = 20
+    Height = 33
+    Top = 357
+    Width = 150
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = ButtonClickOkayMore
+    ParentFont = False
+    TabOrder = 8
+  end
+  object BitBtn2: TBitBtn[8]
+    Left = 230
+    Height = 33
+    Top = 357
+    Width = 150
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    ParentFont = False
+    Spacing = 15
+    TabOrder = 9
+  end
+  object BitBtn3: TBitBtn[9]
+    Left = 440
+    Height = 33
+    Top = 357
+    Width = 140
+    Caption = 'Close'
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    ParentFont = False
+    Spacing = 20
+    TabOrder = 10
+  end
+  object BitBtn4: TBitBtn[10]
+    Left = 390
+    Height = 30
+    Top = 140
+    Width = 125
+    Caption = 'Palettes!'
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      1800000000000003000000000000000000000000000000000000DFDFBF808000
+      8080004040008080408080604040404040404040404040404040404040408080
+      60808020808000808000FFFFFFC0C0C0C0C0C0505050003F3F3F7F7F7FFFFF7F
+      FFFF7FFFFF7FFFFF7FFFFF7FFFFF3F7F7F404040B0B0B0808000FFFFFFC0C0C0
+      3030307FBFBF7FFFFF7FFFFF7FFFFFBF3F3FFF0000FF0000BF7F7F7FFFFF7FFF
+      FF7FFFFF5F5F5F808020FFFFFF9090907FBFBF7FFFFF7FFFFF7FFFFF7FFFFFFF
+      0000FF0000FF0000FF0000BF7F7F7FFFFF7FFFFF3FBFBF606060FFFFFF3F7F7F
+      7FFFFF7FBFFF0000FF3F3FFF3FBFFF7FBFBFFF3F3FFF0000BF7F7F7FFFFF7FFF
+      FF7FFFFF7FFFFF4040407F7F7F7FFFFF7FFFFF0000FF0000FF0000FF003FFF7F
+      FFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF4040403F7F7F7FFFFF
+      7FFFFF3F3FFF0000FF0000FF7FFFFF7FFFFF7FFFFF7FBFBF5030306F6F6F7FFF
+      FF7FFFFF7FFFFF4040403F7F7F7FFFFF7FFFFF7FFFFF3F7FFF7FBFFF7FFFFF7F
+      FFFF7FFFFF503030800000B090903F7F7F7FFFFF7FFFFF4040003F7F7F7FFFBF
+      00FF0000FF003FFFBF7FFFFF7FFFFF7FFFFF7FFFFF6F6F6F5030308000005F7F
+      7F7FFFFF3F7F7F8080003F7F7F3FFFBF00FF0000FF0000FF003FFF7F7FFFFF7F
+      FFFF7FFFFF7FFFFF7FFFFF5FBFBF9F3F3F5F7F7F9090908080003F7F7F7FFFFF
+      3FFF3F00FF003FFF7F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF8060
+      60BF7F7FB090908080007F7F7F7FFFFF7FFFFF7FFFFF7FFFFFBF7FFFFF00FFFF
+      00FF7FBFFF7FFFFF7FBFBF909090C0C0C0B090900000002020007F7F7F7FFFFF
+      7FFFFF7FFFFFBF3FFFFF00FFFF00FFFF00FFBFBFFF7FFFFF606060C0C0C0C0C0
+      C0C0C0C06F6F6F3F3F3FFFFFFF3F3F3F7FFFFF7FFFFFBF3FFFFF00FFFF00FFBF
+      7FFF7FFFFF3F7F7FC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF909090
+      3F3F3F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF909090C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0606000FFFFFFFFFFFFFFFFFF7F7F7F3F7F7F3F7F7F3F7F7F3F
+      7F7FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFBF
+    }
+    OnClick = Button4Click
+    Spacing = 10
+    TabOrder = 11
+  end
+  object GroupRecipient: TGroupBox[11]
+    Left = 12
+    Height = 140
+    Top = 90
+    Width = 281
+    Caption = 'Who is to receive the gold / XP / item?'
+    ClientHeight = 124
+    ClientWidth = 277
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 6
+    object RadioOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 265
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 0
+    end
+    object RadioPC: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 58
+      Caption = 'The PC'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+      TabStop = False
+    end
+    object RadioTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 7
+      TabStop = False
+      Visible = False
+    end
+    object RadioSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 265
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 3
+      TabStop = False
+    end
+    object RadioTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 75
+      Width = 133
+      Caption = 'An object with the tag:'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 4
+      TabStop = False
+    end
+    object RadioActor: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 100
+      Width = 265
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 5
+      TabStop = False
+    end
+    object EditTagged: TEdit
+      Left = 140
+      Height = 23
+      Top = 72
+      Width = 130
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 6
+    end
+    object RadioActivator: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 109
+      Caption = 'The item activator'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+      TabStop = False
+      Visible = False
+    end
+  end
+  object EditName: TEdit[12]
+    Left = 470
+    Height = 23
+    Top = 45
+    Width = 110
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    MaxLength = 80
+    ParentFont = False
+    TabOrder = 5
+  end
+  object TextPalette: TStaticText[13]
+    Left = 310
+    Height = 45
+    Top = 85
+    Width = 270
+    BorderStyle = sbsSingle
+    Caption = 'To choose an item from the standard or custom palettes, click the button below.'
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 13
+  end
+  object MemoQueue: TMemo[14]
+    Left = 310
+    Height = 120
+    Top = 220
+    Width = 270
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 12
+  end
+  object goldgive: TSpinEdit[15]
+    Left = 210
+    Height = 24
+    Top = 10
+    Width = 75
+    Color = 16311256
+    Font.Height = -11
+    Font.Name = 'Arial'
+    MaxValue = 999999
+    OnChange = ToggleOkay
+    ParentFont = False
+    TabOrder = 0
+  end
+  object XPgive: TSpinEdit[16]
+    Left = 210
+    Height = 24
+    Top = 48
+    Width = 75
+    Color = 16311256
+    Font.Height = -11
+    Font.Name = 'Arial'
+    MaxValue = 780000
+    OnChange = ToggleOkay
+    ParentFont = False
+    TabOrder = 2
+  end
+  object CheckPartyGold: TCheckBox[17]
+    Left = 20
+    Height = 22
+    Top = 25
+    Width = 150
+    Caption = 'Give to all PCs in the party'
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 1
+  end
+  object CheckPartyXP: TCheckBox[18]
+    Left = 20
+    Height = 22
+    Top = 65
+    Width = 150
+    Caption = 'Give to all PCs in the party'
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 3
+  end
+end

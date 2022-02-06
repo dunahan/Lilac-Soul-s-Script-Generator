@@ -1,0 +1,118 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tpartydoc','FORMDATA',[
+  'TPF0'#9'Tpartydoc'#8'partydoc'#4'Left'#3#20#2#6'Height'#3'&'#2#3'Top'#3#153#0
+  +#5'Width'#3#138#2#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDialog'
+  +#7'Caption'#6#21'Local party variables'#12'ClientHeight'#3'&'#2#11'ClientWid'
+  +'th'#3#138#2#5'Color'#4'y'#149#223#0#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9.30'#0#6'TL'
+  +'abel'#6'Label1'#4'Left'#2#15#6'Height'#2#26#3'Top'#3'^'#1#5'Width'#3#144#1#9
+  +'Alignment'#7#8'taCenter'#8'AutoSize'#8#7'Caption'#6#17'The include file:'#10
+  +'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#237#9'Font.Name'#6#5'Arial'#11
+  +'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#15'LabelInfoFromLS'#4'Left'#2
+  +#15#6'Height'#2#26#3'Top'#3#145#0#5'Width'#3'l'#2#9'Alignment'#7#8'taCenter'
+  +#8'AutoSize'#8#7'Caption'#6#28'Information from Lilac Soul:'#10'Font.Color'#7
+  +#8'clMaroon'#11'Font.Height'#2#237#9'Font.Name'#6#5'Arial'#11'ParentColor'#8
+  +#10'ParentFont'#8#0#0#5'TMemo'#5'Memo1'#4'Left'#2#15#6'Height'#3#170#0#3'Top'
+  +#3#170#0#5'Width'#3'l'#2#5'Color'#7#8'clInfoBk'#11'Font.Height'#2#244#9'Font'
+  +'.Name'#6#5'Arial'#13'Lines.Strings'#1#12'l'#1#0#0'If you wish to check for '
+  +'party local variables, I suggest you use the include file below. Simply cop'
+  +'y it and save it in your script editor - I would give it the name ls_party.'
+  +' If you try to compile it, the Toolset will give you a "no ''void main()'' '
+  +'function in the script" error. Just say you do not want to compile it as a '
+  +'conditional script, and ignore the error.'#6#0#6'gThen, whenever you want t'
+  +'o use one of the functions in a script, that script must start with this li'
+  +'ne:'#6#0#6#19'#include "ls_party"'#6#0#6#226'Of course, if you do not call '
+  +'it ls_party, you will have to replace that. (If you do call it ls_party, th'
+  +'en the Script Generator can handle this part for you. However, the Script G'
+  +'enerator cannot compile such scripts for you.)'#6#0#6')Then, you can use th'
+  +'e following commands:'#6#0#6#13'SetPartyInt()'#6#15'SetPartyFloat()'#6#16'S'
+  +'etPartyString()'#6#18'SetPartyLocation()'#6#16'SetPartyObject()'#6#0#6#3'an'
+  +'d'#6#0#6#13'GetPartyInt()'#6#15'GetPartyFloat()'#6#16'GetPartyString()'#6#18
+  +'GetPartyLocation()'#6#16'GetPartyObject()'#6#0#6'NThe paramaters will be th'
+  +'e same as for their Set/GetLocal* counterparts, i.e.:'#6#0#6#29'SetPartyInt'
+  +'(oPC, "hello", 1);'#6#0#6'@will call SetLocalInt(oPC, "hello", 1) on all pa'
+  +'rtymembers, etc.'#6#0#12'~'#1#0#0'Note that, with int and float, if differe'
+  +'nt PCs have different values stored on them, the highest of these values wi'
+  +'ll be returned. With string, object, and location, the first one found will'
+  +' always be returned. If you use SetParty* all the time, the same variable w'
+  +'ill always be stored on everybody though (if the party composition does not'
+  +' change), so that problem can be avoided.'#0#10'ParentFont'#8#8'ReadOnly'#9
+  +#10'ScrollBars'#7#10'ssVertical'#8'TabOrder'#2#0#11'WantReturns'#8#0#0#5'TMe'
+  +'mo'#5'Memo2'#4'Left'#2#15#6'Height'#3#165#0#3'Top'#3'w'#1#5'Width'#3#194#1#5
+  +'Color'#4#216#227#248#0#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'
+  +#13'Lines.Strings'#1#6'2//include file by Lilac Soul, aka Carsten Hjorthoj'#6
+  +#0#6'1void SetPartyInt(object oPC, string sName, int n)'#6#1'{'#6'0object oM'
+  +'ember=GetFirstFactionMember(oPC, TRUE);'#6#0#6'!while (GetIsObjectValid(oMe'
+  +'mber))'#6#3'  {'#6'!  SetLocalInt(oMember, sName, n);'#6'*  oMember=GetNext'
+  +'FactionMember(oPC, TRUE);'#6#3'  }'#6#1'}'#6#0#6')int GetPartyInt(object oP'
+  +'C, string sName)'#6#1'{'#6'0object oMember=GetFirstFactionMember(oPC, TRUE)'
+  +';'#6#0#6#8'int n=0;'#6#7'int nn;'#6#0#6'!while (GetIsObjectValid(oMember))'
+  +#6#3'  {'#6'!  nn=GetLocalInt(oMember, sName);'#6#17'  if (nn>n) n=nn;'#6'* '
+  +' oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  }'#6#0#6#9'return n;'#6#1
+  +'}'#6#0#6'5void SetPartyFloat(object oPC, string sName, float f)'#6#1'{'#6'0'
+  +'object oMember=GetFirstFactionMember(oPC, TRUE);'#6#0#6'!while (GetIsObject'
+  +'Valid(oMember))'#6#3'  {'#6'#  SetLocalFloat(oMember, sName, f);'#6'*  oMem'
+  +'ber=GetNextFactionMember(oPC, TRUE);'#6#3'  }'#6#1'}'#6#0#6'-float GetParty'
+  +'Float(object oPC, string sName)'#6#1'{'#6'0object oMember=GetFirstFactionMe'
+  +'mber(oPC, TRUE);'#6#0#6#13'float f=0.0f;'#6#9'float ff;'#6#0#6'!while (GetI'
+  +'sObjectValid(oMember))'#6#3'  {'#6'#  ff=GetLocalFloat(oMember, sName);'#6
+  +#17'  if (ff>f) f=ff;'#6'*  oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  '
+  +'}'#6#0#6#9'return f;'#6#1'}'#6#0#6'7void SetPartyString(object oPC, string '
+  +'sName, string s)'#6#1'{'#6'0object oMember=GetFirstFactionMember(oPC, TRUE)'
+  +';'#6#0#6'!while (GetIsObjectValid(oMember))'#6#3'  {'#6'$  SetLocalString(o'
+  +'Member, sName, s);'#6'*  oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  }'
+  +#6#1'}'#6#0#6'/string GetPartyString(object oPC, string sName)'#6#1'{'#6'0ob'
+  +'ject oMember=GetFirstFactionMember(oPC, TRUE);'#6#12'string s="";'#6#0#6'!w'
+  +'hile (GetIsObjectValid(oMember))'#6#3'  {'#6'#  s=GetLocalString(oMember, s'
+  ,'Name);'#6#24'  if (s != "") return s;'#6'*  oMember=GetNextFactionMember(oP'
+  +'C, TRUE);'#6#3'  }'#6#0#6#9'return s;'#6#1'}'#6#0#6'7void SetPartyObject(ob'
+  +'ject oPC, string sName, object o)'#6#1'{'#6'0object oMember=GetFirstFaction'
+  +'Member(oPC, TRUE);'#6#0#6'!while (GetIsObjectValid(oMember))'#6#3'  {'#6'$ '
+  +' SetLocalObject(oMember, sName, o);'#6'*  oMember=GetNextFactionMember(oPC,'
+  +' TRUE);'#6#3'  }'#6#1'}'#6#0#6'/object GetPartyObject(object oPC, string sN'
+  +'ame)'#6#1'{'#6'0object oMember=GetFirstFactionMember(oPC, TRUE);'#6#24'obje'
+  +'ct o=OBJECT_INVALID;'#6#0#6'!while (GetIsObjectValid(oMember))'#6#3'  {'#6
+  +'#  o=GetLocalObject(oMember, sName);'#6'$  if (o != OBJECT_INVALID) return '
+  +'o;'#6'*  oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  }'#6#0#6#9'return '
+  +'o;'#6#1'}'#6#0#6';void SetPartyLocation(object oPC, string sName, location '
+  +'l)'#6#1'{'#6'0object oMember=GetFirstFactionMember(oPC, TRUE);'#6#0#6'!whil'
+  +'e (GetIsObjectValid(oMember))'#6#3'  {'#6'&  SetLocalLocation(oMember, sNam'
+  +'e, l);'#6'*  oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  }'#6#1'}'#6#0#6
+  +'3location GetPartyLocation(object oPC, string sName)'#6#1'{'#6'0object oMem'
+  +'ber=GetFirstFactionMember(oPC, TRUE);'#6#11'location l;'#6#0#6'!while (GetI'
+  +'sObjectValid(oMember))'#6#3'  {'#6'5  //testing: if the area of l isn''t va'
+  +'lid, it isn''t a'#6#18'  //valid location'#6'%  l=GetLocalLocation(oMember,'
+  +' sName);'#6'9  if (GetAreaFromLocation(l) != OBJECT_INVALID) return l;'#6'*'
+  +'  oMember=GetNextFactionMember(oPC, TRUE);'#6#3'  }'#6#0#6#9'return l;'#6#1
+  +'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVertical'#8'TabOr'
+  +'der'#2#1#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#3#2#6'Height'#2'#'#3'Top'#3#249
+  +#1#5'Width'#2'x'#7'Caption'#6#5'Close'#7'Default'#9#10'Glyph.Data'#10#178#1#0
+  +#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4
+  +#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191
+  +#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128
+  +#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255
+  +#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17
+  +#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7
+  +'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240
+  +#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17
+  +#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17
+  +#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'
+  +#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17
+  +#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17
+  +#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15
+  +#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136
+  +#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#1#7'Spacing'
+  +#2#20#8'TabOrder'#2#2#0#0#11'TStaticText'#9'TextIntro'#4'Left'#2#15#6'Height'
+  +#2'x'#3'Top'#2#15#5'Width'#3'l'#2#7'Caption'#12'!'#2#0#0'Sometimes, you migh'
+  +'t want to check for variables on an entire party rather than a single PC. B'
+  +'ioWare had supplied a function for checking integers in this way, but it is'
+  +' bugged and there is no default direct support for checking other types of '
+  +'variables party-wide. For those who want to do this sort of checking, the f'
+  +'ollowing information (slightly edited for better accuracy) and script from '
+  +'Lilac Soul may be useful. Just be aware that party variables are never nega'
+  +'tive.'#10#10'In brief: copy the below include file into a script named "ls_'
+  +'party".'#5'Color'#4#207#230#207#0#10'Font.Color'#7#7'clBlack'#11'Font.Heigh'
+  +'t'#2#244#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#11'ParentColor'#8#8'TabOr'
+  +'der'#2#3#0#0#0
+]);

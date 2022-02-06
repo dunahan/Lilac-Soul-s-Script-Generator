@@ -1,0 +1,316 @@
+inherited lights: Tlights
+  Left = 376
+  Height = 430
+  Top = 150
+  Width = 380
+  ActiveControl = RadioTagged
+  BorderStyle = bsDialog
+  Caption = 'Turn lights on or off'
+  ClientHeight = 430
+  ClientWidth = 380
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object lightchoice: TRadioGroup[0]
+    Left = 15
+    Height = 60
+    Top = 136
+    Width = 350
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclTopToBottomThenLeftToRight
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 56
+    ClientWidth = 346
+    Color = 16311256
+    ColumnLayout = clVerticalThenHorizontal
+    Columns = 2
+    ItemIndex = 2
+    Items.Strings = (
+      'Turn illumination on'
+      'Turn illumination off'
+      'Toggle illumination'
+    )
+    ParentColor = False
+    TabOrder = 1
+  end
+  object Memo2: TMemo[1]
+    Left = 15
+    Height = 88
+    Top = 205
+    Width = 350
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Specify your placeable, then click "Okay - and more!" to change more lights in the same area, or "Okay - exit!" to make this the last light.'
+      ''
+      'Pressing "Close" will (only) clear out what you have entered since the last "Okay" button.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn[2]
+    Left = 15
+    Height = 35
+    Top = 385
+    Width = 145
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = ButtonClickOkayMore
+    Spacing = 0
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn[3]
+    Left = 165
+    Height = 35
+    Top = 385
+    Width = 100
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    Spacing = 5
+    TabOrder = 4
+  end
+  object BitBtn3: TBitBtn[4]
+    Left = 275
+    Height = 35
+    Top = 385
+    Width = 90
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    Spacing = 10
+    TabOrder = 5
+  end
+  object TextSameArea: TStaticText[5]
+    Left = 15
+    Height = 75
+    Top = 300
+    Width = 350
+    BorderStyle = sbsSunken
+    Caption = 'NOTE: All these lights must be in the same area.'#10#10'If you have lights in multiple areas, you must press "Okay - exit!" after finishing the lights for each area.'
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 6
+  end
+  object GroupTarget: TGroupBox[6]
+    Left = 15
+    Height = 118
+    Top = 10
+    Width = 350
+    Caption = 'Which placeable will have its lighting changed?'
+    ClientHeight = 103
+    ClientWidth = 346
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object LabelTag: TLabel
+      Left = 107
+      Height = 14
+      Top = 54
+      Width = 92
+      Caption = 'object with the tag:'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelNth: TLabel
+      Left = 90
+      Height = 14
+      Top = 54
+      Width = 13
+      AutoSize = False
+      Caption = 'st'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 330
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object RadioTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 123
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object RadioSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 330
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+    end
+    object RadioTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 43
+      Caption = 'The'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 3
+      TabStop = True
+    end
+    object EditTagged: TEdit
+      Left = 205
+      Height = 23
+      Top = 50
+      Width = 130
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 5
+    end
+    object SpinNth: TSpinEdit
+      Left = 50
+      Height = 23
+      Top = 50
+      Width = 35
+      Color = clWhite
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      MaxValue = 99
+      MinValue = 1
+      OnChange = SpinNthChange
+      ParentFont = False
+      TabOrder = 4
+      Value = 1
+    end
+    object RadioTagAll: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 75
+      Width = 135
+      Caption = 'All objects with the tag:'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 6
+    end
+    object EditTagAll: TEdit
+      Left = 205
+      Height = 23
+      Top = 75
+      Width = 130
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 7
+    end
+  end
+end

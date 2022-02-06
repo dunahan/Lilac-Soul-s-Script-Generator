@@ -1,0 +1,91 @@
+object concept_help: Tconcept_help
+  Left = 447
+  Height = 350
+  Top = 149
+  Width = 500
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Help with some concepts (or: What is a ResRef?)'
+  ClientHeight = 350
+  ClientWidth = 500
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 25
+    Height = 260
+    Top = 25
+    Width = 450
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'There are a few questions that have been asked a lot, and this window covers what may be the most common of them -- the distinction between (and meanings of) "ResRef" and "Tag".'
+      ''
+      'RESREF:'
+      'A ResRef (sometimes called "blueprint") identifies an entry in the palette -- the (standard or custom) lists of objects (creatures, items, etc.) you can place in areas of your module. It can be up to 16 characters long and never uses capital letters. It must be unique! ResRefs are used when creating an object.'
+      ''
+      'TAG:'
+      'A tag is used to locate objects in the game -- the things that you have either placed (through the Toolset) or spawned (via scripting or encounters) in the areas of your module. It can be up to 32 characters long, and the case of letters matters. It does not need to be unique. Tags are used when dealing with an existing object.'
+      ''
+      'BioWare''s convention (often adopted by others) is to have an object''s tag be its ResRef, usually in upper case. However, this is just a convention. TAGS AND RESREFS DO NOT NEED TO BE THE SAME. In fact, there are times when intentionally making them different is useful (because ResRefs have a uniqueness requirement).'
+      ''
+      'Tags are a way to tell the game that certain objects are "the same" for whatever purpose you have in mind. For example, your town can have a hundred guards running around, but maybe you do not want them to all look the same. You could create a couple of palette entries for the guards to have some variety, then just spawn/place a dozen or so of each. In this situation, you might have'
+      '* 100 objects (the guards),'
+      '* 8 palette entries (assuming that is how many you made),'
+      '* 8 ResRefs (one for each palette entry), and'
+      '* 1 tag.'
+      'When creating a guard, you need to specify a ResRef. (You can have multiple creatures created from the same ResRef; the uniqueness is on the palette, not on what gets placed in an area.) All creatures created from the same palette entry will be identical, so the multiple ResRefs allow you to have some variety in the guards. However, if a citizen is supposed to run to the nearest guard, you want a simple way to find the guard, regardless of which blueprint it came from. That is where the tag comes into play. If you give all 8 blueprints (hence all 100 guards) the same tag, then all you have to do is look for the nearest creature with that tag. You could think of the ResRefs as "Guard Smith", "Guard Jones", etc., and the tag as "Police Officer". (Not literally, though, since ResRefs cannot have capital letters.) You would use the ResRef when you want a particular type of guard to appear ("Guard Smith, report for duty"), and the tag when you just need a guard ("go to the nearest Police Officer").'
+      ''
+      'ResRefs are a way to tell the game what kind of object to create. Computers are rather picky, and NWN does not know how to fill in missing details. You cannot tell the game "create a horse" because that leaves too many details unspecified (starting with, but not limited to, which horse appearance to use). Instead you have to be more specific: "create x3_horse001", which tells the game to get all the necessary details from the palette entry called "x3_horse001". This is why ResRefs need to be unique. If two palette entries had the same name, the game would not know which to use, so we would be back to not knowing how to fill in missing details.'
+      ''
+      'A common problem with ResRefs is that they can be tricky to find. One reliable method is to place an object in an area, then check that object''s properties. The easily messed up method is to edit the palette entry itself. The problem here is that you must choose "Edit", not "Edit Copy". The problem is compounded for the standard palette because there is no "Edit" option there, only "Edit Copy" (which is no good for finding the ResRef). Why is "Edit Copy" bad? Because that means you are creating a new palette entry, which must have its own unique ResRef. The Toolset knows this and automatically generates a new ResRef before giving you a chance to edit it.'
+      ''
+      'For further information, check the Lexicon or the BioWare forums.'
+      'Lexicon 1.69:'
+      '* http://palmergames.com/Lexicon/Lexicon_1_69.html'
+      'Lexicon 1.68:'
+      '* http://www.nwnlexicon.com/'
+      'New BioWare scripting forum:'
+      '* http://social.bioware.com/forum/1/category/192/index'
+      'Old BioWare scripting forum:'
+      '* http://nwn.bioware.com/forums/viewforum.html?forum=47'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 355
+    Height = 40
+    Top = 300
+    Width = 120
+    Cancel = True
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 15
+    TabOrder = 1
+  end
+end

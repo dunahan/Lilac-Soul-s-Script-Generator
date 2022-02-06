@@ -1,0 +1,71 @@
+object inspect: Tinspect
+  Left = 439
+  Height = 314
+  Top = 149
+  Width = 440
+  ActiveControl = iflist
+  BorderStyle = bsDialog
+  Caption = 'Inspect structure of current if''s'
+  ClientHeight = 314
+  ClientWidth = 440
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 32
+    Height = 19
+    Top = 16
+    Width = 373
+    Caption = 'You are currently on the last line of the following structure.'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object iflist: TMemo
+    Left = 32
+    Height = 180
+    Top = 48
+    Width = 376
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 160
+    Height = 41
+    Top = 257
+    Width = 120
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    Spacing = 10
+    TabOrder = 1
+  end
+end

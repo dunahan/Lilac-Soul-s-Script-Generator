@@ -1,0 +1,45 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tusehow','FORMDATA',[
+  'TPF0'#7'Tusehow'#6'usehow'#4'Left'#3#188#1#6'Height'#3'^'#1#3'Top'#3#187#0#5
+  +'Width'#3#244#1#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDialog'#7
+  +'Caption'#6#24'How do I use the script?'#12'ClientHeight'#3'^'#1#11'ClientWi'
+  +'dth'#3#244#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.He'
+  +'ight'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7#16'poMainFormCenter'#10'L'
+  +'CLVersion'#6#6'0.9.30'#0#5'TMemo'#5'Memo1'#4'Left'#2#25#6'Height'#3#4#1#3'T'
+  +'op'#2#25#5'Width'#3#194#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfo'
+  +'Text'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6'`'
+  +'So, you have created a script with the Script Generator, and now you want t'
+  +'o know how to use it?'#6#0#6'KWell, fear not, it is fairly simple. In fact,'
+  +' there are many ways to do it.'#6#0#12'.'#2#0#0'You can simply copy-and-pas'
+  +'te the script from the Script Generator''s script window into the NWN Tools'
+  +'et''s script editor. Just remember to copy everything. This can be done by '
+  +'selecting all the text in the window then copying it (click in the window, '
+  +'then hit CTL-A followed by CTL-C), or with the button under the script wind'
+  +'ow. The button will also give you options to save the script, compile it (i'
+  +'f the command line compiler was found), and add it and the compiled version'
+  +' to a module or .erf file. (These options are also available from the "File'
+  +'" menu.)'#6#0#6' If your script will not compile:'#12#28#1#0#0'More than 99'
+  +'% of the reports Lilac Soul has had about scripts not compiling were caused'
+  +' by the user not copying everything. Press the button and copy everything. '
+  +'If it still does not compile, and your copy of NWN is patched to 1.69, plea'
+  +'se report this as a bug (The_Krit@hotmail.com).'#0#10'ParentFont'#8#8'ReadO'
+  +'nly'#9#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3'c'#1#6'Height'#2
+  +'('#3'Top'#3','#1#5'Width'#2'x'#6'Cancel'#9#7'Caption'#6#5'Close'#7'Default'
+  +#9#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0
+  +#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0
+  +#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255
+  +#0#255#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0
+  +#0#0#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'
+  +#240#145#17#17#17#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17
+  +#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17
+  +#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pw'
+  +'x'#240#144#176#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145
+  +#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17
+  +#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{'
+  +'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240
+  +#153#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255
+  +#255#255#255#255#7'pwx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11
+  +'ModalResult'#2#1#7'Spacing'#2#15#8'TabOrder'#2#1#0#0#0
+]);

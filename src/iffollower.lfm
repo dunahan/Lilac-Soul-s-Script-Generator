@@ -1,0 +1,58 @@
+object followers: Tfollowers
+  Left = 447
+  Height = 270
+  Top = 146
+  Width = 370
+  ActiveControl = Memo1
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'What about followers?'
+  ClientHeight = 270
+  ClientWidth = 370
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 15
+    Height = 145
+    Top = 110
+    Width = 340
+    Color = clInfoBk
+    Lines.Strings = (
+      'What happens if the placeable / door / creature is killed by one of the PC''s associates (henchmen, familiar, etc.)?'
+      ''
+      'If you choose to treat the PC as the killer, the script will forget which associate landed the killing blow, instead acting as if the PC landed it. If you choose to keep the associate as the killer, then that associate will be treated no differently than any other NPC (including having the script abort for lack of a PC, if you chose that option).'
+    )
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 15
+    Height = 75
+    Top = 15
+    Width = 340
+    AutoFill = True
+    Caption = 'What happens if something was killed by a PC''s associate?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 59
+    ClientWidth = 336
+    Color = 16311256
+    Items.Strings = (
+      'Treat the PC as the killer.'
+      'Keep the associate as the killer.'
+    )
+    OnClick = RadioGroup1Click
+    ParentColor = False
+    TabOrder = 1
+  end
+end

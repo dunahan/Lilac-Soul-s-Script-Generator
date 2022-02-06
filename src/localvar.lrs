@@ -1,0 +1,129 @@
+LazarusResources.Add('Tlocvar','FORMDATA',[
+  'TPF0'#241#7'Tlocvar'#6'locvar'#4'Left'#3#183#1#6'Height'#3#8#2#3'Top'#3#149#0
+  +#5'Width'#3#129#1#13'ActiveControl'#7#7'RadioPC'#11'BorderStyle'#7#8'bsDialo'
+  +'g'#7'Caption'#6#19'Set local variables'#12'ClientHeight'#3#8#2#11'ClientWid'
+  +'th'#3#129#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.Hei'
+  +'ght'#2#245#9'Font.Name'#6#5'Arial'#7'OnClose'#7#9'FormClose'#8'OnCreate'#7
+  +#10'FormCreate'#8'Position'#7#16'poMainFormCenter'#0#242#2#0#6'TLabel'#12'La'
+  +'belVarType'#4'Left'#2#15#6'Height'#2#17#3'Top'#3#190#0#5'Width'#3#146#0#7'C'
+  +'aption'#6#27'Type of the local variable:'#10'Font.Color'#7#7'clBlack'#11'Fo'
+  +'nt.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8
+  +#0#0#242#2#1#6'TLabel'#12'LabelVarName'#4'Left'#2#15#6'Height'#2#17#3'Top'#3
+  +#250#0#5'Width'#3#153#0#7'Caption'#6#27'Name of the local variable:'#10'Font'
+  +'.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'Paren'
+  +'tColor'#8#10'ParentFont'#8#0#0#242#2#2#6'TLabel'#13'LabelVarValue'#4'Left'#2
+  +#15#6'Height'#2#17#3'Top'#3'1'#1#5'Width'#3#147#0#7'Caption'#6#27'Value to g'
+  +'ive the variable:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font'
+  +'.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#3#5'TMemo'#5
+  +'Memo1'#4'Left'#2#16#6'Height'#2'X'#3'Top'#3'w'#1#5'Width'#3'a'#1#5'Color'#4
+  +#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#245#9'Font.Nam'
+  +'e'#6#5'Arial'#13'Lines.Strings'#1#6'uSet your local variable, then click "O'
+  +'kay - and more!" to set another, or "Okay - exit!" to make this the last lo'
+  +'cal.'#6#0#6'ZPressing "Close" will (only) clear out what you have entered s'
+  +'ince the last "Okay" button.'#0#10'ParentFont'#8#8'ReadOnly'#9#8'TabOrder'#2
+  +#6#0#0#242#2#4#7'TBitBtn'#7'BitBtn1'#4'Left'#2#16#6'Height'#2'!'#3'Top'#3#221
+  +#1#5'Width'#3#140#0#7'Caption'#6#16'Okay - and more!'#7'Enabled'#8#11'Font.H'
+  +'eight'#2#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10'Z'#2#0#0'V'#2#0#0'BM'
+  +'V'#2#0#0#0#0#0#0'v'#0#0#0'('#0#0#0')'#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#224#1#0
+  +#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136
+  +'wwwwwwwwwwwwwwwwwp'#0#0#0'wDH'#135'wwwwwwwwwwwwwwwwp'#0#0#0'w"D'#136'wwwwww'
+  +'wwwwwwwwwwp'#0#0#0#162'""H'#135'wwwwwwwwww'#8'wwwwp'#0#0#0#162'""$'#136'www'
+  +'wwwwwwp'#7#135'wwwp'#0#0#0#162'"""H'#135'wwwwwwwwp@xwwwp'#0#0#0#162'"""$'
+  +#136'wwwwwwwww'#4#7#135'wwp'#0#0#0#162'""""H'#135'wwwwwww'#136#132'@xwwp'#0#0
+  +#0#162'"H'#162'"$'#136'wwwwwp'#135'x'#132#196#7#135'wp'#0#0#0#162'"H'#138'""'
+  +'H'#135'wwwp'#135#136#0'D'#204'@'#7'wp'#0#0#0#162'"H'#135#162'"D'#136'www'#7
+  +#128#0'L'#204#204#204#7'wp'#0#0#0'z"H'#135'z"$'#136'wwpp'#0'L'#204#198#204
+  +#198#7'wp'#0#0#0'z"Gww'#162'"H'#135'ww'#0'L'#204#198'dl`wwp'#0#0#0'wwwwwz"$H'
+  +'wpFf'#204'dpf'#7'wwp'#0#0#0'wwwwww'#162'"H'#135'p'#0#6#198'Gt`wwwp'#0#0#0'w'
+  +'wwwwwz"$'#135'wwvdw'#6#7'wwwp'#0#0#0'wwwwwww'#162'$HwwvGw'#0'wwwwp'#0#0#0'w'
+  +'wwwwwwz"Hwwtwwwwwwwp'#0#0#0'wwwwwwww'#162'Hwwwwwwwwwwp'#0#0#0'wwwwwwwwz''ww'
+  +'wwwwwwwwp'#0#0#0#7'OnClick'#7#19'ButtonClickOkayMore'#10'ParentFont'#8#7'Sp'
+  +'acing'#2#5#8'TabOrder'#2#7#0#0#242#2#5#7'TBitBtn'#7'BitBtn2'#4'Left'#3#160#0
+  +#6'Height'#2'!'#3'Top'#3#221#1#5'Width'#2'd'#7'Caption'#6#12'Okay - exit!'#7
+  +'Enabled'#8#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10
+  +'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0
+  +#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0
+  +#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128
+  +#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255
+  +#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162
+  +'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""'
+  +'$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"'
+  +'H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'w'
+  +'w'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'ww'
+  +'wwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0
+  +'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7#19'ButtonClickOkayExit'#10
+  +'ParentFont'#8#7'Spacing'#2#10#8'TabOrder'#2#8#0#0#242#2#6#7'TBitBtn'#7'BitB'
+  +'tn3'#4'Left'#3#23#1#6'Height'#2'!'#3'Top'#3#221#1#5'Width'#2'Z'#7'Caption'#6
+  +#5'Close'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10#178
+  +#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1
+  +#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0
+  +#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128
+  +#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255
+  +#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17
+  +#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17
+  ,#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pw'
+  +'x'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145
+  +#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17
+  +#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7
+  +'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240
+  +#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153
+  +#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'p'
+  +'wx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7
+  +'OnClick'#7#16'ButtonClickClose'#10'ParentFont'#8#7'Spacing'#2#10#8'TabOrder'
+  +#2#9#0#0#242#2#7#9'TCheckBox'#6'incbox'#4'Left'#2#15#6'Height'#2#22#3'Top'#3
+  +'^'#1#5'Width'#3#213#0#7'Caption'#6'%Add this value to the existing value.'#5
+  +'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#5#0#0#242#2#8#9'TGro'
+  +'upBox'#11'GroupTarget'#4'Left'#2#15#6'Height'#3#145#0#3'Top'#2#10#5'Width'#3
+  +'a'#1#7'Caption'#6#20'Set the variable on:'#12'ClientHeight'#2#127#11'Client'
+  +'Width'#3']'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font'
+  +'.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8
+  +'TabOrder'#2#0#0#12'TRadioButton'#10'RadioOwner'#4'Left'#2#5#6'Height'#2#22#3
+  +'Top'#2#0#5'Width'#3'T'#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the scr'
+  +'ipt'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Ari'
+  +'al'#10'ParentFont'#8#8'TabOrder'#2#0#7'TabStop'#8#0#0#12'TRadioButton'#7'Ra'
+  +'dioPC'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25#5'Width'#2'A'#7'Caption'#6#6
+  +'The PC'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Fo'
+  +'nt.Name'#6#5'Arial'#10'ParentFont'#8#5'State'#7#9'cbChecked'#8'TabOrder'#2#1
+  +#0#0#12'TRadioButton'#13'RadioTargeted'#4'Left'#2#5#6'Height'#2#22#3'Top'#2
+  +#25#5'Width'#3#133#0#7'Caption'#6#21'The activation target'#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8
+  +'TabOrder'#2#5#7'TabStop'#8#7'Visible'#8#0#0#12'TRadioButton'#10'RadioSpawn'
+  +#4'Left'#2#5#6'Height'#2#22#3'Top'#2'2'#5'Width'#3'T'#1#8'AutoSize'#8#7'Capt'
+  +'ion'#6#21'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'
+  +#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#7#7'TabStop'#8
+  +#0#0#12'TRadioButton'#11'RadioTagged'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'K'
+  +#5'Width'#3#142#0#7'Caption'#6#23'An object with the tag:'#10'Font.Color'#7#7
+  +'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'Tog'
+  +'gleOkay'#10'ParentFont'#8#8'TabOrder'#2#4#7'TabStop'#8#0#0#5'TEdit'#10'Edit'
+  +'Tagged'#4'Left'#3#155#0#6'Height'#2#24#3'Top'#2'I'#5'Width'#3#190#0#11'Font'
+  +'.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'E'
+  +'ditChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#6#0#0#12'TRadioButto'
+  +'n'#14'RadioActivator'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#0#5'Width'#2'x'#7
+  +'Caption'#6#18'The item activator'#10'Font.Color'#7#7'clBlack'#11'Font.Heigh'
+  +'t'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#2#7'TabStop'
+  +#8#7'Visible'#8#0#0#12'TRadioButton'#10'RadioActor'#4'Left'#2#5#6'Height'#2
+  +#22#3'Top'#2'd'#5'Width'#3'T'#1#8'AutoSize'#8#7'Caption'#6#21'The most recen'
+  +'t actor'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#7'TabStop'#8#0#0#0#242#2#9#9'TCombo'
+  +'Box'#10'BoxVarType'#4'Left'#2#15#6'Height'#2#31#3'Top'#3#210#0#5'Width'#3
+  +#255#0#5'Color'#4#216#227#248#0#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'
+  +#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6'!Integer (number '
+  +'without decimals)'#6#28'Float (number with decimals)'#6#13'String (text)'#0
+  +#8'OnChange'#7#18'EditVarValueChange'#10'ParentFont'#8#5'Style'#7#14'csDropD'
+  +'ownList'#8'TabOrder'#2#2#4'Text'#6'!Integer (number without decimals)'#0#0
+  +#242#2#10#5'TEdit'#11'EditVarName'#4'Left'#2#15#6'Height'#2#26#3'Top'#3#14#1
+  +#5'Width'#3'a'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Fon'
+  +'t.Height'#2#244#9'Font.Name'#6#5'Arial'#9'MaxLength'#2'P'#8'OnChange'#7#10
+  +'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#3#0#0#242#2#11#5'TEdit'#12'EditV'
+  +'arValue'#4'Left'#2#15#6'Height'#2#24#3'Top'#3'E'#1#5'Width'#3'a'#1#5'Color'
+  +#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Na'
+  +'me'#6#5'Arial'#9'MaxLength'#2'P'#8'OnChange'#7#18'EditVarValueChange'#10'Pa'
+  +'rentFont'#8#8'TabOrder'#2#4#4'Text'#6#1'0'#0#0#242#2#12#9'TCheckBox'#10'Che'
+  +'ckParty'#4'Left'#2#23#6'Height'#2#22#3'Top'#3#160#0#5'Width'#3'T'#1#7'Capti'
+  +'on'#6'>Set on all creatures in the selected creature''s faction/party.'#10
+  +'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'O'
+  +'nChange'#7#16'CheckPartyChange'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#0
+]);

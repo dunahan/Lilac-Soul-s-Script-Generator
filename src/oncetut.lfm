@@ -1,0 +1,196 @@
+object once_tut: Tonce_tut
+  Left = 491
+  Height = 550
+  Top = 211
+  Width = 610
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Do once / local variables tutorial'
+  ClientHeight = 550
+  ClientWidth = 610
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poOwnerFormCenter
+  LCLVersion = '0.9.30'
+  object LabelAppearsWen: TLabel
+    Left = 15
+    Height = 16
+    Top = 176
+    Width = 239
+    Caption = 'Script to put under "Text Appears When":'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelActionsTaken: TLabel
+    Left = 15
+    Height = 16
+    Top = 366
+    Width = 208
+    Caption = 'Script to put under "Actions Taken":'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 15
+    Height = 165
+    Top = 5
+    Width = 500
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'TUTORIAL: WHAT IS THE DEAL WITH LOCAL VARIABLES?'
+      ''
+      'One common use of local variables is to control a conversation, so that certain lines only appear at certain times. For example, a local variable could be used to determine if a PC has spoken to a particular NPC yet, allowing a different opening line if they have spoken already. Local variables could also be used to track progress in a task, or even more intricate situations.'
+      ''
+      'Basically, a local variable is a number, string (text), or some other information that is stored upon an object in the game under a name you give it. So if you were to set a local variable named "somename" on a PC to 1, then at a later time (in a different script, usually) you could check the value of "somename" on that PC, and you would get the value 1. If you check the value of "somename" on a different PC, though, the value could be different. (It would be the value set on that PC; local variables are identified by both name and the object on which they were set.) You can change the value of a local variable at different times and even delete it.'
+      ''
+      'The key to using local variables to check if someone has already talked to an NPC is that if a local variable has never been set, it is given a default value. For numbers, the default value is zero. Thus, you can pick a variable name, and check that variable in the conversation. If its value is zero, this is the first time the PC has talked to this NPC. Once the PC starts talking to the NPC, we set the variable to 1. So:'
+      ''
+      '1) We have a "text appears when" script on the "welcome" line of the NPC''s conversation. It checks our designated local variable.'
+      ''
+      '2) If the value of that variable is 0, it means the PC and NPC have not spoken together before. We can pick that line.'
+      '2a) In the "actions taken" script, we set that variable to 1.'
+      ''
+      '3) If the variable is set to 1 (as it will be the next time the PC comes to talk to the NPC), the first line is not spoken (because the variable is not 0). Instead, the game moves on to the next line.'
+      ''
+      '4) This can be repeated, setting the variable to higher numbers to track how many times the NPC has been spoken to, opening up new dialog options as conversations progress.'
+      ''
+      'In essence, then, all we do is check for a local variable on the PC, and if the value of that variable is okay, we let the NPC speak the corresponding line.'
+      ''
+      'There are many ways to do this, and you can easily end up with a lot of scripts. One way to do it with only a few scripts is to use the same local variable name for all NPCs. (BioWare often did this in the official campaigns, using a name such as NW_L_TALKTIMES.) This works okay if the variable is set on the NPC, as each NPC can have different values for the same variable name. However, the PC is not involved in this scheme, so as soon as one PC talks to the NPC, the NPC will act as if every PC had talked to it. This is sometimes/often not desirable in multiplayer, particularly in persistent worlds.'
+      ''
+      'A better way is to have the variable somehow reference both the NPC and the PC. If all NPCs with the same tag can be treated as one NPC for this purpose, this can be done by including the NPC''s tag in the variable name and setting the variable on the PC. This way different NPCs will still refer to different variables (because each has its own variable name), each PC maintains its own list of who has been talked to (because the information is stored on the PC), and there is still only one script needed to check the variable''s value.'
+      ''
+      'This is not highly complicated, and once you start to understand local variables, you may find better ways of accomplishing your goals. This is just meant to be a primer / tutorial on how this works, with sample scripts below to get you started.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object Memo2: TMemo
+    Left = 15
+    Height = 140
+    Top = 215
+    Width = 580
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'courier new'
+    Lines.Strings = (
+      '// "Text Appears When" script for a line that is to be spoken only once per PC.'
+      ''
+      'int StartingConditional()'
+      '{'
+      '    object oPC = GetPCSpeaker();'
+      '    string sVariable = "TalkTimes_" + GetTag(OBJECT_SELF);'
+      ''
+      '    // Returns truth if the variable is not set.'
+      '    return GetLocalInt(oPC, sVariable) == 0; '
+      '}'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+    WordWrap = False
+  end
+  object Memo3: TMemo
+    Left = 15
+    Height = 140
+    Top = 405
+    Width = 580
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'courier new'
+    Lines.Strings = (
+      '// "Actions Taken" script for a line that is to be spoken only once per PC.'
+      ''
+      'void main()'
+      '{'
+      '    object oPC = GetPCSpeaker();'
+      '    string sVariable = "TalkTimes_" + GetTag(OBJECT_SELF);'
+      ''
+      '    // Set the local variable so this line will not be repeated.'
+      '    SetLocalInt(oPC, sVariable, 1);'
+      '}'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+    WordWrap = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 530
+    Height = 65
+    Top = 55
+    Width = 65
+    Cancel = True
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    Layout = blGlyphTop
+    ModalResult = 1
+    Spacing = 5
+    TabOrder = 3
+  end
+  object TextAppearsWhen: TStaticText
+    Left = 260
+    Height = 16
+    Top = 176
+    Width = 335
+    Caption = '(for the line that should only be spoken once)'
+    TabOrder = 4
+  end
+  object TextAppearsWhenNote: TStaticText
+    Left = 15
+    Height = 20
+    Top = 195
+    Width = 580
+    Caption = 'In the dialog tree, this line must come before the line that is spoken the second time.'
+    TabOrder = 5
+  end
+  object TextActionsTaken: TStaticText
+    Left = 230
+    Height = 16
+    Top = 366
+    Width = 365
+    Caption = '(of the same line)'
+    TabOrder = 6
+  end
+  object TextActionsTakenNote: TStaticText
+    Left = 15
+    Height = 20
+    Top = 385
+    Width = 580
+    Caption = 'This line must have a reply (even if just a blank for "[End Dialog]") in order for this to fire.'
+    TabOrder = 7
+  end
+end

@@ -1,0 +1,32 @@
+LazarusResources.Add('Tifwarning','FORMDATA',[
+  'TPF0'#10'Tifwarning'#9'ifwarning'#4'Left'#3#193#1#6'Height'#3#215#0#3'Top'#3
+  +#199#0#5'Width'#3'J'#1#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDi'
+  +'alog'#7'Caption'#6#8'Warning!'#12'ClientHeight'#3#215#0#11'ClientWidth'#3'J'
+  +#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245
+  +#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'Position'#7#16'poMai'
+  +'nFormCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#5'TMemo'#5'Memo1'#4'Left'#2#15#6
+  +'Height'#2'x'#3'Top'#2#15#5'Width'#3','#1#5'Color'#4#216#227#248#0#10'Font.C'
+  +'olor'#7#8'clMaroon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#13'Lines.'
+  +'Strings'#1#6#249'You have an unfinished "if" (or "else") statement. The scr'
+  +'ipt will not work until you finish it. Click "Add to script" to go to the e'
+  +'vent chooser, then finish all remaining "if" statements from there before a'
+  +'ttempting to save or compile this script.'#0#10'ParentFont'#8#8'TabOrder'#2
+  +#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'i'#6'Height'#2'('#3'Top'#3#155#0#5'Wi'
+  +'dth'#2'x'#7'Caption'#6#5'Close'#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'
+  +#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0
+  +#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwww'
+  +'wwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7
+  +'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240
+  +#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17
+  +#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17
+  +#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'
+  +#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17
+  +#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17
+  +'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'
+  +#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0
+  +#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136
+  +#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7'Spacing'#2#15#8'TabO'
+  +'rder'#2#1#0#0#0
+]);

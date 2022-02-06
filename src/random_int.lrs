@@ -1,0 +1,46 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TRandomint','FORMDATA',[
+  'TPF0'#10'TRandomint'#9'Randomint'#4'Left'#3'M'#2#6'Height'#3#175#0#3'Top'#3
+  +'q'#1#5'Width'#3#250#0#13'ActiveControl'#7#9'SpinEdit1'#11'BorderIcons'#11#12
+  +'biSystemMenu'#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#20'Check for ran'
+  +'domness'#12'ClientHeight'#3#175#0#11'ClientWidth'#3#250#0#5'Color'#4'y'#149
+  +#223#0#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7#16'poMain'
+  +'FormCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'#2'/'
+  +#6'Height'#2#21#3'Top'#2'P'#5'Width'#3#142#0#7'Caption'#6#20'percent of the '
+  +'time.'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#240#9'Font.Name'#6#5
+  +'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2
+  +'%'#6'Height'#2#21#3'Top'#2#8#5'Width'#3#159#0#7'Caption'#6#23'Dialog line w'
+  +'ill appear'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#240#9'Font.Name'
+  +#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#9'TSpinEdit'#9'SpinEdit1'
+  +#4'Left'#2'Z'#6'Height'#2#28#3'Top'#2'('#5'Width'#2'F'#11'Font.Height'#2#243
+  +#9'Font.Name'#6#5'Arial'#8'MinValue'#2#1#10'ParentFont'#8#8'TabOrder'#2#0#5
+  +'Value'#2'2'#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2#8#6'Height'#2')'#3'Top'#2'x'
+  +#5'Width'#2'q'#7'Caption'#6#4'Okay'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'
+  +#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0
+  +#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136
+  +'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0
+  +#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0
+  +#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'w'
+  +'w'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162
+  +'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'w'
+  +'wwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11
+  +'ModalResult'#2#1#7'OnClick'#7#13'ButtonOKClick'#7'Spacing'#2#15#8'TabOrder'
+  +#2#1#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3#133#0#6'Height'#2')'#3'Top'#2'x'#5
+  +'Width'#2'q'#7'Caption'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'
+  +#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0
+  +#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136
+  +#135'ww'#136'www'#0#0'wp'#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8
+  +#136'ww'#0#0'y'#17#0#136#135#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'
+  +#0#0'y'#145#17#8#145#17#17#0'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17
+  +#17#17#17#7'www'#0#0'wy'#145#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'
+  +#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17
+  +#17#8#136'ww'#0#0'ww'#145#17#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8
+  +#136'w'#0#0'wy'#17#24'w'#153#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0
+  +'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0
+  +#11'ModalResult'#2#2#7'Spacing'#2#15#8'TabOrder'#2#2#0#0#0
+]);

@@ -1,0 +1,64 @@
+LazarusResources.Add('Tmakeelse','FORMDATA',[
+  'TPF0'#9'Tmakeelse'#8'makeelse'#4'Left'#3#191#1#6'Height'#3#241#0#3'Top'#3#149
+  +#0#5'Width'#3#139#1#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDialo'
+  +'g'#7'Caption'#6#31'Make an else statement as well?'#12'ClientHeight'#3#241#0
+  +#11'ClientWidth'#3#139#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'
+  +#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7#16'poMainFormCe'
+  +'nter'#10'LCLVersion'#6#8'0.9.28.2'#0#5'TMemo'#5'Memo1'#4'Left'#2#16#6'Heigh'
+  +'t'#3#169#0#3'Top'#2#16#5'Width'#3'q'#1#5'Color'#7#8'clInfoBk'#10'Font.Color'
+  +#7#10'clInfoText'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Str'
+  +'ings'#1#6'kWould you like to provide an "else" or "else if" alternative for'
+  +' the "if" statement you have just finished?'#6#0#6#24'It would work like th'
+  +'is:'#6#0#6#24'IF (your last statement)'#6#21'       THEN one thing'#6#4'ELS'
+  +'E'#6#23'       some other thing'#6#0#6#21'Or, for an "else if":'#6#0#6#24'I'
+  +'F (your last statement)'#6#17'   THEN one thing'#6#30'ELSE IF (some other s'
+  +'tatement)'#6#24'   THEN some other thing'#6#23'possibly finishing with'#6#4
+  +'ELSE'#6#16'   default thing'#6#0#6'`You will have to finish an "else" or "e'
+  +'lse if" statement just as you did for the "if" statement.'#6#0#6#0#6#9'Exam'
+  +'ples:'#6#0#6#16'IF (pc has item)'#6#12'   give gold'#6#4'ELSE'#6'/   send m'
+  +'essage to PC that the item is missing.'#6#0#6#2'or'#6#0#6#16'IF (pc is dwar'
+  +'f)'#6#16'   give one item'#6#21'ELSE IF (pc is human)'#6#20'   give another'
+  +' item'#6#19'ELSE IF (pc is elf)'#6#20'   give a third item'#6#0#6#10'and so'
+  +' on.'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVertical'#8'Ta'
+  +'bOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#144#0#6'Height'#2'!'#3'Top'
+  +#3#200#0#5'Width'#2'q'#7'Caption'#6#10'Make else!'#10'Glyph.Data'#10'j'#1#0#0
+  +'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0
+  +#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0
+  +#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0
+  +#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255
+  +#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'
+  +#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136
+  +'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138
+  +'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0
+  +'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'
+  +#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'
+  +''''#0#0#11'ModalResult'#2#6#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0
+  +#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3#16#1#6'Height'#2'!'#3'Top'#3#200#0#5'Widt'
+  +'h'#2'q'#7'Caption'#6#11'Just finish'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BM'
+  +'f'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0
+  +#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136
+  +#135'ww'#136'www'#0#0'wp'#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8
+  +#136'ww'#0#0'y'#17#0#136#135#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'
+  +#0#0'y'#145#17#8#145#17#17#0'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17
+  +#17#17#17#7'www'#0#0'wy'#145#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'
+  +#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17
+  +#17#8#136'ww'#0#0'ww'#145#17#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8
+  +#136'w'#0#0'wy'#17#24'w'#153#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0
+  +'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0
+  +#11'ModalResult'#2#7#7'OnClick'#7#12'Button2Click'#8'TabOrder'#2#2#0#0#7'TBi'
+  +'tBtn'#7'BitBtn3'#4'Left'#2#16#6'Height'#2'!'#3'Top'#3#200#0#5'Width'#2'q'#7
+  +'Caption'#6#13'Make else if!'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0
+  +#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0
+  +#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0
+  +#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0
+  +#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0
+  +#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'
+  +#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'
+  +#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162
+  +'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'
+  +#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162
+  +'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResul'
+  +'t'#2#10#7'OnClick'#7#12'BitBtn3Click'#8'TabOrder'#2#3#0#0#0
+]);

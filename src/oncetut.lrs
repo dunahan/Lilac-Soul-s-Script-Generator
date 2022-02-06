@@ -1,0 +1,117 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tonce_tut','FORMDATA',[
+  'TPF0'#9'Tonce_tut'#8'once_tut'#4'Left'#3#235#1#6'Height'#3'&'#2#3'Top'#3#211
+  +#0#5'Width'#3'b'#2#13'ActiveControl'#7#5'Memo1'#11'BorderStyle'#7#8'bsDialog'
+  +#7'Caption'#6'"Do once / local variables tutorial'#12'ClientHeight'#3'&'#2#11
+  +'ClientWidth'#3'b'#2#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7#17'poOwnerFormCent'
+  +'er'#10'LCLVersion'#6#6'0.9.30'#0#6'TLabel'#15'LabelAppearsWen'#4'Left'#2#15
+  +#6'Height'#2#16#3'Top'#3#176#0#5'Width'#3#239#0#7'Caption'#6'(Script to put '
+  +'under "Text Appears When":'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2
+  +#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'
+  +#17'LabelActionsTaken'#4'Left'#2#15#6'Height'#2#16#3'Top'#3'n'#1#5'Width'#3
+  +#208#0#7'Caption'#6'$Script to put under "Actions Taken":'#10'Font.Color'#7#8
+  +'clMaroon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#0#0#5'TMemo'#5'Memo1'#4'Left'#2#15#6'Height'#3#165#0#3'Top'#2
+  +#5#5'Width'#3#244#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6'0TUTORIAL:'
+  +' WHAT IS THE DEAL WITH LOCAL VARIABLES?'#6#0#12'z'#1#0#0'One common use of '
+  +'local variables is to control a conversation, so that certain lines only ap'
+  +'pear at certain times. For example, a local variable could be used to deter'
+  +'mine if a PC has spoken to a particular NPC yet, allowing a different openi'
+  +'ng line if they have spoken already. Local variables could also be used to '
+  +'track progress in a task, or even more intricate situations.'#6#0#12#145#2#0
+  +#0'Basically, a local variable is a number, string (text), or some other inf'
+  +'ormation that is stored upon an object in the game under a name you give it'
+  +'. So if you were to set a local variable named "somename" on a PC to 1, the'
+  +'n at a later time (in a different script, usually) you could check the valu'
+  +'e of "somename" on that PC, and you would get the value 1. If you check the'
+  +' value of "somename" on a different PC, though, the value could be differen'
+  +'t. (It would be the value set on that PC; local variables are identified by'
+  +' both name and the object on which they were set.) You can change the value'
+  +' of a local variable at different times and even delete it.'#6#0#12#168#1#0
+  +#0'The key to using local variables to check if someone has already talked t'
+  +'o an NPC is that if a local variable has never been set, it is given a defa'
+  +'ult value. For numbers, the default value is zero. Thus, you can pick a var'
+  +'iable name, and check that variable in the conversation. If its value is ze'
+  +'ro, this is the first time the PC has talked to this NPC. Once the PC start'
+  +'s talking to the NPC, we set the variable to 1. So:'#6#0#6#129'1) We have a'
+  +' "text appears when" script on the "welcome" line of the NPC''s conversatio'
+  +'n. It checks our designated local variable.'#6#0#6'v2) If the value of that'
+  +' variable is 0, it means the PC and NPC have not spoken together before. We'
+  +' can pick that line.'#6'=2a) In the "actions taken" script, we set that var'
+  +'iable to 1.'#6#0#6#200'3) If the variable is set to 1 (as it will be the ne'
+  +'xt time the PC comes to talk to the NPC), the first line is not spoken (bec'
+  +'ause the variable is not 0). Instead, the game moves on to the next line.'#6
+  +#0#6#172'4) This can be repeated, setting the variable to higher numbers to '
+  +'track how many times the NPC has been spoken to, opening up new dialog opti'
+  +'ons as conversations progress.'#6#0#6#156'In essence, then, all we do is ch'
+  +'eck for a local variable on the PC, and if the value of that variable is ok'
+  +'ay, we let the NPC speak the corresponding line.'#6#0#12'^'#2#0#0'There are'
+  +' many ways to do this, and you can easily end up with a lot of scripts. One'
+  +' way to do it with only a few scripts is to use the same local variable nam'
+  +'e for all NPCs. (BioWare often did this in the official campaigns, using a '
+  +'name such as NW_L_TALKTIMES.) This works okay if the variable is set on the'
+  +' NPC, as each NPC can have different values for the same variable name. How'
+  +'ever, the PC is not involved in this scheme, so as soon as one PC talks to '
+  +'the NPC, the NPC will act as if every PC had talked to it. This is sometime'
+  +'s/often not desirable in multiplayer, particularly in persistent worlds.'#6
+  +#0#12#25#2#0#0'A better way is to have the variable somehow reference both t'
+  +'he NPC and the PC. If all NPCs with the same tag can be treated as one NPC '
+  +'for this purpose, this can be done by including the NPC''s tag in the varia'
+  +'ble name and setting the variable on the PC. This way different NPCs will s'
+  +'till refer to different variables (because each has its own variable name),'
+  +' each PC maintains its own list of who has been talked to (because the info'
+  +'rmation is stored on the PC), and there is still only one script needed to '
+  +'check the variable''s value.'#6#0#6#245'This is not highly complicated, and'
+  ,' once you start to understand local variables, you may find better ways of '
+  +'accomplishing your goals. This is just meant to be a primer / tutorial on h'
+  +'ow this works, with sample scripts below to get you started.'#0#10'ParentFo'
+  +'nt'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVertical'#8'TabOrder'#2#0#0#0#5'T'
+  +'Memo'#5'Memo2'#4'Left'#2#15#6'Height'#3#140#0#3'Top'#3#215#0#5'Width'#3'D'#2
+  +#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#11'courier new'#13'Lines.Strings'#1#6'O// "Text Appears When" '
+  +'script for a line that is to be spoken only once per PC.'#6#0#6#25'int Star'
+  +'tingConditional()'#6#1'{'#6'     object oPC = GetPCSpeaker();'#6':    strin'
+  +'g sVariable = "TalkTimes_" + GetTag(OBJECT_SELF);'#6#0#6'0    // Returns tr'
+  +'uth if the variable is not set.'#6'-    return GetLocalInt(oPC, sVariable) '
+  +'== 0; '#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssAutoB'
+  +'oth'#8'TabOrder'#2#1#8'WordWrap'#8#0#0#5'TMemo'#5'Memo3'#4'Left'#2#15#6'Hei'
+  +'ght'#3#140#0#3'Top'#3#149#1#5'Width'#3'D'#2#5'Color'#4#216#227#248#0#10'Fon'
+  +'t.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'
+  +#13'Lines.Strings'#1#6'K// "Actions Taken" script for a line that is to be s'
+  +'poken only once per PC.'#6#0#6#11'void main()'#6#1'{'#6'     object oPC = G'
+  +'etPCSpeaker();'#6':    string sVariable = "TalkTimes_" + GetTag(OBJECT_SELF'
+  +');'#6#0#6'@    // Set the local variable so this line will not be repeated.'
+  +#6'#    SetLocalInt(oPC, sVariable, 1);'#6#1'}'#0#10'ParentFont'#8#8'ReadOnl'
+  +'y'#9#10'ScrollBars'#7#10'ssAutoBoth'#8'TabOrder'#2#2#8'WordWrap'#8#0#0#7'TB'
+  +'itBtn'#7'BitBtn1'#4'Left'#3#18#2#6'Height'#2'A'#3'Top'#2'7'#5'Width'#2'A'#6
+  +'Cancel'#9#7'Caption'#6#5'Close'#7'Default'#9#10'Glyph.Data'#10#178#1#0#0#174
+  +#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0
+  +#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0
+  +#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0
+  +#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0
+  +'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17
+  +#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'
+  +#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17
+  +#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17
+  +#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{'
+  +'wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145
+  +#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17
+  +#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'p'
+  +'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'
+  +#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136
+  +#136#136#136#136#136#7'pwwwwwwwwwwwp'#6'Layout'#7#10'blGlyphTop'#11'ModalRes'
+  +'ult'#2#1#7'Spacing'#2#5#8'TabOrder'#2#3#0#0#11'TStaticText'#15'TextAppearsW'
+  +'hen'#4'Left'#3#4#1#6'Height'#2#16#3'Top'#3#176#0#5'Width'#3'O'#1#7'Caption'
+  +#6'.(for the line that should only be spoken once)'#8'TabOrder'#2#4#0#0#11'T'
+  +'StaticText'#19'TextAppearsWhenNote'#4'Left'#2#15#6'Height'#2#20#3'Top'#3#195
+  +#0#5'Width'#3'D'#2#7'Caption'#6'WIn the dialog tree, this line must come bef'
+  +'ore the line that is spoken the second time.'#8'TabOrder'#2#5#0#0#11'TStati'
+  +'cText'#16'TextActionsTaken'#4'Left'#3#230#0#6'Height'#2#16#3'Top'#3'n'#1#5
+  +'Width'#3'm'#1#7'Caption'#6#18'(of the same line)'#8'TabOrder'#2#6#0#0#11'TS'
+  +'taticText'#20'TextActionsTakenNote'#4'Left'#2#15#6'Height'#2#20#3'Top'#3#129
+  +#1#5'Width'#3'D'#2#7'Caption'#6'`This line must have a reply (even if just a'
+  +' blank for "[End Dialog]") in order for this to fire.'#8'TabOrder'#2#7#0#0#0
+]);

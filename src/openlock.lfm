@@ -1,0 +1,346 @@
+inherited lockopen: Tlockopen
+  Left = 447
+  Height = 515
+  Top = 149
+  Width = 370
+  ActiveControl = RadioOwner
+  BorderStyle = bsDialog
+  Caption = 'Open, close, and lock related functions'
+  ClientHeight = 515
+  ClientWidth = 370
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object BitBtn1: TBitBtn[0]
+    Left = 48
+    Height = 40
+    Top = 460
+    Width = 113
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    Spacing = 15
+    TabOrder = 10
+  end
+  object BitBtn2: TBitBtn[1]
+    Left = 201
+    Height = 40
+    Top = 460
+    Width = 113
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 11
+  end
+  object CheckKeyTag: TCheckBox[2]
+    Left = 15
+    Height = 22
+    Top = 365
+    Width = 185
+    Caption = 'Set the tag of the required key to:'
+    OnChange = ToggleOkay
+    TabOrder = 4
+  end
+  object EditKeyTag: TEdit[3]
+    Left = 215
+    Height = 23
+    Top = 364
+    Width = 140
+    Color = 16311256
+    MaxLength = 32
+    OnChange = EditChangeToggleChecked
+    TabOrder = 5
+  end
+  object CheckDCLock: TCheckBox[4]
+    Left = 15
+    Height = 22
+    Top = 395
+    Width = 140
+    Caption = 'Set the DC for locking to'
+    OnChange = ToggleOkay
+    TabOrder = 6
+  end
+  object CheckDCUnlock: TCheckBox[5]
+    Left = 15
+    Height = 22
+    Top = 420
+    Width = 152
+    Caption = 'Set the DC for unlocking to'
+    OnChange = ToggleOkay
+    TabOrder = 8
+  end
+  object SpinDCLock: TSpinEdit[6]
+    Left = 215
+    Height = 24
+    Top = 394
+    Width = 45
+    AutoSize = False
+    Color = 16311256
+    MaxValue = 250
+    OnChange = ControlChangeToggleChecked
+    TabOrder = 7
+    Value = 25
+  end
+  object SpinDCUnlock: TSpinEdit[7]
+    Left = 215
+    Height = 24
+    Top = 419
+    Width = 45
+    AutoSize = False
+    Color = 16311256
+    MaxValue = 250
+    OnChange = ControlChangeToggleChecked
+    TabOrder = 9
+    Value = 25
+  end
+  object GroupDoor: TGroupBox[8]
+    Left = 15
+    Height = 95
+    Top = 15
+    Width = 340
+    Caption = 'Affect which door or container?'
+    ClientHeight = 79
+    ClientWidth = 336
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object RadioOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 325
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object RadioSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 4
+    end
+    object RadioTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 144
+      Caption = 'A door/placeable tagged:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 2
+    end
+    object EditTagged: TEdit
+      Left = 165
+      Height = 23
+      Top = 24
+      Width = 165
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object GroupActions: TGroupBox[9]
+    Left = 15
+    Height = 125
+    Top = 120
+    Width = 340
+    Caption = 'Perform what actions (in the listed order)?'
+    ClientHeight = 110
+    ClientWidth = 336
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object unlock: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 227
+      Caption = 'Unlock it (works on containers and doors)'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object opendoor: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 30
+      Width = 169
+      Caption = 'Open it (only works on doors)'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+    end
+    object closedoor: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 55
+      Width = 170
+      Caption = 'Close it (only works on doors)'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object lock: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 80
+      Width = 218
+      Caption = 'Lock it (works on containers and doors)'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object GroupRequireKey: TRadioGroup[10]
+    Left = 15
+    Height = 100
+    Top = 255
+    Width = 170
+    AutoFill = True
+    Caption = 'Require a specific key?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 166
+    Color = 16311256
+    ItemIndex = 0
+    Items.Strings = (
+      'No change'
+      'Require a specific key'
+      'No specific key required'
+    )
+    OnClick = ToggleOkay
+    ParentColor = False
+    TabOrder = 2
+  end
+  object GroupAllowLock: TRadioGroup[11]
+    Left = 195
+    Height = 100
+    Top = 255
+    Width = 160
+    AutoFill = True
+    Caption = 'Allow players to lock it?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 156
+    Color = 16311256
+    ItemIndex = 0
+    Items.Strings = (
+      'No change'
+      'Allow locking'
+      'Players cannot lock it'
+    )
+    OnClick = ToggleOkay
+    ParentColor = False
+    TabOrder = 3
+  end
+end

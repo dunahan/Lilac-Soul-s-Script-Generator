@@ -1,0 +1,90 @@
+object normscripthelp: Tnormscripthelp
+  Left = 354
+  Height = 320
+  Top = 149
+  Width = 520
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Need help'
+  ClientHeight = 320
+  ClientWidth = 520
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.2'
+  object Memo1: TMemo
+    Left = 30
+    Height = 230
+    Top = 20
+    Width = 460
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'So you are making a script and don''t know where to put it? Perhaps you were hoping I could tell you?'
+      ''
+      'Well, in many cases, I can - but so can you! I need to ask you the question because I need to know, in the script, how to define the PC (in case something is happening to the PC).'
+      ''
+      'If you are in doubt where your script would go, take a look here:'
+      ''
+      'Whenever you want something to happen while a PC talks to an NPC (or at the end of that conversation), it obviously needs to be called from conversation. The script must be put under "Actions Taken".'
+      ''
+      'Whenever you want something to happen, and it is not necessarily obvious to the player that it will happen as a result of the player''s action, use a trigger. A trigger is basically an invisible object; think of it as an area covered with invisible, infrared light. Whenever a player character enters the trigger - or only the first time - something will happen. The player will not know about it until it happens because the trigger cannot be seen. Common uses for triggers are to have nearby NPCs start a conversation or attack the PC, or to spawn in creatures. Scripts for these things go in the OnEnter of the trigger.'
+      ''
+      'Sometimes you just need something to happen when the PC enters the area (or the module). In the area (or module) properties, there is an event called OnEnter, and the script will go there.'
+      ''
+      'You may also need for something to happen when a player uses something. For instance, when a player clicks on a portal, he is actually using it. Thus, portal scripts usually go OnUsed (sometimes, though, the only script that goes OnUsed is a script that starts a conversation with the PC, and the actual transportation of the PC then happens from the conversation, depending on the player''s choices; e.g. multiple destinations or the recall portal system in the original campaign).'
+      ''
+      'Sometimes you need something to happen when a PC destroys a placeable or kills a monster. The scripts for this will go OnDeath of that placeable/creature. Note that all creatures and some placeables already have scripts in their OnDeath. In many cases, you can just append the script you get here to the script already there.'
+      ''
+      'When inserting one script within another, note that both scripts will have a structure like:'
+      ''
+      'void main()'
+      '{'
+      '    [a bunch of script]'
+      '}'
+      ''
+      'Essentially, there can be only "void main" per script, so you take the part that corresponds to "a bunch of script" from the Script Generator (this program) and put it either just before or just after the "bunch of script" in the original script made by BioWare. Then, if the script given to you has one or more lines that look like'
+      '#include "something"'
+      'you must also copy those lines to the BioWare script (provided there is not already a copy of the line there - you will know it by its red font).'
+      ''
+      'Some #include lines do not work together, and some scripts might not be too happy with having more scripting added to them (especially if you do not do it correctly). For this and other reasons, I advise you to save the script under a different name.'
+      ''
+      'There are a few alternatives to the above. One is to simply not use the default script, but only the one provided by this program. Most default OnDeath scripts do little more than generate treasure (not 100% true, but close), so this might be the best option for you.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 360
+    Height = 35
+    Top = 270
+    Width = 113
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 20
+    TabOrder = 1
+  end
+end

@@ -1,0 +1,183 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('THorseForm','FORMDATA',[
+  'TPF0'#241#10'THorseForm'#9'HorseForm'#4'Left'#3'x'#1#6'Height'#3#164#1#3'Top'
+  +#3#150#0#5'Width'#3'Y'#1#13'ActiveControl'#7#7'RadioPC'#11'BorderIcons'#11#12
+  +'biSystemMenu'#10'biMinimize'#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#24
+  +'Mounting and dismounting'#12'ClientHeight'#3#164#1#11'ClientWidth'#3'Y'#1#5
+  +'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'F'
+  +'ont.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'Position'#7#16'poMainFo'
+  +'rmCenter'#0#242#2#0#9'TGroupBox'#10'GroupRider'#4'Left'#2#15#6'Height'#2'x'
+  +#3'Top'#2#15#5'Width'#3';'#1#7'Caption'#6#17'Who is the rider?'#12'ClientHei'
+  +'ght'#2'h'#11'ClientWidth'#3'7'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8
+  +'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#8'TabOrder'#2#0#0#12'TRadioButton'#10'RadioOwner'#4'Left'#2#5
+  +#6'Height'#2#22#3'Top'#2#0#5'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#23'The'
+  +' owner of the script'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'F'
+  +'ont.Name'#6#5'Arial'#8'OnChange'#7#16'RadioOwnerChange'#10'ParentFont'#8#8
+  +'TabOrder'#2#0#0#0#12'TRadioButton'#7'RadioPC'#4'Left'#2#5#6'Height'#2#22#3
+  +'Top'#2#25#5'Width'#2':'#7'Caption'#6#6'The PC'#7'Checked'#9#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8
+  +'TabOrder'#2#1#7'TabStop'#9#0#0#12'TRadioButton'#13'RadioTargeted'#4'Left'#2
+  +#5#6'Height'#2#22#3'Top'#2#25#5'Width'#2'z'#7'Caption'#6#21'The activation t'
+  +'arget'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'A'
+  +'rial'#10'ParentFont'#8#8'TabOrder'#2#6#7'Visible'#8#0#0#12'TRadioButton'#10
+  +'RadioSpawn'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'2'#5'Width'#3','#1#8'AutoSi'
+  +'ze'#8#7'Caption'#6#21'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#16'RadioSpawnChang'
+  +'e'#10'ParentFont'#8#8'TabOrder'#2#3#0#0#12'TRadioButton'#11'RadioTagged'#4
+  +'Left'#2#5#6'Height'#2#22#3'Top'#2'K'#5'Width'#3#133#0#7'Caption'#6#23'An ob'
+  +'ject with the tag:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Fon'
+  +'t.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'
+  +#2#4#0#0#5'TEdit'#10'EditTagged'#4'Left'#3#155#0#6'Height'#2#23#3'Top'#2'I'#5
+  +'Width'#3#150#0#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2
+  +' '#8'OnChange'#7#23'EditChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2
+  +#5#0#0#12'TRadioButton'#14'RadioActivator'#4'Left'#2#5#6'Height'#2#22#3'Top'
+  +#2#0#5'Width'#2'm'#7'Caption'#6#18'The item activator'#10'Font.Color'#7#7'cl'
+  +'Black'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'Tab'
+  +'Order'#2#2#7'Visible'#8#0#0#0#242#2#1#12'TRadioButton'#12'RadioDoMount'#4'L'
+  +'eft'#2'-'#6'Height'#2#22#3'Top'#3#150#0#5'Width'#2'9'#7'Caption'#6#5'Mount'
+  +#7'Checked'#9#8'OnChange'#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#1#7'T'
+  +'abStop'#9#0#0#242#2#2#12'TRadioButton'#13'RadioDismount'#4'Left'#2'}'#6'Hei'
+  +'ght'#2#22#3'Top'#3#150#0#5'Width'#2'N'#7'Caption'#6#8'Dismount'#8'OnChange'
+  +#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#2#0#0#242#2#3#6'TPanel'#12'Pan'
+  +'elDoMount'#4'Left'#2#15#6'Height'#3#180#0#3'Top'#3#180#0#5'Width'#3';'#1#10
+  +'BevelInner'#7#9'bvLowered'#12'ClientHeight'#3#180#0#11'ClientWidth'#3';'#1#5
+  +'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#4#0#6'TLabel'#15'Lab'
+  +'elHorseTails'#4'Left'#3#154#1#6'Height'#2#14#3'Top'#3#128#0#5'Width'#2'o'#7
+  +'Caption'#6#23'Select a type of horse:'#10'Font.Color'#7#7'clBlack'#11'Font.'
+  +'Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#7
+  +'Visible'#8#0#0#11'TRadioGroup'#14'GroupMountType'#4'Left'#2#10#6'Height'#2
+  +'#'#3'Top'#2#5#5'Width'#3''''#1#8'AutoFill'#9#28'ChildSizing.LeftRightSpacin'
+  +'g'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizonta'
+  +'l'#7#24'crsHomogenousChildResize'#27'ChildSizing.EnlargeVertical'#7#24'crsH'
+  +'omogenousChildResize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'
+  +#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7
+  +#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerLine'#2#3#12'Cl'
+  +'ientHeight'#2#31#11'ClientWidth'#3'#'#1#7'Columns'#2#3#10'Font.Color'#7#7'c'
+  +'lBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'ItemIndex'#2#0#13'I'
+  +'tems.Strings'#1#6#8'Animated'#6#7'Instant'#6#5'Cheat'#0#7'OnClick'#7#19'Gro'
+  +'upMountTypeClick'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#9'TGroupBox'#10'Grou'
+  +'pHorse'#4'Left'#2#10#6'Height'#2'i'#3'Top'#2'-'#5'Width'#3''''#1#7'Caption'
+  +#6#23'Who is the horse/mount?'#12'ClientHeight'#2'Y'#11'ClientWidth'#3'#'#1
+  +#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'
+  +#10'ParentFont'#8#8'TabOrder'#2#1#0#12'TRadioButton'#15'RadioHorseOwner'#4'L'
+  +'eft'#2#5#6'Height'#2#22#3'Top'#2#0#5'Width'#3#24#1#8'AutoSize'#8#7'Caption'
+  +#6#23'The owner of the script'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'F'
+  +'ont.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#7
+  ,'TabStop'#9#0#0#12'TRadioButton'#18'RadioHorseTargeted'#4'Left'#2#5#6'Height'
+  +#2#22#3'Top'#2#0#5'Width'#2'z'#7'Caption'#6#21'The activation target'#10'Fon'
+  +'t.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'Pare'
+  +'ntFont'#8#8'TabOrder'#2#1#7'Visible'#8#0#0#12'TRadioButton'#15'RadioHorseSp'
+  +'awn'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#22#5'Width'#3#24#1#8'AutoSize'#8#7
+  +'Caption'#6#21'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.He'
+  +'ight'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#12
+  +'TRadioButton'#16'RadioHorseTagged'#4'Left'#2#5#6'Height'#2#22#3'Top'#2','#5
+  +'Width'#3#153#0#7'Caption'#6#26'The nearest object tagged:'#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'T'
+  +'oggleOkay'#10'ParentFont'#8#8'TabOrder'#2#2#0#0#5'TEdit'#15'EditHorseTagged'
+  +#4'Left'#3#180#0#6'Height'#2#23#3'Top'#2'+'#5'Width'#2'i'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#23'EditChangeToggleChecked'#10'Pa'
+  +'rentFont'#8#8'TabOrder'#2#5#0#0#12'TRadioButton'#18'RadioHorseAssigned'#4'L'
+  +'eft'#2#5#6'Height'#2#22#3'Top'#2'B'#5'Width'#3#154#0#7'Caption'#6#26'The ri'
+  +'der''s assigned mount'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#0#0#0#11'TStaticText'
+  +#9'TextCheat'#4'Left'#2#10#6'Height'#2'P'#3'Top'#2'2'#5'Width'#3''''#1#7'Cap'
+  +'tion'#6#143'"Cheat" means no existing horse is used. Instead a horse type i'
+  +'s specified (below).'#10#10'When dismounting, the "cheat" option MUST be ch'
+  +'osen again.'#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font'
+  +'.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#11'ParentColor'#8#8
+  +'TabOrder'#2#2#7'Visible'#8#0#0#9'TComboBox'#13'BoxHorseTails'#4'Left'#2#10#6
+  +'Height'#2#31#3'Top'#3#143#0#5'Width'#3''''#1#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#8'OnChange'#7
+  +#10'ToggleOkay'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2
+  +#3#7'Visible'#8#0#0#9'TCheckBox'#18'CheckMountIsAction'#4'Left'#2#10#6'Heigh'
+  +'t'#2#22#3'Top'#3#153#0#5'Width'#3#165#0#7'Caption'#6#29'Use the rider''s ac'
+  +'tion queue?'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'
+  +#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#0#242#2#4#6'TPanel'#13'Pane'
+  +'lDismount'#4'Left'#2#15#6'Height'#3#180#0#3'Top'#3#180#0#5'Width'#3';'#1#10
+  +'BevelInner'#7#9'bvLowered'#12'ClientHeight'#3#180#0#11'ClientWidth'#3';'#1#5
+  +'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#5#7'Visible'#8#0#11
+  +'TRadioGroup'#17'GroupDismountType'#4'Left'#2#10#6'Height'#2'F'#3'Top'#2#5#5
+  +'Width'#3''''#1#8'AutoFill'#9#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildS'
+  +'izing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomog'
+  +'enousChildResize'#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildRe'
+  +'size'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'#18'ChildSizing.'
+  +'Layout'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerLine'
+  +#2#3#12'ClientHeight'#2'B'#11'ClientWidth'#3'#'#1#7'Columns'#2#3#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'ItemIndex'
+  +#2#0#13'Items.Strings'#1#6#8'Animated'#6#7'Instant'#6#5'Cheat'#6#1' '#0#7'On'
+  +'Click'#7#22'GroupDismountTypeClick'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#11
+  +'TStaticText'#17'TextDismountTypes'#4'Left'#2#10#6'Height'#2'K'#3'Top'#2'K'#5
+  +'Width'#3''''#1#7'Caption'#6#149'Both animated and instant mountings can be '
+  +'undone with animated or instant dismounts.'#10#10'Only use "cheat" dismount'
+  +'s for creatures that "cheat" mounted.'#5'Color'#7#8'clInfoBk'#10'Font.Color'
+  +#7#10'clInfoText'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFon'
+  +'t'#8#11'ParentColor'#8#8'TabOrder'#2#2#0#0#9'TCheckBox'#21'CheckDismountIsA'
+  +'ction'#4'Left'#2#10#6'Height'#2#22#3'Top'#3#153#0#5'Width'#3#165#0#7'Captio'
+  +'n'#6#29'Use the rider''s action queue?'#10'Font.Color'#7#7'clBlack'#11'Font'
+  +'.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#0#0
+  +#6'TPanel'#10'PanelStuck'#4'Left'#2'#'#6'Height'#2#15#3'Top'#2'/'#5'Width'#3
+  +#230#0#10'BevelOuter'#7#6'bvNone'#7'Caption'#6',The rider is stuck with a mo'
+  +'unted appearance'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.'
+  +'Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#7'OnClick'#7#15'LabelStuc'
+  +'kClick'#0#0#0#242#2#5#7'TBitBtn'#10'ButtonOkay'#4'Left'#2'('#6'Height'#2'#'
+  +#3'Top'#3'w'#1#5'Width'#2'n'#7'Caption'#6#5'&Okay'#7'Default'#9#10'Glyph.Dat'
+  +'a'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0
+  +#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0
+  +#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0
+  +#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255
+  +#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'
+  +#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0
+  ,#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0
+  +#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'
+  +#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0
+  +#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0
+  +#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7#15'ButtonOkayClick'#7'S'
+  +'pacing'#2#6#8'TabOrder'#2#7#0#0#242#2#6#7'TBitBtn'#12'ButtonCancel'#4'Left'
+  +#3#195#0#6'Height'#2'#'#3'Top'#3'w'#1#5'Width'#2'n'#6'Cancel'#9#7'Caption'#6
+  +#7'&Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0
+  +'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0
+  +#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191
+  +#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0
+  +#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'#136
+  +#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135#145
+  +#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0'ww'
+  +#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145#17#17
+  +#17#135'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'ww'#0#0
+  +'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17#153#17
+  +#0#136#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153#17#0#136
+  +#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153
+  +'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#2#7'Spacing'#2#6#8
+  +'TabOrder'#2#8#0#0#242#2#7#12'TRadioButton'#13'RadioDoAssign'#4'Left'#3#220#0
+  +#6'Height'#2#22#3'Top'#3#150#0#5'Width'#2'>'#7'Caption'#6#6'Assign'#8'OnChan'
+  +'ge'#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#3#0#0#242#2#8#6'TPanel'#13
+  +'PanelDoAssign'#4'Left'#2#15#6'Height'#3#180#0#3'Top'#3#180#0#5'Width'#3';'#1
+  +#10'BevelInner'#7#9'bvLowered'#12'ClientHeight'#3#180#0#11'ClientWidth'#3';'
+  +#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#6#7'Visible'#8#0
+  +#9'TGroupBox'#18'GroupAssignedHorse'#4'Left'#2#10#6'Height'#3#130#0#3'Top'#2
+  +#25#5'Width'#3''''#1#7'Caption'#6#23'Who is the horse/mount?'#12'ClientHeigh'
+  +'t'#2'r'#11'ClientWidth'#3'#'#1#10'Font.Color'#7#8'clMaroon'#11'Font.Height'
+  +#2#244#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#0#12'TRadioB'
+  +'utton'#16'RadioAssignOwner'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#1#5'Width'#3
+  +#24#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the script'#7'Checked'#9#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'P'
+  +'arentFont'#8#8'TabOrder'#2#0#7'TabStop'#9#0#0#12'TRadioButton'#19'RadioAssi'
+  +'gnTargeted'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#1#5'Width'#2'z'#7'Caption'#6
+  +#21'The activation target'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245
+  +#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#7'Visible'#8#0#0#12
+  +'TRadioButton'#16'RadioAssignSpawn'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#28#5
+  +'Width'#3#24#1#8'AutoSize'#8#7'Caption'#6#21'The most recent spawn'#10'Font.'
+  +'Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'Parent'
+  +'Font'#8#8'TabOrder'#2#4#0#0#12'TRadioButton'#17'RadioAssignTagged'#4'Left'#2
+  +#5#6'Height'#2#22#3'Top'#2'7'#5'Width'#3#153#0#7'Caption'#6#26'The nearest o'
+  +'bject tagged:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Nam'
+  +'e'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#2
+  +#0#0#5'TEdit'#16'EditAssignTagged'#4'Left'#3#180#0#6'Height'#2#23#3'Top'#2'6'
+  +#5'Width'#2'i'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#23
+  +'EditChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#5#0#0#12'TRadioButt'
+  +'on'#18'RadioAssignPaladin'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'U'#5'Width'#3
+  +#192#0#7'Caption'#6'$The rider''s (existing) paladin mount'#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8
+  +'TabOrder'#2#3#0#0#0#0#0
+]);

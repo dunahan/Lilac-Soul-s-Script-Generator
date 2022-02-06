@@ -1,0 +1,122 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tlights','FORMDATA',[
+  'TPF0'#241#7'Tlights'#6'lights'#4'Left'#3'x'#1#6'Height'#3#174#1#3'Top'#3#150
+  +#0#5'Width'#3'|'#1#13'ActiveControl'#7#11'RadioTagged'#11'BorderStyle'#7#8'b'
+  +'sDialog'#7'Caption'#6#21'Turn lights on or off'#12'ClientHeight'#3#174#1#11
+  +'ClientWidth'#3'|'#1#5'Color'#4'y'#149#223#0#11'Font.Height'#2#245#9'Font.Na'
+  +'me'#6#5'Arial'#7'OnClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#8'Pos'
+  +'ition'#7#16'poMainFormCenter'#0#242#2#0#11'TRadioGroup'#11'lightchoice'#4'L'
+  +'eft'#2#15#6'Height'#2'<'#3'Top'#3#136#0#5'Width'#3'^'#1#8'AutoFill'#9#28'Ch'
+  +'ildSizing.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'Chi'
+  +'ldSizing.EnlargeHorizontal'#7#24'crsHomogenousChildResize'#27'ChildSizing.E'
+  +'nlargeVertical'#7#24'crsHomogenousChildResize'#28'ChildSizing.ShrinkHorizon'
+  +'tal'#7#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChild'
+  +'s'#18'ChildSizing.Layout'#7#29'cclTopToBottomThenLeftToRight'#27'ChildSizin'
+  +'g.ControlsPerLine'#2#2#12'ClientHeight'#2'8'#11'ClientWidth'#3'Z'#1#5'Color'
+  +#4#216#227#248#0#12'ColumnLayout'#7#24'clVerticalThenHorizontal'#7'Columns'#2
+  +#2#9'ItemIndex'#2#2#13'Items.Strings'#1#6#20'Turn illumination on'#6#21'Turn'
+  +' illumination off'#6#19'Toggle illumination'#0#11'ParentColor'#8#8'TabOrder'
+  +#2#1#0#0#242#2#1#5'TMemo'#5'Memo2'#4'Left'#2#15#6'Height'#2'X'#3'Top'#3#205#0
+  +#5'Width'#3'^'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Fo'
+  +'nt.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6#140'Specify '
+  +'your placeable, then click "Okay - and more!" to change more lights in the '
+  +'same area, or "Okay - exit!" to make this the last light.'#6#0#6'ZPressing '
+  +'"Close" will (only) clear out what you have entered since the last "Okay" b'
+  +'utton.'#0#10'ParentFont'#8#8'ReadOnly'#9#8'TabOrder'#2#2#0#0#242#2#2#7'TBit'
+  +'Btn'#7'BitBtn1'#4'Left'#2#15#6'Height'#2'#'#3'Top'#3#129#1#5'Width'#3#145#0
+  +#7'Caption'#6#16'Okay - and more!'#7'Default'#9#7'Enabled'#8#10'Glyph.Data'
+  +#10'Z'#2#0#0'V'#2#0#0'BMV'#2#0#0#0#0#0#0'v'#0#0#0'('#0#0#0')'#0#0#0#20#0#0#0
+  +#1#0#4#0#0#0#0#0#224#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0
+  +#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128
+  +#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0
+  +#255#255#255#0'wx'#136'wwwwwwwwwwwwwwwwwp'#0#0#0'wDH'#135'wwwwwwwwwwwwwwwwp'
+  +#0#0#0'w"D'#136'wwwwwwwwwwwwwwwwp'#0#0#0#162'""H'#135'wwwwwwwwww'#8'wwwwp'#0
+  +#0#0#162'""$'#136'wwwwwwwwwp'#7#135'wwwp'#0#0#0#162'"""H'#135'wwwwwwwwp@xwww'
+  +'p'#0#0#0#162'"""$'#136'wwwwwwwww'#4#7#135'wwp'#0#0#0#162'""""H'#135'wwwwwww'
+  +#136#132'@xwwp'#0#0#0#162'"H'#162'"$'#136'wwwwwp'#135'x'#132#196#7#135'wp'#0
+  +#0#0#162'"H'#138'""H'#135'wwwp'#135#136#0'D'#204'@'#7'wp'#0#0#0#162'"H'#135
+  +#162'"D'#136'www'#7#128#0'L'#204#204#204#7'wp'#0#0#0'z"H'#135'z"$'#136'wwpp'
+  +#0'L'#204#198#204#198#7'wp'#0#0#0'z"Gww'#162'"H'#135'ww'#0'L'#204#198'dl`wwp'
+  +#0#0#0'wwwwwz"$HwpFf'#204'dpf'#7'wwp'#0#0#0'wwwwww'#162'"H'#135'p'#0#6#198'G'
+  +'t`wwwp'#0#0#0'wwwwwwz"$'#135'wwvdw'#6#7'wwwp'#0#0#0'wwwwwww'#162'$HwwvGw'#0
+  +'wwwwp'#0#0#0'wwwwwwwz"Hwwtwwwwwwwp'#0#0#0'wwwwwwww'#162'Hwwwwwwwwwwp'#0#0#0
+  +'wwwwwwwwz''wwwwwwwwwwp'#0#0#0#7'OnClick'#7#19'ButtonClickOkayMore'#7'Spacin'
+  +'g'#2#0#8'TabOrder'#2#3#0#0#242#2#3#7'TBitBtn'#7'BitBtn2'#4'Left'#3#165#0#6
+  +'Height'#2'#'#3'Top'#3#129#1#5'Width'#2'd'#7'Caption'#6#12'Okay - exit!'#7'E'
+  +'nabled'#8#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('
+  +#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0
+  +#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191
+  +#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0
+  +#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwww'
+  +'w'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0
+  +#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162
+  +'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'
+  +#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'
+  +#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwww'
+  +'z"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClic'
+  +'k'#7#19'ButtonClickOkayExit'#7'Spacing'#2#5#8'TabOrder'#2#4#0#0#242#2#4#7'T'
+  +'BitBtn'#7'BitBtn3'#4'Left'#3#19#1#6'Height'#2'#'#3'Top'#3#129#1#5'Width'#2
+  +'Z'#7'Caption'#6#5'Close'#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0
+  +#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0
+  +#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0
+  +#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0
+  +#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwww'
+  +'wwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240
+  +#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240#145#17#17
+  +#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  ,'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'
+  +#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'#240#145#1
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17
+  +#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{w'
+  +'x'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145
+  +#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0
+  +#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136#136#136
+  +#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7'OnClick'#7#16'ButtonClickClo'
+  +'se'#7'Spacing'#2#10#8'TabOrder'#2#5#0#0#242#2#5#11'TStaticText'#12'TextSame'
+  +'Area'#4'Left'#2#15#6'Height'#2'K'#3'Top'#3','#1#5'Width'#3'^'#1#11'BorderSt'
+  +'yle'#7#9'sbsSunken'#7'Caption'#6#159'NOTE: All these lights must be in the '
+  +'same area.'#10#10'If you have lights in multiple areas, you must press "Oka'
+  +'y - exit!" after finishing the lights for each area.'#5'Color'#7#8'clInfoBk'
+  +#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2#245#9'Font.Name'#6#5'Aria'
+  +'l'#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2#6#0#0#242#2#6#9'TGroupB'
+  +'ox'#11'GroupTarget'#4'Left'#2#15#6'Height'#2'v'#3'Top'#2#10#5'Width'#3'^'#1
+  +#7'Caption'#6'/Which placeable will have its lighting changed?'#12'ClientHei'
+  +'ght'#2'g'#11'ClientWidth'#3'Z'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8
+  +'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#8'TabOrder'#2#0#0#6'TLabel'#8'LabelTag'#4'Left'#2'k'#6'Height'
+  +#2#14#3'Top'#2'6'#5'Width'#2'\'#7'Caption'#6#20'object with the tag:'#10'Fon'
+  +'t.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#11'Pare'
+  +'ntColor'#8#10'ParentFont'#8#0#0#6'TLabel'#8'LabelNth'#4'Left'#2'Z'#6'Height'
+  +#2#14#3'Top'#2'6'#5'Width'#2#13#8'AutoSize'#8#7'Caption'#6#2'st'#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#11'ParentCol'
+  +'or'#8#10'ParentFont'#8#0#0#12'TRadioButton'#10'RadioOwner'#4'Left'#2#5#6'He'
+  +'ight'#2#22#3'Top'#2#0#5'Width'#3'J'#1#8'AutoSize'#8#7'Caption'#6#23'The own'
+  +'er of the script'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.'
+  +'Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#12'TRadioButton'#13'R'
+  +'adioTargeted'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#0#5'Width'#2'{'#7'Caption'
+  +#6#21'The activation target'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#7'Visible'#8#0
+  +#0#12'TRadioButton'#10'RadioSpawn'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25#5
+  +'Width'#3'J'#1#8'AutoSize'#8#7'Caption'#6#21'The most recent spawn'#10'Font.'
+  +'Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'Parent'
+  +'Font'#8#8'TabOrder'#2#2#0#0#12'TRadioButton'#11'RadioTagged'#4'Left'#2#5#6
+  +'Height'#2#22#3'Top'#2'2'#5'Width'#2'+'#7'Caption'#6#3'The'#7'Checked'#9#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8'On'
+  +'Change'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#3#7'TabStop'#9#0#0#5
+  +'TEdit'#10'EditTagged'#4'Left'#3#205#0#6'Height'#2#23#3'Top'#2'2'#5'Width'#3
+  +#130#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeTo'
+  +'ggleChecked'#10'ParentFont'#8#8'TabOrder'#2#5#0#0#9'TSpinEdit'#7'SpinNth'#4
+  +'Left'#2'2'#6'Height'#2#23#3'Top'#2'2'#5'Width'#2'#'#5'Color'#7#7'clWhite'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8'Ma'
+  +'xValue'#2'c'#8'MinValue'#2#1#8'OnChange'#7#13'SpinNthChange'#10'ParentFont'
+  +#8#8'TabOrder'#2#4#5'Value'#2#1#0#0#12'TRadioButton'#11'RadioTagAll'#4'Left'
+  +#2#5#6'Height'#2#22#3'Top'#2'K'#5'Width'#3#135#0#7'Caption'#6#25'All objects'
+  +' with the tag:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Na'
+  +'me'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#6
+  +#0#0#5'TEdit'#10'EditTagAll'#4'Left'#3#205#0#6'Height'#2#23#3'Top'#2'K'#5'Wi'
+  +'dth'#3#130#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.H'
+  +'eight'#2#246#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'Edi'
+  +'tChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#7#0#0#0#0
+]);

@@ -1,0 +1,710 @@
+inherited misc: Tmisc
+  Left = 447
+  Height = 550
+  Top = 150
+  Width = 750
+  ActiveControl = CheckMap
+  BorderStyle = bsDialog
+  Caption = 'Miscellaneous functions'
+  ClientHeight = 550
+  ClientWidth = 750
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object LabelScale: TLabel[0]
+    Left = 245
+    Height = 24
+    Top = 284
+    Width = 17
+    AutoSize = False
+    Caption = '%'
+    Color = 16311256
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object ShapeSpacer: TShape[1]
+    Left = 495
+    Height = 260
+    Top = 15
+    Width = 5
+    Brush.Color = clPurple
+    Pen.Color = clMaroon
+  end
+  object BitBtn1: TBitBtn[2]
+    Left = 149
+    Height = 41
+    Top = 499
+    Width = 113
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    Spacing = 15
+    TabOrder = 14
+  end
+  object BitBtn2: TBitBtn[3]
+    Left = 459
+    Height = 41
+    Top = 499
+    Width = 113
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 15
+  end
+  object CheckMap: TCheckBox[4]
+    Left = 15
+    Height = 22
+    Top = 15
+    Width = 276
+    Caption = 'Reveal/hide the map of an area to/from the PC'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object CheckWeather: TCheckBox[5]
+    Left = 15
+    Height = 22
+    Top = 145
+    Width = 354
+    Caption = 'Change the weather in an area (only outside areas can be affected)'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+  end
+  object CheckFacing: TCheckBox[6]
+    Left = 15
+    Height = 22
+    Top = 315
+    Width = 173
+    Caption = 'Make someone face something'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 11
+  end
+  object CheckStrip: TCheckBox[7]
+    Left = 505
+    Height = 22
+    Top = 15
+    Width = 148
+    Caption = 'Strip the PC of belongings'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 6
+  end
+  object CheckScale: TCheckBox[8]
+    Left = 15
+    Height = 22
+    Top = 285
+    Width = 160
+    Caption = 'Set the module''s XP scale to'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 9
+  end
+  object SpinScale: TSpinEdit[9]
+    Left = 200
+    Height = 24
+    Top = 284
+    Width = 45
+    AutoSize = False
+    Color = 16311256
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    MaxValue = 200
+    ParentFont = False
+    TabOrder = 10
+    Value = 10
+  end
+  object GroupWhichMap: TGroupBox[10]
+    Left = 35
+    Height = 95
+    Top = 40
+    Width = 290
+    Caption = 'Which area?'
+    ClientHeight = 80
+    ClientWidth = 286
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 1
+    object RadioMapOwner: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 0
+      Width = 272
+      AutoSize = False
+      Caption = 'The script owner'
+      TabOrder = 2
+    end
+    object RadioMapTagged: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 25
+      Width = 106
+      Caption = 'The area tagged:'
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object RadioMapPC: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 50
+      Width = 129
+      Caption = 'The PC''s current area'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object EditMapTagged: TEdit
+      Left = 130
+      Height = 23
+      Top = 24
+      Width = 150
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object GroupShowMap: TRadioGroup[11]
+    Left = 335
+    Height = 88
+    Top = 47
+    Width = 150
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 84
+    ClientWidth = 146
+    Color = 16311256
+    Enabled = False
+    ItemIndex = 0
+    Items.Strings = (
+      'Explore the area'
+      'Blank the map'
+    )
+    ParentColor = False
+    TabOrder = 2
+  end
+  object GroupAreaWeather: TGroupBox[12]
+    Left = 35
+    Height = 105
+    Top = 170
+    Width = 290
+    Caption = 'Which area?'
+    ClientHeight = 90
+    ClientWidth = 286
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 4
+    object RadioWeatherOwner: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 0
+      Width = 272
+      AutoSize = False
+      Caption = 'The script owner'
+      TabOrder = 2
+    end
+    object RadioWeatherTagged: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 23
+      Width = 106
+      Caption = 'The area tagged:'
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object RadioWeatherPC: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 46
+      Width = 129
+      Caption = 'The PC''s current area'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object EditWeatherTagged: TEdit
+      Left = 130
+      Height = 23
+      Top = 22
+      Width = 150
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 3
+    end
+    object RadioWeatherModule: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 68
+      Width = 107
+      Caption = 'All exterior areas'
+      TabOrder = 4
+    end
+  end
+  object GroupWhichWeather: TGroupBox[13]
+    Left = 335
+    Height = 105
+    Top = 170
+    Width = 150
+    Caption = 'Change the weather to'
+    ClientHeight = 90
+    ClientWidth = 146
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 5
+    object BoxWeather: TComboBox
+      Left = 7
+      Height = 31
+      Top = 27
+      Width = 135
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Default/random'
+        'Clear'
+        'Rain'
+        'Snow'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'Default/random'
+    end
+  end
+  object GroupSubjectFacing: TGroupBox[14]
+    Left = 35
+    Height = 145
+    Top = 340
+    Width = 340
+    Caption = 'Who will turn?'
+    ClientHeight = 130
+    ClientWidth = 336
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 12
+    object RadioFacerOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 325
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerOwnerChange
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioFacerPC: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 58
+      Caption = 'The PC'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerPCChange
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioFacerTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerTargetedChange
+      ParentFont = False
+      TabOrder = 5
+      Visible = False
+    end
+    object RadioFacerSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerSpawnChange
+      ParentFont = False
+      TabOrder = 7
+    end
+    object RadioFacerTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 75
+      Width = 138
+      Caption = 'A creature with the tag:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EditFacerTagged: TEdit
+      Left = 160
+      Height = 23
+      Top = 73
+      Width = 170
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 6
+    end
+    object RadioFacerActivator: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 109
+      Caption = 'The item activator'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerActivatorChange
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object RadioFacerActor: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 100
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioFacerActorChange
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object GroupTargetFacing: TGroupBox[15]
+    Left = 395
+    Height = 145
+    Top = 340
+    Width = 340
+    Caption = 'Turn to face what?'
+    ClientHeight = 130
+    ClientWidth = 336
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 13
+    object RadioTowardOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 325
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Enabled = False
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object RadioTowardPC: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 58
+      Caption = 'The PC'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+      TabStop = True
+    end
+    object RadioTowardTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 25
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 6
+      Visible = False
+    end
+    object RadioTowardSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 8
+    end
+    object RadioTowardTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 75
+      Width = 175
+      Caption = 'The closest object with the tag:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EditTowardTagged: TEdit
+      Left = 200
+      Height = 23
+      Top = 73
+      Width = 130
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 7
+    end
+    object RadioTowardActivator: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 0
+      Width = 109
+      Caption = 'The item activator'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object RadioTowardActor: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 100
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 3
+    end
+    object RadioTowardTargetLoc: TRadioButton
+      Left = 150
+      Height = 22
+      Top = 25
+      Width = 162
+      Caption = 'The activation target location'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 5
+      Visible = False
+    end
+  end
+  object GroupWhatStrip: TCheckGroup[16]
+    Left = 525
+    Height = 88
+    Top = 47
+    Width = 210
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    Color = 16311256
+    Enabled = False
+    Items.Strings = (
+      'Remove main inventory'
+      'Remove equipped items'
+      'Remove gold'
+    )
+    OnItemClick = GroupWhatStripItemClick
+    ParentColor = False
+    TabOrder = 7
+    Data = {
+      03000000020202
+    }
+  end
+  object GroupWhereStrip: TGroupBox[17]
+    Left = 525
+    Height = 105
+    Top = 145
+    Width = 210
+    ClientHeight = 101
+    ClientWidth = 206
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 8
+    object RadioStripDestroy: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 5
+      Width = 150
+      Caption = 'Simply destroy belongings'
+      TabOrder = 0
+    end
+    object RadioStripChest: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 35
+      Width = 172
+      Caption = 'Place in chest/box/etc. tagged:'
+      Checked = True
+      OnChange = ToggleOkay
+      TabOrder = 1
+      TabStop = True
+    end
+    object EditStripChest: TEdit
+      Left = 30
+      Height = 23
+      Top = 60
+      Width = 170
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object TextDelayedTargeting: TStaticText[18]
+    Left = 395
+    Height = 35
+    Top = 300
+    Width = 340
+    Caption = 'Note that a targeted creature may move from the targeted location during the delay.'
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 16
+    Visible = False
+  end
+end

@@ -1,0 +1,158 @@
+inherited entryupdate: Tentryupdate
+  Left = 376
+  Height = 349
+  Top = 154
+  Width = 306
+  ActiveControl = journaltag
+  BorderStyle = bsDialog
+  Caption = 'Add journal entry'
+  ClientHeight = 349
+  ClientWidth = 306
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  object Label1: TLabel[0]
+    Left = 25
+    Height = 16
+    Top = 10
+    Width = 230
+    Caption = 'Tag of the journal entry (case sensitive):'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel[1]
+    Left = 25
+    Height = 15
+    Top = 75
+    Width = 55
+    Caption = 'ID of entry'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object journaltag: TEdit[2]
+    Left = 25
+    Height = 23
+    Top = 32
+    Width = 256
+    Color = 16311256
+    MaxLength = 32
+    OnChange = ToggleOkay
+    TabOrder = 0
+  end
+  object SpinEdit1: TSpinEdit[3]
+    Left = 96
+    Height = 24
+    Top = 70
+    Width = 65
+    Color = 16311256
+    Font.Height = -12
+    Font.Name = 'Arial'
+    MaxValue = 999999
+    MinValue = 1
+    ParentFont = False
+    TabOrder = 1
+    Value = 1
+  end
+  object CheckBox1: TCheckBox[4]
+    Left = 25
+    Height = 22
+    Top = 110
+    Width = 212
+    Caption = 'Allow override of higher journal entries'
+    TabOrder = 2
+  end
+  object RadioGroup1: TRadioGroup[5]
+    Left = 25
+    Height = 100
+    Top = 165
+    Width = 256
+    AutoFill = True
+    Caption = 'Update journals for'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 252
+    Color = 16311256
+    ItemIndex = 1
+    Items.Strings = (
+      'The PC'
+      'The party of the PC'
+      'All PCs in the game'
+    )
+    ParentColor = False
+    TabOrder = 4
+  end
+  object BitBtn1: TBitBtn[6]
+    Left = 40
+    Height = 41
+    Top = 290
+    Width = 113
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    Spacing = 15
+    TabOrder = 5
+  end
+  object BitBtn2: TBitBtn[7]
+    Left = 166
+    Height = 41
+    Top = 290
+    Width = 113
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 6
+  end
+  object TextNotRecommendOverride: TStaticText[8]
+    Left = 45
+    Height = 20
+    Top = 130
+    Width = 180
+    Caption = '(not recommended)'
+    TabOrder = 3
+  end
+end

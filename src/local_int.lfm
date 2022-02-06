@@ -1,0 +1,341 @@
+inherited local: Tlocal
+  Left = 447
+  Height = 340
+  Top = 239
+  Width = 440
+  ActiveControl = RadioGroupParty.RadioButton0
+  BorderStyle = bsDialog
+  Caption = 'Check for local variable'
+  ClientHeight = 340
+  ClientWidth = 440
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  object LabelSelectType: TLabel[0]
+    Left = 15
+    Height = 20
+    Top = 20
+    Width = 219
+    Caption = 'Select the type of local variable:'
+    Font.Color = clMaroon
+    Font.Height = -15
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object localchoice: TComboBox[1]
+    Left = 15
+    Height = 31
+    Top = 50
+    Width = 270
+    Color = 16311256
+    Font.Height = -10
+    Font.Name = 'Arial'
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Integer (number without decimals)'
+      'Float (number with decimals)'
+      'String (text)'
+    )
+    OnChange = localchoiceChange
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 4
+    Text = 'Integer (number without decimals)'
+  end
+  object BitBtn7: TBitBtn[2]
+    Left = 325
+    Height = 40
+    Top = 285
+    Width = 100
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object PanelInput: TPanel[3]
+    Left = 15
+    Height = 220
+    Top = 105
+    Width = 270
+    ClientHeight = 220
+    ClientWidth = 270
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 0
+    object LabelCalled: TLabel
+      Left = 10
+      Height = 15
+      Top = 8
+      Width = 131
+      Caption = 'The local integer called:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object GroupCompares: TRadioGroup
+      Left = 10
+      Height = 70
+      Top = 60
+      Width = 250
+      AutoFill = True
+      Caption = 'must be'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 54
+      ClientWidth = 246
+      Columns = 2
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+      object RadioEqual: TRadioButton
+        Left = 6
+        Height = 21
+        Top = 6
+        Width = 107
+        Caption = 'exactly'
+        Checked = True
+        State = cbChecked
+        TabOrder = 0
+      end
+      object RadioNotEqual: TRadioButton
+        Left = 113
+        Height = 21
+        Top = 6
+        Width = 127
+        Caption = 'different than'
+        TabOrder = 1
+        TabStop = False
+      end
+      object RadioLess: TRadioButton
+        Left = 6
+        Height = 21
+        Top = 27
+        Width = 107
+        Caption = 'less than'
+        TabOrder = 2
+        TabStop = False
+      end
+      object RadioGreater: TRadioButton
+        Left = 113
+        Height = 21
+        Top = 27
+        Width = 127
+        Caption = 'greater than'
+        TabOrder = 3
+        TabStop = False
+      end
+    end
+    object EditVarName: TEdit
+      Left = 10
+      Height = 26
+      Top = 28
+      Width = 250
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxLength = 80
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EditVarValue: TEdit
+      Left = 10
+      Height = 24
+      Top = 135
+      Width = 250
+      MaxLength = 80
+      OnChange = VarValueChange
+      TabOrder = 3
+      Text = '0'
+    end
+    object ButtonOkMore: TBitBtn
+      Left = 10
+      Height = 35
+      Top = 175
+      Width = 120
+      Caption = 'Ok - more!'
+      Default = True
+      Enabled = False
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Glyph.Data = {
+        56020000424D5602000000000000760000002800000029000000140000000100
+        040000000000E001000000000000000000001000000000000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+        7777777777777777777777777777700000007744488777777777777777777777
+        7777777777777000000077224488777777777777777777777777777777777000
+        0000A22222488777777777777777777777087777777770000000A22222248877
+        777777777777777770078777777770000000A222222248877777777777777777
+        70407877777770000000A2222222248877777777777777777704078777777000
+        0000A22222222248877777777777777788844078777770000000A22248A22224
+        88777777777770877884C407877770000000A222488A22224887777777708788
+        0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+        00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+        2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+        64706607777770000000777777777777A2224887700006C64774607777777000
+        00007777777777777A2224877777766477060777777770000000777777777777
+        77A224487777764777007777777770000000777777777777777A224877777477
+        777777777777700000007777777777777777A248777777777777777777777000
+        000077777777777777777A277777777777777777777770000000
+      }
+      OnClick = ButtonClickOkayMore
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ButtonOkExit: TBitBtn
+      Left = 140
+      Height = 35
+      Top = 175
+      Width = 120
+      Caption = 'Ok - EXIT!'
+      Enabled = False
+      Glyph.Data = {
+        66010000424D6601000000000000760000002800000014000000140000000100
+        040000000000F000000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+        777777770000774448877777777777770000772244887777777777770000A222
+        22488777777777770000A22222248877777777770000A2222222488777777777
+        0000A22222222488777777770000A22222222248877777770000A22248A22224
+        887777770000A222488A2222488777770000A2224887A2224488777700007A22
+        48877A222488777700007A22477777A222488777000077777777777A22244877
+        0000777777777777A222488700007777777777777A2224870000777777777777
+        77A224480000777777777777777A224800007777777777777777A24800007777
+        7777777777777A270000
+      }
+      ModalResult = 1
+      OnClick = ButtonClickOkayExit
+      TabOrder = 5
+    end
+    object CBoxCaseSensitive: TCheckBox
+      Left = 138
+      Height = 22
+      Top = 69
+      Width = 113
+      Caption = 'Case sensitive?'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object RadioGroupParty: TRadioGroup[4]
+    Left = 295
+    Height = 75
+    Top = 20
+    Width = 130
+    AutoFill = True
+    Caption = 'Check variables on:'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 59
+    ClientWidth = 126
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ItemIndex = 0
+    Items.Strings = (
+      'the PC only.'
+      'the PC''s party.'
+    )
+    OnClick = RadioGroupPartyClick
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 2
+  end
+  object PanelPartyInfo: TPanel[5]
+    Left = 295
+    Height = 125
+    Top = 105
+    Width = 135
+    BevelInner = bvLowered
+    ClientHeight = 125
+    ClientWidth = 135
+    Color = clInfoBk
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+    object TextPartyInfo: TStaticText
+      Left = 5
+      Height = 65
+      Top = 5
+      Width = 125
+      Caption = 'If checking the PC''s party, be sure to click the "Party Info" button!'
+      TabOrder = 0
+    end
+    object BitBtn8: TBitBtn
+      Left = 25
+      Height = 40
+      Top = 75
+      Width = 100
+      Caption = 'Party Info'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+        FFFFFF606060606060606060DF60DFBF3F7F9090909090906060606060606060
+        60606060606060606060FFFFFFFFFFFF6060606060606060606060607F007FFF
+        BF3F3F003F808080606060606060606060606060606060606060FFFFFFFFFFFF
+        606060606060606060606060DF60DFFFFF00BF3F7F606060B0B0B06060606060
+        60606060606060606060FFFFFF505050B0B0B0B0B0B0B0B0B0B0B0B0DF60DFFF
+        FF00FFBF3F3F003F808080B0B0B0B0B0B0B0B0B0B0B0B0B0B0B0FFFFFF606060
+        6060606060606060606060609F209FFFFF00FFFF00BF3F7F2020206060606060
+        606060606060606060600000000000000000000000000000000000007F007FFF
+        FF00FFFF00FFBF3F3F003F0000000000000000000000000000007F007FFF3FBF
+        FF7F7FFF7F7FFF7F7FFF7F7FFF3FBFFF007FFF007FFF007FFF00BFFF7F7FFF7F
+        7FFF7F7FFF7F7FBF00BFFFFFFF3F003FFF7F7FFFFF00FFFF00FFFF00FF7F7FFF
+        0000FF0000FF0000FF003FFFBF3FFFFF00FFFF00EF6FAF606060FFFFFFFFFFFF
+        FFFFFFBF3F7FFFBF3FFFFF00FF7F7FFF0000FF0000FF0000FF0000FF3F7FFFFF
+        00BF3F7F606060606060FFFFFFFFFFFFFFFFFFFFFFFF3F003FFF7F7FFF7F7FFF
+        0000FF0000FF0000FF0000FF003FBF3F7F808080606060606060FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFBF00BFFF003FFF0000FF0000FF0000FF3F7FBF3F
+        7F404040606060606060FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F007FFF
+        BF3FFF007FFF0000FF3F7FFFFF00FFBF3F5F205F808080606060FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFF7F007FFFFF00FFFF00BF00BFFFBF3FFFFF00FFFF
+        00BF3F7F404040606060FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F007FFF
+        FF00BF3F7FFFFFFF3F003FFF7F7FFFFF00FFBF3F5F205F808080FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFF7F007FBF3F7FFFFFFFFFFFFFFFFFFFFFFFFFBF3F
+        7FFFBF3FBF3F7F404040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F003FFF3FBF5F205F
+      }
+      OnClick = Button8Click
+      TabOrder = 1
+    end
+  end
+end

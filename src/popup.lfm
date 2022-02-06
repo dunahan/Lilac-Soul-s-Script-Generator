@@ -1,0 +1,69 @@
+object popup_ev: Tpopup_ev
+  Left = 447
+  Height = 205
+  Top = 343
+  Width = 375
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'You are ready, then!'
+  ClientHeight = 205
+  ClientWidth = 375
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 15
+    Height = 120
+    Top = 16
+    Width = 345
+    Color = clInfoBk
+    Lines.Strings = (
+      'You are now ready to create the actual script!'
+      ''
+      'If you supplied any conditions before this, the rest of the script will run only for players who meet those conditions.'
+      ''
+      'Click "close" to start the scripting of the events or actions that you want to happen.'
+    )
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object CheckBox1: TCheckBox
+    Left = 15
+    Height = 22
+    Top = 163
+    Width = 135
+    Caption = 'Never show this again!'
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn
+    Left = 247
+    Height = 33
+    Top = 157
+    Width = 113
+    Cancel = True
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    OnClick = NeverAgain
+    Spacing = 20
+    TabOrder = 0
+  end
+end

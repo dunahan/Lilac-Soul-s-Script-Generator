@@ -1,0 +1,284 @@
+object partydoc: Tpartydoc
+  Left = 532
+  Height = 550
+  Top = 153
+  Width = 650
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Local party variables'
+  ClientHeight = 550
+  ClientWidth = 650
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Label1: TLabel
+    Left = 15
+    Height = 26
+    Top = 350
+    Width = 400
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'The include file:'
+    Font.Color = clMaroon
+    Font.Height = -19
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelInfoFromLS: TLabel
+    Left = 15
+    Height = 26
+    Top = 145
+    Width = 620
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Information from Lilac Soul:'
+    Font.Color = clMaroon
+    Font.Height = -19
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 15
+    Height = 170
+    Top = 170
+    Width = 620
+    Color = clInfoBk
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'If you wish to check for party local variables, I suggest you use the include file below. Simply copy it and save it in your script editor - I would give it the name ls_party. If you try to compile it, the Toolset will give you a "no ''void main()'' function in the script" error. Just say you do not want to compile it as a conditional script, and ignore the error.'
+      ''
+      'Then, whenever you want to use one of the functions in a script, that script must start with this line:'
+      ''
+      '#include "ls_party"'
+      ''
+      'Of course, if you do not call it ls_party, you will have to replace that. (If you do call it ls_party, then the Script Generator can handle this part for you. However, the Script Generator cannot compile such scripts for you.)'
+      ''
+      'Then, you can use the following commands:'
+      ''
+      'SetPartyInt()'
+      'SetPartyFloat()'
+      'SetPartyString()'
+      'SetPartyLocation()'
+      'SetPartyObject()'
+      ''
+      'and'
+      ''
+      'GetPartyInt()'
+      'GetPartyFloat()'
+      'GetPartyString()'
+      'GetPartyLocation()'
+      'GetPartyObject()'
+      ''
+      'The paramaters will be the same as for their Set/GetLocal* counterparts, i.e.:'
+      ''
+      'SetPartyInt(oPC, "hello", 1);'
+      ''
+      'will call SetLocalInt(oPC, "hello", 1) on all partymembers, etc.'
+      ''
+      'Note that, with int and float, if different PCs have different values stored on them, the highest of these values will be returned. With string, object, and location, the first one found will always be returned. If you use SetParty* all the time, the same variable will always be stored on everybody though (if the party composition does not change), so that problem can be avoided.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+    WantReturns = False
+  end
+  object Memo2: TMemo
+    Left = 15
+    Height = 165
+    Top = 375
+    Width = 450
+    Color = 16311256
+    Font.Height = -11
+    Font.Name = 'courier new'
+    Lines.Strings = (
+      '//include file by Lilac Soul, aka Carsten Hjorthoj'
+      ''
+      'void SetPartyInt(object oPC, string sName, int n)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  SetLocalInt(oMember, sName, n);'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      '}'
+      ''
+      'int GetPartyInt(object oPC, string sName)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'int n=0;'
+      'int nn;'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  nn=GetLocalInt(oMember, sName);'
+      '  if (nn>n) n=nn;'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      ''
+      'return n;'
+      '}'
+      ''
+      'void SetPartyFloat(object oPC, string sName, float f)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  SetLocalFloat(oMember, sName, f);'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      '}'
+      ''
+      'float GetPartyFloat(object oPC, string sName)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'float f=0.0f;'
+      'float ff;'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  ff=GetLocalFloat(oMember, sName);'
+      '  if (ff>f) f=ff;'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      ''
+      'return f;'
+      '}'
+      ''
+      'void SetPartyString(object oPC, string sName, string s)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  SetLocalString(oMember, sName, s);'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      '}'
+      ''
+      'string GetPartyString(object oPC, string sName)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      'string s="";'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  s=GetLocalString(oMember, sName);'
+      '  if (s != "") return s;'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      ''
+      'return s;'
+      '}'
+      ''
+      'void SetPartyObject(object oPC, string sName, object o)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  SetLocalObject(oMember, sName, o);'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      '}'
+      ''
+      'object GetPartyObject(object oPC, string sName)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      'object o=OBJECT_INVALID;'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  o=GetLocalObject(oMember, sName);'
+      '  if (o != OBJECT_INVALID) return o;'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      ''
+      'return o;'
+      '}'
+      ''
+      'void SetPartyLocation(object oPC, string sName, location l)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  SetLocalLocation(oMember, sName, l);'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      '}'
+      ''
+      'location GetPartyLocation(object oPC, string sName)'
+      '{'
+      'object oMember=GetFirstFactionMember(oPC, TRUE);'
+      'location l;'
+      ''
+      'while (GetIsObjectValid(oMember))'
+      '  {'
+      '  //testing: if the area of l isn''t valid, it isn''t a'
+      '  //valid location'
+      '  l=GetLocalLocation(oMember, sName);'
+      '  if (GetAreaFromLocation(l) != OBJECT_INVALID) return l;'
+      '  oMember=GetNextFactionMember(oPC, TRUE);'
+      '  }'
+      ''
+      'return l;'
+      '}'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object BitBtn1: TBitBtn
+    Left = 515
+    Height = 35
+    Top = 505
+    Width = 120
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 20
+    TabOrder = 2
+  end
+  object TextIntro: TStaticText
+    Left = 15
+    Height = 120
+    Top = 15
+    Width = 620
+    Caption = 'Sometimes, you might want to check for variables on an entire party rather than a single PC. BioWare had supplied a function for checking integers in this way, but it is bugged and there is no default direct support for checking other types of variables party-wide. For those who want to do this sort of checking, the following information (slightly edited for better accuracy) and script from Lilac Soul may be useful. Just be aware that party variables are never negative.'#10#10'In brief: copy the below include file into a script named "ls_party".'
+    Color = 13625039
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 3
+  end
+end
