@@ -1,0 +1,253 @@
+inherited merchant: Tmerchant
+  Left = 447
+  Height = 520
+  Top = 149
+  Width = 365
+  ActiveControl = RadioTagged
+  BorderStyle = bsDialog
+  Caption = 'Start merchant for PC'
+  ClientHeight = 520
+  ClientWidth = 365
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object Label2: TLabel[0]
+    Left = 81
+    Height = 15
+    Top = 120
+    Width = 129
+    Alignment = taRightJustify
+    Caption = 'Additional sell mark up:'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel[1]
+    Left = 66
+    Height = 15
+    Top = 150
+    Width = 144
+    Alignment = taRightJustify
+    Caption = 'Additional buy mark down:'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel[2]
+    Left = 275
+    Height = 15
+    Top = 150
+    Width = 12
+    Caption = '%'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel[3]
+    Left = 275
+    Height = 15
+    Top = 120
+    Width = 12
+    Caption = '%'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object markup: TSpinEdit[4]
+    Left = 220
+    Height = 24
+    Top = 115
+    Width = 50
+    Color = 16311256
+    Font.Height = -12
+    Font.Name = 'Arial'
+    MinValue = -100
+    ParentFont = False
+    TabOrder = 1
+  end
+  object markdown: TSpinEdit[5]
+    Left = 220
+    Height = 24
+    Top = 145
+    Width = 50
+    Color = 16311256
+    Font.Height = -12
+    Font.Name = 'Arial'
+    MinValue = -100
+    ParentFont = False
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn[6]
+    Left = 56
+    Height = 40
+    Top = 295
+    Width = 113
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    Spacing = 15
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn[7]
+    Left = 192
+    Height = 40
+    Top = 295
+    Width = 113
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 5
+  end
+  object GroupStore: TGroupBox[8]
+    Left = 15
+    Height = 85
+    Top = 15
+    Width = 335
+    Caption = 'Identify the store to open:'
+    ClientHeight = 68
+    ClientWidth = 331
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object RadioClosest: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 5
+      Width = 317
+      AutoSize = False
+      Caption = 'Closest to the script owner'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+    end
+    object RadioTagged: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 35
+      Width = 58
+      Caption = 'By tag:'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object EditTagged: TEdit
+      Left = 75
+      Height = 23
+      Top = 34
+      Width = 250
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object MemoStandardScripts: TMemo[9]
+    Left = 15
+    Height = 150
+    Top = 355
+    Width = 335
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'NOTE:'
+      'BioWare provided a few standard scripts that are often sufficient for opening stores when appraise is being used. If put under "Actions Taken" in a conversation, they will open for the PC speaker the store closest to the NPC speaker (which works very well when there is only one store object in the area).'
+      ''
+      'x1_openstore -- opens the store with an appraise check.'
+      'x1_openstorefav -- uses the favorable appraise check.'
+      'x0_d1_stor_open2 -- prices shifted 10% in the PC''s favor.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object GroupAppraise: TRadioGroup[10]
+    Left = 15
+    Height = 95
+    Top = 180
+    Width = 335
+    AutoFill = True
+    Caption = 'Use the appraise skill?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 80
+    ClientWidth = 331
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ItemIndex = 1
+    Items.Strings = (
+      'No appraise check'
+      'Standard appraise check'
+      'Favorable appraise check (NPC modified roll is 0)'
+    )
+    ParentFont = False
+    ParentColor = False
+    TabOrder = 3
+  end
+end

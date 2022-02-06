@@ -1,0 +1,207 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tcastspell','FORMDATA',[
+  'TPF0'#241#10'Tcastspell'#9'castspell'#4'Left'#3#160#1#6'Height'#3#174#1#3'To'
+  +'p'#3#162#0#5'Width'#3#208#2#13'ActiveControl'#7#16'RadioCasterOwner'#11'Bor'
+  +'derStyle'#7#8'bsDialog'#7'Caption'#6#10'Cast spell'#12'ClientHeight'#3#174#1
+  +#11'ClientWidth'#3#208#2#5'Color'#4'y'#149#223#0#11'Font.Height'#2#246#9'Fon'
+  +'t.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'Position'#7#16'poMainForm'
+  +'Center'#0#242#2#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#254#1#6'Height'#2'('#3'To'
+  +'p'#3','#1#5'Width'#2'r'#7'Caption'#6#4'Okay'#7'Default'#9#7'Enabled'#8#10'G'
+  +'lyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0
+  +#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0
+  +#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  +#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136
+  +'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'w'
+  +'www'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136
+  +'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'
+  +#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162
+  +'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwww'
+  +'w'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7#12'Button1C'
+  +'lick'#7'Spacing'#2#15#8'TabOrder'#2#3#0#0#242#2#1#7'TBitBtn'#7'BitBtn2'#4'L'
+  +'eft'#3#254#1#6'Height'#2'('#3'Top'#3'w'#1#5'Width'#2'r'#6'Cancel'#9#7'Capti'
+  +'on'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0
+  +#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16
+  +#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0
+  +#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255
+  +#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'
+  +#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135
+  +#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0
+  +'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145
+  +#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'w'
+  +'w'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17
+  +#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153
+  +#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0
+  +#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#2#7'Spac'
+  +'ing'#2#15#8'TabOrder'#2#4#0#0#242#2#2#9'TGroupBox'#11'GroupCaster'#4'Left'#2
+  +#8#6'Height'#3#229#0#3'Top'#2#8#5'Width'#3#144#1#7'Caption'#6'>Who is castin'
+  +'g the spell (creatures and placeables are valid):'#12'ClientHeight'#3#214#0
+  +#11'ClientWidth'#3#140#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroo'
+  +'n'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'Paren'
+  +'tFont'#8#8'TabOrder'#2#0#0#6'TLabel'#15'LabelCasterName'#4'Left'#2'D'#6'Hei'
+  +'ght'#2#14#3'Top'#2'i'#5'Width'#2'9'#7'Caption'#6#10'and named:'#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentCol'
+  +'or'#8#10'ParentFont'#8#0#0#6'TLabel'#20'LabelNearestExplain1'#4'Left'#2'Z'#6
+  +'Height'#2#14#3'Top'#3#155#0#5'Width'#3#252#0#7'Caption'#6'5(The "nearest" o'
+  +'ption requires the creature be in the'#10'Font.Color'#7#7'clBlack'#11'Font.'
+  +'Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0
+  +#6'TLabel'#20'LabelNearestExplain2'#4'Left'#2'Z'#6'Height'#2#14#3'Top'#3#170
+  +#0#5'Width'#3#224#0#7'Caption'#6'.same area, but does not require a unique t'
+  +'ag.)'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Ar'
+  +'ial'#11'ParentColor'#8#10'ParentFont'#8#0#0#12'TRadioButton'#16'RadioCaster'
+  +'Owner'#4'Left'#2#12#6'Height'#2#22#3'Top'#2#0#5'Width'#3'r'#1#8'AutoSize'#8
+  +#7'Caption'#6#23'The owner of the script'#7'Checked'#9#10'Font.Color'#7#7'cl'
+  +'Black'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'Tab'
+  +'Order'#2#0#7'TabStop'#9#0#0#12'TRadioButton'#13'RadioCasterPC'#4'Left'#2#12
+  +#6'Height'#2#22#3'Top'#2#25#5'Width'#2':'#7'Caption'#6#6'The PC'#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFon'
+  +'t'#8#8'TabOrder'#2#1#0#0#12'TRadioButton'#19'RadioCasterTargeted'#4'Left'#2
+  +#12#6'Height'#2#22#3'Top'#2#25#5'Width'#2'z'#7'Caption'#6#21'The activation '
+  +'target'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visible'#8#0#0#12'TRadioButton'#17
+  +'RadioCasterTagged'#4'Left'#2#12#6'Height'#2#22#3'Top'#2'K'#5'Width'#2'm'#7
+  +'Caption'#6#17'An object tagged:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'
+  +#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8
+  +#8'TabOrder'#2#3#0#0#5'TEdit'#16'EditCasterTagged'#4'Left'#3#142#0#6'Height'
+  +#2#23#3'Top'#2'H'#5'Width'#3#240#0#11'Font.Height'#2#245#9'Font.Name'#6#5'Ar'
+  ,'ial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeToggleChecked'#10'ParentF'
+  +'ont'#8#8'TabOrder'#2#6#0#0#12'TRadioButton'#16'RadioCasterSpawn'#4'Left'#2
+  +#12#6'Height'#2#22#3'Top'#2'2'#5'Width'#3'r'#1#8'AutoSize'#8#7'Caption'#6#21
+  +'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#4#7'Visible'#8#0#0#5'T'
+  +'Edit'#14'EditCasterName'#4'Left'#3#142#0#6'Height'#2#23#3'Top'#2'f'#5'Width'
+  +#3#240#0#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2'P'#10
+  +'ParentFont'#8#8'TabOrder'#2#7#0#0#9'TCheckBox'#18'CheckCasterNearest'#4'Lef'
+  +'t'#2'D'#6'Height'#2#22#3'Top'#3#135#0#5'Width'#3#210#0#7'Caption'#6'''Use t'
+  +'he nearest creature with this tag.'#10'Font.Color'#7#7'clBlack'#11'Font.Hei'
+  +'ght'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#8#0#0#12
+  +'TRadioButton'#20'RadioCasterActivator'#4'Left'#2#12#6'Height'#2#22#3'Top'#2
+  +#0#5'Width'#2'm'#7'Caption'#6#18'The item activator'#10'Font.Color'#7#7'clBl'
+  +'ack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOr'
+  +'der'#2#2#7'Visible'#8#0#0#0#242#2#3#9'TGroupBox'#10'GroupSpell'#4'Left'#2#8
+  +#6'Height'#3#170#0#3'Top'#3#245#0#5'Width'#3#144#1#7'Caption'#6#17'Cast whic'
+  +'h spell:'#12'ClientHeight'#3#155#0#11'ClientWidth'#3#140#1#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6
+  +#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#1#0#9'TComboBox'#6
+  +'Spells'#4'Left'#2#20#6'Height'#2#31#3'Top'#2#5#5'Width'#3'h'#1#11'Font.Heig'
+  +'ht'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#8'OnChange'#7#10'Toggl'
+  +'eOkay'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#0#0#9
+  +'TCheckBox'#12'instantspell'#4'Left'#2#25#6'Height'#2#22#3'Top'#2'A'#5'Width'
+  +#3#198#0#7'Caption'#6'(Instant spell - cast the spell instantly'#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFon'
+  +'t'#8#8'TabOrder'#2#3#0#0#9'TCheckBox'#5'cheat'#4'Left'#2#25#6'Height'#2#22#3
+  +'Top'#2'Z'#5'Width'#3'#'#1#7'Caption'#6'8Cheat (i.e. the caster need not hav'
+  +'e the spell prepared)'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Hei'
+  +'ght'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#5'State'#7#9'cbChecked'
+  +#8'TabOrder'#2#4#0#0#9'TCheckBox'#9'CheckBox1'#4'Left'#2#25#6'Height'#2#22#3
+  +'Top'#2's'#5'Width'#2'h'#7'Caption'#6#17'Cast a fake spell'#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#14'CheckBox1Click'#11'ParentColor'#8#10'ParentFont'#8#8
+  +'TabOrder'#2#5#0#0#7'TBitBtn'#7'BitBtn3'#4'Left'#3#200#0#6'Height'#2#25#3'To'
+  +'p'#2's'#5'Width'#3#175#0#7'Caption'#6#21'What is a fake spell?'#10'Glyph.Da'
+  +'ta'#10#194#6#0#0#190#6#0#0'BM'#190#6#0#0#0#0#0#0'6'#4#0#0'('#0#0#0'$'#0#0#0
+  +#18#0#0#0#1#0#8#0#0#0#0#0#136#2#0#0#0#0#0#0#0#0#0#0#0#1#0#0#0#0#0#0#0#0#0#0#0
+  +#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192
+  +#0#192#220#192#0#240#202#166#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#240#251#255#0#164#160#160#0#128#128#128#0#0#0#255#0#0#255
+  ,#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0#7#7#7#7#7#7
+  +#7#7#3#3#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#255#255#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7
+  +#7#3#0#248#3#7#7#7#7#7#7#7#7#7#7#7#7#7#7#248#248#255#7#7#7#7#7#7#7#7#7#7#7#7
+  +#7#7#7#251#3#3#0#7#7#7#7#7#7#7#7#7#7#7#7#7#248#255#7#248#255#7#7#7#7#7#7#7#7
+  +#7#7#7#7#7#7#7#251#3#3#7#7#7#7#7#7#7#7#7#7#7#7#7#248#255#255#248#255#7#7#7#7
+  +#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#248#248#7#7#7#7#7#7
+  +#7#7#7#7#7#7#7#7#7#7#7#0#248#3#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#255#255#7#7#7#7
+  +#7#7#7#7#7#7#7#7#7#7#7#3#3#3#0#7#7#7#7#7#7#7#7#7#7#7#7#7#7#248#248#248#255#7
+  +#7#7#7#7#7#7#7#7#7#7#7#7#7#251#3#3#248#7#7#7#7#7#7#7#7#7#7#7#7#7#248#255#7
+  +#248#255#7#7#7#7#7#7#7#7#7#7#7#7#7#7#251#3#3#3#0#7#7#7#7#7#7#7#7#7#7#7#7#248
+  +#255#7#248#255#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#251#3#3#3#248#7#7#7#7#7#7#7#7#7
+  +#7#7#248#255#7#7#248#255#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#251#3#3#3#0#7#7#7#7#7
+  +#7#7#7#7#7#7#248#255#7#7#248#255#7#7#7#7#7#7#7#7#7#7#0#248#7#7#7#251#3#3#3
+  +#248#7#7#7#7#7#7#7#7#255#7#7#248#255#7#7#248#255#7#7#7#7#7#7#7#7#3#3#3#0#7#7
+  +#7#251#3#3#0#7#7#7#7#7#7#7#248#248#255#7#7#248#255#7#7#248#255#7#7#7#7#7#7#7
+  +#251#3#3#3#248#0#248#3#3#3#248#7#7#7#7#7#7#248#255#7#248#255#255#255#248#7#7
+  +#248#255#7#7#7#7#7#7#7#7#251#3#3#3#3#3#3#3#3#3#7#7#7#7#7#7#248#255#7#7#248
+  +#248#248#7#7#7#248#255#7#7#7#7#7#7#7#7#7#251#251#3#3#3#3#3#3#7#7#7#7#7#7#7#7
+  +#248#255#255#7#7#7#7#7#7#248#7#7#7#7#7#7#7#7#7#7#7#7#251#251#251#251#251#7#7
+  +#7#7#7#7#7#7#7#7#248#248#255#255#255#255#255#248#7#7#7#7#7#7#7#7#7#7#7#7#7#7
+  +#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#7#248#248#248#248#248#7#7#7#7#7#7#9'NumGlyphs'
+  +#2#2#7'OnClick'#7#12'BitBtn3Click'#8'TabOrder'#2#6#0#0#12'TRadioButton'#11'R'
+  +'adioSpells'#4'Left'#2'Z'#6'Height'#2#22#3'Top'#2'('#5'Width'#2'5'#7'Caption'
+  +#6#6'Spells'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#24'RadioChangeToggleVisible'#10'ParentF'
+  +'ont'#8#8'TabOrder'#2#1#7'TabStop'#9#0#0#12'TRadioButton'#19'RadioSpellAbili'
+  +'ties'#4'Left'#3#210#0#6'Height'#2#22#3'Top'#2'('#5'Width'#2'l'#7'Caption'#6
+  +#20'Spell-like abilities'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#24'RadioChangeToggleVisible'#10'ParentF'
+  +'ont'#8#8'TabOrder'#2#2#0#0#9'TComboBox'#14'SpellAbilities'#4'Left'#2#20#6'H'
+  +'eight'#2#31#3'Top'#2#5#5'Width'#3'h'#1#11'Font.Height'#2#245#9'Font.Name'#6
+  +#5'Arial'#10'ItemHeight'#2#0#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#5
+  +'Style'#7#14'csDropDownList'#8'TabOrder'#2#7#7'Visible'#8#0#0#0#242#2#4#9'TG'
+  +'roupBox'#11'GroupTarget'#4'Left'#3#166#1#6'Height'#3#229#0#3'Top'#2#8#5'Wid'
+  +'th'#3'"'#1#7'Caption'#6#31'Who is the target of the spell?'#12'ClientHeight'
+  +#3#214#0#11'ClientWidth'#3#30#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8
+  +'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#8'TabOrder'#2#2#0#6'TLabel'#13'LabelLocation'#4'Left'#2'#'#6
+  +'Height'#2#14#3'Top'#3#180#0#5'Width'#3#204#0#7'Caption'#6'-Must select this'
+  +' if the target is a waypoint!'#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'c'
+  +'lInfoText'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#11'ParentColor'#8
+  +#10'ParentFont'#8#11'Transparent'#8#0#0#12'TRadioButton'#16'RadioTargetOwner'
+  +#4'Left'#2#12#6'Height'#2#22#3'Top'#2#24#5'Width'#3#19#1#8'AutoSize'#8#7'Cap'
+  +'tion'#6#23'The owner of the script'#10'Font.Color'#7#7'clBlack'#11'Font.Hei'
+  +'ght'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#5#0#0#12
+  +'TRadioButton'#13'RadioTargetPC'#4'Left'#2#12#6'Height'#2#22#3'Top'#2'0'#5'W'
+  +'idth'#2':'#7'Caption'#6#6'The PC'#10'Font.Color'#7#7'clBlack'#11'Font.Heigh'
+  +'t'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#12'TR'
+  +'adioButton'#19'RadioTargetTargeted'#4'Left'#2#12#6'Height'#2#22#3'Top'#2'0'
+  +#5'Width'#2'z'#7'Caption'#6#21'The activation target'#10'Font.Color'#7#7'clB'
+  +'lack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabO'
+  +'rder'#2#7#7'Visible'#8#0#0#12'TRadioButton'#16'RadioTargetSpawn'#4'Left'#2
+  +#12#6'Height'#2#22#3'Top'#2'H'#5'Width'#3#19#1#8'AutoSize'#8#7'Caption'#6#21
+  +'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#12
+  +'TRadioButton'#17'RadioTargetTagged'#4'Left'#2#12#6'Height'#2#22#3'Top'#2'`'
+  +#5'Width'#3#153#0#7'Caption'#6#26'The nearest object tagged:'#10'Font.Color'
+  +#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10
+  +'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#5'TEdit'#16'EditTargetTagg'
+  +'ed'#4'Left'#2'#'#6'Height'#2#23#3'Top'#2'x'#5'Width'#3#240#0#11'Font.Height'
+  +#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChange'
+  +'ToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#8#0#0#9'TCheckBox'#13'CheckLo'
+  +'cation'#4'Left'#2#12#6'Height'#2#22#3'Top'#3#160#0#5'Width'#3#155#0#7'Capti'
+  +'on'#6#29'Cast at the target''s location'#8'TabOrder'#2#9#0#0#12'TRadioButto'
+  ,'n'#17'RadioTargetCaster'#4'Left'#2#12#6'Height'#2#22#3'Top'#2#0#5'Width'#2
+  +'L'#7'Caption'#6#10'The caster'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0
+  +#7'TabStop'#9#0#0#12'TRadioButton'#20'RadioTargetActivator'#4'Left'#2#12#6'H'
+  +'eight'#2#22#3'Top'#2#24#5'Width'#2'm'#7'Caption'#6#18'The item activator'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'P'
+  +'arentFont'#8#8'TabOrder'#2#2#7'Visible'#8#0#0#12'TRadioButton'#20'RadioTarg'
+  +'etTargetLoc'#4'Left'#2#12#6'Height'#2#22#3'Top'#2'0'#5'Width'#3#162#0#7'Cap'
+  +'tion'#6#30'The activation target location'#10'Font.Color'#7#7'clBlack'#11'F'
+  +'ont.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#26'RadioTargetTarge'
+  +'tLocChange'#10'ParentFont'#8#8'TabOrder'#2#6#7'Visible'#8#0#0#0#0
+]);

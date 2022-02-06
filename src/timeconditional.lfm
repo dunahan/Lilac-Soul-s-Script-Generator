@@ -1,0 +1,235 @@
+inherited CondTime: TCondTime
+  Left = 447
+  Height = 220
+  Top = 245
+  Width = 440
+  BorderStyle = bsDialog
+  Caption = 'Check the time'
+  ClientHeight = 220
+  ClientWidth = 440
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  object LabelTitle: TLabel[0]
+    Left = 15
+    Height = 16
+    Top = 15
+    Width = 102
+    Caption = 'The time must be'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object RadioTimeOfDay: TRadioButton[1]
+    Left = 15
+    Height = 22
+    Top = 40
+    Width = 135
+    Caption = 'a certain time of day.'
+    Checked = True
+    OnChange = RadioChangeToggleVisible
+    TabOrder = 1
+    TabStop = True
+  end
+  object RadioHoursOfDay: TRadioButton[2]
+    Left = 209
+    Height = 22
+    Top = 40
+    Width = 208
+    Caption = 'between certain hours (inclusive).'
+    OnChange = RadioChangeToggleVisible
+    TabOrder = 0
+  end
+  object PanelTimeOfDay: TPanel[3]
+    Left = 37
+    Height = 75
+    Top = 75
+    Width = 150
+    BevelOuter = bvNone
+    ClientHeight = 75
+    ClientWidth = 150
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 2
+    object CheckNight: TCheckBox
+      Left = 85
+      Height = 22
+      Top = 45
+      Width = 53
+      Caption = 'Night'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object CheckDay: TCheckBox
+      Left = 85
+      Height = 22
+      Top = 10
+      Width = 45
+      Caption = 'Day'
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object CheckDusk: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 45
+      Width = 53
+      Caption = 'Dusk'
+      OnChange = ToggleOkay
+      TabOrder = 2
+    end
+    object CheckDawn: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 10
+      Width = 56
+      Caption = 'Dawn'
+      OnChange = ToggleOkay
+      TabOrder = 0
+    end
+  end
+  object MemoTimeOfDay: TMemo[4]
+    Left = 210
+    Height = 75
+    Top = 75
+    Width = 215
+    Color = 11924981
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Dusk and dawn are each one hour long. (Which hour can be changed in the module''s "Advanced" properties.) Night and day fill the remaining hours.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object PanelHoursOfDay: TPanel[5]
+    Left = 230
+    Height = 75
+    Top = 75
+    Width = 150
+    BevelOuter = bvNone
+    ClientHeight = 75
+    ClientWidth = 150
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    Visible = False
+    object LabelFrom: TLabel
+      Left = 30
+      Height = 15
+      Top = 13
+      Width = 33
+      Caption = 'From:'
+      ParentColor = False
+    end
+    object LabelTo: TLabel
+      Left = 30
+      Height = 15
+      Top = 43
+      Width = 17
+      Caption = 'To:'
+      ParentColor = False
+    end
+    object SpinFrom: TSpinEdit
+      Left = 80
+      Height = 23
+      Top = 10
+      Width = 40
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxValue = 23
+      ParentFont = False
+      TabOrder = 0
+      Value = 12
+    end
+    object SpinTo: TSpinEdit
+      Left = 80
+      Height = 23
+      Top = 40
+      Width = 40
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxValue = 23
+      ParentFont = False
+      TabOrder = 1
+      Value = 12
+    end
+  end
+  object MemoHoursOfDay: TMemo[6]
+    Left = 15
+    Height = 75
+    Top = 75
+    Width = 190
+    Color = 11924981
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'The interval can be a single hour. It can also wrap around midnight.'
+      ''
+      'It cannot do both though. :)'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 5
+    Visible = False
+  end
+  object ButtonOkay: TBitBtn[7]
+    Left = 70
+    Height = 35
+    Top = 170
+    Width = 120
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonOkayClick
+    Spacing = 5
+    TabOrder = 6
+  end
+  object ButtonClose: TBitBtn[8]
+    Left = 250
+    Height = 35
+    Top = 170
+    Width = 120
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 5
+    TabOrder = 7
+  end
+end

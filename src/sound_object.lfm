@@ -1,0 +1,495 @@
+inherited soundobject: Tsoundobject
+  Left = 444
+  Height = 545
+  Top = 150
+  Width = 480
+  ActiveControl = CheckBox8
+  BorderStyle = bsDialog
+  Caption = 'Sound objects, ambient sound, and music'
+  ClientHeight = 545
+  ClientWidth = 480
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object BitBtn1: TBitBtn[0]
+    Left = 400
+    Height = 60
+    Top = 365
+    Width = 65
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    Layout = blGlyphTop
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    Spacing = 5
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn[1]
+    Left = 400
+    Height = 60
+    Top = 455
+    Width = 65
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    Layout = blGlyphTop
+    ModalResult = 2
+    Spacing = 5
+    TabOrder = 4
+  end
+  object GroupSoundObject: TGroupBox[2]
+    Left = 15
+    Height = 195
+    Top = 340
+    Width = 375
+    Caption = 'Existing sound object:'
+    ClientHeight = 178
+    ClientWidth = 371
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 5
+      Height = 21
+      Top = 10
+      Width = 145
+      AutoSize = False
+      Caption = 'Tag of the sound object:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 5
+      Height = 25
+      Top = 45
+      Width = 360
+      AutoSize = False
+      Caption = 'Do what to this sound object (choose all that apply):'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 145
+      Height = 21
+      Top = 10
+      Width = 220
+      AutoSize = False
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+    end
+    object CheckBox1: TCheckBox
+      Left = 15
+      Height = 22
+      Top = 95
+      Width = 295
+      Caption = 'Move it to the PC''s position (it must be in the same area).'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object CheckBox2: TCheckBox
+      Left = 15
+      Height = 22
+      Top = 145
+      Width = 122
+      Caption = 'Make it start playing.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+    end
+    object CheckBox3: TCheckBox
+      Left = 15
+      Height = 22
+      Top = 70
+      Width = 121
+      Caption = 'Make it stop playing.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+    end
+    object CheckVolume: TCheckBox
+      Left = 15
+      Height = 22
+      Top = 120
+      Width = 106
+      Caption = 'Set its volume to:'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+    end
+    object SpinVolume: TSpinEdit
+      Left = 140
+      Height = 23
+      Top = 119
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxValue = 127
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      TabOrder = 4
+      Value = 127
+    end
+  end
+  object GroupAmbiance: TGroupBox[3]
+    Left = 15
+    Height = 145
+    Top = 5
+    Width = 450
+    Caption = 'Ambient sounds (in the PC''s current area):'
+    ClientHeight = 128
+    ClientWidth = 446
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object CheckDaySounds: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 35
+      Width = 192
+      Caption = 'Change daytime ambient sounds to'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+    end
+    object ComboDaySounds: TComboBox
+      Left = 250
+      Height = 31
+      Top = 30
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        ''
+      )
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object CheckNightSounds: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 70
+      Width = 197
+      Caption = 'Change nighttime ambient sounds to'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+    end
+    object ComboNightSounds: TComboBox
+      Left = 250
+      Height = 31
+      Top = 65
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        ''
+      )
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 4
+    end
+    object CheckBox7: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 100
+      Width = 360
+      Caption = 'Play ambient sounds. (The preceding two options will also play them.)'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+    end
+    object CheckBox8: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 165
+      Caption = 'Stop playing ambient sounds.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object GroupMusic: TGroupBox[4]
+    Left = 15
+    Height = 180
+    Top = 155
+    Width = 450
+    Caption = 'Background music (in the PC''s current area):'
+    ClientHeight = 163
+    ClientWidth = 446
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object CheckDayMusic: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 35
+      Width = 204
+      Caption = 'Change daytime background music to'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object ComboDayMusic: TComboBox
+      Left = 250
+      Height = 31
+      Top = 30
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        ''
+      )
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 3
+    end
+    object CheckNightMusic: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 70
+      Width = 209
+      Caption = 'Change nighttime background music to'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ComboNightMusic: TComboBox
+      Left = 250
+      Height = 31
+      Top = 65
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        ''
+      )
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 5
+    end
+    object CheckBox11: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 135
+      Width = 138
+      Caption = 'Play background music.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 8
+    end
+    object CheckBox12: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 177
+      Caption = 'Stop playing background music.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object CheckBattleMusic: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 105
+      Width = 133
+      Caption = 'Change battle music to'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+    end
+    object ComboBattleMusic: TComboBox
+      Left = 250
+      Height = 31
+      Top = 100
+      Width = 190
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        ''
+      )
+      OnChange = ControlChangeToggleChecked
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 7
+    end
+    object CheckPlayBattle: TCheckBox
+      Left = 225
+      Height = 22
+      Top = 135
+      Width = 125
+      Caption = 'Play the battle music.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 9
+    end
+    object CheckStopBattle: TCheckBox
+      Left = 225
+      Height = 22
+      Top = 5
+      Width = 127
+      Caption = 'Stop the battle music.'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+end

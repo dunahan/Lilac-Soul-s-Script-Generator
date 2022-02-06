@@ -1,0 +1,570 @@
+inherited castspell: Tcastspell
+  Left = 416
+  Height = 430
+  Top = 162
+  Width = 720
+  ActiveControl = RadioCasterOwner
+  BorderStyle = bsDialog
+  Caption = 'Cast spell'
+  ClientHeight = 430
+  ClientWidth = 720
+  Color = 14652793
+  Font.Height = -10
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object BitBtn1: TBitBtn[0]
+    Left = 510
+    Height = 40
+    Top = 300
+    Width = 114
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    Spacing = 15
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn[1]
+    Left = 510
+    Height = 40
+    Top = 375
+    Width = 114
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 4
+  end
+  object GroupCaster: TGroupBox[2]
+    Left = 8
+    Height = 229
+    Top = 8
+    Width = 400
+    Caption = 'Who is casting the spell (creatures and placeables are valid):'
+    ClientHeight = 214
+    ClientWidth = 396
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object LabelCasterName: TLabel
+      Left = 68
+      Height = 14
+      Top = 105
+      Width = 57
+      Caption = 'and named:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelNearestExplain1: TLabel
+      Left = 90
+      Height = 14
+      Top = 155
+      Width = 252
+      Caption = '(The "nearest" option requires the creature be in the'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelNearestExplain2: TLabel
+      Left = 90
+      Height = 14
+      Top = 170
+      Width = 224
+      Caption = 'same area, but does not require a unique tag.)'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioCasterOwner: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 0
+      Width = 370
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioCasterPC: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 25
+      Width = 58
+      Caption = 'The PC'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioCasterTargeted: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 25
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 5
+      Visible = False
+    end
+    object RadioCasterTagged: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 75
+      Width = 109
+      Caption = 'An object tagged:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 3
+    end
+    object EditCasterTagged: TEdit
+      Left = 142
+      Height = 23
+      Top = 72
+      Width = 240
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 6
+    end
+    object RadioCasterSpawn: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 50
+      Width = 370
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 4
+      Visible = False
+    end
+    object EditCasterName: TEdit
+      Left = 142
+      Height = 23
+      Top = 102
+      Width = 240
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 80
+      ParentFont = False
+      TabOrder = 7
+    end
+    object CheckCasterNearest: TCheckBox
+      Left = 68
+      Height = 22
+      Top = 135
+      Width = 210
+      Caption = 'Use the nearest creature with this tag.'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 8
+    end
+    object RadioCasterActivator: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 0
+      Width = 109
+      Caption = 'The item activator'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object GroupSpell: TGroupBox[3]
+    Left = 8
+    Height = 170
+    Top = 245
+    Width = 400
+    Caption = 'Cast which spell:'
+    ClientHeight = 155
+    ClientWidth = 396
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object Spells: TComboBox
+      Left = 20
+      Height = 31
+      Top = 5
+      Width = 360
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object instantspell: TCheckBox
+      Left = 25
+      Height = 22
+      Top = 65
+      Width = 198
+      Caption = 'Instant spell - cast the spell instantly'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 3
+    end
+    object cheat: TCheckBox
+      Left = 25
+      Height = 22
+      Top = 90
+      Width = 291
+      Caption = 'Cheat (i.e. the caster need not have the spell prepared)'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 4
+    end
+    object CheckBox1: TCheckBox
+      Left = 25
+      Height = 22
+      Top = 115
+      Width = 104
+      Caption = 'Cast a fake spell'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = CheckBox1Click
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+    end
+    object BitBtn3: TBitBtn
+      Left = 200
+      Height = 25
+      Top = 115
+      Width = 175
+      Caption = 'What is a fake spell?'
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00070707070707
+        07070303070707070707070707070707070707FFFF0707070707070707070707
+        07070707070300F8030707070707070707070707070707F8F8FF070707070707
+        070707070707070707FB03030007070707070707070707070707F8FF07F8FF07
+        0707070707070707070707070707FB030307070707070707070707070707F8FF
+        FFF8FF0707070707070707070707070707070707070707070707070707070707
+        070707F8F8070707070707070707070707070707070700F80307070707070707
+        0707070707070707FFFF07070707070707070707070707070703030300070707
+        0707070707070707070707F8F8F8FF0707070707070707070707070707FB0303
+        F807070707070707070707070707F8FF07F8FF07070707070707070707070707
+        07FB03030300070707070707070707070707F8FF07F8FF070707070707070707
+        070707070707FB030303F80707070707070707070707F8FF0707F8FF07070707
+        0707070707070707070707FB030303000707070707070707070707F8FF0707F8
+        FF0707070707070707070700F8070707FB030303F80707070707070707FF0707
+        F8FF0707F8FF070707070707070703030300070707FB03030007070707070707
+        F8F8FF0707F8FF0707F8FF07070707070707FB030303F800F8030303F8070707
+        070707F8FF07F8FFFFFFF80707F8FF0707070707070707FB0303030303030303
+        03070707070707F8FF0707F8F8F8070707F8FF070707070707070707FBFB0303
+        030303030707070707070707F8FFFF070707070707F807070707070707070707
+        0707FBFBFBFBFB07070707070707070707F8F8FFFFFFFFFFF807070707070707
+        0707070707070707070707070707070707070707070707F8F8F8F8F807070707
+        0707
+      }
+      NumGlyphs = 2
+      OnClick = BitBtn3Click
+      TabOrder = 6
+    end
+    object RadioSpells: TRadioButton
+      Left = 90
+      Height = 22
+      Top = 40
+      Width = 53
+      Caption = 'Spells'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      OnChange = RadioChangeToggleVisible
+      ParentFont = False
+      TabOrder = 1
+      TabStop = True
+    end
+    object RadioSpellAbilities: TRadioButton
+      Left = 210
+      Height = 22
+      Top = 40
+      Width = 108
+      Caption = 'Spell-like abilities'
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      OnChange = RadioChangeToggleVisible
+      ParentFont = False
+      TabOrder = 2
+    end
+    object SpellAbilities: TComboBox
+      Left = 20
+      Height = 31
+      Top = 5
+      Width = 360
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 7
+      Visible = False
+    end
+  end
+  object GroupTarget: TGroupBox[4]
+    Left = 422
+    Height = 229
+    Top = 8
+    Width = 290
+    Caption = 'Who is the target of the spell?'
+    ClientHeight = 214
+    ClientWidth = 286
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object LabelLocation: TLabel
+      Left = 35
+      Height = 14
+      Top = 180
+      Width = 204
+      Caption = 'Must select this if the target is a waypoint!'
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object RadioTargetOwner: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 24
+      Width = 275
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 5
+    end
+    object RadioTargetPC: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 48
+      Width = 58
+      Caption = 'The PC'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioTargetTargeted: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 48
+      Width = 122
+      Caption = 'The activation target'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 7
+      Visible = False
+    end
+    object RadioTargetSpawn: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 72
+      Width = 275
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
+    end
+    object RadioTargetTagged: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 96
+      Width = 153
+      Caption = 'The nearest object tagged:'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EditTargetTagged: TEdit
+      Left = 35
+      Height = 23
+      Top = 120
+      Width = 240
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 8
+    end
+    object CheckLocation: TCheckBox
+      Left = 12
+      Height = 22
+      Top = 160
+      Width = 155
+      Caption = 'Cast at the target''s location'
+      TabOrder = 9
+    end
+    object RadioTargetCaster: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 0
+      Width = 76
+      Caption = 'The caster'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioTargetActivator: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 24
+      Width = 109
+      Caption = 'The item activator'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object RadioTargetTargetLoc: TRadioButton
+      Left = 12
+      Height = 22
+      Top = 48
+      Width = 162
+      Caption = 'The activation target location'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = RadioTargetTargetLocChange
+      ParentFont = False
+      TabOrder = 6
+      Visible = False
+    end
+  end
+end

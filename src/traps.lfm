@@ -1,0 +1,796 @@
+inherited trapform: Ttrapform
+  Left = 447
+  Height = 550
+  Top = 148
+  Width = 750
+  ActiveControl = CheckCreate
+  BorderStyle = bsDialog
+  Caption = 'Traps'
+  ClientHeight = 550
+  ClientWidth = 750
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object ShapeFormSpacer: TShape[0]
+    Left = 15
+    Height = 9
+    Top = 210
+    Width = 720
+    Brush.Color = clPurple
+    Pen.Color = clSkyBlue
+    Pen.Width = 2
+    Shape = stRoundRect
+  end
+  object CheckCreate: TCheckBox[1]
+    Left = 10
+    Height = 22
+    Top = 10
+    Width = 95
+    Caption = 'Create a trap'
+    Color = clInactiveCaptionText
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = CheckCreateChange
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object PanelManipulate: TPanel[2]
+    Left = 245
+    Height = 265
+    Top = 230
+    Width = 495
+    ClientHeight = 265
+    ClientWidth = 495
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 8
+    object Label1: TLabel
+      Left = 0
+      Height = 17
+      Top = 3
+      Width = 495
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Do what to the selected trap?'
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object ShapePanelSpacer: TShape
+      Left = 275
+      Height = 230
+      Top = 25
+      Width = 4
+      Brush.Color = clPurple
+      Pen.Color = clNavy
+      Shape = stRoundRect
+    end
+    object ActiveStatus: TRadioGroup
+      Left = 10
+      Height = 80
+      Top = 20
+      Width = 100
+      AutoFill = True
+      Caption = 'Active status'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 96
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Activate'
+        'Deactivate'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 0
+    end
+    object DetectableStatus: TRadioGroup
+      Left = 10
+      Height = 80
+      Top = 180
+      Width = 115
+      AutoFill = True
+      Caption = 'Detectable status'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 111
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Detectable'
+        'Undetectable'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 4
+    end
+    object Detected: TRadioGroup
+      Left = 135
+      Height = 80
+      Top = 180
+      Width = 135
+      AutoFill = True
+      Caption = 'Detected by the PC'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 131
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Make detected'
+        'Make undetected'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 5
+    end
+    object Disarmability: TRadioGroup
+      Left = 10
+      Height = 80
+      Top = 100
+      Width = 125
+      AutoFill = True
+      Caption = 'Disarmability'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 121
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Disarmable'
+        'Not disarmable'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 2
+    end
+    object Oneshot: TRadioGroup
+      Left = 120
+      Height = 80
+      Top = 20
+      Width = 150
+      AutoFill = True
+      Caption = 'Reset after triggered?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 146
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Only fires once'
+        'Fires until disarmed'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 1
+    end
+    object Recover: TRadioGroup
+      Left = 145
+      Height = 80
+      Top = 100
+      Width = 125
+      AutoFill = True
+      Caption = 'Recoverability'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 65
+      ClientWidth = 121
+      ItemIndex = 0
+      Items.Strings = (
+        'No change'
+        'Recoverable'
+        'Not recoverable'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 3
+    end
+    object SpinDetectDC: TSpinEdit
+      Left = 308
+      Height = 23
+      Top = 42
+      Width = 45
+      Color = 16311256
+      MaxValue = 250
+      OnChange = ControlChangeToggleChecked
+      TabOrder = 7
+      Value = 20
+    end
+    object SpinDisarmDC: TSpinEdit
+      Left = 308
+      Height = 23
+      Top = 97
+      Width = 45
+      Color = 16311256
+      MaxValue = 250
+      OnChange = ControlChangeToggleChecked
+      TabOrder = 9
+      Value = 25
+    end
+    object EditKeyTag: TEdit
+      Left = 308
+      Height = 23
+      Top = 162
+      Width = 175
+      Color = 16311256
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 11
+    end
+    object CheckDetectDC: TCheckBox
+      Left = 285
+      Height = 22
+      Top = 20
+      Width = 172
+      Caption = 'Set the DC to detect the trap to'
+      OnChange = ToggleOkay
+      TabOrder = 6
+    end
+    object CheckDisarmDC: TCheckBox
+      Left = 285
+      Height = 22
+      Top = 75
+      Width = 174
+      Caption = 'Set the DC to disarm the trap to'
+      OnChange = ToggleOkay
+      TabOrder = 8
+    end
+    object CheckKeyTag: TCheckBox
+      Left = 285
+      Height = 30
+      Top = 130
+      Width = 182
+      Caption = 'Set the tag of the key required to'#10'disarm the trap to'
+      OnChange = ToggleOkay
+      TabOrder = 10
+    end
+    object Disable: TCheckBox
+      Left = 285
+      Height = 22
+      Top = 215
+      Width = 102
+      Caption = 'Disable the trap.'
+      OnChange = ToggleOkay
+      TabOrder = 12
+    end
+  end
+  object BitBtn1: TBitBtn[3]
+    Left = 10
+    Height = 35
+    Top = 507
+    Width = 160
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = ButtonClickOkayMore
+    Spacing = 5
+    TabOrder = 9
+  end
+  object BitBtn2: TBitBtn[4]
+    Left = 250
+    Height = 35
+    Top = 507
+    Width = 160
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    Spacing = 10
+    TabOrder = 10
+  end
+  object BitBtn3: TBitBtn[5]
+    Left = 630
+    Height = 35
+    Top = 507
+    Width = 110
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    Spacing = 10
+    TabOrder = 11
+  end
+  object CheckManipulate: TCheckBox[6]
+    Left = 10
+    Height = 22
+    Top = 230
+    Width = 154
+    Caption = 'Make changes to a trap.'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = CheckChangeToggleEnable
+    ParentFont = False
+    TabOrder = 6
+  end
+  object GroupManipulate: TGroupBox[7]
+    Left = 20
+    Height = 200
+    Top = 272
+    Width = 215
+    Caption = 'Change which trap?'
+    ClientHeight = 185
+    ClientWidth = 211
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 7
+    object RadioChangeOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 121
+      Caption = 'On the script owner'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioChangeTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 131
+      Caption = 'On the targeted object'
+      TabOrder = 1
+      Visible = False
+    end
+    object RadioChangeSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 30
+      Width = 153
+      Caption = 'On the most recent spawn'
+      TabOrder = 2
+      Visible = False
+    end
+    object RadioChangeTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 55
+      Width = 145
+      Caption = 'On an object with the tag'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object EditChangeTagged: TEdit
+      Left = 27
+      Height = 23
+      Top = 77
+      Width = 173
+      Color = 16311256
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 4
+    end
+    object RadioChangeRecent: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 105
+      Width = 205
+      AutoSize = False
+      Caption = 'The last trap'
+      Enabled = False
+      TabOrder = 5
+    end
+    object RadioChangeNearPC: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 130
+      Width = 138
+      Caption = 'The trap nearest the PC'
+      TabOrder = 6
+    end
+    object RadioChangePCDetected: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 155
+      Width = 183
+      Caption = 'The detected trap nearest the PC'
+      TabOrder = 7
+    end
+  end
+  object PanelCreate: TPanel[8]
+    Left = 420
+    Height = 155
+    Top = 10
+    Width = 285
+    ClientHeight = 155
+    ClientWidth = 285
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 4
+    object LabelStrength: TLabel
+      Left = 10
+      Height = 14
+      Top = 13
+      Width = 80
+      Caption = 'Strength of trap:'
+      ParentColor = False
+    end
+    object LabelType: TLabel
+      Left = 10
+      Height = 14
+      Top = 47
+      Width = 62
+      Caption = 'Type of trap:'
+      Color = 16311256
+      ParentColor = False
+      Transparent = False
+    end
+    object LabelTriggerScript: TLabel
+      Left = 10
+      Height = 14
+      Top = 75
+      Width = 116
+      Caption = 'OnTrapTriggered script:'
+      ParentColor = False
+    end
+    object LabelDisarmScript: TLabel
+      Left = 10
+      Height = 14
+      Top = 130
+      Width = 81
+      Caption = 'OnDisarm script:'
+      ParentColor = False
+    end
+    object ComboStrength: TComboBox
+      Left = 155
+      Height = 31
+      Top = 5
+      Width = 110
+      Color = 16311256
+      ItemHeight = 0
+      ItemIndex = 1
+      Items.Strings = (
+        'Minor'
+        'Average'
+        'Strong'
+        'Deadly'
+        'Epic'
+      )
+      OnChange = ComboStrengthChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'Average'
+    end
+    object ComboType: TComboBox
+      Left = 155
+      Height = 31
+      Top = 39
+      Width = 110
+      Color = 16311256
+      ItemHeight = 0
+      ItemIndex = 9
+      Items.Strings = (
+        'Acid blob'
+        'Acid splash'
+        'Electrical'
+        'Fire'
+        'Frost'
+        'Gas'
+        'Holy'
+        'Negative'
+        'Sonic'
+        'Spike'
+        'Tangle'
+      )
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'Spike'
+    end
+    object OnTriggered: TEdit
+      Left = 155
+      Height = 23
+      Top = 75
+      Width = 120
+      CharCase = ecLowerCase
+      Color = 16311256
+      MaxLength = 16
+      TabOrder = 2
+    end
+    object TextTriggerScript: TStaticText
+      Left = 20
+      Height = 35
+      Top = 92
+      Width = 125
+      BorderStyle = sbsSunken
+      Caption = 'Leave blank to use the'#10'default for the trap.'
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 3
+    end
+    object OnDisarm: TEdit
+      Left = 155
+      Height = 23
+      Top = 125
+      Width = 120
+      CharCase = ecLowerCase
+      Color = 16311256
+      MaxLength = 16
+      TabOrder = 4
+    end
+  end
+  object RadioObjectCreate: TRadioButton[9]
+    Left = 123
+    Height = 22
+    Top = 10
+    Width = 135
+    Caption = 'on a door or placeable.'
+    Checked = True
+    Enabled = False
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = RadioChangeToggleVisible
+    ParentFont = False
+    TabOrder = 1
+    TabStop = True
+  end
+  object RadioLocationCreate: TRadioButton[10]
+    Left = 282
+    Height = 22
+    Top = 10
+    Width = 94
+    Caption = 'on the ground.'
+    Enabled = False
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = RadioLocationCreateChange
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PanelLocationCreate: TPanel[11]
+    Left = 420
+    Height = 36
+    Top = 164
+    Width = 285
+    ClientHeight = 36
+    ClientWidth = 285
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 5
+    Visible = False
+    object Label2: TLabel
+      Left = 10
+      Height = 14
+      Top = 11
+      Width = 60
+      Caption = 'Size of trap:'
+      ParentColor = False
+    end
+    object SpinSize: TFloatSpinEdit
+      Left = 155
+      Height = 23
+      Top = 5
+      Width = 50
+      DecimalPlaces = 1
+      Increment = 1
+      MaxValue = 80
+      MinValue = 1
+      TabOrder = 0
+      Value = 2
+    end
+  end
+  object GroupCreate: TGroupBox[12]
+    Left = 20
+    Height = 150
+    Top = 42
+    Width = 365
+    Caption = 'Where?'
+    ClientHeight = 135
+    ClientWidth = 361
+    Color = 16311256
+    Enabled = False
+    ParentColor = False
+    TabOrder = 3
+    object RadioCreateOwner: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 350
+      AutoSize = False
+      Caption = 'The script owner'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioCreateTargeted: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 30
+      Width = 122
+      Caption = 'The activation target'
+      TabOrder = 6
+      Visible = False
+    end
+    object RadioCreateSpawn: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 55
+      Width = 350
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      TabOrder = 7
+      Visible = False
+    end
+    object RadioCreateTagged: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 80
+      Width = 130
+      Caption = 'An object with the tag'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object EditCreateTagged: TEdit
+      Left = 155
+      Height = 23
+      Top = 79
+      Width = 200
+      Color = 16311256
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 8
+    end
+    object RadioCreateActor: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 105
+      Width = 350
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Enabled = False
+      TabOrder = 5
+      Visible = False
+    end
+    object RadioCreateActivator: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 5
+      Width = 109
+      Caption = 'The item activator'
+      Enabled = False
+      TabOrder = 1
+      Visible = False
+    end
+    object RadioCreatePC: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 30
+      Width = 58
+      Caption = 'The PC'
+      Enabled = False
+      TabOrder = 2
+    end
+    object RadioCreateTargetLoc: TRadioButton
+      Left = 5
+      Height = 22
+      Top = 30
+      Width = 113
+      Caption = 'The target location'
+      TabOrder = 4
+      Visible = False
+    end
+  end
+  object PanelDelayInfo: TPanel[13]
+    Left = 10
+    Height = 22
+    Top = 204
+    Width = 730
+    BevelInner = bvLowered
+    Caption = 'Traps are created (above) immediately; it is the manipulations of traps (below) that will be delayed.'
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 12
+    Visible = False
+  end
+end

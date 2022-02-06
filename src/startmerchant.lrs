@@ -1,0 +1,95 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tmerchant','FORMDATA',[
+  'TPF0'#241#9'Tmerchant'#8'merchant'#4'Left'#3#191#1#6'Height'#3#8#2#3'Top'#3
+  +#149#0#5'Width'#3'm'#1#13'ActiveControl'#7#11'RadioTagged'#11'BorderStyle'#7
+  +#8'bsDialog'#7'Caption'#6#21'Start merchant for PC'#12'ClientHeight'#3#8#2#11
+  +'ClientWidth'#3'm'#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'P'
+  +'osition'#7#16'poMainFormCenter'#0#242#2#0#6'TLabel'#6'Label2'#4'Left'#2'Q'#6
+  +'Height'#2#15#3'Top'#2'x'#5'Width'#3#129#0#9'Alignment'#7#14'taRightJustify'
+  +#7'Caption'#6#24'Additional sell mark up:'#10'Font.Color'#7#7'clBlack'#11'Fo'
+  +'nt.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8
+  +#0#0#242#2#1#6'TLabel'#6'Label3'#4'Left'#2'B'#6'Height'#2#15#3'Top'#3#150#0#5
+  +'Width'#3#144#0#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#25'Additional'
+  +' buy mark down:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.N'
+  +'ame'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#2#6'TLabel'#6
+  +'Label4'#4'Left'#3#19#1#6'Height'#2#15#3'Top'#3#150#0#5'Width'#2#12#7'Captio'
+  +'n'#6#1'%'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'#6#5
+  +'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#3#6'TLabel'#6'Label5'#4
+  +'Left'#3#19#1#6'Height'#2#15#3'Top'#2'x'#5'Width'#2#12#7'Caption'#6#1'%'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'P'
+  +'arentColor'#8#10'ParentFont'#8#0#0#242#2#4#9'TSpinEdit'#6'markup'#4'Left'#3
+  +#220#0#6'Height'#2#24#3'Top'#2's'#5'Width'#2'2'#5'Color'#4#216#227#248#0#11
+  +'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'MinValue'#2#156#10'ParentFont'
+  +#8#8'TabOrder'#2#1#0#0#242#2#5#9'TSpinEdit'#8'markdown'#4'Left'#3#220#0#6'He'
+  +'ight'#2#24#3'Top'#3#145#0#5'Width'#2'2'#5'Color'#4#216#227#248#0#11'Font.He'
+  +'ight'#2#244#9'Font.Name'#6#5'Arial'#8'MinValue'#2#156#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#2#0#0#242#2#6#7'TBitBtn'#7'BitBtn1'#4'Left'#2'8'#6'Height'#2'('#3
+  +'Top'#3''''#1#5'Width'#2'q'#7'Caption'#6#4'Okay'#7'Default'#9#7'Enabled'#8#10
+  +'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0
+  +#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0
+  +#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  +#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136
+  +'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'w'
+  +'www'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136
+  +'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'
+  +#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162
+  +'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwww'
+  +'w'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7#12'Button1C'
+  +'lick'#7'Spacing'#2#15#8'TabOrder'#2#4#0#0#242#2#7#7'TBitBtn'#7'BitBtn2'#4'L'
+  +'eft'#3#192#0#6'Height'#2'('#3'Top'#3''''#1#5'Width'#2'q'#6'Cancel'#9#7'Capt'
+  +'ion'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0
+  +#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16
+  +#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0
+  +#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255
+  +#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'
+  +#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135
+  +#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0
+  +'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145
+  +#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'w'
+  +'w'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17
+  +#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153
+  +#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0
+  +#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#2#7'Spac'
+  +'ing'#2#15#8'TabOrder'#2#5#0#0#242#2#8#9'TGroupBox'#10'GroupStore'#4'Left'#2
+  +#15#6'Height'#2'U'#3'Top'#2#15#5'Width'#3'O'#1#7'Caption'#6#27'Identify the '
+  +'store to open:'#12'ClientHeight'#2'D'#11'ClientWidth'#3'K'#1#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#243#9'Font.Name'#6
+  +#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0#12'TRadioButt'
+  +'on'#12'RadioClosest'#4'Left'#2#8#6'Height'#2#22#3'Top'#2#5#5'Width'#3'='#1#8
+  +'AutoSize'#8#7'Caption'#6#27'Closest to the script owner'#10'Font.Color'#7#7
+  +'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'T'
+  +'abOrder'#2#2#0#0#12'TRadioButton'#11'RadioTagged'#4'Left'#2#8#6'Height'#2#22
+  +#3'Top'#2'#'#5'Width'#2':'#7'Caption'#6#7'By tag:'#7'Checked'#9#10'Font.Colo'
+  +'r'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7
+  +#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#0#7'TabStop'#9#0#0#5'TEdit'#10
+  ,'EditTagged'#4'Left'#2'K'#6'Height'#2#23#3'Top'#2'"'#5'Width'#3#250#0#5'Colo'
+  +'r'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font'
+  +'.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeToggleChecke'
+  +'d'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#0#242#2#9#5'TMemo'#19'MemoStandardS'
+  +'cripts'#4'Left'#2#15#6'Height'#3#150#0#3'Top'#3'c'#1#5'Width'#3'O'#1#5'Colo'
+  +'r'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2#245#9'Fo'
+  +'nt.Name'#6#5'Arial'#13'Lines.Strings'#1#6#5'NOTE:'#12'1'#1#0#0'BioWare prov'
+  +'ided a few standard scripts that are often sufficient for opening stores wh'
+  +'en appraise is being used. If put under "Actions Taken" in a conversation, '
+  +'they will open for the PC speaker the store closest to the NPC speaker (whi'
+  +'ch works very well when there is only one store object in the area).'#6#0#6
+  +'7x1_openstore -- opens the store with an appraise check.'#6'5x1_openstorefa'
+  +'v -- uses the favorable appraise check.'#6'9x0_d1_stor_open2 -- prices shif'
+  +'ted 10% in the PC''s favor.'#0#10'ParentFont'#8#8'ReadOnly'#9#8'TabOrder'#2
+  +#6#0#0#242#2#10#11'TRadioGroup'#13'GroupAppraise'#4'Left'#2#15#6'Height'#2'_'
+  +#3'Top'#3#180#0#5'Width'#3'O'#1#8'AutoFill'#9#7'Caption'#6#23'Use the apprai'
+  +'se skill?'#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSpa'
+  +'cing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomogenousChildResize'
+  +#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildResize'#28'ChildSizi'
+  +'ng.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7
+  +#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclLeftToRightThenTopToBotto'
+  +'m'#27'ChildSizing.ControlsPerLine'#2#1#12'ClientHeight'#2'P'#11'ClientWidth'
+  +#3'K'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'
+  +#2#245#9'Font.Name'#6#5'Arial'#9'ItemIndex'#2#1#13'Items.Strings'#1#6#17'No '
+  +'appraise check'#6#23'Standard appraise check'#6'1Favorable appraise check ('
+  +'NPC modified roll is 0)'#0#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2
+  +#3#0#0#0
+]);

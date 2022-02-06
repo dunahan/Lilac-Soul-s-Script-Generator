@@ -1,0 +1,34 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tstatwarning','FORMDATA',[
+  'TPF0'#12'Tstatwarning'#11'statwarning'#4'Left'#3'M'#2#6'Height'#3#183#0#3'To'
+  +'p'#2#25#5'Width'#3#252#0#13'ActiveControl'#7#7'BitBtn1'#11'BorderStyle'#7#8
+  +'bsDialog'#7'Caption'#6#7'Warning'#12'ClientHeight'#3#183#0#11'ClientWidth'#3
+  +#252#0#5'Color'#4'y'#149#223#0#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'
+  +#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9.30'#0#6'TLabel'#6
+  +'Label1'#4'Left'#2#10#6'Height'#2#20#3'Top'#2#24#5'Width'#3#232#0#9'Alignmen'
+  +'t'#7#8'taCenter'#8'AutoSize'#8#7'Caption'#6#24'You must choose at least'#10
+  +'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#240#9'Font.Name'#6#5'Arial'#11
+  +'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#10#6'Heig'
+  +'ht'#2#20#3'Top'#2'@'#5'Width'#3#232#0#9'Alignment'#7#8'taCenter'#8'AutoSize'
+  +#8#7'Caption'#6#22'one stat to check for!'#10'Font.Color'#7#8'clMaroon'#11'F'
+  +'ont.Height'#2#240#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8
+  +#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'K'#6'Height'#2'+'#3'Top'#2'n'#5'Width'#2
+  +'q'#7'Caption'#6#5'Close'#7'Default'#9#10'Glyph.Data'#10#178#1#0#0#174#1#0#0
+  +'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'
+  +#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191
+  +#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwww'
+  +'wwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7
+  +'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240
+  +#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17
+  +#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17
+  +#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'
+  +#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17
+  +#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17
+  +'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'
+  +#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0
+  +#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136
+  +#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#1#7'Spacing'#2#20#8'TabO'
+  +'rder'#2#0#0#0#0
+]);

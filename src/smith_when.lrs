@@ -1,0 +1,46 @@
+LazarusResources.Add('Twhentofire','FORMDATA',[
+  'TPF0'#11'Twhentofire'#10'whentofire'#4'Left'#3#191#1#6'Height'#3'E'#1#3'Top'
+  +#3#149#0#5'Width'#3'E'#1#13'ActiveControl'#7#5'Memo1'#11'BorderIcons'#11#12
+  +'biSystemMenu'#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#28'When to fire '
+  +'- what is this?'#12'ClientHeight'#3'E'#1#11'ClientWidth'#3'E'#1#5'Color'#4
+  +'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'
+  +#6#5'Arial'#8'Position'#7#17'poOwnerFormCenter'#10'LCLVersion'#6#8'0.9.28.2'
+  +#0#5'TMemo'#5'Memo1'#4'Left'#2#25#6'Height'#3#235#0#3'Top'#2#20#5'Width'#3#19
+  +#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6'FThis determines the cond'
+  +'ition under which item creation should happen.'#6#0#6#16'A spell is cast:'#6
+  +#196'Put the script OnSpellCastAt for a placeable. Item creation will happen'
+  +' when a spell is cast at the placeable, provided it is a correct spell and '
+  +'the correct stuff is in the placeable''s inventory.'#6#0#6#18'Items given/t'
+  +'aken:'#6#235'Put the script OnDisturbed for a placeable. Item creation will'
+  +' happen when something is added to or removed from the placeable''s invento'
+  +'ry (while the inventory is still open), provided the correct stuff is in th'
+  +'e placeable''s inventory.'#6#144'One quirk of this approach is that adding '
+  +'gold will not trigger this script, so if the last ingredient the PC adds is'
+  +' gold, nothing will happen.'#6#0#6#17'Inventory closed:'#6#179'Put the scri'
+  +'pt OnClosed for a placeable. Item creation will happen when a player closes'
+  +' the inventory of the placeable, provided the correct stuff is in the place'
+  +'able''s inventory.'#6#0#6#18'In a conversation:'#6#166'Put the script under'
+  +' "Actions Taken" in a conversation file. This can be used to have the NPC l'
+  +'ook through the PC''s inventory and create items based on what is found.'#6
+  +'lIt is not possible with the Script Generator to first ask the PC if each i'
+  +'tem (individually) should be made.'#0#10'ParentFont'#8#8'ReadOnly'#9#10'Scr'
+  +'ollBars'#7#10'ssVertical'#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'
+  +#2'i'#6'Height'#2'('#3'Top'#3#14#1#5'Width'#2's'#7'Caption'#6#5'Close'#10'Gl'
+  +'yph.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23
+  +#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192
+  +#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255
+  +#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0
+  +#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240
+  +#145#17#17#17#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  +#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'
+  +#240#144#176#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17
+  +'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'
+  +#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153
+  +#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255
+  +#255#255#255#7'pwx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'Moda'
+  +'lResult'#2#1#7'Spacing'#2#15#8'TabOrder'#2#1#0#0#0
+]);

@@ -1,0 +1,193 @@
+inherited teleport: Tteleport
+  Left = 447
+  Height = 340
+  Top = 149
+  Width = 625
+  ActiveControl = RadioWaypoint
+  BorderStyle = bsDialog
+  Caption = 'Teleport PC'
+  ClientHeight = 340
+  ClientWidth = 625
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  object Memo1: TMemo[0]
+    Left = 320
+    Height = 200
+    Top = 45
+    Width = 290
+    Color = clInfoBk
+    Lines.Strings = (
+      'Notes:'
+      ''
+      'Teleporting a PC first clears all actions. Most of the time, this is not a problem, but if you are doing more things to the PC in this script, you might get unsatisfactory results.'
+      ''
+      'Also, for full party teleportation, the stored location will be that stored on the main PC ("the PC" for this script), and the current location will be stored only on that PC.'
+      ''
+      'Explicitly teleporting a PC''s associates is only useful if teleporting within a single area (think "secret door", for example) as they automatically follow to new areas.'
+    )
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object BitBtn1: TBitBtn[1]
+    Left = 320
+    Height = 40
+    Top = 285
+    Width = 115
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    Spacing = 10
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn[2]
+    Left = 495
+    Height = 40
+    Top = 285
+    Width = 115
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 10
+    TabOrder = 5
+  end
+  object CheckBox1: TCheckBox[3]
+    Left = 25
+    Height = 22
+    Top = 145
+    Width = 257
+    Caption = 'Store the PC''s current location (for a return trip).'
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 1
+  end
+  object GroupDestination: TGroupBox[4]
+    Left = 15
+    Height = 120
+    Top = 15
+    Width = 290
+    Caption = 'Teleport to where?'
+    ClientHeight = 103
+    ClientWidth = 286
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object RadioWaypoint: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 5
+      Width = 159
+      Caption = 'The waypoint whose tag is:'
+      Checked = True
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object EditWaypoint: TEdit
+      Left = 30
+      Height = 23
+      Top = 30
+      Width = 250
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioStored: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 65
+      Width = 240
+      Caption = 'The location stored from a prior teleportation.'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object CheckVFX: TCheckBox[5]
+    Left = 25
+    Height = 22
+    Top = 170
+    Width = 190
+    Caption = 'Use the "unsummon" visual effect.'
+    Checked = True
+    Color = 16311256
+    ParentColor = False
+    State = cbChecked
+    TabOrder = 2
+  end
+  object GroupWho: TRadioGroup[6]
+    Left = 25
+    Height = 120
+    Top = 205
+    Width = 240
+    AutoFill = True
+    Caption = 'Who will be teleported?'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 105
+    ClientWidth = 236
+    Color = 16311256
+    ItemIndex = 0
+    Items.Strings = (
+      'Just the PC'
+      'The PC and its associates'
+      'All party members in the current area'
+      'The PC''s entire party'
+    )
+    ParentColor = False
+    TabOrder = 3
+  end
+end

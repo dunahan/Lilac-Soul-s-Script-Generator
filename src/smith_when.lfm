@@ -1,0 +1,75 @@
+object whentofire: Twhentofire
+  Left = 447
+  Height = 325
+  Top = 149
+  Width = 325
+  ActiveControl = Memo1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'When to fire - what is this?'
+  ClientHeight = 325
+  ClientWidth = 325
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poOwnerFormCenter
+  LCLVersion = '0.9.28.2'
+  object Memo1: TMemo
+    Left = 25
+    Height = 235
+    Top = 20
+    Width = 275
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'This determines the condition under which item creation should happen.'
+      ''
+      'A spell is cast:'
+      'Put the script OnSpellCastAt for a placeable. Item creation will happen when a spell is cast at the placeable, provided it is a correct spell and the correct stuff is in the placeable''s inventory.'
+      ''
+      'Items given/taken:'
+      'Put the script OnDisturbed for a placeable. Item creation will happen when something is added to or removed from the placeable''s inventory (while the inventory is still open), provided the correct stuff is in the placeable''s inventory.'
+      'One quirk of this approach is that adding gold will not trigger this script, so if the last ingredient the PC adds is gold, nothing will happen.'
+      ''
+      'Inventory closed:'
+      'Put the script OnClosed for a placeable. Item creation will happen when a player closes the inventory of the placeable, provided the correct stuff is in the placeable''s inventory.'
+      ''
+      'In a conversation:'
+      'Put the script under "Actions Taken" in a conversation file. This can be used to have the NPC look through the PC''s inventory and create items based on what is found.'
+      'It is not possible with the Script Generator to first ask the PC if each item (individually) should be made.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 105
+    Height = 40
+    Top = 270
+    Width = 115
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 15
+    TabOrder = 1
+  end
+end

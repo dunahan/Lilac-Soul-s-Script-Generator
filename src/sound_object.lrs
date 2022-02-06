@@ -1,0 +1,155 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tsoundobject','FORMDATA',[
+  'TPF0'#241#12'Tsoundobject'#11'soundobject'#4'Left'#3#188#1#6'Height'#3'!'#2#3
+  +'Top'#3#150#0#5'Width'#3#224#1#13'ActiveControl'#7#9'CheckBox8'#11'BorderSty'
+  +'le'#7#8'bsDialog'#7'Caption'#6'''Sound objects, ambient sound, and music'#12
+  +'ClientHeight'#3'!'#2#11'ClientWidth'#3#224#1#5'Color'#4'y'#149#223#0#10'Fon'
+  +'t.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnCre'
+  +'ate'#7#10'FormCreate'#8'Position'#7#16'poMainFormCenter'#0#242#2#0#7'TBitBt'
+  +'n'#7'BitBtn1'#4'Left'#3#144#1#6'Height'#2'<'#3'Top'#3'm'#1#5'Width'#2'A'#7
+  +'Caption'#6#4'Okay'#7'Default'#9#7'Enabled'#8#10'Glyph.Data'#10'j'#1#0#0'f'#1
+  +#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0
+  +#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0
+  +#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0
+  +#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0
+  +'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135
+  +'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'ww'
+  +'ww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""'
+  +'H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"'
+  +'Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'
+  +#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'
+  +''''#0#0#6'Layout'#7#10'blGlyphTop'#11'ModalResult'#2#1#7'OnClick'#7#12'BitB'
+  +'tn1Click'#7'Spacing'#2#5#8'TabOrder'#2#3#0#0#242#2#1#7'TBitBtn'#7'BitBtn2'#4
+  +'Left'#3#144#1#6'Height'#2'<'#3'Top'#3#199#1#5'Width'#2'A'#6'Cancel'#9#7'Cap'
+  +'tion'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'
+  +#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0
+  +#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0
+  +#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255
+  +#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0
+  +#0'wp'#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0
+  +#136#135#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145
+  +#17#17#0'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0
+  +'wy'#145#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16
+  +#136#135'ww'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'w'
+  +'w'#145#17#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17
+  +#24'w'#153#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145
+  +#17#8'w'#0#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0#6'Layout'#7#10'b'
+  +'lGlyphTop'#11'ModalResult'#2#2#7'Spacing'#2#5#8'TabOrder'#2#4#0#0#242#2#2#9
+  +'TGroupBox'#16'GroupSoundObject'#4'Left'#2#15#6'Height'#3#195#0#3'Top'#3'T'#1
+  +#5'Width'#3'w'#1#7'Caption'#6#22'Existing sound object:'#12'ClientHeight'#3
+  +#178#0#11'ClientWidth'#3's'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'cl'
+  +'Maroon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#8'TabOrder'#2#2#0#6'TLabel'#6'Label1'#4'Left'#2#5#6'Height'#2
+  +#21#3'Top'#2#10#5'Width'#3#145#0#8'AutoSize'#8#7'Caption'#6#24'Tag of the so'
+  +'und object:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'
+  +#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#6'Label2'#4'Lef'
+  +'t'#2#5#6'Height'#2#25#3'Top'#2'-'#5'Width'#3'h'#1#8'AutoSize'#8#7'Caption'#6
+  +'5Do what to this sound object (choose all that apply):'#10'Font.Color'#7#8
+  +'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#0#0#5'TEdit'#5'Edit1'#4'Left'#3#145#0#6'Height'#2#21#3'Top'#2
+  +#10#5'Width'#3#220#0#8'AutoSize'#8#5'Color'#4#216#227#248#0#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8
+  +'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#9'TCheckBox'
+  +#9'CheckBox1'#4'Left'#2#15#6'Height'#2#22#3'Top'#2'_'#5'Width'#3''''#1#7'Cap'
+  +'tion'#6';Move it to the PC''s position (it must be in the same area).'#5'Co'
+  +'lor'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Fo'
+  +'nt.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'Paren'
+  +'tFont'#8#8'TabOrder'#2#2#0#0#9'TCheckBox'#9'CheckBox2'#4'Left'#2#15#6'Heigh'
+  +'t'#2#22#3'Top'#3#145#0#5'Width'#2'z'#7'Caption'#6#22'Make it start playing.'
+  +#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'Par'
+  +'entFont'#8#8'TabOrder'#2#5#0#0#9'TCheckBox'#9'CheckBox3'#4'Left'#2#15#6'Hei'
+  +'ght'#2#22#3'Top'#2'F'#5'Width'#2'y'#7'Caption'#6#21'Make it stop playing.'#5
+  +'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'Par'
+  +'entFont'#8#8'TabOrder'#2#1#0#0#9'TCheckBox'#11'CheckVolume'#4'Left'#2#15#6
+  +'Height'#2#22#3'Top'#2'x'#5'Width'#2'j'#7'Caption'#6#18'Set its volume to:'#5
+  ,'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'Par'
+  +'entFont'#8#8'TabOrder'#2#3#0#0#9'TSpinEdit'#10'SpinVolume'#4'Left'#3#140#0#6
+  +'Height'#2#23#3'Top'#2'w'#5'Width'#2'-'#5'Color'#4#216#227#248#0#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'MaxValue'#2
+  +#127#8'OnChange'#7#26'ControlChangeToggleChecked'#10'ParentFont'#8#8'TabOrde'
+  +'r'#2#4#5'Value'#2#127#0#0#0#242#2#3#9'TGroupBox'#13'GroupAmbiance'#4'Left'#2
+  +#15#6'Height'#3#145#0#3'Top'#2#5#5'Width'#3#194#1#7'Caption'#6'*Ambient soun'
+  +'ds (in the PC''s current area):'#12'ClientHeight'#3#128#0#11'ClientWidth'#3
+  +#190#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'
+  +#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'
+  +#2#0#0#9'TCheckBox'#14'CheckDaySounds'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'#'
+  +#5'Width'#3#192#0#7'Caption'#6' Change daytime ambient sounds to'#5'Color'#4
+  +#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'
+  +#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8
+  +'TabOrder'#2#1#0#0#9'TComboBox'#14'ComboDaySounds'#4'Left'#3#250#0#6'Height'
+  +#2#31#3'Top'#2#30#5'Width'#3#190#0#5'Color'#4#216#227#248#0#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0
+  +#9'ItemIndex'#2#0#13'Items.Strings'#1#6#0#0#8'OnChange'#7#26'ControlChangeTo'
+  +'ggleChecked'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#2
+  +#0#0#9'TCheckBox'#16'CheckNightSounds'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'F'
+  +#5'Width'#3#197#0#7'Caption'#6'"Change nighttime ambient sounds to'#5'Color'
+  +#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Na'
+  +'me'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'
+  +#8#8'TabOrder'#2#3#0#0#9'TComboBox'#16'ComboNightSounds'#4'Left'#3#250#0#6'H'
+  +'eight'#2#31#3'Top'#2'A'#5'Width'#3#190#0#5'Color'#4#216#227#248#0#10'Font.C'
+  +'olor'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHei'
+  +'ght'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#0#0#8'OnChange'#7#26'Contro'
+  +'lChangeToggleChecked'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabO'
+  +'rder'#2#4#0#0#9'TCheckBox'#9'CheckBox7'#4'Left'#2#5#6'Height'#2#22#3'Top'#2
+  +'d'#5'Width'#3'h'#1#7'Caption'#6'EPlay ambient sounds. (The preceding two op'
+  +'tions will also play them.)'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'cl'
+  +'Black'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'Toggl'
+  +'eOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#5#0#0#9'TCheckBox'#9
+  +'CheckBox8'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#5#5'Width'#3#165#0#7'Caption'
+  +#6#28'Stop playing ambient sounds.'#5'Color'#4#216#227#248#0#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'T'
+  +'oggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0#0#0#242#2#4
+  +#9'TGroupBox'#10'GroupMusic'#4'Left'#2#15#6'Height'#3#180#0#3'Top'#3#155#0#5
+  +'Width'#3#194#1#7'Caption'#6',Background music (in the PC''s current area):'
+  +#12'ClientHeight'#3#163#0#11'ClientWidth'#3#190#1#5'Color'#4#216#227#248#0#10
+  +'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11
+  +'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#1#0#9'TCheckBox'#13'CheckDayM'
+  +'usic'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'#'#5'Width'#3#204#0#7'Caption'#6
+  +'"Change daytime background music to'#5'Color'#4#216#227#248#0#10'Font.Color'
+  +#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10
+  +'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#2#0#0#9'TCombo'
+  +'Box'#13'ComboDayMusic'#4'Left'#3#250#0#6'Height'#2#31#3'Top'#2#30#5'Width'#3
+  +#190#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.St'
+  +'rings'#1#6#0#0#8'OnChange'#7#26'ControlChangeToggleChecked'#10'ParentFont'#8
+  +#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#3#0#0#9'TCheckBox'#15'CheckNigh'
+  +'tMusic'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'F'#5'Width'#3#209#0#7'Caption'#6
+  +'$Change nighttime background music to'#5'Color'#4#216#227#248#0#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7
+  +#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#4#0#0#9'TCo'
+  +'mboBox'#15'ComboNightMusic'#4'Left'#3#250#0#6'Height'#2#31#3'Top'#2'A'#5'Wi'
+  +'dth'#3#190#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.H'
+  +'eight'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13
+  +'Items.Strings'#1#6#0#0#8'OnChange'#7#26'ControlChangeToggleChecked'#10'Pare'
+  +'ntFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#5#0#0#9'TCheckBox'#10
+  +'CheckBox11'#4'Left'#2#5#6'Height'#2#22#3'Top'#3#135#0#5'Width'#3#138#0#7'Ca'
+  +'ption'#6#22'Play background music.'#5'Color'#4#216#227#248#0#10'Font.Color'
+  +#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10
+  ,'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#8#0#0#9'TCheck'
+  +'Box'#10'CheckBox12'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#5#5'Width'#3#177#0#7
+  +'Caption'#6#30'Stop playing background music.'#5'Color'#4#216#227#248#0#10'F'
+  +'ont.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnC'
+  +'hange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0
+  +#0#9'TCheckBox'#16'CheckBattleMusic'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'i'#5
+  +'Width'#3#133#0#7'Caption'#6#22'Change battle music to'#5'Color'#4#216#227
+  +#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Ar'
+  +'ial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabO'
+  +'rder'#2#6#0#0#9'TComboBox'#16'ComboBattleMusic'#4'Left'#3#250#0#6'Height'#2
+  +#31#3'Top'#2'd'#5'Width'#3#190#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7
+  +'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#9
+  +'ItemIndex'#2#0#13'Items.Strings'#1#6#0#0#8'OnChange'#7#26'ControlChangeTogg'
+  +'leChecked'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#7#0
+  +#0#9'TCheckBox'#15'CheckPlayBattle'#4'Left'#3#225#0#6'Height'#2#22#3'Top'#3
+  +#135#0#5'Width'#2'}'#7'Caption'#6#22'Play the battle music.'#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#9#0#0#9'TCheckBox'#15'CheckStopBattle'#4'Left'#3#225#0#6'Height'#2
+  +#22#3'Top'#2#5#5'Width'#2#127#7'Caption'#6#22'Stop the battle music.'#5'Colo'
+  +'r'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font'
+  +'.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentF'
+  +'ont'#8#8'TabOrder'#2#1#0#0#0#0
+]);

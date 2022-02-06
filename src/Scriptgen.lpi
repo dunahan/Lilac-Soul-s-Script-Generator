@@ -1,0 +1,828 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <Flags>
+        <SaveClosedFiles Value="False"/>
+        <SaveOnlyProjectUnits Value="True"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <AlwaysBuild Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <AutoCreateForms Value="False"/>
+      <Title Value="LS Script Generator"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="3"/>
+      <BuildNr Value="2"/>
+      <StringTable FileDescription="Generates scripts for Neverwinter Nights" ProductName="LS NWN Script Generator" ProductVersion="TK.0"/>
+    </VersionInfo>
+    <BuildModes Count="3">
+      <Item1 Name="Release" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="9"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="debug"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+              <IncludeAssertionCode Value="True"/>
+              <AllowLabel Value="False"/>
+              <StaticKeyword Value="True"/>
+              <UseAnsiStrings Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <Optimizations>
+              <OptimizationLevel Value="0"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="True"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+          <Other>
+            <Verbosity>
+              <ShowWarn Value="False"/>
+              <ShowNotes Value="False"/>
+              <ShowHints Value="False"/>
+            </Verbosity>
+            <ConfigFile>
+              <StopAfterErrCount Value="12"/>
+            </ConfigFile>
+            <CompilerMessages>
+              <UseMsgFile Value="True"/>
+            </CompilerMessages>
+            <CompilerPath Value="$(CompPath)"/>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Win">
+        <CompilerOptions>
+          <Version Value="9"/>
+          <Target>
+            <Filename Value="win32/Script Generator.exe"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="win32"/>
+            <LCLWidgetType Value="win32"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+              <AllowLabel Value="False"/>
+              <StaticKeyword Value="True"/>
+              <UseAnsiStrings Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <UseLineInfoUnit Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <Verbosity>
+              <ShowWarn Value="False"/>
+              <ShowNotes Value="False"/>
+              <ShowHints Value="False"/>
+            </Verbosity>
+            <ConfigFile>
+              <StopAfterErrCount Value="12"/>
+            </ConfigFile>
+            <CompilerMessages>
+              <UseMsgFile Value="True"/>
+            </CompilerMessages>
+            <CompilerPath Value="$(CompPath)"/>
+          </Other>
+        </CompilerOptions>
+      </Item3>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="/home/james/development/publishedproject/"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="81">
+      <Unit0>
+        <Filename Value="Scriptgen.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="start.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="main"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="start"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="random_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Randomint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="random_int"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="confirm_clear.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="confirmclear"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="confirm_clear"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="confirm_exit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="confirmexit"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="confirm_exit"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="item_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="itemint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="item_int"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="howto_use.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="usehow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="howto_use"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="numitems_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="numitems"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="numitems_int"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="pcgold_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="goldint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pcgold_int"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="pcstats_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="pcstats"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pcstats_int"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="statchoose_box.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="statchoose"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="statchoose_box"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="statwarning_box.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="statwarning"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="statwarning_box"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="oncetut.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="once_tut"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="oncetut"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="local_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="local"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="local_int"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="party_doc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="partydoc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="party_doc"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="help_doc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="helpdoc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="help_doc"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="nwn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="nwn"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="normscript_help.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="normscripthelp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="normscript_help"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="event.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="eventchooser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="event"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="restraint_norm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="restraint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="restraint_norm"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="other_restrict.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="otherrestrictions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="other_restrict"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="itemxp_give.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="giveitem"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="itemxp_give"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="itemxp_take.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="takestuff"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="itemxp_take"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="adjustreputation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="repadjust"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="adjustreputation"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="alignmentreputation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="adjalignment"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="alignmentreputation"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="localvar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="locvar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="localvar"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="startmerchant.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="merchant"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="startmerchant"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="attackpc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="attack"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="attackpc"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="spawn_creature.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="crspawn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="spawn_creature"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="spawn_placeable.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="plspawn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="spawn_placeable"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="help_concept.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="concept_help"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="help_concept"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="codegen_doc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="codegen"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="codegen_doc"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="startconv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="conversation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="startconv"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="teleport_pc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="teleport"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="teleport_pc"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="applyvisual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="vfx"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="applyvisual"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="destroyobject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="destroyobj"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="destroyobject"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="popup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="popup_ev"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="popup"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="ifinspector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="inspect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ifinspector"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="chooseif.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ifchoose"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="chooseif"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="make_else.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="makeelse"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="make_else"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="journaladd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="entryupdate"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="journaladd"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="journal_int.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="journalsint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="journal_int"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="damage_pc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="damagepc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="damage_pc"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="spellcast.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="castspell"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="spellcast"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="openlock.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="lockopen"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="openlock"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="effect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="applyeffect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="effect"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="actionqueue.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="queue"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="actionqueue"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="if_warning.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ifwarning"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="if_warning"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="heartbeat_notice.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="heartbeatnotice"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="heartbeat_notice"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="storepcparty.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="storeinfo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="storepcparty"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="lights_onoff.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="lights"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="lights_onoff"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="fakespell.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fakespelldoc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fakespell"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="black_smith.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="blacksmith"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="black_smith"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="choose_smith.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="choose_blacksmith"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="choose_smith"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="smith_when.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="whentofire"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="smith_when"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="unique_power.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="uniquepower"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unique_power"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="commform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="communicationform"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="commform"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="sound_object.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="soundobject"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="sound_object"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="subracedeity.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="subrace_deity"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="subracedeity"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="iffollower.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="followers"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="iffollower"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="companions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="companion"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="companions"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="delay.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="delaycommand"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="delay"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="miscfunc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="misc"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="miscfunc"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="acquire_item.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="acquire"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="acquire_item"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="cut_scene.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cutscene"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cut_scene"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="itemscript.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="itemscripting"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="itemscript"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="ipSpell.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ipCastSpell"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ipSpell"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="palettetool.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PaletteWindow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="palettetool"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="erfname.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ErfNameForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="erfname"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="removeeffect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RemEffect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="removeeffect"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="EventHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EventHelp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="EventHelper"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="appear.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="appearance"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="appear"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="traps.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="trapform"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="traps"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="constants.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="constants"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="extform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ExtForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ExtForm"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="colorc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ColorCreature"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ColorC"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="queueform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="QueueForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="QueueForm"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="horsemount.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HorseForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="HorseMount"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="timeconditional.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CondTime"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TimeConditional"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="typechoose.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TypeChooser"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="TypeChoose"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="biofiles.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BioFiles"/>
+      </Unit80>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="9"/>
+    <Target>
+      <Filename Value="linux/scriptgenerator"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="linux"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+        <AllowLabel Value="False"/>
+        <StaticKeyword Value="True"/>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <TargetOS Value="linux"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShowWarn Value="False"/>
+        <ShowNotes Value="False"/>
+        <ShowHints Value="False"/>
+      </Verbosity>
+      <ConfigFile>
+        <StopAfterErrCount Value="12"/>
+      </ConfigFile>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+</CONFIG>
