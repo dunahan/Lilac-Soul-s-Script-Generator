@@ -1,0 +1,235 @@
+object cutscene: Tcutscene
+  Left = 376
+  Height = 400
+  Top = 154
+  Width = 670
+  ActiveControl = RadioGroup1.RadioButton0
+  BorderStyle = bsDialog
+  Caption = 'Cutscenes'
+  ClientHeight = 400
+  ClientWidth = 670
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Label1: TLabel
+    Left = 280
+    Height = 16
+    Top = 26
+    Width = 350
+    AutoSize = False
+    Caption = 'the start or end of the cutscene by 3 or 4 seconds,  '
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label2: TLabel
+    Left = 280
+    Height = 16
+    Top = 10
+    Width = 350
+    AutoSize = False
+    Caption = 'It may be a good idea to first call a fade, then delay'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label3: TLabel
+    Left = 280
+    Height = 16
+    Top = 42
+    Width = 350
+    AutoSize = False
+    Caption = 'and delay the fade back in for about 6 to 8  seconds'
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Memo1: TMemo
+    Left = 10
+    Height = 375
+    Top = 10
+    Width = 260
+    Color = clInfoBk
+    Lines.Strings = (
+      'IMPORTANT - PLEASE READ'
+      ''
+      'This cutscene generator is NOT highly advanced. I [Lilac Soul] could have made it more advanced, but I think that would make it inaccessible to a lot of people.'
+      ''
+      'For instance, the Script Generator does not let you control the camera. I recommend that you set the camera mode to chase-cam right after starting the cutscene. It will revert to the normal mode when you finish the cutscene. The advantage of chase-cam is that whenever the PC turns, the camera will turn with him.'
+      ''
+      'My advice is to not make one single script that handles the entire cutscene. Instead, make heavy use of triggers. The general outline of your cutscene might be:'
+      ''
+      '1) Start the cutscene.'
+      '2) Jump to an area normally inaccessible to the player (can be a copy of the current area).'
+      '3) Walk to a waypoint.'
+      ''
+      'Then around that waypoint, paint a trigger, and for the OnEnter of that trigger, make a script that:'
+      ''
+      '4) Does a lot of stuff.'
+      '5) Walk to another waypoint.'
+      ''
+      'That waypoint has another trigger, and so on. On the last trigger:'
+      ''
+      '6) Jump the PC to the normally accessible area.'
+      '7) End the cuscene.'
+      ''
+      'Still, there are so many things that can make cutscenes behave oddly, and I make no guarantees. Be sure to test the cutscene before you release the module.'
+    )
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 280
+    Height = 55
+    Top = 70
+    Width = 380
+    AutoFill = True
+    Caption = 'Start / end cutscene'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 40
+    ClientWidth = 376
+    Color = 16311256
+    Columns = 3
+    ItemIndex = 0
+    Items.Strings = (
+      'Neither'
+      'Start cutscene'
+      'End cutscene'
+    )
+    ParentColor = False
+    TabOrder = 1
+  end
+  object RadioGroup2: TRadioGroup
+    Left = 280
+    Height = 120
+    Top = 135
+    Width = 380
+    AutoFill = True
+    Caption = 'Fade in / fade out'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclTopToBottomThenLeftToRight
+    ChildSizing.ControlsPerLine = 4
+    ClientHeight = 105
+    ClientWidth = 376
+    Color = 16311256
+    ColumnLayout = clVerticalThenHorizontal
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Neither'
+      'Fade in slowly'
+      'Fade in medium speed'
+      'Fade out slowly'
+      'Fade out medium speed'
+      'Immediately black-out screen'
+      'Immediately remove black-out'
+    )
+    ParentColor = False
+    TabOrder = 2
+  end
+  object RadioGroup3: TRadioGroup
+    Left = 280
+    Height = 55
+    Top = 265
+    Width = 170
+    AutoFill = True
+    Caption = 'Switch to chase-cam'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 40
+    ClientWidth = 166
+    Color = 16311256
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'No'
+      'Yes'
+    )
+    ParentColor = False
+    TabOrder = 3
+  end
+  object BitBtn1: TBitBtn
+    Left = 325
+    Height = 41
+    Top = 334
+    Width = 115
+    Caption = 'Okay'
+    Default = True
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    Spacing = 15
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn
+    Left = 505
+    Height = 41
+    Top = 334
+    Width = 115
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 5
+  end
+end

@@ -1,0 +1,104 @@
+object heartbeatnotice: Theartbeatnotice
+  Left = 447
+  Height = 290
+  Top = 149
+  Width = 400
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Important notice!'
+  ClientHeight = 290
+  ClientWidth = 400
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 15
+    Height = 200
+    Top = 10
+    Width = 370
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Important information about NPC heartbeats:'
+      ''
+      'Everything you put in this script will run on each NPC heartbeat (every six seconds), provided a PC is in the same area and provided the NPC is not currently in conversation or combat.'
+      ''
+      'The PC has been generically defined as the nearest PC that the NPC can see. For most heartbeats, the NPC will likely not see any PCs. Thus, if scripting something that deals with the PC, it is probable that the scripting could have strange behavior most of the time as it tries to deal with a nonexistent object.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object ButtonYes: TBitBtn
+    Left = 50
+    Height = 35
+    Top = 245
+    Width = 110
+    Caption = 'Yes'
+    Default = True
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 6
+    OnClick = ButtonYesClick
+    Spacing = 15
+    TabOrder = 2
+  end
+  object ButtonNo: TBitBtn
+    Left = 230
+    Height = 35
+    Top = 245
+    Width = 110
+    Cancel = True
+    Caption = 'No'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 7
+    Spacing = 15
+    TabOrder = 3
+  end
+  object MemoQuestion: TMemo
+    Left = 15
+    Height = 50
+    Top = 180
+    Width = 370
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Would you like to have this script check that a PC was found before continuing?'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+end

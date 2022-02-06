@@ -1,0 +1,131 @@
+Change log, Lilac Soul's NNW Script Generator version 2.3 to The Krit's revision
+--------------------------------------------------------------------------------
+
+General functionality
+---------------------
+* The system tray, program update, and donate options are gone.
+* Added the current directory to the search for NWN. This might help some
+  people who previously had to locate NWN manually.
+* The handling of checks for whether or not a PC triggered a script has been
+  made more refined, with a new option to only check the "usual suspects".
+* Miscellaneous interface tweaks, including a more consistent presentation
+  for choosing a object to be affected by the script. In most places, this
+  means more choices.
+  * The most recent spawn and "last actor" have been added as choices for
+    objects that the script can affect.
+* I regenerated most of the symbolic constant choices, using both nwscript.nss
+  and various .2da's as sources. This means more choices in several places.
+  * Most (if not all) instances of symbolic constants being displayed have
+    been changed to more descriptive names (usually generated from .2da information, so there may be some oddities left here).[/list][*] Speeded up palette searches.
+* Loading a module's palette will also load the palettes from that module's
+  hak paks (but the priority system is ignored, possibly affecting cases
+  where the same blueprint exists in multiple hak paks). Custom talk tables
+  are also now supported.
+* In some places with "okay and more" buttons, users can see a list of what
+  they have done so far.
+* Spruced up the icon for today's larger sizes.
+
+
+Script changes
+--------------
+* Comments have been added to scripts. These are the English sentences after
+  a pair of slashes (//). These are for your reference; you can change them
+  (the comments, not the slashes) to whatever you want.
+* Scripts follow a cleaner format now. (The apology for the non-clean scripts
+  has consequentially been removed.)
+* Blacksmith scripts have been revamped. This will break any auxiliary
+  scripts anyone may have written to interact with a blacksmith under the old
+  system. (The older format is still recognized though, for those wanting to
+  expand an existing blacksmith script. The result will be a conversion to
+  the new format.
+* Blacksmith scripts now use  x0_inc_skills  (the trap crafting library).
+  Normally this is a non-issue, but there is a (small) chance that someone
+  would modify this library for crafting, thinking nothing else uses it. If
+  so, there is another small chance that those changes might break the
+  blacksmith scripts. (Specifically, the functions  DestroyNumItems()  and
+  skillCTRAPGetHasComponent() are needed.)
+* Tag-based scripts use a new new system (compatible with the previous new
+  system).
+* The "nw_i0_tool" conflicts have been eliminated.
+* The "ls_party" #include for party-wide local variables is automatically
+  referenced if needed. Users are still responsible for copying that script
+  into their module though.
+* Heartbeat scripts now have an option to abort if no PC is seen.
+* When it made sense, finding objects by tag has been changed to find the
+  nearest object with that tag or to find an item in a particular inventory
+  with that tag. This will let those scripts function properly when there is
+  more than one object with that tag.
+* Leveling creatures is no longer strictly restricted to henchmen, but it is
+  still found with the other henchmen functionality.
+  * Similarly, the option to destroy a henchman can be used to destroy
+    objects that are not henchmen. Be careful if you are trying to *only*
+    destroy a creature if it is a henchman. (Identifying a creature by its
+    tag will only find henchmen.)
+* There is better support for multiple henchmen.
+* You can now unpossess a familiar if you (just) know which object is the
+  familiar. (This is an alternative to knowing which object is the PC.) If
+  this is done and the possessed familiar had been called "the PC", then
+  future references to "the PC" will mean the master.
+* Storing PC/party info can now be delayed. (The stored info will be
+  calculated after the delay.)
+* Speaking text is no longer an action unless done through the action queue
+  window.
+
+
+New options for conditionals/checks
+-----------------------------------
+* When checking for an equipped item, there are new options for "either hand"
+  and "either ring" (and "any creature weapon").
+* Can check for a PC being triple-classed (as well as multi-classed).
+* For "Text Appears When" scripts, the race check now allows selecting
+  multiple races.
+* When making a skill check, there is now always a check that the PC can
+  actually use the skill (relevant for skills that require training).
+* Skill checks can be hidden from players.
+* Journal quests can be checked for being exactly at a given stage.
+* Copied some "Text Appears When" checks to "if" statement options, and vice
+  versa. Similarly for restrictions on when a script runs.
+
+
+New options for "normal" scripts
+--------------------------------
+* When restricting when a script fires, there is an option for once per
+  creature as well as once per tag.
+* Packages can be selected when leveling a creature.
+* Creatures spawned on a delay can now be given an action (only one though)
+  to do upon spawning.
+* Dice have been added as options for determining a damage amount. (It is
+  D&D after all. :) )
+* The cursed flag (undroppable by players) on items can be changed.
+* Weather can be set module-wide.
+* Reputation adjustments can be made party-wide.
+* An area's battle music can be set, started, and stopped.
+* Added an option to write a message to the log file.
+* Added an option for a creature to play one of its voice/quick chat lines.
+* Messages (to players or to the log) can contain the PC's and/or the script
+  owner's names.
+* You can now jump the PC and (just) that PC's associates. (This is for when
+  jumping within an area, as with secret doors.)
+* Visual effects that require a duration have been added as options.
+
+
+New options for blacksmith scripts
+----------------------------------
+* Blacksmith scripts can check for a certain number of a given item as an
+  ingredient.
+
+
+1.69 additions
+--------------
+* The palette window reads the "x3" .bif (horse blueprints mostly).
+* PDK has been added to the class choices.
+* Alignment adjustments can be for just the PC, not the party.
+* New appearances, wings, tails, and visual effects added to the lists.
+  * Added support specifically for scaled appearances.
+* Descriptions can be changed.
+* Creature colors can be changed (for part-based appearances).
+* Paladin mounts can be summoned and dismissed.
+* Horses can be mounted and dismounted.
+
+
+And miscellaneous bugs squashed as they were found.

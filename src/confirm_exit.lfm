@@ -1,0 +1,69 @@
+object confirmexit: Tconfirmexit
+  Left = 447
+  Height = 200
+  Top = 183
+  Width = 300
+  ActiveControl = BitBtn1
+  BorderStyle = bsDialog
+  Caption = 'Confirm'
+  ClientHeight = 200
+  ClientWidth = 300
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Label1: TLabel
+    Left = 20
+    Height = 100
+    Top = 20
+    Width = 260
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Are you sure you want to exit?'#10#10'All unsaved info will be lost!'
+    Font.Color = clMaroon
+    Font.Height = -17
+    Font.Name = 'Arial'
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 20
+    Height = 40
+    Top = 140
+    Width = 110
+    Caption = 'Yes'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    Spacing = 10
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 170
+    Height = 40
+    Top = 140
+    Width = 110
+    Cancel = True
+    Caption = 'Cancel'
+    Kind = bkNo
+    ModalResult = 2
+    Spacing = 10
+    TabOrder = 1
+  end
+end

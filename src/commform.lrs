@@ -1,0 +1,170 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tcommunicationform','FORMDATA',[
+  'TPF0'#241#18'Tcommunicationform'#17'communicationform'#4'Left'#3#191#1#6'Hei'
+  +'ght'#3#229#1#3'Top'#3#149#0#5'Width'#3#194#1#13'ActiveControl'#7#21'receive'
+  +'r.RadioButton1'#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6';Speak a string '
+  +'/ display floating text / send message to PC'#12'ClientHeight'#3#229#1#11'C'
+  +'lientWidth'#3#194#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#7'OnClose'#7#9'FormClose'#8'OnCr'
+  +'eate'#7#10'FormCreate'#8'Position'#7#16'poMainFormCenter'#0#242#2#0#6'TPane'
+  +'l'#12'PanelDefault'#4'Left'#2'-'#6'Height'#3#190#0#3'Top'#3#240#0#5'Width'#3
+  +'h'#1#10'BevelInner'#7#8'bvRaised'#10'BevelOuter'#7#9'bvLowered'#7'Caption'#6
+  +'!No additional information needed.'#5'Color'#4#216#227#248#0#10'Font.Color'
+  +#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8
+  +#10'ParentFont'#8#8'TabOrder'#2#2#0#0#242#2#1#6'TPanel'#9'PanelText'#4'Left'
+  +#2#25#6'Height'#2'_'#3'Top'#3#140#0#5'Width'#3#144#1#12'ClientHeight'#2'_'#11
+  +'ClientWidth'#3#144#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'
+  +#2#0#0#6'TLabel'#6'Label1'#4'Left'#2#20#6'Height'#2#19#3'Top'#2#12#5'Width'#2
+  +'9'#7'Caption'#6#9'The text:'#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'cl'
+  +'Maroon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#11'Transparent'#8#0#0#5'TEdit'#7'tospeak'#4'Left'#2'Z'#6'Heig'
+  +'ht'#2#24#3'Top'#2#10#5'Width'#3'"'#1#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#9'MaxLength'#2'P'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#0#0#0#11'TStaticText'#10'TextTokens'#4'Left'#2'K'#6'Height'#2'2'#3
+  +'Top'#2'-'#5'Width'#3'@'#1#9'Alignment'#7#8'taCenter'#7'Caption'#6'UUse "<ME'
+  +'>" to get the name of the script owner, and "<PC>" to get the name of the P'
+  +'C.'#8'TabOrder'#2#1#0#0#0#242#2#2#7'TBitBtn'#7'BitBtn1'#4'Left'#2#25#6'Heig'
+  +'ht'#2'#'#3'Top'#3#184#1#5'Width'#3#140#0#7'Caption'#6#16'Okay - and more!'#7
+  +'Default'#9#7'Enabled'#8#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9
+  +'Font.Name'#6#5'Arial'#10'Glyph.Data'#10'Z'#2#0#0'V'#2#0#0'BMV'#2#0#0#0#0#0#0
+  +'v'#0#0#0'('#0#0#0')'#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#224#1#0#0#0#0#0#0#0#0#0
+  +#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0
+  +#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255
+  +#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwwwwwwwwwwwww'
+  +'p'#0#0#0'wDH'#135'wwwwwwwwwwwwwwwwp'#0#0#0'w"D'#136'wwwwwwwwwwwwwwwwp'#0#0#0
+  +#162'""H'#135'wwwwwwwwww'#8'wwwwp'#0#0#0#162'""$'#136'wwwwwwwwwp'#7#135'wwwp'
+  +#0#0#0#162'"""H'#135'wwwwwwwwp@xwwwp'#0#0#0#162'"""$'#136'wwwwwwwww'#4#7#135
+  +'wwp'#0#0#0#162'""""H'#135'wwwwwww'#136#132'@xwwp'#0#0#0#162'"H'#162'"$'#136
+  +'wwwwwp'#135'x'#132#196#7#135'wp'#0#0#0#162'"H'#138'""H'#135'wwwp'#135#136#0
+  +'D'#204'@'#7'wp'#0#0#0#162'"H'#135#162'"D'#136'www'#7#128#0'L'#204#204#204#7
+  +'wp'#0#0#0'z"H'#135'z"$'#136'wwpp'#0'L'#204#198#204#198#7'wp'#0#0#0'z"Gww'
+  +#162'"H'#135'ww'#0'L'#204#198'dl`wwp'#0#0#0'wwwwwz"$HwpFf'#204'dpf'#7'wwp'#0
+  +#0#0'wwwwww'#162'"H'#135'p'#0#6#198'Gt`wwwp'#0#0#0'wwwwwwz"$'#135'wwvdw'#6#7
+  +'wwwp'#0#0#0'wwwwwww'#162'$HwwvGw'#0'wwwwp'#0#0#0'wwwwwwwz"Hwwtwwwwwwwp'#0#0
+  +#0'wwwwwwww'#162'Hwwwwwwwwwwp'#0#0#0'wwwwwwwwz''wwwwwwwwwwp'#0#0#0#7'OnClick'
+  +#7#19'ButtonClickOkayMore'#10'ParentFont'#8#8'TabOrder'#2#5#0#0#242#2#3#7'TB'
+  +'itBtn'#7'BitBtn2'#4'Left'#3#185#0#6'Height'#2'#'#3'Top'#3#184#1#5'Width'#2
+  +'x'#7'Caption'#6#12'Okay - exit!'#7'Enabled'#8#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0
+  +#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240
+  +#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191
+  +#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255
+  +#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'
+  +#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'www'
+  +'ww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'
+  +#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'
+  +#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'
+  +#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0
+  +#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0
+  +#11'ModalResult'#2#1#7'OnClick'#7#19'ButtonClickOkayExit'#10'ParentFont'#8#7
+  +'Spacing'#2#5#8'TabOrder'#2#6#0#0#242#2#4#7'TBitBtn'#7'BitBtn3'#4'Left'#3'E'
+  +#1#6'Height'#2'#'#3'Top'#3#184#1#5'Width'#2'd'#7'Caption'#6#5'Close'#10'Font'
+  +'.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'Glyph'
+  +'.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0
+  +#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  ,#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11
+  +'wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240
+  +#145#17#17#17#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  +#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'
+  +#240#144#176#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17
+  +'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'
+  +#240#145#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153
+  +#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255
+  +#255#255#255#7'pwx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'Moda'
+  +'lResult'#2#2#7'OnClick'#7#16'ButtonClickClose'#10'ParentFont'#8#7'Spacing'#2
+  +#10#8'TabOrder'#2#7#0#0#242#2#5#6'TPanel'#14'PanelFloatText'#4'Left'#2'-'#6
+  +'Height'#3#190#0#3'Top'#3#240#0#5'Width'#3'h'#1#10'BevelInner'#7#8'bvRaised'
+  +#10'BevelOuter'#7#9'bvLowered'#12'ClientHeight'#3#190#0#11'ClientWidth'#3'h'
+  +#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#3#7'Visible'#8#0
+  +#11'TRadioGroup'#14'GroupPartywide'#4'Left'#2#30#6'Height'#2'<'#3'Top'#2'A'#5
+  +'Width'#3','#1#8'AutoFill'#9#7'Caption'#6'5Should this text be seen by other'
+  +'s in the PC''s party?'#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildSizing.'
+  +'TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomogenousS'
+  +'paceResize'#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildResize'
+  +#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizing.Shrink'
+  +'Vertical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclLeftToRightTh'
+  +'enTopToBottom'#27'ChildSizing.ControlsPerLine'#2#2#12'ClientHeight'#2','#11
+  +'ClientWidth'#3'('#1#7'Columns'#2#2#9'ItemIndex'#2#0#13'Items.Strings'#1#6#3
+  +'Yes'#6#2'No'#0#8'TabOrder'#2#0#0#0#0#242#2#6#6'TPanel'#12'PanelSpeaker'#4'L'
+  +'eft'#2'-'#6'Height'#3#190#0#3'Top'#3#240#0#5'Width'#3'h'#1#10'BevelInner'#7
+  +#8'bvRaised'#10'BevelOuter'#7#9'bvLowered'#12'ClientHeight'#3#190#0#11'Clien'
+  +'tWidth'#3'h'#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#4#7
+  +'Visible'#8#0#6'TLabel'#6'volume'#4'Left'#2'#'#6'Height'#2#17#3'Top'#3#160#0
+  +#5'Width'#2'1'#7'Caption'#6#7'Volume:'#10'Font.Color'#7#7'clBlack'#11'Font.H'
+  +'eight'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0
+  +#9'TGroupBox'#12'GroupSpeaker'#4'Left'#2#10#6'Height'#3#145#0#3'Top'#2#5#5'W'
+  +'idth'#3'T'#1#7'Caption'#6#15'Who will speak?'#12'ClientHeight'#3#129#0#11'C'
+  +'lientWidth'#3'P'#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2
+  +#0#0#12'TRadioButton'#10'RadioOwner'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#0#5
+  +'Width'#3'E'#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the script'#7'Chec'
+  +'ked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'A'
+  +'rial'#10'ParentFont'#8#5'State'#7#9'cbChecked'#8'TabOrder'#2#0#0#0#12'TRadi'
+  +'oButton'#7'RadioPC'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25#5'Width'#2'A'#7
+  +'Caption'#6#6'The PC'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Fo'
+  +'nt.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#7'TabStop'#8#0#0#12'TR'
+  +'adioButton'#13'RadioTargeted'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25#5'Widt'
+  +'h'#3#133#0#7'Caption'#6#21'The activation target'#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrde'
+  +'r'#2#5#7'TabStop'#8#7'Visible'#8#0#0#12'TRadioButton'#10'RadioSpawn'#4'Left'
+  +#2#5#6'Height'#2#22#3'Top'#2'2'#5'Width'#3'E'#1#8'AutoSize'#8#7'Caption'#6#21
+  +'The most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#7#7'TabStop'#8#0#0#12
+  +'TRadioButton'#11'RadioTagged'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'K'#5'Widt'
+  +'h'#3#142#0#7'Caption'#6#23'An object with the tag:'#10'Font.Color'#7#7'clBl'
+  +'ack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleO'
+  +'kay'#10'ParentFont'#8#8'TabOrder'#2#4#7'TabStop'#8#0#0#5'TEdit'#10'EditTagg'
+  +'ed'#4'Left'#3#160#0#6'Height'#2#24#3'Top'#2'I'#5'Width'#3#170#0#5'Color'#4
+  +#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'
+  +#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeToggleChecked'#10'P'
+  +'arentFont'#8#8'TabOrder'#2#6#0#0#12'TRadioButton'#14'RadioActivator'#4'Left'
+  +#2#5#6'Height'#2#22#3'Top'#2#0#5'Width'#2'x'#7'Caption'#6#18'The item activa'
+  +'tor'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Ari'
+  +'al'#10'ParentFont'#8#8'TabOrder'#2#2#7'TabStop'#8#7'Visible'#8#0#0#12'TRadi'
+  +'oButton'#10'RadioActor'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'd'#5'Width'#3'E'
+  +#1#8'AutoSize'#8#7'Caption'#6#21'The most recent actor'#10'Font.Color'#7#7'c'
+  +'lBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#3#7'TabStop'#8#0#0#0#9'TComboBox'#9'volumebox'#4'Left'#2'U'#6'Hei'
+  ,'ght'#2#31#3'Top'#3#155#0#5'Width'#3#240#0#5'Color'#7#21'clInactiveCaptionTe'
+  +'xt'#7'Enabled'#8#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.N'
+  +'ame'#6#5'Arial'#10'ItemHeight'#2#0#9'ItemIndex'#2#2#13'Items.Strings'#1#6#25
+  +'Silent shout (DM channel)'#6#25'Shout (heard module-wide)'#6' Talk (heard b'
+  +'y nearby creatures)'#6#27'Talk, AI (not heard by PCs)'#6' Whisper (heard in'
+  +' a short range)'#0#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrde'
+  +'r'#2#1#4'Text'#6' Talk (heard by nearby creatures)'#0#0#0#242#2#7#11'TRadio'
+  +'Group'#8'receiver'#4'Left'#2'A'#6'Height'#2'x'#3'Top'#2#15#5'Width'#3'@'#1#8
+  +'AutoFill'#9#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSp'
+  +'acing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomogenousChildResize'
+  +#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildResize'#28'ChildSizi'
+  +'ng.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7
+  +#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclLeftToRightThenTopToBotto'
+  +'m'#27'ChildSizing.ControlsPerLine'#2#1#12'ClientHeight'#2't'#11'ClientWidth'
+  +#3'<'#1#5'Color'#4#216#227#248#0#9'ItemIndex'#2#1#13'Items.Strings'#1#6'*Rec'
+  +'ord a message in the server''s log file.'#6'%Send a chat window message to '
+  +'the PC.'#6'-Have floating text appear over the PC''s head.'#6#29'Have someo'
+  +'ne speak some text.'#6'"Have someone say a quickchat line.'#0#7'OnClick'#7
+  +#13'receiverClick'#11'ParentColor'#8#8'TabOrder'#2#8#0#0#242#2#8#6'TPanel'#10
+  +'PanelQChat'#4'Left'#2#25#6'Height'#2'_'#3'Top'#3#140#0#5'Width'#3#144#1#12
+  +'ClientHeight'#2'_'#11'ClientWidth'#3#144#1#5'Color'#4#216#227#248#0#11'Pare'
+  +'ntColor'#8#8'TabOrder'#2#1#7'Visible'#8#0#6'TLabel'#10'LabelQChat'#4'Left'#2
+  +'<'#6'Height'#2#19#3'Top'#2'&'#5'Width'#2'u'#7'Caption'#6#16'Which quickchat'
+  +'?'#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2
+  +#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#11'Transpare'
+  +'nt'#8#0#0#9'TComboBox'#10'ComboQChat'#4'Left'#3#190#0#6'Height'#2#31#3'Top'
+  +#2' '#5'Width'#3#150#0#10'ItemHeight'#2#0#13'Items.Strings'#1#6#7'Attack!'#6
+  +#14'Attack grunt 1'#6#14'Attack grunt 2'#6#14'Attack grunt 3'#6#8'Bad idea'#6
+  +#11'Battlecry 1'#6#11'Battlecry 2'#6#11'Battlecry 3'#6#5'Bored'#6#6'Can do'#6
+  +#9'Cannot do'#6#5'Cheer'#6#4'Cuss'#6#5'Death'#6#5'Dying'#6#10'Encumbered'#6
+  +#15'Enemies sighted'#6#4'Flee'#6#10'Follow me!'#6#11'Go stealthy'#6#9'Good i'
+  +'dea'#6#7'Goodbye'#6#11'Group party'#6#9'Guard me!'#6#8'Heal me!'#6#5'Hello'
+  +#6#4'Help'#6#5'Hold!'#6#5'Laugh'#6#9'Look here'#6#9'Move over'#6#2'No'#6#6'P'
+  +'ain 1'#6#6'Pain 2'#6#6'Pain 3'#6#9'Pick lock'#6#8'Poisoned'#6#4'Rest'#6#18
+  +'Search for secrets'#6#8'Selected'#6#16'Something to say'#6#12'Spell failed'
+  +#6#4'Stop'#6#13'Task complete'#6#5'Taunt'#6#9'Thank you'#6#8'Threaten'#6#12
+  +'Weapon sucks'#6#3'Yes'#0#8'OnChange'#7#10'ToggleOkay'#5'Style'#7#14'csDropD'
+  +'ownList'#8'TabOrder'#2#0#0#0#0#0
+]);

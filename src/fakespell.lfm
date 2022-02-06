@@ -1,0 +1,71 @@
+object fakespelldoc: Tfakespelldoc
+  Left = 447
+  Height = 320
+  Top = 140
+  Width = 454
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'What is a fake spell'
+  ClientHeight = 320
+  ClientWidth = 454
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 16
+    Height = 230
+    Top = 15
+    Width = 425
+    Color = 16311256
+    Lines.Strings = (
+      'What is a fake spell?'
+      ''
+      'Casting a fake spell simply means that the the caster will look like he is casting a spell, but really he is not. He waves his arms, says the appropriate words, and the usual conjuration visuals appear (which in some cases includes a projectile to the target, but not always). However, after this, nothing happens.'
+      ''
+      'Many people believe that fake spells will also apply a visual effect to the target (i.e. that it will look like the target is hit by the spell, even though no non-visual effects happen). It does not, as those visual effects are applied by the spell script, and the spell script is not run for a fake spell. Any visual effects desired after the casting action must be applied by you after having the fake spell cast.'
+      ''
+      ''
+      'How might a fake spell be used?'
+      ''
+      'Suppose you make an NPC with a custom "spell" that creates a portal. You can use a fake spell to make it look like this NPC is casting a spell (at a waypoint marking where the portal will appear). Then, you create the portal at the "spell"''s target, possibly with a visual effect, preferrably delayed so that it does not appear before the casting action completes. Ideally, the delay would be implemented using the caster''s action queue, but some may prefer more traditional timed delays.'
+      ''
+      ''
+      'CAUTION: There are issues with fake spells. From the Lexicon:'
+      ''
+      '"For some reason stacking this Action doesn''t seem to produce a predictable string of castings. The creature will cast the first FakeSpell and when reaching the next FakeSpell in its Action Queue will halt all following queued Actions."'
+    )
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 309
+    Height = 45
+    Top = 260
+    Width = 129
+    Cancel = True
+    Caption = 'Close'
+    Default = True
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 25
+    TabOrder = 1
+  end
+end

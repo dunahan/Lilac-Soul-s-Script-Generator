@@ -1,0 +1,1104 @@
+inherited companion: Tcompanion
+  Left = 376
+  Height = 550
+  Top = 154
+  Width = 750
+  ActiveControl = RadioNew
+  BorderStyle = bsDialog
+  Caption = 'Henchmen and other followers'
+  ClientHeight = 550
+  ClientWidth = 750
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object ShapeFakePanel: TShape[0]
+    Left = 15
+    Height = 440
+    Top = 45
+    Width = 720
+    Brush.Color = 16311256
+    Pen.Style = psClear
+  end
+  object BevelFakePanel: TBevel[1]
+    Left = 15
+    Height = 440
+    Top = 45
+    Width = 720
+    Shape = bsFrame
+    Style = bsRaised
+  end
+  object PanelRightNew: TPanel[2]
+    Left = 385
+    Height = 430
+    Top = 50
+    Width = 345
+    BevelOuter = bvNone
+    ClientHeight = 430
+    ClientWidth = 345
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    object GroupAddHenchman: TGroupBox
+      Left = 25
+      Height = 135
+      Top = 40
+      Width = 315
+      Caption = 'Who is the henchman?'
+      ClientHeight = 120
+      ClientWidth = 311
+      Enabled = False
+      TabOrder = 1
+      object RadioAddHenchOwner: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 300
+        AutoSize = False
+        Caption = 'The owner of the script'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object RadioAddHenchTargeted: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 122
+        Caption = 'The activation target'
+        TabOrder = 1
+        Visible = False
+      end
+      object RadioAddHenchSpawn: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 30
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        TabOrder = 2
+        Visible = False
+      end
+      object RadioAddHenchTagged: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 60
+        Width = 153
+        Caption = 'The nearest object tagged:'
+        OnChange = ToggleOkay
+        TabOrder = 3
+      end
+      object RadioAddHenchActor: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 90
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent actor'
+        TabOrder = 5
+        Visible = False
+      end
+      object EditAddHenchTagged: TEdit
+        Left = 170
+        Height = 23
+        Top = 58
+        Width = 135
+        Color = 16311256
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        TabOrder = 4
+      end
+    end
+    object CheckAddHenchman: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 10
+      Width = 106
+      Caption = 'Add a henchman'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 0
+    end
+    object CheckDominate: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 195
+      Width = 121
+      Caption = 'Dominate a creature'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 2
+    end
+    object GroupDominate: TGroupBox
+      Left = 25
+      Height = 120
+      Top = 225
+      Width = 315
+      Caption = 'Who is to be dominated?'
+      ClientHeight = 105
+      ClientWidth = 311
+      Enabled = False
+      TabOrder = 3
+      object RadioDominateOwner: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 300
+        AutoSize = False
+        Caption = 'The owner of the script'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object RadioDominateTargeted: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 122
+        Caption = 'The activation target'
+        TabOrder = 1
+        Visible = False
+      end
+      object RadioDominateSpawn: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 25
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        TabOrder = 2
+        Visible = False
+      end
+      object RadioDominateTagged: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 50
+        Width = 153
+        Caption = 'The nearest object tagged:'
+        OnChange = ToggleOkay
+        TabOrder = 3
+      end
+      object RadioDominateActor: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 75
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent actor'
+        TabOrder = 5
+        Visible = False
+      end
+      object EditDominateTagged: TEdit
+        Left = 170
+        Height = 23
+        Top = 47
+        Width = 135
+        Color = 16311256
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        TabOrder = 4
+      end
+    end
+    object GroupDurationDominate: TRadioGroup
+      Left = 25
+      Height = 55
+      Top = 360
+      Width = 315
+      AutoFill = True
+      Caption = 'How long will the domination last?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 40
+      ClientWidth = 311
+      Columns = 3
+      Enabled = False
+      ItemIndex = 1
+      Items.Strings = (
+        'Permanently'
+        'Duration in seconds:'
+      )
+      TabOrder = 4
+      object SpinEdit2: TSpinEdit
+        Left = 246
+        Height = 23
+        Top = 9
+        Width = 59
+        Color = 16311256
+        MaxValue = 99999
+        MinValue = 1
+        TabOrder = 1
+        Value = 240
+      end
+    end
+  end
+  object PanelLeftNew: TPanel[3]
+    Left = 20
+    Height = 285
+    Top = 195
+    Width = 365
+    BevelOuter = bvNone
+    ClientHeight = 285
+    ClientWidth = 365
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 3
+    object LabelVFXSummon: TLabel
+      Left = 20
+      Height = 20
+      Top = 150
+      Width = 340
+      AutoSize = False
+      Caption = 'Use which visual effect when summoning this creature?'
+      Color = 16311256
+      Enabled = False
+      ParentColor = False
+      Transparent = False
+    end
+    object LabelResRefSummon: TLabel
+      Left = 20
+      Height = 30
+      Top = 110
+      Width = 148
+      Caption = 'Creature ResRef:'#10'(must have henchman scripts)'
+      ParentColor = False
+    end
+    object summonanimal: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 5
+      Width = 197
+      Caption = 'Summon master''s animal companion'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 0
+    end
+    object summonfamiliar: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 30
+      Width = 146
+      Caption = 'Summon master''s familiar'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 1
+    end
+    object CheckSummon: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 80
+      Width = 121
+      Caption = 'Summon a creature.'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 4
+    end
+    object EditSummon: TEdit
+      Left = 210
+      Height = 23
+      Top = 110
+      Width = 150
+      CharCase = ecLowerCase
+      Color = 16311256
+      MaxLength = 16
+      OnChange = EditChangeToggleChecked
+      TabOrder = 5
+    end
+    object BoxVFXSummon: TComboBox
+      Left = 20
+      Height = 27
+      Top = 169
+      Width = 340
+      Enabled = False
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 7
+    end
+    object GroupDurationSummon: TRadioGroup
+      Left = 20
+      Height = 55
+      Top = 215
+      Width = 340
+      AutoFill = True
+      Caption = 'How long will the summoning last?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 40
+      ClientWidth = 336
+      Columns = 3
+      Enabled = False
+      ItemIndex = 1
+      Items.Strings = (
+        'Permanently'
+        'Duration in seconds:'
+      )
+      TabOrder = 8
+      object SpinEdit1: TSpinEdit
+        Left = 266
+        Height = 23
+        Top = 9
+        Width = 64
+        Color = 16311256
+        MaxValue = 99999
+        MinValue = 1
+        TabOrder = 1
+        Value = 240
+      end
+    end
+    object ButtonPalette: TBitBtn
+      Left = 260
+      Height = 28
+      Top = 80
+      Width = 100
+      Caption = 'Palettes!'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000DFDFBF808000
+        8080004040008080408080604040404040404040404040404040404040408080
+        60808020808000808000FFFFFFC0C0C0C0C0C0505050003F3F3F7F7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF3F7F7F404040B0B0B0808000FFFFFFC0C0C0
+        3030307FBFBF7FFFFF7FFFFF7FFFFFBF3F3FFF0000FF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF5F5F5F808020FFFFFF9090907FBFBF7FFFFF7FFFFF7FFFFF7FFFFFFF
+        0000FF0000FF0000FF0000BF7F7F7FFFFF7FFFFF3FBFBF606060FFFFFF3F7F7F
+        7FFFFF7FBFFF0000FF3F3FFF3FBFFF7FBFBFFF3F3FFF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF7FFFFF4040407F7F7F7FFFFF7FFFFF0000FF0000FF0000FF003FFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF4040403F7F7F7FFFFF
+        7FFFFF3F3FFF0000FF0000FF7FFFFF7FFFFF7FFFFF7FBFBF5030306F6F6F7FFF
+        FF7FFFFF7FFFFF4040403F7F7F7FFFFF7FFFFF7FFFFF3F7FFF7FBFFF7FFFFF7F
+        FFFF7FFFFF503030800000B090903F7F7F7FFFFF7FFFFF4040003F7F7F7FFFBF
+        00FF0000FF003FFFBF7FFFFF7FFFFF7FFFFF7FFFFF6F6F6F5030308000005F7F
+        7F7FFFFF3F7F7F8080003F7F7F3FFFBF00FF0000FF0000FF003FFF7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF5FBFBF9F3F3F5F7F7F9090908080003F7F7F7FFFFF
+        3FFF3F00FF003FFF7F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF8060
+        60BF7F7FB090908080007F7F7F7FFFFF7FFFFF7FFFFF7FFFFFBF7FFFFF00FFFF
+        00FF7FBFFF7FFFFF7FBFBF909090C0C0C0B090900000002020007F7F7F7FFFFF
+        7FFFFF7FFFFFBF3FFFFF00FFFF00FFFF00FFBFBFFF7FFFFF606060C0C0C0C0C0
+        C0C0C0C06F6F6F3F3F3FFFFFFF3F3F3F7FFFFF7FFFFFBF3FFFFF00FFFF00FFBF
+        7FFF7FFFFF3F7F7FC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF909090
+        3F3F3F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF909090C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0606000FFFFFFFFFFFFFFFFFF7F7F7F3F7F7F3F7F7F3F7F7F3F
+        7F7FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFBF
+      }
+      OnClick = ButtonPaletteClick
+      Spacing = 10
+      TabOrder = 6
+    end
+    object CheckSummonPaladinMount: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 55
+      Width = 178
+      Caption = 'Summon master''s paladin mount'
+      Color = 16311256
+      OnChange = CheckSummonPaladinMountChange
+      ParentColor = False
+      TabOrder = 2
+    end
+    object CheckRecordPaladinMount: TCheckBox
+      Left = 190
+      Height = 22
+      Top = 55
+      Width = 171
+      Caption = 'Record as most recent spawn'
+      Color = 16311256
+      Enabled = False
+      ParentColor = False
+      TabOrder = 3
+    end
+  end
+  object BitBtn2: TBitBtn[4]
+    Left = 200
+    Height = 41
+    Top = 499
+    Width = 120
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = BitBtn2Click
+    Spacing = 15
+    TabOrder = 7
+  end
+  object BitBtn3: TBitBtn[5]
+    Left = 430
+    Height = 41
+    Top = 499
+    Width = 120
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 8
+  end
+  object RadioNew: TRadioButton[6]
+    Left = 200
+    Height = 22
+    Top = 9
+    Width = 113
+    Caption = 'New associates'
+    Checked = True
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = RadioChangeToggleVisible
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+  end
+  object RadioExisting: TRadioButton[7]
+    Left = 424
+    Height = 22
+    Top = 9
+    Width = 131
+    Caption = 'Existing associates'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = RadioChangeToggleVisible
+    ParentFont = False
+    TabOrder = 1
+  end
+  object PanelLeftExisting: TPanel[8]
+    Left = 20
+    Height = 285
+    Top = 195
+    Width = 365
+    BevelOuter = bvNone
+    ClientHeight = 285
+    ClientWidth = 365
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 5
+    Visible = False
+    object destroyanimal: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 0
+      Width = 183
+      Caption = 'Unsummon the animal companion'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 0
+    end
+    object destroyfamiliar: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 19
+      Width = 265
+      Caption = 'Unsummon the familiar (will first be unpossessed)'
+      Color = 16311256
+      OnChange = destroyfamiliarChange
+      ParentColor = False
+      TabOrder = 1
+    end
+    object releasesummoned: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 57
+      Width = 194
+      Caption = 'Unsummon the summoned creature'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 3
+    end
+    object CheckReleaseDominated: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 76
+      Width = 177
+      Caption = 'Release the dominated creature'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 4
+    end
+    object CheckDestroyReleaseDominated: TCheckBox
+      Left = 225
+      Height = 22
+      Top = 76
+      Width = 90
+      Caption = 'and destroy it'
+      Color = 16311256
+      Enabled = False
+      ParentColor = False
+      TabOrder = 5
+    end
+    object CheckRemHenchman: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 95
+      Width = 116
+      Caption = 'Release henchmen'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 6
+    end
+    object CheckDestroyRemHenchman: TCheckBox
+      Left = 225
+      Height = 22
+      Top = 95
+      Width = 108
+      Caption = 'and destroy them'
+      Color = 16311256
+      Enabled = False
+      ParentColor = False
+      TabOrder = 7
+    end
+    object GroupRemHenchman: TGroupBox
+      Left = 20
+      Height = 145
+      Top = 115
+      Width = 340
+      Caption = 'Release which henchman?'
+      ClientHeight = 130
+      ClientWidth = 336
+      Enabled = False
+      TabOrder = 8
+      object RadioRemHenchOwner: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 25
+        Width = 320
+        AutoSize = False
+        Caption = 'The owner of the script'
+        TabOrder = 6
+      end
+      object RadioRemHenchTargeted: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 25
+        Width = 122
+        Caption = 'The activation target'
+        TabOrder = 1
+        Visible = False
+      end
+      object RadioRemHenchSpawn: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 50
+        Width = 320
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        TabOrder = 2
+        Visible = False
+      end
+      object RadioRemHenchTagged: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 75
+        Width = 158
+        Caption = 'All henchmen whose tag is:'
+        OnChange = ToggleOkay
+        TabOrder = 3
+      end
+      object RadioRemHenchActor: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 100
+        Width = 320
+        AutoSize = False
+        Caption = 'The most recent actor'
+        TabOrder = 4
+        Visible = False
+      end
+      object EditRemHenchTagged: TEdit
+        Left = 170
+        Height = 23
+        Top = 72
+        Width = 160
+        Color = 16311256
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        TabOrder = 5
+      end
+      object RadioRemHenchAll: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 89
+        Caption = 'All henchmen'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+    end
+    object nuke: TButton
+      Left = 0
+      Height = 20
+      Top = 265
+      Width = 150
+      Caption = 'Release all associates'
+      OnClick = nukeClick
+      TabOrder = 9
+    end
+    object CheckReleasePaladinMount: TCheckBox
+      Left = 0
+      Height = 22
+      Top = 38
+      Width = 164
+      Caption = 'Unsummon the paladin mount'
+      Color = 16311256
+      OnChange = destroyfamiliarChange
+      OnClick = ToggleOkay
+      ParentColor = False
+      TabOrder = 2
+    end
+  end
+  object PanelRightExisting: TPanel[9]
+    Left = 385
+    Height = 430
+    Top = 50
+    Width = 345
+    BevelOuter = bvNone
+    ClientHeight = 430
+    ClientWidth = 345
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 6
+    Visible = False
+    object LabelClassLevelup: TLabel
+      Left = 25
+      Height = 14
+      Top = 347
+      Width = 72
+      Caption = 'In what class?'
+      Enabled = False
+      ParentColor = False
+    end
+    object LabelPackageLevelup: TLabel
+      Left = 25
+      Height = 14
+      Top = 384
+      Width = 111
+      Caption = 'Using which package?'
+      Enabled = False
+      ParentColor = False
+    end
+    object unpossess: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 10
+      Width = 214
+      Caption = 'Make the master unpossess his familiar'
+      Color = 16311256
+      OnChange = unpossessChange
+      ParentColor = False
+      TabOrder = 0
+    end
+    object CheckLevelup: TCheckBox
+      Left = 5
+      Height = 22
+      Top = 50
+      Width = 118
+      Caption = 'Level up henchmen'
+      Color = 16311256
+      OnChange = CheckChangeToggleEnable
+      ParentColor = False
+      TabOrder = 1
+    end
+    object TextLevelupNote: TStaticText
+      Left = 25
+      Height = 45
+      Top = 70
+      Width = 315
+      Caption = 'NOTE:'#10'Leveling may fail if the creature was created in the Toolset with more than a single level.'
+      Color = clInfoBk
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 2
+    end
+    object GroupHowMuchLevelup: TRadioGroup
+      Left = 25
+      Height = 75
+      Top = 120
+      Width = 250
+      AutoFill = True
+      Caption = 'Level up...'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclTopToBottomThenLeftToRight
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 60
+      ClientWidth = 246
+      ColumnLayout = clVerticalThenHorizontal
+      Enabled = False
+      ItemIndex = 0
+      Items.Strings = (
+        'to master''s level minus'
+        'this many levels:'
+      )
+      TabOrder = 3
+      object SpinRelativeLevel: TSpinEdit
+        Left = 166
+        Height = 24
+        Top = 6
+        Width = 50
+        MaxValue = 9
+        TabOrder = 0
+      end
+      object SpinAbsoluteLevel: TSpinEdit
+        Left = 166
+        Height = 24
+        Top = 30
+        Width = 50
+        MaxValue = 40
+        MinValue = 1
+        TabOrder = 3
+        Value = 1
+      end
+    end
+    object GroupWhoLevelup: TGroupBox
+      Left = 25
+      Height = 130
+      Top = 200
+      Width = 315
+      Caption = 'Level up whom?'
+      ClientHeight = 115
+      ClientWidth = 311
+      Enabled = False
+      TabOrder = 4
+      object RadioLevelOwner: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 22
+        Width = 300
+        AutoSize = False
+        Caption = 'The owner of the script'
+        TabOrder = 6
+      end
+      object RadioLevelTargeted: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 22
+        Width = 122
+        Caption = 'The activation target'
+        TabOrder = 1
+        Visible = False
+      end
+      object RadioLevelSpawn: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 44
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        TabOrder = 2
+        Visible = False
+      end
+      object RadioLevelTagged: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 66
+        Width = 158
+        Caption = 'All henchmen whose tag is:'
+        OnChange = ToggleOkay
+        TabOrder = 3
+      end
+      object RadioLevelActor: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 88
+        Width = 300
+        AutoSize = False
+        Caption = 'The most recent actor'
+        TabOrder = 4
+        Visible = False
+      end
+      object EditLevelTagged: TEdit
+        Left = 170
+        Height = 23
+        Top = 63
+        Width = 135
+        Color = 16311256
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        TabOrder = 5
+      end
+      object RadioLevelAll: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 89
+        Caption = 'All henchmen'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+    end
+    object BoxClassLevelup: TComboBox
+      Left = 160
+      Height = 27
+      Top = 339
+      Width = 180
+      Enabled = False
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Default class'
+        'Barbarian'
+        'Bard'
+        'Cleric'
+        'Druid'
+        'Fighter'
+        'Monk'
+        'Paladin'
+        'Ranger'
+        'Rogue'
+        'Sorcerer'
+        'Wizard'
+        'Arcane Archer'
+        'Assassin'
+        'Blackguard'
+        'Divine Champion'
+        'Dragon Disciple'
+        'Dwarven Defender'
+        'Harper'
+        'Pale Master'
+        'Purple Dragon Knight'
+        'Shadowdancer'
+        'Shifter'
+        'Weapon Master'
+        'Aberration'
+        'Animal'
+        'Beast'
+        'Commoner'
+        'Construct'
+        'Dragon'
+        'Elemental'
+        'Fey'
+        'Giant'
+        'Humanoid'
+        'Magical Beast'
+        'Monstrous'
+        'Ooze'
+        'Outsider'
+        'Shapechanger'
+        'Undead'
+        'Vermin'
+      )
+      OnChange = BoxClassLevelupChange
+      Style = csDropDownList
+      TabOrder = 5
+      Text = 'Default class'
+    end
+    object BoxPackageLevelup: TComboBox
+      Left = 160
+      Height = 27
+      Top = 375
+      Width = 180
+      Enabled = False
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Preselected package'
+      )
+      Style = csDropDownList
+      TabOrder = 6
+      Text = 'Preselected package'
+    end
+    object CheckSpellsLevelup: TCheckBox
+      Left = 25
+      Height = 22
+      Top = 405
+      Width = 193
+      Caption = 'Leveling replenishes all spell slots?'
+      Enabled = False
+      TabOrder = 7
+    end
+  end
+  object PanelMaster: TPanel[10]
+    Left = 20
+    Height = 145
+    Top = 50
+    Width = 360
+    BevelOuter = bvNone
+    ClientHeight = 145
+    ClientWidth = 360
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 2
+    object GroupMaster: TGroupBox
+      Left = 0
+      Height = 145
+      Top = 0
+      Width = 360
+      Caption = 'Who is the master?'
+      ClientHeight = 129
+      ClientWidth = 356
+      Color = 14652793
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      object RadioMasterOwner: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 340
+        AutoSize = False
+        Caption = 'The owner of the script'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = RadioMasterOwnerChange
+        ParentFont = False
+        TabOrder = 0
+      end
+      object RadioMasterPC: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 25
+        Width = 58
+        Caption = 'The PC'
+        Checked = True
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 7
+        TabStop = True
+      end
+      object RadioMasterTargeted: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 25
+        Width = 122
+        Caption = 'The activation target'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = RadioMasterTargetedChange
+        ParentFont = False
+        TabOrder = 2
+        Visible = False
+      end
+      object RadioMasterSpawn: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 50
+        Width = 340
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = RadioMasterSpawnChange
+        ParentFont = False
+        TabOrder = 3
+        Visible = False
+      end
+      object RadioMasterTagged: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 75
+        Width = 133
+        Caption = 'An object with the tag:'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = ToggleOkay
+        ParentFont = False
+        TabOrder = 4
+      end
+      object RadioMasterActor: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 100
+        Width = 340
+        AutoSize = False
+        Caption = 'The most recent actor'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = RadioMasterActorChange
+        ParentFont = False
+        TabOrder = 5
+        Visible = False
+      end
+      object RadioMasterActivator: TRadioButton
+        Left = 7
+        Height = 22
+        Top = 0
+        Width = 109
+        Caption = 'The item activator'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 1
+        Visible = False
+      end
+      object EditMasterTagged: TEdit
+        Left = 160
+        Height = 23
+        Top = 72
+        Width = 190
+        Color = 16311256
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        ParentFont = False
+        TabOrder = 6
+      end
+    end
+  end
+end

@@ -1,0 +1,555 @@
+inherited EventHelp: TEventHelp
+  Left = 447
+  Height = 550
+  Top = 149
+  Width = 430
+  ActiveControl = PanelOldSystem
+  BorderStyle = bsDialog
+  Caption = 'Help with item-related events'
+  ClientHeight = 550
+  ClientWidth = 430
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poMainFormCenter
+  object BitBtn1: TBitBtn[0]
+    Left = 160
+    Height = 30
+    Top = 515
+    Width = 110
+    Caption = 'Close'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 1
+    Spacing = 15
+    TabOrder = 3
+  end
+  object PanelOldSystem: TPanel[1]
+    Left = 10
+    Height = 510
+    Top = 5
+    Width = 410
+    BevelOuter = bvNone
+    ClientHeight = 510
+    ClientWidth = 410
+    TabOrder = 0
+    Visible = False
+    object MemoOldSystem: TMemo
+      Left = 5
+      Height = 300
+      Top = 5
+      Width = 400
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Lines.Strings = (
+        'THE OLD SYSTEM FOR ITEM SCRIPTS'
+        '------------------------------------------------------'
+        ''
+        'This window describes the old system for item scripts (handling activation, acquisition, unacquisition, equipping, and unequipping) that was used through version 2.1 of the Script Generator. If you are not currently using this system, you would likely be better off using the new system, as that will allow you to use packages (from the Vault) that require tag-based scripting. Plus, if you ever need to ask someone for help, that someone is more likely to be familiar with BioWare''s system than the old Script Generator system. On the other hand, if you started your module with an older version of the Script Generator and are already using the old system, then converting your module to the new system might not be worth the trouble. (That is why the old system is still documented here.)'
+        ''
+        'To use the old system, you first have to remove the x2_mod_<WHATEVER> references from these five events (listed under the module''s properties): OnActivateItem, OnAcquireItem, OnUnacquireItem, OnPlayerEquipItem, and OnPlayerUnequipItem. These get replaced by the scripts displayed below.'
+        ''
+        'Once that is done, you simply name your scripts appropriately. An OnAcquireItem script would be called "ac_" followed by the tag of the item in question. So, if the item is tagged "myring", the script is called "ac_myring". Similarly, for OnUnacquireItem scripts the script name would be "uac_" followed by the tag (e.g., "uac_myring"), for OnEquipItem scripts the script name would be "eq_" followed by the tag (e.g., "eq_myring"), and OnUnequipItem scripts the script name would be "ueq_" followed by the tag (e.g., "ueq_myring"). The activation script is a bit different in that it does not get a prefix; the name of the activation script would be the same as the tag of the item (in lowercase, as script names must be lowercase).'
+        ''
+        'If you require further assistance, please consult the manual for Lilac Soul''s version of the Script Generator.'
+      )
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object GroupOldSystemScripts: TGroupBox
+      Left = 5
+      Height = 190
+      Top = 315
+      Width = 400
+      Caption = 'View module event scripts'
+      ClientHeight = 175
+      ClientWidth = 396
+      Color = 16311256
+      ParentColor = False
+      TabOrder = 1
+      object RadioOldAcquire: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 25
+        Width = 125
+        Caption = 'OnAcquireItem script'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 0
+      end
+      object RadioOldUnacquire: TRadioButton
+        Left = 200
+        Height = 22
+        Top = 25
+        Width = 138
+        Caption = 'OnUnAcquireItem script'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 4
+      end
+      object RadioOldEquip: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 50
+        Width = 143
+        Caption = 'OnPlayerEquipItem script'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 2
+      end
+      object RadioOldUnequip: TRadioButton
+        Left = 200
+        Height = 22
+        Top = 50
+        Width = 156
+        Caption = 'OnPlayerUnEquipItem script'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 3
+      end
+      object MemoOldAcquire: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void main()'
+          '{'
+          '    ExecuteScript("ac_" + GetTag(GetModuleItemAcquired()), OBJECT_SELF);'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 6
+        Visible = False
+        WordWrap = False
+      end
+      object MemoOldUnacquire: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void main()'
+          '{'
+          '    ExecuteScript("uac_" + GetTag(GetModuleItemLost()), OBJECT_SELF);'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 7
+        Visible = False
+        WordWrap = False
+      end
+      object MemoOldEquip: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void main()'
+          '{'
+          '    ExecuteScript("eq_" + GetTag(GetPCItemLastEquipped()), OBJECT_SELF);'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 8
+        Visible = False
+        WordWrap = False
+      end
+      object MemoOldUnequip: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void main()'
+          '{'
+          '    ExecuteScript("ueq_" + GetTag(GetPCItemLastUnequipped()), OBJECT_SELF);'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 9
+        Visible = False
+        WordWrap = False
+      end
+      object RadioOldActivate: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 0
+        Width = 127
+        Caption = 'OnActivateItem script'
+        Checked = True
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 1
+        TabStop = True
+      end
+      object MemoOldActivate: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void main()'
+          '{'
+          '    ExecuteScript(GetTag(GetItemActivated()), OBJECT_SELF);'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 5
+        WordWrap = False
+      end
+    end
+  end
+  object PanelNewSystem: TPanel[2]
+    Left = 10
+    Height = 510
+    Top = 5
+    Width = 410
+    BevelOuter = bvNone
+    ClientHeight = 510
+    ClientWidth = 410
+    TabOrder = 1
+    Visible = False
+    object MemoNewSystem: TMemo
+      Left = 5
+      Height = 300
+      Top = 5
+      Width = 400
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Lines.Strings = (
+        'THE NEW SYSTEM FOR ITEM SCRIPTS'
+        '------------------------------------------------------'
+        ''
+        'This window describes the new system for item scripts (handling activation, acquisition, unacquisition, equipping, and unequipping) that is compatible with BioWare''s tag-based system (the de facto standard). This is a bit different than what was used in versions 2.2 and 2.3 of the Script Generator, but it is compatible, so both approaches can be used in the same module. It is not, however, compatible with the old system used in version 2.1 (and earlier); if you are already using the old system, you may want to stick with it and avoid the hassle of converting all your item scripts to the new system.'
+        ''
+        'This is not an introduction to tag-based scripting. It will not explain how or why things work, nor will it teach you alternate ways to do things. This is merely intended to get your tag-based scripts working. In particular, when something is *a* way to accomplush a task, it is not *the* (only) way to do so. It is quite possible for custom scripts to replace the standard BioWare ones without disupting tag-based scripting, but explaining that goes beyond the scope of this documentation.'
+        ''
+        'To use the new system, tag-based scripting must be enabled in your module. A way to do this is to first check the module''s OnModuleLoad script. This script should have the line'
+        '    SetModuleSwitch'
+        '        (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, TRUE);'
+        'and this line should not be commented out. (A line starting with "//" is commented out.) For the default module load scripts, this line is number 89 (in x2_mod_def_load) or 96 (in x3_mod_def_load). Next, check some other module events. The handlers for these events should be as follows:'
+        '  OnAcquireItem: x2_mod_def_aqu'
+        '  OnActivateItem: x2_mod_def_act'
+        '  OnPlayerEquipItem: x2_mod_def_equ'
+        '  OnPlayerUnequipItem: x2_mod_def_unequ'
+        '  OnUnacquireItem: x2_mod_def_unaqu'
+        '(These were probably filled in by default when you made the module, but still check them.)'
+        ''
+        'Once tag-based scripting is enabled, it is time to create a tag-based script. At its simplest level, this means creating a script whose name is the tag of the item in question. The Toolset will force the script name to be in lowercase and no longer than 16 characters; this is fine and does not mean your tags must also be like that. (Just use the first 16 characters if your tag is longer.)'
+        ''
+        'What goes in this script? Start with the tag-based template, which is available as a script type from the main Script Generator window. This is your script''s framework. Next, use the Script Generator to create a function for this script. This function will replace a function in the template (see below for which lines get replaced for each event type). One tricky part comes if the Script Generator adds stuff (#include''s, maybe auxiliary functions) before your function. This stuff should go either near the top of the template (e.g. right after ''#include "x2_inc_switches"'') or at the top of the "Event Handlers" section (the part designated for your functionality). In either case, this stuff should only be added if it is not already in the script. (Hint: be consistent!) Hopefully this is not too complicated for those generating such scripts, and on the bright side, there is a good chance this header stuff will not be an issue for your script.'
+        ''
+        'As an alternative to manually modifying the tag-based template, you can use the Script Generator to create a function, then choose to save and/or compile it. At this point the Script Generator will add the rest of the template for you. (This may be useful if you are only implementing one of the events for your item, such as activation.)'
+        ''
+        'This is a bit more involved and advanced than the system used in versions 2.2 and 2.3 of the Script Generator, but the end result is a significant reduction in the number of resources used. With the 2.2/2.3 approach, each item would have 2-6 scripts (4-12 script resources), while the current approach requires only a single script (two script resources) per item. Hopefully the additional complexity is manageable. (If not, you can always tell the Script Generator to use the old system, but follow the directions for the 2.2/2.3 approach, as described in the manuals for those versions.)'
+      )
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object GroupNewSystemScripts: TGroupBox
+      Left = 5
+      Height = 190
+      Top = 315
+      Width = 400
+      Caption = 'View the lines in the template to replace'
+      ClientHeight = 175
+      ClientWidth = 396
+      Color = 16311256
+      ParentColor = False
+      TabOrder = 1
+      object RadioNewAcquire: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 25
+        Width = 97
+        Caption = 'Item acquisition'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 4
+      end
+      object RadioNewUnacquire: TRadioButton
+        Left = 200
+        Height = 22
+        Top = 25
+        Width = 109
+        Caption = 'Item unacquisition'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 1
+      end
+      object RadioNewEquip: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 50
+        Width = 155
+        Caption = 'Item equipped (by a player)'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 2
+      end
+      object RadioNewUnequip: TRadioButton
+        Left = 200
+        Height = 22
+        Top = 50
+        Width = 167
+        Caption = 'Item unequipped (by a player)'
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 3
+      end
+      object MemoNewAcquire: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void OnAcquire(object oItem, object oAcquiredBy, object oTakenFrom, int nStackSize)'
+          '{'
+          '    // Default: do nothing.'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 6
+        Visible = False
+        WordWrap = False
+      end
+      object MemoNewUnacquire: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void OnUnacquire(object oItem, object oLostBy)'
+          '{'
+          '    // Default: do nothing.'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 7
+        Visible = False
+        WordWrap = False
+      end
+      object MemoNewEquip: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void OnEquip(object oItem, object oEquippedBy)'
+          '{'
+          '    // Default: do nothing.'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 8
+        Visible = False
+        WordWrap = False
+      end
+      object MemoNewUnequip: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void OnUnequip(object oItem, object oUnequippedBy)'
+          '{'
+          '    // Default: do nothing.'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 9
+        Visible = False
+        WordWrap = False
+      end
+      object RadioNewActivate: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 0
+        Width = 92
+        Caption = 'Item activation'
+        Checked = True
+        OnChange = RadioChangeToggleVisible
+        TabOrder = 0
+        TabStop = True
+      end
+      object MemoNewActivate: TMemo
+        Left = 5
+        Height = 90
+        Top = 75
+        Width = 385
+        Color = clMoneyGreen
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'courier new'
+        Lines.Strings = (
+          'void OnActivate(object oItem, object oActTarget, location lActTarget, object oActivator)'
+          '{'
+          '    // Default: do nothing.'
+          '}'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 5
+        WordWrap = False
+      end
+    end
+  end
+  object PanelOldOrNew: TPanel[3]
+    Left = 10
+    Height = 510
+    Top = 5
+    Width = 410
+    BevelOuter = bvNone
+    ClientHeight = 510
+    ClientWidth = 410
+    TabOrder = 2
+    Visible = False
+    object LabelOldToNewScript: TLabel
+      Left = 5
+      Height = 15
+      Top = 315
+      Width = 308
+      Caption = 'Script to aid conversions from the old system to the new:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object OldOrNew: TMemo
+      Left = 5
+      Height = 300
+      Top = 5
+      Width = 400
+      Color = clInfoBk
+      Lines.Strings = (
+        'Should you use the old or the new system for item-related scripting?'
+        ''
+        'It depends. The new system is better because it is uses BioWare''s tag-based scripting, which is the community standard for these events. The old system is not compatible with BioWare''s system, and therefore does not allow you to use most community-created item prefabs in your module. If you are starting a new module or do not yet have any item scripting in your current module, then the new system is worth using for its compatibility with community standards.'
+        ''
+        'However, switching from the old system to the new system can be a hassle, and problematic if you forget an item. If you have already started using the old system in your module and if you have no compelling reason to switch, stick with the old system.'
+        ''
+        'If you do have a compelling reason to convert your module from the old system to the new, you will have to change scripts for each item that was implemented under the old system. A relatively simple way to do this requires two steps per item:'
+        ''
+        '1) For each item that has an activation script, rename that script by adding the prefix "act_". That is, change the name from the item''s tag to "act_" + the item''s tag.'
+        ''
+        '2) For each item that has any events scripted, create a script whose name is the item''s tag. (If such a script already exists, see step 1.) The contents of that script should be what is displayed below.'
+        ''
+        'This will make those scripts compatible with the new system (and will actually still work under the old, in case you need to do this in stages for whatever reason). Once you have all your item scripts converted like this, change the module events according to the directions for the new system, and you should be set. Of course, you could also adapt each item''s scripts to the form of the new system (the below script is a hybrid form, with elements of both old and new), but that is not necessary to get things working.'
+      )
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object MemoOldToNewScript: TMemo
+      Left = 5
+      Height = 170
+      Top = 335
+      Width = 400
+      Color = clMoneyGreen
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'courier new'
+      Lines.Strings = (
+        '#include "x2_inc_switches"'
+        ''
+        'void main()'
+        '{'
+        '    switch ( GetUserDefinedItemEventNumber() )'
+        '    {'
+        '        case X2_ITEM_EVENT_ACTIVATE:'
+        '            ExecuteScript("act_"+GetTag(GetItemActivated()), OBJECT_SELF);'
+        '            break;'
+        '        case X2_ITEM_EVENT_EQUIP:'
+        '            ExecuteScript("eq_"+GetTag(GetPCLastItemEquipped()), OBJECT_SELF);'
+        '            break;'
+        '        case X2_ITEM_EVENT_UNEQUIP:'
+        '            ExecuteScript("ueq_"+GetTag(GetPCLastItemUnequipped()), OBJECT_SELF);'
+        '            break;'
+        '        case X2_ITEM_EVENT_ACQUIRE:'
+        '            ExecuteScript("ac_"+GetTag(GetModuleItemAcquired()), OBJECT_SELF);'
+        '            break;'
+        '        case X2_ITEM_EVENT_UNACQUIRE:'
+        '            ExecuteScript("uac_"+GetTag(GetModuleItemLost()), OBJECT_SELF);'
+        '            break;'
+        '    }'
+        '}'
+      )
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssBoth
+      TabOrder = 1
+      WordWrap = False
+    end
+  end
+end

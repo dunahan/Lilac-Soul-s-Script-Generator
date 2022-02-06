@@ -1,0 +1,958 @@
+inherited queue: Tqueue
+  Left = 447
+  Height = 550
+  Top = 163
+  Width = 750
+  ActiveControl = PanelAboutQueues
+  BorderStyle = bsDialog
+  Caption = 'Assign an action queue'
+  ClientHeight = 550
+  ClientWidth = 750
+  Color = 14652793
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object LabelTheQueue: TLabel[0]
+    Left = 490
+    Height = 20
+    Top = 15
+    Width = 149
+    Caption = 'Current action queue:'
+    Font.Color = clMaroon
+    Font.Height = -15
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Panel1: TPanel[1]
+    Left = 45
+    Height = 125
+    Top = 155
+    Width = 400
+    ClientHeight = 125
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 0
+    object LabelActionQueue: TLabel
+      Left = 32
+      Height = 17
+      Top = 8
+      Width = 238
+      Caption = 'Select who will receive this action queue:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditTagged: TEdit
+      Left = 165
+      Height = 24
+      Top = 77
+      Width = 225
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 4
+    end
+    object RadioTagged: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 80
+      Width = 149
+      Caption = 'A creature with this tag:'
+      OnChange = ToggleOkay
+      TabOrder = 6
+      TabStop = False
+    end
+    object RadioOwner: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 32
+      Width = 380
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Checked = True
+      OnChange = EnableTargets
+      State = cbChecked
+      TabOrder = 0
+    end
+    object RadioPC: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 56
+      Width = 274
+      Caption = 'The PC (Note: the PC can interrupt the queue)'
+      OnChange = EnableTargets
+      TabOrder = 2
+      TabStop = False
+    end
+    object RadioTargeted: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 56
+      Width = 129
+      Caption = 'The targeted object'
+      OnChange = EnableTargets
+      TabOrder = 3
+      TabStop = False
+      Visible = False
+    end
+    object RadioSpawn: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 104
+      Width = 380
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      OnChange = EnableTargets
+      TabOrder = 5
+      TabStop = False
+      Visible = False
+    end
+    object RadioActivator: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 32
+      Width = 120
+      Caption = 'The item activator'
+      OnChange = EnableTargets
+      TabOrder = 1
+      TabStop = False
+      Visible = False
+    end
+  end
+  object MemoTheQueue: TMemo[2]
+    Left = 490
+    Height = 495
+    Top = 40
+    Width = 250
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 14
+    WantReturns = False
+    WordWrap = False
+  end
+  object Memo2: TMemo[3]
+    Left = 10
+    Height = 165
+    Top = 320
+    Width = 250
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      ''
+      'Choose an action, then click "Okay - and more!" to add another action, or "Okay - exit!" to make this the last action in the queue.'
+      ''
+      'Pressing "Close" will discard (only) what you have changed since the last "Okay" button was clicked.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 10
+    WantReturns = False
+  end
+  object ComboBox1: TComboBox[4]
+    Left = 10
+    Height = 27
+    Top = 290
+    Width = 250
+    Color = 16311256
+    Font.Height = -10
+    Font.Name = 'Arial'
+    ItemHeight = 0
+    Items.Strings = (
+      'Clear all actions (good to call first!)'
+      'Attack someone (simple weapon attack)'
+      'Close door'
+      'Equip item by tag'
+      'Equip most damaging melee weapon'
+      'Equip most damaging ranged weapon'
+      'Equip most effective armor'
+      'Face something'
+      'Follow someone'
+      'Give item to PC'
+      'Jump to an object'
+      'Lock something'
+      'Move (walk) to an object'
+      'Move away from object'
+      'Open door'
+      'Pick up item'
+      'Play animation'
+      'Put down item'
+      'Sit on object'
+      'Speak a line'
+      'Take item from PC'
+      'Unequip item by position'
+      'Unequip item by tag'
+      'Unlock something'
+      'Wait a specified amount of time'
+    )
+    OnChange = ComboBox1Change
+    ParentFont = False
+    TabOrder = 1
+    Text = 'Choose your action'
+  end
+  object TargetPanel: TPanel[5]
+    Left = 267
+    Height = 126
+    Top = 327
+    Width = 213
+    ClientHeight = 126
+    ClientWidth = 213
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 2
+    Visible = False
+    object EditTargetTag: TEdit
+      Left = 30
+      Height = 24
+      Top = 72
+      Width = 175
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 6
+    end
+    object RadioTargetOwner: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 8
+      Width = 148
+      Caption = 'Target the script owner'
+      Enabled = False
+      TabOrder = 0
+      TabStop = False
+    end
+    object RadioTargetPC: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 28
+      Width = 98
+      Caption = 'Target the PC'
+      TabOrder = 2
+      TabStop = False
+    end
+    object RadioTargetTag: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 48
+      Width = 179
+      Caption = 'Target an object with the tag:'
+      Checked = True
+      OnChange = ToggleOkay
+      State = cbChecked
+      TabOrder = 4
+    end
+    object RadioTargetTargeted: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 28
+      Width = 166
+      Caption = 'Target the activation target'
+      TabOrder = 3
+      TabStop = False
+      Visible = False
+    end
+    object RadioTargetSpawn: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 102
+      Width = 186
+      Caption = 'Target the most recent spawn'
+      TabOrder = 5
+      TabStop = False
+    end
+    object RadioTargetActivator: TRadioButton
+      Left = 8
+      Height = 22
+      Top = 8
+      Width = 153
+      Caption = 'Target the item activator'
+      TabOrder = 1
+      TabStop = False
+      Visible = False
+    end
+  end
+  object nonepanel: TPanel[6]
+    Left = 283
+    Height = 60
+    Top = 360
+    Width = 185
+    ClientHeight = 60
+    ClientWidth = 185
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 3
+    Visible = False
+    object Label2: TLabel
+      Left = 8
+      Height = 19
+      Top = 8
+      Width = 148
+      Caption = 'No more input needed.'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 19
+      Top = 32
+      Width = 128
+      Caption = 'Click okay to script!'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object itemtreepanel: TPanel[7]
+    Left = 267
+    Height = 125
+    Top = 325
+    Width = 213
+    ClientHeight = 125
+    ClientWidth = 213
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    Visible = False
+    object Label4: TLabel
+      Left = 8
+      Height = 17
+      Top = 27
+      Width = 113
+      Caption = 'The tag of the item:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 8
+      Height = 17
+      Top = 74
+      Width = 93
+      Caption = 'click to choose:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 8
+      Height = 17
+      Top = 8
+      Width = 197
+      Caption = 'Note: the item must already exist!'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditItemTreeTag: TEdit
+      Left = 8
+      Height = 24
+      Top = 44
+      Width = 197
+      MaxLength = 32
+      OnChange = ToggleOkay
+      TabOrder = 0
+    end
+    object BitBtn4: TBitBtn
+      Left = 105
+      Height = 25
+      Top = 70
+      Width = 100
+      Caption = 'Palettes!'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000DFDFBF808000
+        8080004040008080408080604040404040404040404040404040404040408080
+        60808020808000808000FFFFFFC0C0C0C0C0C0505050003F3F3F7F7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF3F7F7F404040B0B0B0808000FFFFFFC0C0C0
+        3030307FBFBF7FFFFF7FFFFF7FFFFFBF3F3FFF0000FF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF5F5F5F808020FFFFFF9090907FBFBF7FFFFF7FFFFF7FFFFF7FFFFFFF
+        0000FF0000FF0000FF0000BF7F7F7FFFFF7FFFFF3FBFBF606060FFFFFF3F7F7F
+        7FFFFF7FBFFF0000FF3F3FFF3FBFFF7FBFBFFF3F3FFF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF7FFFFF4040407F7F7F7FFFFF7FFFFF0000FF0000FF0000FF003FFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF4040403F7F7F7FFFFF
+        7FFFFF3F3FFF0000FF0000FF7FFFFF7FFFFF7FFFFF7FBFBF5030306F6F6F7FFF
+        FF7FFFFF7FFFFF4040403F7F7F7FFFFF7FFFFF7FFFFF3F7FFF7FBFFF7FFFFF7F
+        FFFF7FFFFF503030800000B090903F7F7F7FFFFF7FFFFF4040003F7F7F7FFFBF
+        00FF0000FF003FFFBF7FFFFF7FFFFF7FFFFF7FFFFF6F6F6F5030308000005F7F
+        7F7FFFFF3F7F7F8080003F7F7F3FFFBF00FF0000FF0000FF003FFF7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF5FBFBF9F3F3F5F7F7F9090908080003F7F7F7FFFFF
+        3FFF3F00FF003FFF7F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF8060
+        60BF7F7FB090908080007F7F7F7FFFFF7FFFFF7FFFFF7FFFFFBF7FFFFF00FFFF
+        00FF7FBFFF7FFFFF7FBFBF909090C0C0C0B090900000002020007F7F7F7FFFFF
+        7FFFFF7FFFFFBF3FFFFF00FFFF00FFFF00FFBFBFFF7FFFFF606060C0C0C0C0C0
+        C0C0C0C06F6F6F3F3F3FFFFFFF3F3F3F7FFFFF7FFFFFBF3FFFFF00FFFF00FFBF
+        7FFF7FFFFF3F7F7FC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF909090
+        3F3F3F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF909090C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0606000FFFFFFFFFFFFFFFFFF7F7F7F3F7F7F3F7F7F3F7F7F3F
+        7F7FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFBF
+      }
+      OnClick = Button4Click
+      Spacing = 10
+      TabOrder = 1
+    end
+    object CheckItemTreeEventItem: TCheckBox
+      Left = 8
+      Height = 22
+      Top = 100
+      Width = 186
+      Caption = 'Use this script''s item instead.'
+      OnChange = CheckItemTreeEventItemChange
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object animationpanel: TPanel[8]
+    Left = 270
+    Height = 110
+    Top = 335
+    Width = 210
+    ClientHeight = 110
+    ClientWidth = 210
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 5
+    Visible = False
+    object Label7: TLabel
+      Left = 71
+      Height = 17
+      Top = 76
+      Width = 53
+      Caption = 'Duration:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelAnimation: TLabel
+      Left = 8
+      Height = 17
+      Top = 8
+      Width = 109
+      Caption = 'Choose animation:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox2: TComboBox
+      Left = 8
+      Height = 31
+      Top = 32
+      Width = 194
+      ItemHeight = 0
+      Items.Strings = (
+        'Bow'
+        'Dodge to side'
+        'Dodge / duck'
+        'Drink'
+        'Greet'
+        'Head turn left'
+        'Head turn right'
+        'Pause, bored'
+        'Pause, scratch head'
+        'Read'
+        'Salute'
+        'Spasm (fire-and-forget)'
+        'Steal'
+        'Taunt'
+        'Victory 1'
+        'Victory 2'
+        'Victory 3'
+        'Conjure 1'
+        'Conjure 2'
+        'Dead back'
+        'Dead front'
+        'Get from low'
+        'Get from waist height'
+        'Listen'
+        'Look far'
+        'Meditate'
+        'Pause'
+        'Pause, 2'
+        'Pause, drunk'
+        'Pause, tired'
+        'Sitting in chair'
+        'Sitting crosslegged'
+        'Spasm (looping)'
+        'Talk forcefully'
+        'Talk laughing'
+        'Talk normally'
+        'Talk pleading'
+        'Worship'
+      )
+      OnChange = ToggleAnimDuration
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 138
+      Height = 24
+      Top = 72
+      Width = 64
+      Enabled = False
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxValue = 999999
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 6
+    end
+  end
+  object durationpanel: TPanel[9]
+    Left = 300
+    Height = 46
+    Top = 367
+    Width = 145
+    ClientHeight = 46
+    ClientWidth = 145
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 6
+    Visible = False
+    object Label8: TLabel
+      Left = 12
+      Height = 17
+      Top = 12
+      Width = 53
+      Caption = 'Duration:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpinEdit2: TSpinEdit
+      Left = 70
+      Height = 24
+      Top = 8
+      Width = 63
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxValue = 999999
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object BitBtn1: TBitBtn[10]
+    Left = 10
+    Height = 35
+    Top = 500
+    Width = 150
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = Button1Click
+    ParentFont = False
+    Spacing = 10
+    TabOrder = 11
+  end
+  object BitBtn2: TBitBtn[11]
+    Left = 187
+    Height = 35
+    Top = 500
+    Width = 150
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    ParentFont = False
+    Spacing = 15
+    TabOrder = 12
+  end
+  object BitBtn3: TBitBtn[12]
+    Left = 370
+    Height = 35
+    Top = 500
+    Width = 110
+    Caption = 'Close'
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    ParentFont = False
+    Spacing = 20
+    TabOrder = 13
+  end
+  object speakpanel: TPanel[13]
+    Left = 270
+    Height = 110
+    Top = 335
+    Width = 210
+    ClientHeight = 110
+    ClientWidth = 210
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 7
+    Visible = False
+    object Label9: TLabel
+      Left = 5
+      Height = 17
+      Top = 5
+      Width = 83
+      Caption = 'Line to speak:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelVolume: TLabel
+      Left = 5
+      Height = 15
+      Top = 55
+      Width = 46
+      Caption = 'Volume:'
+      ParentColor = False
+    end
+    object speakline: TEdit
+      Left = 5
+      Height = 24
+      Top = 22
+      Width = 200
+      MaxLength = 80
+      OnChange = ToggleOkay
+      TabOrder = 0
+    end
+    object ComboVolume: TComboBox
+      Left = 5
+      Height = 31
+      Top = 70
+      Width = 200
+      Color = clInactiveCaptionText
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 2
+      Items.Strings = (
+        'Silent shout (DM channel)'
+        'Shout (heard module-wide)'
+        'Talk (heard nearby)'
+        'Talk, AI (not heard by PCs)'
+        'Whisper (short range)'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'Talk (heard nearby)'
+    end
+  end
+  object slotpanel: TPanel[14]
+    Left = 267
+    Height = 70
+    Top = 355
+    Width = 213
+    ClientHeight = 70
+    ClientWidth = 213
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 8
+    Visible = False
+    object Label10: TLabel
+      Left = 8
+      Height = 17
+      Top = 8
+      Width = 74
+      Caption = 'Choose slot:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object slotbox: TComboBox
+      Left = 8
+      Height = 31
+      Top = 30
+      Width = 197
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 0
+    end
+  end
+  object equippanel: TPanel[15]
+    Left = 267
+    Height = 195
+    Top = 290
+    Width = 213
+    ClientHeight = 195
+    ClientWidth = 213
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 9
+    Visible = False
+    object Label11: TLabel
+      Left = 8
+      Height = 17
+      Top = 27
+      Width = 113
+      Caption = 'The tag of the item:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 8
+      Height = 17
+      Top = 74
+      Width = 95
+      Caption = 'Click to choose:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label13: TLabel
+      Left = 8
+      Height = 17
+      Top = 8
+      Width = 197
+      Caption = 'Note: the item must already exist!'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 8
+      Height = 17
+      Top = 128
+      Width = 103
+      Caption = 'Equip to this slot:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditEquipTag: TEdit
+      Left = 8
+      Height = 24
+      Top = 44
+      Width = 197
+      Color = clInactiveCaptionText
+      MaxLength = 32
+      OnChange = ToggleOkay
+      TabOrder = 0
+    end
+    object BitBtn5: TBitBtn
+      Left = 105
+      Height = 25
+      Top = 70
+      Width = 100
+      Caption = 'Palettes!'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000DFDFBF808000
+        8080004040008080408080604040404040404040404040404040404040408080
+        60808020808000808000FFFFFFC0C0C0C0C0C0505050003F3F3F7F7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF3F7F7F404040B0B0B0808000FFFFFFC0C0C0
+        3030307FBFBF7FFFFF7FFFFF7FFFFFBF3F3FFF0000FF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF5F5F5F808020FFFFFF9090907FBFBF7FFFFF7FFFFF7FFFFF7FFFFFFF
+        0000FF0000FF0000FF0000BF7F7F7FFFFF7FFFFF3FBFBF606060FFFFFF3F7F7F
+        7FFFFF7FBFFF0000FF3F3FFF3FBFFF7FBFBFFF3F3FFF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF7FFFFF4040407F7F7F7FFFFF7FFFFF0000FF0000FF0000FF003FFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF4040403F7F7F7FFFFF
+        7FFFFF3F3FFF0000FF0000FF7FFFFF7FFFFF7FFFFF7FBFBF5030306F6F6F7FFF
+        FF7FFFFF7FFFFF4040403F7F7F7FFFFF7FFFFF7FFFFF3F7FFF7FBFFF7FFFFF7F
+        FFFF7FFFFF503030800000B090903F7F7F7FFFFF7FFFFF4040003F7F7F7FFFBF
+        00FF0000FF003FFFBF7FFFFF7FFFFF7FFFFF7FFFFF6F6F6F5030308000005F7F
+        7F7FFFFF3F7F7F8080003F7F7F3FFFBF00FF0000FF0000FF003FFF7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF5FBFBF9F3F3F5F7F7F9090908080003F7F7F7FFFFF
+        3FFF3F00FF003FFF7F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF8060
+        60BF7F7FB090908080007F7F7F7FFFFF7FFFFF7FFFFF7FFFFFBF7FFFFF00FFFF
+        00FF7FBFFF7FFFFF7FBFBF909090C0C0C0B090900000002020007F7F7F7FFFFF
+        7FFFFF7FFFFFBF3FFFFF00FFFF00FFFF00FFBFBFFF7FFFFF606060C0C0C0C0C0
+        C0C0C0C06F6F6F3F3F3FFFFFFF3F3F3F7FFFFF7FFFFFBF3FFFFF00FFFF00FFBF
+        7FFF7FFFFF3F7F7FC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF909090
+        3F3F3F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF909090C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0606000FFFFFFFFFFFFFFFFFF7F7F7F3F7F7F3F7F7F3F7F7F3F
+        7F7FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFBF
+      }
+      OnClick = BitBtn5Click
+      Spacing = 10
+      TabOrder = 1
+    end
+    object equipslotbox: TComboBox
+      Left = 8
+      Height = 31
+      Top = 152
+      Width = 197
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object CheckEquipEventItem: TCheckBox
+      Left = 8
+      Height = 22
+      Top = 100
+      Width = 186
+      Caption = 'Use this script''s item instead.'
+      OnChange = CheckEquipEventItemChange
+      TabOrder = 3
+      Visible = False
+    end
+  end
+  object PanelAboutQueues: TPanel[16]
+    Left = 10
+    Height = 130
+    Top = 15
+    Width = 470
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 126
+    ClientWidth = 466
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 15
+    object TextAboutQueues: TStaticText
+      Left = 10
+      Height = 80
+      Top = 43
+      Width = 450
+      Caption = 'An action queue is a way to make sure that one activity is finished before the caller proceeds to the next one. Thus, calling ActionMoveToObject() followed by ActionSpeakString() will mean that the string is not spoken before the NPC has reached the object it was told to move to.'
+      TabOrder = 0
+    end
+    object CaptionAboutQueues: TStaticText
+      Left = 10
+      Height = 25
+      Top = 10
+      Width = 450
+      Caption = 'About action queues:'
+      Font.Color = clInfoText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object Panel3: TPanel[17]
+    Left = 182
+    Height = 100
+    Top = 125
+    Width = 385
+    BevelInner = bvRaised
+    BorderStyle = bsSingle
+    ClientHeight = 96
+    ClientWidth = 381
+    Color = clRed
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 16
+    Visible = False
+    object Memo3: TMemo
+      Left = 15
+      Height = 75
+      Top = 12
+      Width = 355
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Lines.Strings = (
+        'You cannot delay an action queue made this way, because too many things can go wrong.'
+        'Instead, if you want an action to happen after a fixed delay, just use the wait action first.'
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+end

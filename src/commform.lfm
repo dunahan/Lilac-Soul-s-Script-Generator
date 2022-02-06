@@ -1,0 +1,506 @@
+inherited communicationform: Tcommunicationform
+  Left = 447
+  Height = 485
+  Top = 149
+  Width = 450
+  ActiveControl = receiver.RadioButton1
+  BorderStyle = bsDialog
+  Caption = 'Speak a string / display floating text / send message to PC'
+  ClientHeight = 485
+  ClientWidth = 450
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object PanelDefault: TPanel[0]
+    Left = 45
+    Height = 190
+    Top = 240
+    Width = 360
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Caption = 'No additional information needed.'
+    Color = 16311256
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+  end
+  object PanelText: TPanel[1]
+    Left = 25
+    Height = 95
+    Top = 140
+    Width = 400
+    ClientHeight = 95
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 20
+      Height = 19
+      Top = 12
+      Width = 57
+      Caption = 'The text:'
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object tospeak: TEdit
+      Left = 90
+      Height = 24
+      Top = 10
+      Width = 290
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 80
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+    end
+    object TextTokens: TStaticText
+      Left = 75
+      Height = 50
+      Top = 45
+      Width = 320
+      Alignment = taCenter
+      Caption = 'Use "<ME>" to get the name of the script owner, and "<PC>" to get the name of the PC.'
+      TabOrder = 1
+    end
+  end
+  object BitBtn1: TBitBtn[2]
+    Left = 25
+    Height = 35
+    Top = 440
+    Width = 140
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = ButtonClickOkayMore
+    ParentFont = False
+    TabOrder = 5
+  end
+  object BitBtn2: TBitBtn[3]
+    Left = 185
+    Height = 35
+    Top = 440
+    Width = 120
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    ParentFont = False
+    Spacing = 5
+    TabOrder = 6
+  end
+  object BitBtn3: TBitBtn[4]
+    Left = 325
+    Height = 35
+    Top = 440
+    Width = 100
+    Caption = 'Close'
+    Font.Color = clBlack
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    ParentFont = False
+    Spacing = 10
+    TabOrder = 7
+  end
+  object PanelFloatText: TPanel[5]
+    Left = 45
+    Height = 190
+    Top = 240
+    Width = 360
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 190
+    ClientWidth = 360
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 3
+    Visible = False
+    object GroupPartywide: TRadioGroup
+      Left = 30
+      Height = 60
+      Top = 65
+      Width = 300
+      AutoFill = True
+      Caption = 'Should this text be seen by others in the PC''s party?'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 44
+      ClientWidth = 296
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Yes'
+        'No'
+      )
+      TabOrder = 0
+    end
+  end
+  object PanelSpeaker: TPanel[6]
+    Left = 45
+    Height = 190
+    Top = 240
+    Width = 360
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 190
+    ClientWidth = 360
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    Visible = False
+    object volume: TLabel
+      Left = 35
+      Height = 17
+      Top = 160
+      Width = 49
+      Caption = 'Volume:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object GroupSpeaker: TGroupBox
+      Left = 10
+      Height = 145
+      Top = 5
+      Width = 340
+      Caption = 'Who will speak?'
+      ClientHeight = 129
+      ClientWidth = 336
+      Color = 16311256
+      ParentColor = False
+      TabOrder = 0
+      object RadioOwner: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 0
+        Width = 325
+        AutoSize = False
+        Caption = 'The owner of the script'
+        Checked = True
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 0
+      end
+      object RadioPC: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 25
+        Width = 65
+        Caption = 'The PC'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 1
+        TabStop = False
+      end
+      object RadioTargeted: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 25
+        Width = 133
+        Caption = 'The activation target'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 5
+        TabStop = False
+        Visible = False
+      end
+      object RadioSpawn: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 50
+        Width = 325
+        AutoSize = False
+        Caption = 'The most recent spawn'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 7
+        TabStop = False
+      end
+      object RadioTagged: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 75
+        Width = 142
+        Caption = 'An object with the tag:'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = ToggleOkay
+        ParentFont = False
+        TabOrder = 4
+        TabStop = False
+      end
+      object EditTagged: TEdit
+        Left = 160
+        Height = 24
+        Top = 73
+        Width = 170
+        Color = 16311256
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        MaxLength = 32
+        OnChange = EditChangeToggleChecked
+        ParentFont = False
+        TabOrder = 6
+      end
+      object RadioActivator: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 0
+        Width = 120
+        Caption = 'The item activator'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 2
+        TabStop = False
+        Visible = False
+      end
+      object RadioActor: TRadioButton
+        Left = 5
+        Height = 22
+        Top = 100
+        Width = 325
+        AutoSize = False
+        Caption = 'The most recent actor'
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 3
+        TabStop = False
+      end
+    end
+    object volumebox: TComboBox
+      Left = 85
+      Height = 31
+      Top = 155
+      Width = 240
+      Color = clInactiveCaptionText
+      Enabled = False
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemHeight = 0
+      ItemIndex = 2
+      Items.Strings = (
+        'Silent shout (DM channel)'
+        'Shout (heard module-wide)'
+        'Talk (heard by nearby creatures)'
+        'Talk, AI (not heard by PCs)'
+        'Whisper (heard in a short range)'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'Talk (heard by nearby creatures)'
+    end
+  end
+  object receiver: TRadioGroup[7]
+    Left = 65
+    Height = 120
+    Top = 15
+    Width = 320
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 116
+    ClientWidth = 316
+    Color = 16311256
+    ItemIndex = 1
+    Items.Strings = (
+      'Record a message in the server''s log file.'
+      'Send a chat window message to the PC.'
+      'Have floating text appear over the PC''s head.'
+      'Have someone speak some text.'
+      'Have someone say a quickchat line.'
+    )
+    OnClick = receiverClick
+    ParentColor = False
+    TabOrder = 8
+  end
+  object PanelQChat: TPanel[8]
+    Left = 25
+    Height = 95
+    Top = 140
+    Width = 400
+    ClientHeight = 95
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 1
+    Visible = False
+    object LabelQChat: TLabel
+      Left = 60
+      Height = 19
+      Top = 38
+      Width = 117
+      Caption = 'Which quickchat?'
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object ComboQChat: TComboBox
+      Left = 190
+      Height = 31
+      Top = 32
+      Width = 150
+      ItemHeight = 0
+      Items.Strings = (
+        'Attack!'
+        'Attack grunt 1'
+        'Attack grunt 2'
+        'Attack grunt 3'
+        'Bad idea'
+        'Battlecry 1'
+        'Battlecry 2'
+        'Battlecry 3'
+        'Bored'
+        'Can do'
+        'Cannot do'
+        'Cheer'
+        'Cuss'
+        'Death'
+        'Dying'
+        'Encumbered'
+        'Enemies sighted'
+        'Flee'
+        'Follow me!'
+        'Go stealthy'
+        'Good idea'
+        'Goodbye'
+        'Group party'
+        'Guard me!'
+        'Heal me!'
+        'Hello'
+        'Help'
+        'Hold!'
+        'Laugh'
+        'Look here'
+        'Move over'
+        'No'
+        'Pain 1'
+        'Pain 2'
+        'Pain 3'
+        'Pick lock'
+        'Poisoned'
+        'Rest'
+        'Search for secrets'
+        'Selected'
+        'Something to say'
+        'Spell failed'
+        'Stop'
+        'Task complete'
+        'Taunt'
+        'Thank you'
+        'Threaten'
+        'Weapon sucks'
+        'Yes'
+      )
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 0
+    end
+  end
+end

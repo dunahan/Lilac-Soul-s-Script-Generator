@@ -1,0 +1,242 @@
+inherited delaycommand: Tdelaycommand
+  Left = 376
+  Height = 550
+  Top = 149
+  Width = 500
+  ActiveControl = Memo1
+  BorderStyle = bsDialog
+  Caption = 'Delay the next thing that you script'
+  ClientHeight = 550
+  ClientWidth = 500
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object Memo1: TMemo[0]
+    Left = 25
+    Height = 305
+    Top = 16
+    Width = 450
+    Color = clInfoBk
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'The next thing you script will be delayed. That means that everything you script from the next window you open (until that window gets closed) will be delayed. As long as the caption on the event chooser window says so, the next command will be delayed.'
+      ''
+      'There are two ways to delay something. The more common method is to specify a number of seconds, and this is what you should usually do. The less common method is to use a creature''s action queue, which means that what you script will be delayed until that creature finishes whatever it was told to do so far. There are some subtle ways this can go wrong, but it has its uses, such as implementing the results of a "fake spell".'
+      ''
+      'Note that there are certain things that cannot be delayed. For instance, you cannot delay an if-statement. So if you make an if-statement, the first thing you script within that if-statement will be delayed, not the if-statement itself. Also, there can be (almost) no interaction when delaying a script. For example, if you create a creature after a delay, you can only give it one thing to do after spawning, and you are limited to the options listed in the "spawn creature" window. (Well, it is possible to give it more to do, but not with the Script Generator.)'
+      ''
+      'If you have multiple things that should happen (at the same time) after a delay, there are better methods to use than what the Script Generator will produce. Just a heads-up for those with large modules; the better methods fall outside the scope of the Generator.'
+      ''
+      'To reset using a delay command, just set the delay to 0 seconds.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object BitBtn2: TBitBtn[1]
+    Left = 108
+    Height = 35
+    Top = 505
+    Width = 113
+    Caption = 'Okay'
+    Default = True
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = BitBtn2Click
+    Spacing = 15
+    TabOrder = 0
+  end
+  object BitBtn3: TBitBtn[2]
+    Left = 269
+    Height = 35
+    Top = 505
+    Width = 113
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 15
+    TabOrder = 1
+  end
+  object RadioTimed: TRadioButton[3]
+    Left = 65
+    Height = 22
+    Top = 340
+    Width = 106
+    Caption = 'Specify seconds'
+    Checked = True
+    Color = 16311256
+    OnChange = RadioChangeToggleVisible
+    ParentColor = False
+    TabOrder = 3
+    TabStop = True
+  end
+  object RadioQueue: TRadioButton[4]
+    Left = 237
+    Height = 22
+    Top = 340
+    Width = 169
+    Caption = 'Use a creature''s action queue'
+    Color = 16311256
+    OnChange = RadioChangeToggleVisible
+    ParentColor = False
+    TabOrder = 4
+  end
+  object PanelTimed: TPanel[5]
+    Left = 65
+    Height = 100
+    Top = 380
+    Width = 370
+    ClientHeight = 100
+    ClientWidth = 370
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 5
+    object Label1: TLabel
+      Left = 20
+      Height = 19
+      Top = 35
+      Width = 198
+      Caption = 'Delay for how many seconds?'
+      Color = 16311256
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 273
+      Height = 28
+      Top = 30
+      Width = 75
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Arial'
+      MaxValue = 65535
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object PanelQueue: TPanel[6]
+    Left = 65
+    Height = 120
+    Top = 370
+    Width = 370
+    ClientHeight = 120
+    ClientWidth = 370
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 6
+    Visible = False
+    object RadioOwner: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 5
+      Width = 234
+      Caption = 'The owner of the script                                '
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioPC: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 29
+      Width = 229
+      Caption = 'The PC (Note: the player can interrupt this)'
+      TabOrder = 6
+    end
+    object RadioTargeted: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 29
+      Width = 122
+      Caption = 'The activation target'
+      TabOrder = 2
+      Visible = False
+    end
+    object RadioTag: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 75
+      Width = 140
+      Caption = 'A creature with this tag:'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object RadioSpawn: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 97
+      Width = 235
+      Caption = 'The most recent spawn                                '
+      TabOrder = 4
+      Visible = False
+    end
+    object EditTag: TEdit
+      Left = 178
+      Height = 23
+      Top = 72
+      Width = 185
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 7
+    end
+    object RadioActor: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 53
+      Width = 232
+      Caption = 'The most recent actor                                  '
+      TabOrder = 5
+      Visible = False
+    end
+    object RadioActivator: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 5
+      Width = 109
+      Caption = 'The item activator'
+      TabOrder = 1
+      Visible = False
+    end
+  end
+end

@@ -1,0 +1,53 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Theartbeatnotice','FORMDATA',[
+  'TPF0'#16'Theartbeatnotice'#15'heartbeatnotice'#4'Left'#3#191#1#6'Height'#3'"'
+  +#1#3'Top'#3#149#0#5'Width'#3#144#1#13'ActiveControl'#7#5'Memo1'#11'BorderSty'
+  +'le'#7#8'bsDialog'#7'Caption'#6#17'Important notice!'#12'ClientHeight'#3'"'#1
+  +#11'ClientWidth'#3#144#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'
+  +#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7#16'poMainFormCe'
+  +'nter'#10'LCLVersion'#6#6'0.9.30'#0#5'TMemo'#5'Memo1'#4'Left'#2#15#6'Height'
+  +#3#200#0#3'Top'#2#10#5'Width'#3'r'#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7
+  +#10'clInfoText'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#13'Lines.Strin'
+  +'gs'#1#6'+Important information about NPC heartbeats:'#6#0#6#184'Everything '
+  +'you put in this script will run on each NPC heartbeat (every six seconds), '
+  +'provided a PC is in the same area and provided the NPC is not currently in '
+  +'conversation or combat.'#6#0#12'8'#1#0#0'The PC has been generically define'
+  +'d as the nearest PC that the NPC can see. For most heartbeats, the NPC will'
+  +' likely not see any PCs. Thus, if scripting something that deals with the P'
+  +'C, it is probable that the scripting could have strange behavior most of th'
+  +'e time as it tries to deal with a nonexistent object.'#0#10'ParentFont'#8#8
+  +'ReadOnly'#9#8'TabOrder'#2#0#0#0#7'TBitBtn'#9'ButtonYes'#4'Left'#2'2'#6'Heig'
+  +'ht'#2'#'#3'Top'#3#245#0#5'Width'#2'n'#7'Caption'#6#3'Yes'#7'Default'#9#10'G'
+  +'lyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0
+  +#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0
+  +#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  +#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136
+  +'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'w'
+  +'www'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136
+  +'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'
+  +#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162
+  +'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwww'
+  +'w'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#6#7'OnClick'#7#14'ButtonYe'
+  +'sClick'#7'Spacing'#2#15#8'TabOrder'#2#2#0#0#7'TBitBtn'#8'ButtonNo'#4'Left'#3
+  +#230#0#6'Height'#2'#'#3'Top'#3#245#0#5'Width'#2'n'#6'Cancel'#9#7'Caption'#6#2
+  +'No'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0
+  +#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0
+  +#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0
+  +#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0
+  +#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'#136#135'ww'
+  +#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135#145#0#136
+  +#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0'ww'#0#0'w'
+  +#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145#17#17#17#135
+  +'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17
+  +#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17#153#17#0#136
+  +#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153#17#0#136#135#0
+  +#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153'wwwy'
+  +#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#7#7'Spacing'#2#15#8'TabO'
+  +'rder'#2#3#0#0#5'TMemo'#12'MemoQuestion'#4'Left'#2#15#6'Height'#2'2'#3'Top'#3
+  +#180#0#5'Width'#3'r'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'
+  +#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6'OWould '
+  +'you like to have this script check that a PC was found before continuing?'#0
+  +#10'ParentFont'#8#8'ReadOnly'#9#8'TabOrder'#2#1#0#0#0
+]);

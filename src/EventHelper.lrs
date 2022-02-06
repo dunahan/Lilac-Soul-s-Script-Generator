@@ -1,0 +1,269 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TEventHelp','FORMDATA',[
+  'TPF0'#241#10'TEventHelp'#9'EventHelp'#4'Left'#3#191#1#6'Height'#3'&'#2#3'Top'
+  +#3#149#0#5'Width'#3#174#1#13'ActiveControl'#7#14'PanelOldSystem'#11'BorderSt'
+  +'yle'#7#8'bsDialog'#7'Caption'#6#29'Help with item-related events'#12'Client'
+  +'Height'#3'&'#2#11'ClientWidth'#3#174#1#5'Color'#4'y'#149#223#0#10'Font.Colo'
+  +'r'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7
+  +#16'poMainFormCenter'#0#242#2#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#160#0#6'Heig'
+  +'ht'#2#30#3'Top'#3#3#2#5'Width'#2'n'#7'Caption'#6#5'Close'#10'Glyph.Data'#10
+  +#178#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0
+  +#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191
+  +#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128
+  +#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0
+  +#255#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145
+  +#17#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17
+  +#17#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7
+  +'pwx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240
+  +#145#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17
+  +#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15
+  +#7'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240
+  +#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153
+  +#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'p'
+  +'wx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#1#7
+  +'Spacing'#2#15#8'TabOrder'#2#3#0#0#242#2#1#6'TPanel'#14'PanelOldSystem'#4'Le'
+  +'ft'#2#10#6'Height'#3#254#1#3'Top'#2#5#5'Width'#3#154#1#10'BevelOuter'#7#6'b'
+  +'vNone'#12'ClientHeight'#3#254#1#11'ClientWidth'#3#154#1#8'TabOrder'#2#0#7'V'
+  +'isible'#8#0#5'TMemo'#13'MemoOldSystem'#4'Left'#2#5#6'Height'#3','#1#3'Top'#2
+  +#5#5'Width'#3#144#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6#31'THE OLD'
+  +' SYSTEM FOR ITEM SCRIPTS'#6'6----------------------------------------------'
+  +'--------'#6#0#12#23#3#0#0'This window describes the old system for item scr'
+  +'ipts (handling activation, acquisition, unacquisition, equipping, and unequ'
+  +'ipping) that was used through version 2.1 of the Script Generator. If you a'
+  +'re not currently using this system, you would likely be better off using th'
+  +'e new system, as that will allow you to use packages (from the Vault) that '
+  +'require tag-based scripting. Plus, if you ever need to ask someone for help'
+  +', that someone is more likely to be familiar with BioWare''s system than th'
+  +'e old Script Generator system. On the other hand, if you started your modul'
+  +'e with an older version of the Script Generator and are already using the o'
+  +'ld system, then converting your module to the new system might not be worth'
+  +' the trouble. (That is why the old system is still documented here.)'#6#0#12
+  +#30#1#0#0'To use the old system, you first have to remove the x2_mod_<WHATEV'
+  +'ER> references from these five events (listed under the module''s propertie'
+  +'s): OnActivateItem, OnAcquireItem, OnUnacquireItem, OnPlayerEquipItem, and '
+  +'OnPlayerUnequipItem. These get replaced by the scripts displayed below.'#6#0
+  +#12#221#2#0#0'Once that is done, you simply name your scripts appropriately.'
+  +' An OnAcquireItem script would be called "ac_" followed by the tag of the i'
+  +'tem in question. So, if the item is tagged "myring", the script is called "'
+  +'ac_myring". Similarly, for OnUnacquireItem scripts the script name would be'
+  +' "uac_" followed by the tag (e.g., "uac_myring"), for OnEquipItem scripts t'
+  +'he script name would be "eq_" followed by the tag (e.g., "eq_myring"), and '
+  +'OnUnequipItem scripts the script name would be "ueq_" followed by the tag ('
+  +'e.g., "ueq_myring"). The activation script is a bit different in that it do'
+  +'es not get a prefix; the name of the activation script would be the same as'
+  +' the tag of the item (in lowercase, as script names must be lowercase).'#6#0
+  +#6'nIf you require further assistance, please consult the manual for Lilac S'
+  +'oul''s version of the Script Generator.'#0#10'ParentFont'#8#8'ReadOnly'#9#10
+  +'ScrollBars'#7#10'ssVertical'#8'TabOrder'#2#0#0#0#9'TGroupBox'#21'GroupOldSy'
+  +'stemScripts'#4'Left'#2#5#6'Height'#3#190#0#3'Top'#3';'#1#5'Width'#3#144#1#7
+  +'Caption'#6#25'View module event scripts'#12'ClientHeight'#3#175#0#11'Client'
+  +'Width'#3#140#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#1#0
+  +#12'TRadioButton'#15'RadioOldAcquire'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25
+  +#5'Width'#2'}'#7'Caption'#6#20'OnAcquireItem script'#8'OnChange'#7#24'RadioC'
+  +'hangeToggleVisible'#8'TabOrder'#2#0#0#0#12'TRadioButton'#17'RadioOldUnacqui'
+  +'re'#4'Left'#3#200#0#6'Height'#2#22#3'Top'#2#25#5'Width'#3#138#0#7'Caption'#6
+  ,#22'OnUnAcquireItem script'#8'OnChange'#7#24'RadioChangeToggleVisible'#8'Tab'
+  +'Order'#2#4#0#0#12'TRadioButton'#13'RadioOldEquip'#4'Left'#2#5#6'Height'#2#22
+  +#3'Top'#2'2'#5'Width'#3#143#0#7'Caption'#6#24'OnPlayerEquipItem script'#8'On'
+  +'Change'#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#2#0#0#12'TRadioButton'
+  +#15'RadioOldUnequip'#4'Left'#3#200#0#6'Height'#2#22#3'Top'#2'2'#5'Width'#3
+  +#156#0#7'Caption'#6#26'OnPlayerUnEquipItem script'#8'OnChange'#7#24'RadioCha'
+  +'ngeToggleVisible'#8'TabOrder'#2#3#0#0#5'TMemo'#14'MemoOldAcquire'#4'Left'#2
+  +#5#6'Height'#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier ne'
+  +'w'#13'Lines.Strings'#1#6#11'void main()'#6#1'{'#6'H    ExecuteScript("ac_" '
+  +'+ GetTag(GetModuleItemAcquired()), OBJECT_SELF);'#6#1'}'#0#10'ParentFont'#8
+  +#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#6#7'Visible'#8#8'Wor'
+  +'dWrap'#8#0#0#5'TMemo'#16'MemoOldUnacquire'#4'Left'#2#5#6'Height'#2'Z'#3'Top'
+  +#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'#13'Lines.Strings'#1
+  +#6#11'void main()'#6#1'{'#6'E    ExecuteScript("uac_" + GetTag(GetModuleItem'
+  +'Lost()), OBJECT_SELF);'#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBa'
+  +'rs'#7#6'ssBoth'#8'TabOrder'#2#7#7'Visible'#8#8'WordWrap'#8#0#0#5'TMemo'#12
+  +'MemoOldEquip'#4'Left'#2#5#6'Height'#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Col'
+  +'or'#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#11'courier new'#13'Lines.Strings'#1#6#11'void main()'#6#1'{'#6
+  +'H    ExecuteScript("eq_" + GetTag(GetPCItemLastEquipped()), OBJECT_SELF);'#6
+  +#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'
+  +#2#8#7'Visible'#8#8'WordWrap'#8#0#0#5'TMemo'#14'MemoOldUnequip'#4'Left'#2#5#6
+  +'Height'#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Fo'
+  +'nt.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'
+  +#13'Lines.Strings'#1#6#11'void main()'#6#1'{'#6'K    ExecuteScript("ueq_" + '
+  +'GetTag(GetPCItemLastUnequipped()), OBJECT_SELF);'#6#1'}'#0#10'ParentFont'#8
+  +#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#9#7'Visible'#8#8'Wor'
+  +'dWrap'#8#0#0#12'TRadioButton'#16'RadioOldActivate'#4'Left'#2#5#6'Height'#2
+  +#22#3'Top'#2#0#5'Width'#2#127#7'Caption'#6#21'OnActivateItem script'#7'Check'
+  +'ed'#9#8'OnChange'#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#1#7'TabStop'
+  +#9#0#0#5'TMemo'#15'MemoOldActivate'#4'Left'#2#5#6'Height'#2'Z'#3'Top'#2'K'#5
+  +'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlack'#11'F'
+  +'ont.Height'#2#245#9'Font.Name'#6#11'courier new'#13'Lines.Strings'#1#6#11'v'
+  +'oid main()'#6#1'{'#6';    ExecuteScript(GetTag(GetItemActivated()), OBJECT_'
+  +'SELF);'#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8
+  +'TabOrder'#2#5#8'WordWrap'#8#0#0#0#0#242#2#2#6'TPanel'#14'PanelNewSystem'#4
+  +'Left'#2#10#6'Height'#3#254#1#3'Top'#2#5#5'Width'#3#154#1#10'BevelOuter'#7#6
+  +'bvNone'#12'ClientHeight'#3#254#1#11'ClientWidth'#3#154#1#8'TabOrder'#2#1#7
+  +'Visible'#8#0#5'TMemo'#13'MemoNewSystem'#4'Left'#2#5#6'Height'#3','#1#3'Top'
+  +#2#5#5'Width'#3#144#1#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'
+  +#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6#31'THE '
+  +'NEW SYSTEM FOR ITEM SCRIPTS'#6'6-------------------------------------------'
+  +'-----------'#6#0#12']'#2#0#0'This window describes the new system for item '
+  +'scripts (handling activation, acquisition, unacquisition, equipping, and un'
+  +'equipping) that is compatible with BioWare''s tag-based system (the de fact'
+  +'o standard). This is a bit different than what was used in versions 2.2 and'
+  +' 2.3 of the Script Generator, but it is compatible, so both approaches can '
+  +'be used in the same module. It is not, however, compatible with the old sys'
+  +'tem used in version 2.1 (and earlier); if you are already using the old sys'
+  +'tem, you may want to stick with it and avoid the hassle of converting all y'
+  +'our item scripts to the new system.'#6#0#12#234#1#0#0'This is not an introd'
+  +'uction to tag-based scripting. It will not explain how or why things work, '
+  +'nor will it teach you alternate ways to do things. This is merely intended '
+  +'to get your tag-based scripts working. In particular, when something is *a*'
+  +' way to accomplush a task, it is not *the* (only) way to do so. It is quite'
+  +' possible for custom scripts to replace the standard BioWare ones without d'
+  +'isupting tag-based scripting, but explaining that goes beyond the scope of '
+  +'this documentation.'#6#0#6#176'To use the new system, tag-based scripting m'
+  +'ust be enabled in your module. A way to do this is to first check the modul'
+  +'e''s OnModuleLoad script. This script should have the line'#6#19'    SetMod'
+  +'uleSwitch'#6'6        (MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS, TRUE);'#12#31
+  +#1#0#0'and this line should not be commented out. (A line starting with "//"'
+  ,' is commented out.) For the default module load scripts, this line is numbe'
+  +'r 89 (in x2_mod_def_load) or 96 (in x3_mod_def_load). Next, check some othe'
+  +'r module events. The handlers for these events should be as follows:'#6#31
+  +'  OnAcquireItem: x2_mod_def_aqu'#6'   OnActivateItem: x2_mod_def_act'#6'#  '
+  +'OnPlayerEquipItem: x2_mod_def_equ'#6'''  OnPlayerUnequipItem: x2_mod_def_un'
+  +'equ'#6'#  OnUnacquireItem: x2_mod_def_unaqu'#6'Z(These were probably filled'
+  +' in by default when you made the module, but still check them.)'#6#0#12#135
+  +#1#0#0'Once tag-based scripting is enabled, it is time to create a tag-based'
+  +' script. At its simplest level, this means creating a script whose name is '
+  +'the tag of the item in question. The Toolset will force the script name to '
+  +'be in lowercase and no longer than 16 characters; this is fine and does not'
+  +' mean your tags must also be like that. (Just use the first 16 characters i'
+  +'f your tag is longer.)'#6#0#12#184#3#0#0'What goes in this script? Start wi'
+  +'th the tag-based template, which is available as a script type from the mai'
+  +'n Script Generator window. This is your script''s framework. Next, use the '
+  +'Script Generator to create a function for this script. This function will r'
+  +'eplace a function in the template (see below for which lines get replaced f'
+  +'or each event type). One tricky part comes if the Script Generator adds stu'
+  +'ff (#include''s, maybe auxiliary functions) before your function. This stuf'
+  +'f should go either near the top of the template (e.g. right after ''#includ'
+  +'e "x2_inc_switches"'') or at the top of the "Event Handlers" section (the p'
+  +'art designated for your functionality). In either case, this stuff should o'
+  +'nly be added if it is not already in the script. (Hint: be consistent!) Hop'
+  +'efully this is not too complicated for those generating such scripts, and o'
+  +'n the bright side, there is a good chance this header stuff will not be an '
+  +'issue for your script.'#6#0#12'R'#1#0#0'As an alternative to manually modif'
+  +'ying the tag-based template, you can use the Script Generator to create a f'
+  +'unction, then choose to save and/or compile it. At this point the Script Ge'
+  +'nerator will add the rest of the template for you. (This may be useful if y'
+  +'ou are only implementing one of the events for your item, such as activatio'
+  +'n.)'#6#0#12'M'#2#0#0'This is a bit more involved and advanced than the syst'
+  +'em used in versions 2.2 and 2.3 of the Script Generator, but the end result'
+  +' is a significant reduction in the number of resources used. With the 2.2/2'
+  +'.3 approach, each item would have 2-6 scripts (4-12 script resources), whil'
+  +'e the current approach requires only a single script (two script resources)'
+  +' per item. Hopefully the additional complexity is manageable. (If not, you '
+  +'can always tell the Script Generator to use the old system, but follow the '
+  +'directions for the 2.2/2.3 approach, as described in the manuals for those '
+  +'versions.)'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVertical'
+  +#8'TabOrder'#2#0#0#0#9'TGroupBox'#21'GroupNewSystemScripts'#4'Left'#2#5#6'He'
+  +'ight'#3#190#0#3'Top'#3';'#1#5'Width'#3#144#1#7'Caption'#6')View the lines i'
+  +'n the template to replace'#12'ClientHeight'#3#175#0#11'ClientWidth'#3#140#1
+  +#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#1#0#12'TRadioButto'
+  +'n'#15'RadioNewAcquire'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#25#5'Width'#2'a'
+  +#7'Caption'#6#16'Item acquisition'#8'OnChange'#7#24'RadioChangeToggleVisible'
+  +#8'TabOrder'#2#4#0#0#12'TRadioButton'#17'RadioNewUnacquire'#4'Left'#3#200#0#6
+  +'Height'#2#22#3'Top'#2#25#5'Width'#2'm'#7'Caption'#6#18'Item unacquisition'#8
+  +'OnChange'#7#24'RadioChangeToggleVisible'#8'TabOrder'#2#1#0#0#12'TRadioButto'
+  +'n'#13'RadioNewEquip'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'2'#5'Width'#3#155#0
+  +#7'Caption'#6#27'Item equipped (by a player)'#8'OnChange'#7#24'RadioChangeTo'
+  +'ggleVisible'#8'TabOrder'#2#2#0#0#12'TRadioButton'#15'RadioNewUnequip'#4'Lef'
+  +'t'#3#200#0#6'Height'#2#22#3'Top'#2'2'#5'Width'#3#167#0#7'Caption'#6#29'Item'
+  +' unequipped (by a player)'#8'OnChange'#7#24'RadioChangeToggleVisible'#8'Tab'
+  +'Order'#2#3#0#0#5'TMemo'#14'MemoNewAcquire'#4'Left'#2#5#6'Height'#2'Z'#3'Top'
+  +#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'#13'Lines.Strings'#1
+  +#6'Svoid OnAcquire(object oItem, object oAcquiredBy, object oTakenFrom, int '
+  +'nStackSize)'#6#1'{'#6#27'    // Default: do nothing.'#6#1'}'#0#10'ParentFon'
+  +'t'#8#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#6#7'Visible'#8#8
+  +'WordWrap'#8#0#0#5'TMemo'#16'MemoNewUnacquire'#4'Left'#2#5#6'Height'#2'Z'#3
+  +'Top'#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Font.Color'#7#7'c'
+  +'lBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'#13'Lines.Strin'
+  +'gs'#1#6'.void OnUnacquire(object oItem, object oLostBy)'#6#1'{'#6#27'    //'
+  +' Default: do nothing.'#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBar'
+  ,'s'#7#6'ssBoth'#8'TabOrder'#2#7#7'Visible'#8#8'WordWrap'#8#0#0#5'TMemo'#12'M'
+  +'emoNewEquip'#4'Left'#2#5#6'Height'#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Colo'
+  +'r'#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'F'
+  +'ont.Name'#6#11'courier new'#13'Lines.Strings'#1#6'.void OnEquip(object oIte'
+  +'m, object oEquippedBy)'#6#1'{'#6#27'    // Default: do nothing.'#6#1'}'#0#10
+  +'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#8#7'Vi'
+  +'sible'#8#8'WordWrap'#8#0#0#5'TMemo'#14'MemoNewUnequip'#4'Left'#2#5#6'Height'
+  +#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Color'#7#12'clMoneyGreen'#10'Font.Color'
+  +#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier new'#13'Lines.'
+  +'Strings'#1#6'2void OnUnequip(object oItem, object oUnequippedBy)'#6#1'{'#6
+  +#27'    // Default: do nothing.'#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10
+  +'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#9#7'Visible'#8#8'WordWrap'#8#0#0#12'T'
+  +'RadioButton'#16'RadioNewActivate'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#0#5'W'
+  +'idth'#2'\'#7'Caption'#6#15'Item activation'#7'Checked'#9#8'OnChange'#7#24'R'
+  +'adioChangeToggleVisible'#8'TabOrder'#2#0#7'TabStop'#9#0#0#5'TMemo'#15'MemoN'
+  +'ewActivate'#4'Left'#2#5#6'Height'#2'Z'#3'Top'#2'K'#5'Width'#3#129#1#5'Color'
+  +#7#12'clMoneyGreen'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font'
+  +'.Name'#6#11'courier new'#13'Lines.Strings'#1#6'Xvoid OnActivate(object oIte'
+  +'m, object oActTarget, location lActTarget, object oActivator)'#6#1'{'#6#27
+  +'    // Default: do nothing.'#6#1'}'#0#10'ParentFont'#8#8'ReadOnly'#9#10'Scr'
+  +'ollBars'#7#6'ssBoth'#8'TabOrder'#2#5#8'WordWrap'#8#0#0#0#0#242#2#3#6'TPanel'
+  +#13'PanelOldOrNew'#4'Left'#2#10#6'Height'#3#254#1#3'Top'#2#5#5'Width'#3#154#1
+  +#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3#254#1#11'ClientWidth'#3#154#1
+  +#8'TabOrder'#2#2#7'Visible'#8#0#6'TLabel'#19'LabelOldToNewScript'#4'Left'#2#5
+  +#6'Height'#2#15#3'Top'#3';'#1#5'Width'#3'4'#1#7'Caption'#6'9Script to aid co'
+  +'nversions from the old system to the new:'#10'Font.Color'#7#8'clMaroon'#11
+  +'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'
+  +#8#0#0#5'TMemo'#8'OldOrNew'#4'Left'#2#5#6'Height'#3','#1#3'Top'#2#5#5'Width'
+  +#3#144#1#5'Color'#7#8'clInfoBk'#13'Lines.Strings'#1#6'DShould you use the ol'
+  +'d or the new system for item-related scripting?'#6#0#12#206#1#0#0'It depend'
+  +'s. The new system is better because it is uses BioWare''s tag-based scripti'
+  +'ng, which is the community standard for these events. The old system is not'
+  +' compatible with BioWare''s system, and therefore does not allow you to use'
+  +' most community-created item prefabs in your module. If you are starting a '
+  +'new module or do not yet have any item scripting in your current module, th'
+  +'en the new system is worth using for its compatibility with community stand'
+  +'ards.'#6#0#6#251'However, switching from the old system to the new system c'
+  +'an be a hassle, and problematic if you forget an item. If you have already '
+  +'started using the old system in your module and if you have no compelling r'
+  +'eason to switch, stick with the old system.'#6#0#6#242'If you do have a com'
+  +'pelling reason to convert your module from the old system to the new, you w'
+  +'ill have to change scripts for each item that was implemented under the old'
+  +' system. A relatively simple way to do this requires two steps per item:'#6
+  +#0#6#168'1) For each item that has an activation script, rename that script '
+  +'by adding the prefix "act_". That is, change the name from the item''s tag '
+  +'to "act_" + the item''s tag.'#6#0#6#202'2) For each item that has any event'
+  +'s scripted, create a script whose name is the item''s tag. (If such a scrip'
+  +'t already exists, see step 1.) The contents of that script should be what i'
+  +'s displayed below.'#6#0#12#8#2#0#0'This will make those scripts compatible '
+  +'with the new system (and will actually still work under the old, in case yo'
+  +'u need to do this in stages for whatever reason). Once you have all your it'
+  +'em scripts converted like this, change the module events according to the d'
+  +'irections for the new system, and you should be set. Of course, you could a'
+  +'lso adapt each item''s scripts to the form of the new system (the below scr'
+  +'ipt is a hybrid form, with elements of both old and new), but that is not n'
+  +'ecessary to get things working.'#0#8'ReadOnly'#9#10'ScrollBars'#7#10'ssVert'
+  +'ical'#8'TabOrder'#2#0#0#0#5'TMemo'#18'MemoOldToNewScript'#4'Left'#2#5#6'Hei'
+  +'ght'#3#170#0#3'Top'#3'O'#1#5'Width'#3#144#1#5'Color'#7#12'clMoneyGreen'#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#11'courier ne'
+  +'w'#13'Lines.Strings'#1#6#26'#include "x2_inc_switches"'#6#0#6#11'void main('
+  +')'#6#1'{'#6'.    switch ( GetUserDefinedItemEventNumber() )'#6#5'    {'#6'$'
+  +'        case X2_ITEM_EVENT_ACTIVATE:'#6'J            ExecuteScript("act_"+G'
+  +'etTag(GetItemActivated()), OBJECT_SELF);'#6#18'            break;'#6'!     '
+  +'   case X2_ITEM_EVENT_EQUIP:'#6'N            ExecuteScript("eq_"+GetTag(Get'
+  ,'PCLastItemEquipped()), OBJECT_SELF);'#6#18'            break;'#6'#        c'
+  +'ase X2_ITEM_EVENT_UNEQUIP:'#6'Q            ExecuteScript("ueq_"+GetTag(GetP'
+  +'CLastItemUnequipped()), OBJECT_SELF);'#6#18'            break;'#6'#        '
+  +'case X2_ITEM_EVENT_ACQUIRE:'#6'N            ExecuteScript("ac_"+GetTag(GetM'
+  +'oduleItemAcquired()), OBJECT_SELF);'#6#18'            break;'#6'%        ca'
+  +'se X2_ITEM_EVENT_UNACQUIRE:'#6'K            ExecuteScript("uac_"+GetTag(Get'
+  +'ModuleItemLost()), OBJECT_SELF);'#6#18'            break;'#6#5'    }'#6#1'}'
+  +#0#10'ParentFont'#8#8'ReadOnly'#9#10'ScrollBars'#7#6'ssBoth'#8'TabOrder'#2#1
+  +#8'WordWrap'#8#0#0#0#0
+]);

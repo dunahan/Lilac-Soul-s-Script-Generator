@@ -1,0 +1,308 @@
+inherited damagepc: Tdamagepc
+  Left = 376
+  Height = 550
+  Top = 150
+  Width = 400
+  ActiveControl = RadioGroupDice.RadioButton0
+  BorderStyle = bsDialog
+  Caption = 'Deal damage to someone'
+  ClientHeight = 550
+  ClientWidth = 400
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object LabelVFX: TLabel[0]
+    Left = 20
+    Height = 15
+    Top = 430
+    Width = 200
+    Caption = 'Accompanied by which visual effect?'
+    ParentColor = False
+  end
+  object RadioGroup1: TRadioGroup[1]
+    Left = 20
+    Height = 115
+    Top = 305
+    Width = 360
+    AutoFill = True
+    Caption = 'The damage type will be:'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 99
+    ClientWidth = 356
+    Color = 16311256
+    Columns = 3
+    ItemIndex = 6
+    Items.Strings = (
+      'Acid'
+      'Bludgeoning'
+      'Cold'
+      'Divine'
+      'Electrical'
+      'Fire'
+      'Magical'
+      'Negative'
+      'Piercing'
+      'Positive'
+      'Slashing'
+      'Sonic'
+    )
+    ParentColor = False
+    TabOrder = 2
+  end
+  object ComboBox1: TComboBox[2]
+    Left = 20
+    Height = 28
+    Top = 450
+    Width = 360
+    Color = 16311256
+    ItemHeight = 0
+    Style = csDropDownList
+    TabOrder = 3
+  end
+  object BitBtn1: TBitBtn[3]
+    Left = 60
+    Height = 35
+    Top = 500
+    Width = 100
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn[4]
+    Left = 240
+    Height = 35
+    Top = 500
+    Width = 100
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object GroupTarget: TGroupBox[5]
+    Left = 20
+    Height = 170
+    Top = 125
+    Width = 360
+    Caption = 'Deal the damage to:'
+    ClientHeight = 154
+    ClientWidth = 356
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 1
+    object CheckOwner: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 30
+      Width = 340
+      AutoSize = False
+      Caption = 'The owner of the script'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 0
+    end
+    object CheckPC: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 55
+      Width = 65
+      Caption = 'The PC'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 2
+    end
+    object pctarget: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 55
+      Width = 133
+      Caption = 'The activation target'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 3
+      Visible = False
+    end
+    object pcuser: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 30
+      Width = 120
+      Caption = 'The item activator'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 1
+      Visible = False
+    end
+    object CheckSpawn: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 80
+      Width = 340
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 4
+      Visible = False
+    end
+    object CheckTagged: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 105
+      Width = 122
+      Caption = 'The object tagged'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 5
+    end
+    object EditTagged: TEdit
+      Left = 150
+      Height = 24
+      Top = 102
+      Width = 200
+      Color = 16311256
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      TabOrder = 6
+    end
+    object CheckActor: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 130
+      Width = 340
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Color = 16311256
+      OnChange = ToggleOkay
+      ParentColor = False
+      TabOrder = 7
+      Visible = False
+    end
+    object PanelDamageOrigin: TPanel
+      Left = 10
+      Height = 24
+      Top = 3
+      Width = 340
+      Caption = 'Note: Damage will be credited to the owner of the script.'
+      Color = clInfoBk
+      Font.Color = clInfoText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 8
+    end
+  end
+  object GroupAmount: TGroupBox[6]
+    Left = 20
+    Height = 105
+    Top = 10
+    Width = 360
+    Caption = 'Damage by how much?'
+    ClientHeight = 88
+    ClientWidth = 356
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object SpinEdit1: TSpinEdit
+      Left = 10
+      Height = 25
+      Top = 32
+      Width = 60
+      Color = 16311256
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 1000
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 0
+      Value = 1
+    end
+    object RadioGroupDice: TRadioGroup
+      Left = 80
+      Height = 70
+      Top = 10
+      Width = 270
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 5
+      ClientHeight = 66
+      ClientWidth = 266
+      Columns = 5
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'points'
+        'd2'
+        'd3'
+        'd4'
+        'd6'
+        'd8'
+        'd10'
+        'd12'
+        'd20'
+        'd100'
+      )
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+end

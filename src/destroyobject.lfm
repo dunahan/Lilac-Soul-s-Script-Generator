@@ -1,0 +1,293 @@
+inherited destroyobj: Tdestroyobj
+  Left = 447
+  Height = 410
+  Top = 146
+  Width = 380
+  ActiveControl = CheckOwner
+  BorderStyle = bsDialog
+  Caption = 'Destroy objects'
+  ClientHeight = 410
+  ClientWidth = 380
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object Label1: TLabel[0]
+    Left = 25
+    Height = 17
+    Top = 160
+    Width = 149
+    Caption = 'Using which visual effect?'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Memo1: TMemo[1]
+    Left = 25
+    Height = 80
+    Top = 230
+    Width = 330
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'Define what to destroy, then click "Okay - and more!" to destroy another, or "Okay - exit!" to make this the last thing destroyed.'
+      ''
+      'Pressing "Close" will (only) clear out what you have entered since the last "Okay" button.'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox[2]
+    Left = 25
+    Height = 31
+    Top = 185
+    Width = 330
+    Color = 16311256
+    ItemHeight = 0
+    Style = csDropDownList
+    TabOrder = 2
+  end
+  object BitBtn1: TBitBtn[3]
+    Left = 25
+    Height = 33
+    Top = 325
+    Width = 150
+    Caption = 'Okay - and more!'
+    Default = True
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      56020000424D5602000000000000760000002800000029000000140000000100
+      040000000000E001000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      7777777777777777777777777777700000007744488777777777777777777777
+      7777777777777000000077224488777777777777777777777777777777777000
+      0000A22222488777777777777777777777087777777770000000A22222248877
+      777777777777777770078777777770000000A222222248877777777777777777
+      70407877777770000000A2222222248877777777777777777704078777777000
+      0000A22222222248877777777777777788844078777770000000A22248A22224
+      88777777777770877884C407877770000000A222488A22224887777777708788
+      0044CC40077770000000A2224887A22244887777770780004CCCCCCC07777000
+      00007A2248877A22248877777070004CCCC6CCC60777700000007A22477777A2
+      2248877777004CCCC6646C6077777000000077777777777A22244877704666CC
+      64706607777770000000777777777777A2224887700006C64774607777777000
+      00007777777777777A2224877777766477060777777770000000777777777777
+      77A224487777764777007777777770000000777777777777777A224877777477
+      777777777777700000007777777777777777A248777777777777777777777000
+      000077777777777777777A277777777777777777777770000000
+    }
+    OnClick = ButtonClickOkayMore
+    ParentFont = False
+    TabOrder = 3
+  end
+  object BitBtn2: TBitBtn[4]
+    Left = 205
+    Height = 33
+    Top = 325
+    Width = 150
+    Caption = 'Okay - exit!'
+    Enabled = False
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ButtonClickOkayExit
+    ParentFont = False
+    Spacing = 15
+    TabOrder = 4
+  end
+  object BitBtn3: TBitBtn[5]
+    Left = 115
+    Height = 33
+    Top = 367
+    Width = 150
+    Caption = 'Close'
+    Font.Height = -10
+    Font.Name = 'Arial'
+    Glyph.Data = {
+      AE010000424DAE010000000000007600000028000000170000001A0000000100
+      0400000000003801000000000000000000001000000000000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+      77777777777777777777777777777777777B77000000000000000000000B7778
+      F09111111111110F07707778F09111111111110F07787778F091111111111100
+      07777778F091111111111170077B7778F09111111111117007707778F0911111
+      1111117007707778F09111111111110F077B7778F09111111111110F077B7778
+      F09101111111110F07707778F090B0111111110F077B7778F09101111111110F
+      077B7778F09111111111110F077B7778F09111111111110007707778F0911111
+      11111170077B7778F091111111111170077B7778F091111111111170077B7778
+      F09111111111110F07707778F09111111111110F07707778F09999999999990F
+      07707778F00000000000000F07707778FFFFFFFFFFFFFFFF0770777888888888
+      888888880770777777777777777777777770
+    }
+    ModalResult = 2
+    OnClick = ButtonClickClose
+    ParentFont = False
+    Spacing = 20
+    TabOrder = 5
+  end
+  object GroupTarget: TGroupBox[6]
+    Left = 15
+    Height = 140
+    Top = 10
+    Width = 350
+    Caption = 'Destroy what? (PCs cannot be destroyed)'
+    ClientHeight = 122
+    ClientWidth = 346
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 0
+    object CheckOwner: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 0
+      Width = 325
+      AutoSize = False
+      Caption = 'The script owner'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object CheckTargeted: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 0
+      Width = 325
+      AutoSize = False
+      Caption = 'The activation target'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object CheckSpawn: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 20
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent spawn'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object CheckTagged: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 42
+      Width = 118
+      Caption = 'An object tagged:'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = CheckTaggedChange
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+    end
+    object EditTagged: TEdit
+      Left = 145
+      Height = 26
+      Top = 40
+      Width = 190
+      AutoSize = False
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = EditChangeToggleChecked
+      ParentFont = False
+      TabOrder = 4
+    end
+    object CheckActor: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 80
+      Width = 325
+      AutoSize = False
+      Caption = 'The most recent actor'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = ToggleOkay
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+      Visible = False
+    end
+    object CheckWaypoint: TCheckBox
+      Left = 30
+      Height = 22
+      Top = 60
+      Width = 109
+      Caption = 'Tag is a waypoint'
+      Color = 16311256
+      Enabled = False
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+    end
+    object CheckScriptItem: TCheckBox
+      Left = 10
+      Height = 22
+      Top = 100
+      Width = 158
+      Caption = 'The item this script is for'
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnChange = CheckTaggedChange
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 7
+      Visible = False
+    end
+  end
+end

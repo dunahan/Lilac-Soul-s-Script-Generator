@@ -1,0 +1,28 @@
+LazarusResources.Add('Tconfirmclear','FORMDATA',[
+  'TPF0'#13'Tconfirmclear'#12'confirmclear'#4'Left'#3#189#1#6'Height'#3#212#0#3
+  +'Top'#3#224#0#5'Width'#3#0#1#13'ActiveControl'#7#7'BitBtn1'#11'BorderStyle'#7
+  +#8'bsDialog'#7'Caption'#6#7'Confirm'#12'ClientHeight'#3#212#0#11'ClientWidth'
+  +#3#0#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'Position'#7#16'p'
+  +'oMainFormCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'
+  +#2#12#6'Height'#3#136#0#3'Top'#2#12#5'Width'#3#232#0#9'Alignment'#7#8'taCent'
+  +'er'#8'AutoSize'#8#7'Caption'#6'oAre you sure you want to'#10'clear the scri'
+  +'pt window?'#10#10'All contents will be lost, and'#10'a new script will be s'
+  +'tarted.'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#241#9'Font.Name'#6#5
+  +'Arial'#6'Layout'#7#8'tlCenter'#11'ParentColor'#8#10'ParentFont'#8#0#0#7'TBi'
+  +'tBtn'#7'BitBtn1'#4'Left'#2#12#6'Height'#2'('#3'Top'#3#160#0#5'Width'#2'p'#7
+  +'Caption'#6#4'Okay'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'
+  +#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0
+  +#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0
+  +#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255
+  +#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'
+  +#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'w'
+  +'wwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'ww'
+  +'w'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135
+  +#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'www'
+  +'wwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0
+  +'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7
+  +'Spacing'#2#15#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3#132#0#6'H'
+  +'eight'#2'('#3'Top'#3#160#0#5'Width'#2'p'#6'Cancel'#9#7'Caption'#6#6'Cancel'
+  +#4'Kind'#7#4'bkNo'#11'ModalResult'#2#2#7'Spacing'#2#10#8'TabOrder'#2#1#0#0#0
+]);

@@ -1,0 +1,154 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tvfx','FORMDATA',[
+  'TPF0'#241#4'Tvfx'#3'vfx'#4'Left'#3#191#1#6'Height'#3'!'#2#3'Top'#3#149#0#5'W'
+  +'idth'#3'T'#1#13'ActiveControl'#7#11'RadioImpact'#11'BorderStyle'#7#8'bsDial'
+  +'og'#7'Caption'#6#19'Apply visual effect'#12'ClientHeight'#3'!'#2#11'ClientW'
+  +'idth'#3'T'#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.He'
+  +'ight'#2#245#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8'Position'
+  +#7#16'poMainFormCenter'#0#242#2#0#5'TMemo'#5'Memo1'#4'Left'#2#10#6'Height'#2
+  +'P'#3'Top'#3#149#1#5'Width'#3'@'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7
+  +#8'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'
+  +#1#6'yApply your visual effect, then click "Okay - and more!" to apply anoth'
+  +'er, or "Okay - exit!" to make this the last visual.'#6#0#6'ZPressing "Close'
+  +'" will (only) clear out what you have entered since the last "Okay" button.'
+  +#0#10'ParentFont'#8#8'ReadOnly'#9#8'TabOrder'#2#6#0#0#242#2#1#7'TBitBtn'#7'B'
+  +'itBtn1'#4'Left'#2#10#6'Height'#2'#'#3'Top'#3#244#1#5'Width'#3#135#0#7'Capti'
+  +'on'#6#16'Okay - and more!'#7'Default'#9#7'Enabled'#8#10'Glyph.Data'#10'Z'#2
+  +#0#0'V'#2#0#0'BMV'#2#0#0#0#0#0#0'v'#0#0#0'('#0#0#0')'#0#0#0#20#0#0#0#1#0#4#0
+  +#0#0#0#0#224#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0
+  +#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0
+  +#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255
+  +#255#0'wx'#136'wwwwwwwwwwwwwwwwwp'#0#0#0'wDH'#135'wwwwwwwwwwwwwwwwp'#0#0#0'w'
+  +'"D'#136'wwwwwwwwwwwwwwwwp'#0#0#0#162'""H'#135'wwwwwwwwww'#8'wwwwp'#0#0#0#162
+  +'""$'#136'wwwwwwwwwp'#7#135'wwwp'#0#0#0#162'"""H'#135'wwwwwwwwp@xwwwp'#0#0#0
+  +#162'"""$'#136'wwwwwwwww'#4#7#135'wwp'#0#0#0#162'""""H'#135'wwwwwww'#136#132
+  +'@xwwp'#0#0#0#162'"H'#162'"$'#136'wwwwwp'#135'x'#132#196#7#135'wp'#0#0#0#162
+  +'"H'#138'""H'#135'wwwp'#135#136#0'D'#204'@'#7'wp'#0#0#0#162'"H'#135#162'"D'
+  +#136'www'#7#128#0'L'#204#204#204#7'wp'#0#0#0'z"H'#135'z"$'#136'wwpp'#0'L'#204
+  +#198#204#198#7'wp'#0#0#0'z"Gww'#162'"H'#135'ww'#0'L'#204#198'dl`wwp'#0#0#0'w'
+  +'wwwwz"$HwpFf'#204'dpf'#7'wwp'#0#0#0'wwwwww'#162'"H'#135'p'#0#6#198'Gt`wwwp'
+  +#0#0#0'wwwwwwz"$'#135'wwvdw'#6#7'wwwp'#0#0#0'wwwwwww'#162'$HwwvGw'#0'wwwwp'#0
+  +#0#0'wwwwwwwz"Hwwtwwwwwwwp'#0#0#0'wwwwwwww'#162'Hwwwwwwwwwwp'#0#0#0'wwwwwwww'
+  +'z''wwwwwwwwwwp'#0#0#0#7'OnClick'#7#19'ButtonClickOkayMore'#8'TabOrder'#2#3#0
+  +#0#242#2#2#7'TBitBtn'#7'BitBtn2'#4'Left'#3#150#0#6'Height'#2'#'#3'Top'#3#244
+  +#1#5'Width'#2'Z'#7'Caption'#6#12'Okay - exit!'#7'Enabled'#8#10'Glyph.Data'#10
+  +'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0
+  +#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0
+  +#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128
+  +#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255
+  +#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162
+  +'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""'
+  +'$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"'
+  +'H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'w'
+  +'w'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'ww'
+  +'wwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0
+  +'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7#19'ButtonClickOkayExit'#8
+  +'TabOrder'#2#4#0#0#242#2#3#7'TBitBtn'#7'BitBtn3'#4'Left'#3#245#0#6'Height'#2
+  +'#'#3'Top'#3#244#1#5'Width'#2'U'#7'Caption'#6#5'Close'#10'Glyph.Data'#10#178
+  +#1#0#0#174#1#0#0'BM'#174#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1
+  +#0#4#0#0#0#0#0'8'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0
+  +#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128
+  +#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255
+  +#255#255#0'wwwwwwwwwwwwwwwwwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17
+  +#17#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17
+  +#17#0#7'wwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pw'
+  +'x'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145
+  +#17#17#17#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17
+  +#17#17#15#7'{wx'#240#145#1#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7
+  +'{wx'#240#145#17#17#17#17#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240
+  +#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17
+  +#17#17#17#15#7'pwx'#240#145#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153
+  +#153#15#7'pwx'#240#0#0#0#0#0#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'p'
+  +'wx'#136#136#136#136#136#136#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7
+  +'OnClick'#7#16'ButtonClickClose'#7'Spacing'#2#5#8'TabOrder'#2#5#0#0#242#2#4#9
+  +'TGroupBox'#11'GroupTarget'#4'Left'#2#10#6'Height'#3#145#0#3'Top'#3#205#0#5
+  +'Width'#3'@'#1#7'Caption'#6#27'Apply the visual effect to:'#12'ClientHeight'
+  +#3#129#0#11'ClientWidth'#3'<'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8
+  ,'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10
+  +'ParentFont'#8#8'TabOrder'#2#1#0#9'TCheckBox'#10'CheckOwner'#4'Left'#2#10#6
+  +'Height'#2#22#3'Top'#2#5#5'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#23'The o'
+  +'wner of the script'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11
+  +'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0#0#9'TCheckBox'#7'CheckPC'
+  +#4'Left'#2#10#6'Height'#2#22#3'Top'#2#30#5'Width'#2':'#7'Caption'#6#6'The PC'
+  +#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'Par'
+  +'entFont'#8#8'TabOrder'#2#2#0#0#9'TCheckBox'#12'uniquetarget'#4'Left'#2#10#6
+  +'Height'#2#22#3'Top'#2#30#5'Width'#2'z'#7'Caption'#6#21'The activation targe'
+  +'t'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8
+  +#10'ParentFont'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#9'TCheckBox'#10'uniqueuse'
+  +'r'#4'Left'#2#10#6'Height'#2#22#3'Top'#2#5#5'Width'#2'm'#7'Caption'#6#18'The'
+  +' item activator'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Fo'
+  +'nt.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'Pa'
+  +'rentColor'#8#10'ParentFont'#8#8'TabOrder'#2#1#7'Visible'#8#0#0#9'TCheckBox'
+  +#10'CheckSpawn'#4'Left'#2#10#6'Height'#2#22#3'Top'#2'7'#5'Width'#3','#1#8'Au'
+  +'toSize'#8#7'Caption'#6#21'The most recent spawn'#5'Color'#4#216#227#248#0#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'On'
+  +'Change'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#4
+  +#7'Visible'#8#0#0#9'TCheckBox'#11'CheckTagged'#4'Left'#2#10#6'Height'#2#22#3
+  +'Top'#2'P'#5'Width'#2'n'#7'Caption'#6#17'The object tagged'#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#5#0#0#5'TEdit'#10'EditTagged'#4'Left'#3#145#0#6'Height'#2#23#3'To'
+  +'p'#2'O'#5'Width'#3#165#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChan'
+  +'ge'#7#23'EditChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#6#0#0#9'TC'
+  +'heckBox'#10'CheckActor'#4'Left'#2#10#6'Height'#2#22#3'Top'#2'i'#5'Width'#3
+  +','#1#8'AutoSize'#8#7'Caption'#6#21'The most recent actor'#5'Color'#4#216#227
+  +#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Ar'
+  +'ial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabO'
+  +'rder'#2#7#7'Visible'#8#0#0#9'TCheckBox'#14'CheckTargetLoc'#4'Left'#2#10#6'H'
+  +'eight'#2#22#3'Top'#2#30#5'Width'#3#162#0#7'Caption'#6#30'The activation tar'
+  +'get location'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.'
+  +'Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'Paren'
+  +'tColor'#8#10'ParentFont'#8#8'TabOrder'#2#8#7'Visible'#8#0#0#0#242#2#5#9'TGr'
+  +'oupBox'#8'GroupVFX'#4'Left'#2#20#6'Height'#3#180#0#3'Top'#2#10#5'Width'#3','
+  +#1#7'Caption'#6'!Which visual effect will be used?'#12'ClientHeight'#3#163#0
+  +#11'ClientWidth'#3'('#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'
+  +#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFo'
+  +'nt'#8#8'TabOrder'#2#0#0#12'TRadioButton'#13'RadioDuration'#4'Left'#2'('#6'H'
+  +'eight'#2#22#3'Top'#2#5#5'Width'#2']'#7'Caption'#6#12'Long-lasting'#10'Font.'
+  +'Color'#7#7'clBlack'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnChang'
+  +'e'#7#24'RadioChangeToggleVisible'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#12'T'
+  +'RadioButton'#11'RadioImpact'#4'Left'#3#175#0#6'Height'#2#22#3'Top'#2#5#5'Wi'
+  +'dth'#2'L'#7'Caption'#6#10'Quick-fire'#7'Checked'#9#10'Font.Color'#7#7'clBla'
+  +'ck'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnChange'#7#24'RadioCha'
+  +'ngeToggleVisible'#10'ParentFont'#8#8'TabOrder'#2#0#7'TabStop'#9#0#0#9'TComb'
+  +'oBox'#13'ComboDuration'#4'Left'#2#15#6'Height'#2#31#3'Top'#2'#'#5'Width'#3
+  +#14#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#8'OnChange'#7#10'ToggleOkay'
+  +#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#1#7'Visible'#8
+  +#0#0#9'TGroupBox'#13'GroupDuration'#4'Left'#2#10#6'Height'#2'K'#3'Top'#2'K'#5
+  +'Width'#3#24#1#7'Caption'#6#30'How long will the effect last?'#12'ClientHeig'
+  +'ht'#2';'#11'ClientWidth'#3#20#1#10'Font.Color'#7#8'clMaroon'#11'Font.Height'
+  +#2#244#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#7'Visible'#8
+  +#0#12'TRadioButton'#17'RadioSupernatural'#4'Left'#2#5#6'Height'#2#22#3'Top'#2
+  +#5#5'Width'#2'Y'#7'Caption'#6#13'Until removed'#10'Font.Color'#7#7'clBlack'
+  +#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2
+  +#2#0#0#12'TRadioButton'#18'RadioExtraordinary'#4'Left'#2'}'#6'Height'#2#22#3
+  +'Top'#2#5#5'Width'#3#128#0#7'Caption'#6#23'Until the subject rests'#10'Font.'
+  ,'Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'Parent'
+  +'Font'#8#8'TabOrder'#2#3#0#0#12'TRadioButton'#12'RadioSeconds'#4'Left'#2#5#6
+  +'Height'#2#22#3'Top'#2#30#5'Width'#3#137#0#7'Caption'#6#22'For this many sec'
+  +'onds:'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Fon'
+  +'t.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#7'TabStop'#9#0#0#9'TSpi'
+  +'nEdit'#11'SpinSeconds'#4'Left'#3#165#0#6'Height'#2#23#3'Top'#2#29#5'Width'#2
+  +'A'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#8'MaxValue'#4'?B'#15#0#8'MinValue'#2#1#8'OnChan'
+  +'ge'#7#26'ControlChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#1#5'Val'
+  +'ue'#2'<'#0#0#0#9'TComboBox'#11'ComboImpact'#4'Left'#2#15#6'Height'#2#31#3'T'
+  +'op'#2'#'#5'Width'#3#14#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ItemHeight'#2#0#8'OnCha'
+  +'nge'#7#10'ToggleOkay'#10'ParentFont'#8#5'Style'#7#14'csDropDownList'#8'TabO'
+  +'rder'#2#2#0#0#0#242#2#6#9'TCheckBox'#13'CheckLocation'#4'Left'#2#10#6'Heigh'
+  +'t'#2#22#3'Top'#3'c'#1#5'Width'#3#203#0#7'Caption'#6'''Apply to the object'''
+  +'s location instead.'#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'
+  +#2#2#0#0#242#2#7#11'TStaticText'#12'TextLocation'#4'Left'#2#30#6'Height'#2#20
+  +#3'Top'#3'w'#1#5'Width'#3#225#0#9'Alignment'#7#8'taCenter'#11'BorderStyle'#7
+  +#9'sbsSunken'#7'Caption'#6'+Must be selected if applying to a waypoint!'#5'C'
+  +'olor'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2#7#0#0
+  +#0
+]);

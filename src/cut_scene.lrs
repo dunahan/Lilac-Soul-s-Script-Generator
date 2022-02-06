@@ -1,0 +1,103 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tcutscene','FORMDATA',[
+  'TPF0'#9'Tcutscene'#8'cutscene'#4'Left'#3'x'#1#6'Height'#3#144#1#3'Top'#3#154
+  +#0#5'Width'#3#158#2#13'ActiveControl'#7#24'RadioGroup1.RadioButton0'#11'Bord'
+  +'erStyle'#7#8'bsDialog'#7'Caption'#6#9'Cutscenes'#12'ClientHeight'#3#144#1#11
+  +'ClientWidth'#3#158#2#5'Color'#4'y'#149#223#0#11'Font.Height'#2#245#9'Font.N'
+  +'ame'#6#5'Arial'#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9.3'
+  +'0'#0#6'TLabel'#6'Label1'#4'Left'#3#24#1#6'Height'#2#16#3'Top'#2#26#5'Width'
+  +#3'^'#1#8'AutoSize'#8#7'Caption'#6'5the start or end of the cutscene by 3 or'
+  +' 4 seconds,  '#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Fon'
+  +'t.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8
+  +#11'Transparent'#8#0#0#6'TLabel'#6'Label2'#4'Left'#3#24#1#6'Height'#2#16#3'T'
+  +'op'#2#10#5'Width'#3'^'#1#8'AutoSize'#8#7'Caption'#6'6It may be a good idea '
+  +'to first call a fade, then delay'#5'Color'#4#216#227#248#0#10'Font.Color'#7
+  +#8'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8
+  +#10'ParentFont'#8#11'Transparent'#8#0#0#6'TLabel'#6'Label3'#4'Left'#3#24#1#6
+  +'Height'#2#16#3'Top'#2'*'#5'Width'#3'^'#1#8'AutoSize'#8#7'Caption'#6'4and de'
+  +'lay the fade back in for about 6 to 8  seconds'#5'Color'#4#216#227#248#0#10
+  +'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11
+  +'ParentColor'#8#10'ParentFont'#8#11'Transparent'#8#0#0#5'TMemo'#5'Memo1'#4'L'
+  +'eft'#2#10#6'Height'#3'w'#1#3'Top'#2#10#5'Width'#3#4#1#5'Color'#7#8'clInfoBk'
+  +#13'Lines.Strings'#1#6#23'IMPORTANT - PLEASE READ'#6#0#6#160'This cutscene g'
+  +'enerator is NOT highly advanced. I [Lilac Soul] could have made it more adv'
+  +'anced, but I think that would make it inaccessible to a lot of people.'#6#0
+  +#12'9'#1#0#0'For instance, the Script Generator does not let you control the'
+  +' camera. I recommend that you set the camera mode to chase-cam right after '
+  +'starting the cutscene. It will revert to the normal mode when you finish th'
+  +'e cutscene. The advantage of chase-cam is that whenever the PC turns, the c'
+  +'amera will turn with him.'#6#0#6#160'My advice is to not make one single sc'
+  +'ript that handles the entire cutscene. Instead, make heavy use of triggers.'
+  +' The general outline of your cutscene might be:'#6#0#6#22'1) Start the cuts'
+  +'cene.'#6'[2) Jump to an area normally inaccessible to the player (can be a '
+  +'copy of the current area).'#6#22'3) Walk to a waypoint.'#6#0#6'dThen around'
+  +' that waypoint, paint a trigger, and for the OnEnter of that trigger, make '
+  +'a script that:'#6#0#6#23'4) Does a lot of stuff.'#6#28'5) Walk to another w'
+  +'aypoint.'#6#0#6'BThat waypoint has another trigger, and so on. On the last '
+  +'trigger:'#6#0#6'/6) Jump the PC to the normally accessible area.'#6#19'7) E'
+  +'nd the cuscene.'#6#0#6#155'Still, there are so many things that can make cu'
+  +'tscenes behave oddly, and I make no guarantees. Be sure to test the cutscen'
+  +'e before you release the module.'#0#8'ReadOnly'#9#10'ScrollBars'#7#14'ssAut'
+  +'oVertical'#8'TabOrder'#2#0#0#0#11'TRadioGroup'#11'RadioGroup1'#4'Left'#3#24
+  +#1#6'Height'#2'7'#3'Top'#2'F'#5'Width'#3'|'#1#8'AutoFill'#9#7'Caption'#6#20
+  +'Start / end cutscene'#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildSizing.T'
+  +'opBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomogenousCh'
+  +'ildResize'#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildResize'#28
+  +'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizing.ShrinkVer'
+  +'tical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclLeftToRightThenT'
+  +'opToBottom'#27'ChildSizing.ControlsPerLine'#2#3#12'ClientHeight'#2'('#11'Cl'
+  +'ientWidth'#3'x'#1#5'Color'#4#216#227#248#0#7'Columns'#2#3#9'ItemIndex'#2#0
+  +#13'Items.Strings'#1#6#7'Neither'#6#14'Start cutscene'#6#12'End cutscene'#0
+  +#11'ParentColor'#8#8'TabOrder'#2#1#0#0#11'TRadioGroup'#11'RadioGroup2'#4'Lef'
+  +'t'#3#24#1#6'Height'#2'x'#3'Top'#3#135#0#5'Width'#3'|'#1#8'AutoFill'#9#7'Cap'
+  +'tion'#6#18'Fade in / fade out'#28'ChildSizing.LeftRightSpacing'#2#6#28'Chil'
+  +'dSizing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHom'
+  +'ogenousChildResize'#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChild'
+  +'Resize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizin'
+  +'g.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclTopTo'
+  +'BottomThenLeftToRight'#27'ChildSizing.ControlsPerLine'#2#4#12'ClientHeight'
+  +#2'i'#11'ClientWidth'#3'x'#1#5'Color'#4#216#227#248#0#12'ColumnLayout'#7#24
+  +'clVerticalThenHorizontal'#7'Columns'#2#2#9'ItemIndex'#2#0#13'Items.Strings'
+  +#1#6#7'Neither'#6#14'Fade in slowly'#6#20'Fade in medium speed'#6#15'Fade ou'
+  +'t slowly'#6#21'Fade out medium speed'#6#28'Immediately black-out screen'#6
+  +#28'Immediately remove black-out'#0#11'ParentColor'#8#8'TabOrder'#2#2#0#0#11
+  +'TRadioGroup'#11'RadioGroup3'#4'Left'#3#24#1#6'Height'#2'7'#3'Top'#3#9#1#5'W'
+  +'idth'#3#170#0#8'AutoFill'#9#7'Caption'#6#19'Switch to chase-cam'#28'ChildSi'
+  +'zing.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSiz'
+  ,'ing.EnlargeHorizontal'#7#24'crsHomogenousChildResize'#27'ChildSizing.Enlarg'
+  +'eVertical'#7#24'crsHomogenousChildResize'#28'ChildSizing.ShrinkHorizontal'#7
+  +#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'C'
+  +'hildSizing.Layout'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.Contr'
+  +'olsPerLine'#2#2#12'ClientHeight'#2'('#11'ClientWidth'#3#166#0#5'Color'#4#216
+  +#227#248#0#7'Columns'#2#2#9'ItemIndex'#2#0#13'Items.Strings'#1#6#2'No'#6#3'Y'
+  +'es'#0#11'ParentColor'#8#8'TabOrder'#2#3#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3
+  +'E'#1#6'Height'#2')'#3'Top'#3'N'#1#5'Width'#2's'#7'Caption'#6#4'Okay'#7'Defa'
+  +'ult'#9#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0
+  +#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16
+  +#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191
+  +#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0
+  +#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'wwwwww'
+  +#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'#0#0#162
+  +'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0#162'"H'
+  +#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"D'#136'w'
+  +'w'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0
+  +'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'wwwwwwwz"H'
+  +#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'OnClick'#7
+  +#12'BitBtn1Click'#7'Spacing'#2#15#8'TabOrder'#2#4#0#0#7'TBitBtn'#7'BitBtn2'#4
+  +'Left'#3#249#1#6'Height'#2')'#3'Top'#3'N'#1#5'Width'#2's'#6'Cancel'#9#7'Capt'
+  +'ion'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0
+  +#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16
+  +#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0
+  +#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255
+  +#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'
+  +#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135
+  +#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0
+  +'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145
+  +#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'w'
+  +'w'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17
+  +#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153
+  +#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0
+  +#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#2#7'Spac'
+  +'ing'#2#15#8'TabOrder'#2#5#0#0#0
+]);

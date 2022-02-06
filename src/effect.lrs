@@ -1,0 +1,427 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tapplyeffect','FORMDATA',[
+  'TPF0'#241#12'Tapplyeffect'#11'applyeffect'#4'Left'#3'x'#1#6'Height'#3'm'#1#3
+  +'Top'#3#154#0#5'Width'#3#238#2#13'ActiveControl'#7#9'SpinEdit2'#11'BorderSty'
+  +'le'#7#8'bsDialog'#7'Caption'#6'$Apply effect to someone or something'#12'Cl'
+  +'ientHeight'#3'm'#1#11'ClientWidth'#3#238#2#5'Color'#4'y'#149#223#0#10'Font.'
+  +'Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnCreat'
+  +'e'#7#10'FormCreate'#8'Position'#7#16'poMainFormCenter'#0#242#2#0#6'TLabel'#6
+  +'Label1'#4'Left'#3#144#1#6'Height'#2#16#3'Top'#2#8#5'Width'#2'^'#7'Caption'#6
+  +#17'Additional input:'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#243#9
+  +'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#1#6'TLab'
+  +'el'#11'LabelEffect'#4'Left'#2#15#6'Height'#2#15#3'Top'#2#20#5'Width'#2'O'#7
+  +'Caption'#6#16'Effect to apply:'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'
+  +#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#2
+  +#5'TMemo'#5'Memo1'#4'Left'#3#164#1#6'Height'#2'_'#3'Top'#3#185#0#5'Width'#3
+  +','#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#13'Lines.Strings'#1#6'~Define your effect, then'
+  +' click "Okay - and more!" to create another, or "Okay - exit!" to make this'
+  +' the last of these effects.'#6#0#6'ZPressing "Close" will (only) clear out '
+  +'what you have entered since the last "Okay" button.'#0#10'ParentFont'#8#8'R'
+  +'eadOnly'#9#8'TabOrder'#2#5#7'TabStop'#8#0#0#242#2#3#9'TComboBox'#10'effectl'
+  +'ist'#4'Left'#2#15#6'Height'#2#31#3'Top'#2'-'#5'Width'#3#180#0#5'Color'#4#216
+  +#227#248#0#10'ItemHeight'#2#0#8'OnChange'#7#16'effectlistChange'#5'Style'#7
+  +#14'csDropDownList'#8'TabOrder'#2#0#0#0#242#2#4#6'TPanel'#9'nonepanel'#4'Lef'
+  +'t'#3#144#1#6'Height'#2'<'#3'Top'#2'?'#5'Width'#3'O'#1#7'Caption'#6#28'No ad'
+  +'ditional input required'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlac'
+  +'k'#11'Font.Height'#2#241#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'Paren'
+  +'tFont'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#242#2#5#6'TPanel'#12'percentpanel'
+  +#4'Left'#3#175#1#6'Height'#2'P'#3'Top'#2'5'#5'Width'#3#17#1#12'ClientHeight'
+  +#2'P'#11'ClientWidth'#3#17#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clB'
+  +'lack'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'Pa'
+  +'rentFont'#8#8'TabOrder'#2#4#7'Visible'#8#0#6'TLabel'#6'Label2'#4'Left'#2'$'
+  +#6'Height'#2#15#3'Top'#2#29#5'Width'#3#135#0#7'Caption'#6#22'Using what perc'
+  +'entage?'#11'ParentColor'#8#0#0#9'TSpinEdit'#12'percentvalue'#4'Left'#3#192#0
+  +#6'Height'#2#24#3'Top'#2#24#5'Width'#2'-'#8'MinValue'#2#1#8'TabOrder'#2#0#5
+  +'Value'#2#10#0#0#0#242#2#6#6'TPanel'#11'numberpanel'#4'Left'#3#183#1#6'Heigh'
+  +'t'#2'P'#3'Top'#2'5'#5'Width'#3#1#1#12'ClientHeight'#2'P'#11'ClientWidth'#3#1
+  +#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#244
+  +#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#22
+  +#7'Visible'#8#0#6'TLabel'#6'Label3'#4'Left'#2'7'#6'Height'#2#15#3'Top'#2#29#5
+  +'Width'#2'C'#7'Caption'#6#9'How much?'#11'ParentColor'#8#0#0#9'TSpinEdit'#11
+  +'numbervalue'#4'Left'#3#145#0#6'Height'#2#24#3'Top'#2#24#5'Width'#2'7'#8'Max'
+  +'Value'#3#15''''#8'MinValue'#2#1#8'TabOrder'#2#0#5'Value'#2#1#0#0#0#242#2#7#6
+  +'TPanel'#12'abilitypanel'#4'Left'#3#175#1#6'Height'#2'h'#3'Top'#2')'#5'Width'
+  +#3#17#1#12'ClientHeight'#2'h'#11'ClientWidth'#3#17#1#5'Color'#4#216#227#248#0
+  +#11'ParentColor'#8#8'TabOrder'#2#6#7'Visible'#8#0#6'TLabel'#6'Label4'#4'Left'
+  +#2#28#6'Height'#2#14#3'Top'#2'A'#5'Width'#2'J'#7'Caption'#6#12'By how much?'
+  +#11'ParentColor'#8#0#0#6'TLabel'#12'LabelAbility'#4'Left'#2'#'#6'Height'#2#14
+  +#3'Top'#2#20#5'Width'#2'C'#7'Caption'#6#14'Which ability?'#11'ParentColor'#8
+  +#0#0#9'TComboBox'#7'ability'#4'Left'#3#128#0#6'Height'#2#31#3'Top'#2#15#5'Wi'
+  +'dth'#2'n'#10'ItemHeight'#2#0#9'ItemIndex'#2#2#13'Items.Strings'#1#6#8'Chari'
+  +'sma'#6#12'Constitution'#6#9'Dexterity'#6#12'Intelligence'#6#8'Strength'#6#6
+  +'Wisdom'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#4'Text'#6#9'Dexteri'
+  +'ty'#0#0#9'TSpinEdit'#12'abilityvalue'#4'Left'#3#128#0#6'Height'#2#23#3'Top'
+  +#2'<'#5'Width'#2'('#8'MaxValue'#2#12#8'MinValue'#2#1#8'TabOrder'#2#1#5'Value'
+  +#2#2#0#0#0#242#2#8#7'TBitBtn'#7'BitBtn1'#4'Left'#2#15#6'Height'#2'#'#3'Top'#3
+  +'@'#1#5'Width'#3#150#0#7'Caption'#6#16'Okay - and more!'#7'Default'#9#7'Enab'
+  +'led'#8#10'Glyph.Data'#10'Z'#2#0#0'V'#2#0#0'BMV'#2#0#0#0#0#0#0'v'#0#0#0'('#0
+  +#0#0')'#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#224#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0
+  +#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0
+  +#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255
+  +#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwwwwwwwwwwwwwp'#0#0#0'wDH'#135
+  +'wwwwwwwwwwwwwwwwp'#0#0#0'w"D'#136'wwwwwwwwwwwwwwwwp'#0#0#0#162'""H'#135'www'
+  +'wwwwwww'#8'wwwwp'#0#0#0#162'""$'#136'wwwwwwwwwp'#7#135'wwwp'#0#0#0#162'"""H'
+  +#135'wwwwwwwwp@xwwwp'#0#0#0#162'"""$'#136'wwwwwwwww'#4#7#135'wwp'#0#0#0#162
+  +'""""H'#135'wwwwwww'#136#132'@xwwp'#0#0#0#162'"H'#162'"$'#136'wwwwwp'#135'x'
+  ,#132#196#7#135'wp'#0#0#0#162'"H'#138'""H'#135'wwwp'#135#136#0'D'#204'@'#7'wp'
+  +#0#0#0#162'"H'#135#162'"D'#136'www'#7#128#0'L'#204#204#204#7'wp'#0#0#0'z"H'
+  +#135'z"$'#136'wwpp'#0'L'#204#198#204#198#7'wp'#0#0#0'z"Gww'#162'"H'#135'ww'#0
+  +'L'#204#198'dl`wwp'#0#0#0'wwwwwz"$HwpFf'#204'dpf'#7'wwp'#0#0#0'wwwwww'#162'"'
+  +'H'#135'p'#0#6#198'Gt`wwwp'#0#0#0'wwwwwwz"$'#135'wwvdw'#6#7'wwwp'#0#0#0'wwww'
+  +'www'#162'$HwwvGw'#0'wwwwp'#0#0#0'wwwwwwwz"Hwwtwwwwwwwp'#0#0#0'wwwwwwww'#162
+  +'Hwwwwwwwwwwp'#0#0#0'wwwwwwwwz''wwwwwwwwwwp'#0#0#0#7'OnClick'#7#19'ButtonCli'
+  +'ckOkayMore'#8'TabOrder'#2#23#0#0#242#2#9#7'TBitBtn'#7'BitBtn2'#4'Left'#3#225
+  +#0#6'Height'#2'#'#3'Top'#3'@'#1#5'Width'#3#150#0#7'Caption'#6#12'Okay - exit'
+  +'!'#7'Enabled'#8#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0
+  +#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16
+  +#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0
+  +#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255
+  +#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0#0'wDH'#135'w'
+  +'wwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'#136'wwwww'
+  +#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'#135'www'#0#0
+  +#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162'"H'#135#162'"'
+  +'D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'#0#0'wwwwwz"$'
+  +'Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162'$H'#0#0'www'
+  +'wwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResult'#2#1#7'On'
+  +'Click'#7#19'ButtonClickOkayExit'#7'Spacing'#2#15#8'TabOrder'#2#24#0#0#242#2
+  +#10#7'TBitBtn'#7'BitBtn3'#4'Left'#3'b'#2#6'Height'#2'#'#3'Top'#3'@'#1#5'Widt'
+  +'h'#2'}'#7'Caption'#6#5'Close'#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'#174
+  +#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0
+  +#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0
+  +#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0
+  +#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwww'
+  +'wwwwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240
+  +#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240#145#17#17
+  +#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  +'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'
+  +#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'#240#145#1
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17
+  +#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{w'
+  +'x'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145
+  +#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0
+  +#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136#136#136
+  +#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7'OnClick'#7#16'ButtonClickClo'
+  +'se'#7'Spacing'#2#20#8'TabOrder'#2#25#0#0#242#2#11#6'TPanel'#14'polymorphpan'
+  +'el'#4'Left'#3#175#1#6'Height'#2'h'#3'Top'#2')'#5'Width'#3#17#1#12'ClientHei'
+  +'ght'#2'h'#11'ClientWidth'#3#17#1#5'Color'#4#216#227#248#0#11'ParentColor'#8
+  +#8'TabOrder'#2#7#7'Visible'#8#0#6'TLabel'#6'Label5'#4'Left'#2'#'#6'Height'#2
+  +#14#3'Top'#2#15#5'Width'#2'z'#7'Caption'#6#23'What type of polymorph?'#11'Pa'
+  +'rentColor'#8#0#0#9'TComboBox'#8'polylist'#4'Left'#2'#'#6'Height'#2#31#3'Top'
+  +#2'('#5'Width'#3#203#0#10'ItemHeight'#2#0#5'Style'#7#14'csDropDownList'#8'Ta'
+  +'bOrder'#2#0#0#0#9'TCheckBox'#15'CheckPolyCancel'#4'Left'#2'#'#6'Height'#2#22
+  +#3'Top'#2'N'#5'Width'#3#206#0#7'Caption'#6'$Can the player cancel the polymo'
+  +'rph?'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font'
+  +'.Name'#6#5'Arial'#10'ParentFont'#8#5'State'#7#9'cbChecked'#8'TabOrder'#2#1#0
+  +#0#0#242#2#12#11'TRadioGroup'#7'SubType'#4'Left'#2#15#6'Height'#2'7'#3'Top'#2
+  +'b'#5'Width'#3'h'#1#8'AutoFill'#9#7'Caption'#6'%This effect is subject to re'
+  +'moval by:'#28'ChildSizing.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSpa'
+  +'cing'#2#6#29'ChildSizing.EnlargeHorizontal'#7#24'crsHomogenousChildResize'
+  +#27'ChildSizing.EnlargeVertical'#7#24'crsHomogenousChildResize'#28'ChildSizi'
+  +'ng.ShrinkHorizontal'#7#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7
+  +#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29'cclLeftToRightThenTopToBotto'
+  +'m'#27'ChildSizing.ControlsPerLine'#2#3#12'ClientHeight'#2'('#11'ClientWidth'
+  +#3'd'#1#5'Color'#4#216#227#248#0#7'Columns'#2#3#9'ItemIndex'#2#0#13'Items.St'
+  +'rings'#1#6#16'Dispels and rest'#6#18'Rest (not dispels)'#6#7'Neither'#0#11
+  +'ParentColor'#8#8'TabOrder'#2#2#0#0#242#2#13#6'TPanel'#10'CursePanel'#4'Left'
+  +#3#144#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3'O'#1#12'ClientHeight'#2'y'#11
+  +'ClientWidth'#3'O'#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'
+  +#8#8'TabOrder'#2#8#7'Visible'#8#0#6'TLabel'#6'Label7'#4'Left'#2#16#6'Height'
+  ,#2#15#3'Top'#2#3#5'Width'#3#11#1#7'Caption'#6'3The curse will lower abilitie'
+  +'s by this many points:'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244#9
+  +'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#6'La'
+  +'bel8'#4'Left'#2'-'#6'Height'#2#15#3'Top'#2#30#5'Width'#2'/'#7'Caption'#6#8
+  +'Strength'#11'ParentColor'#8#0#0#6'TLabel'#6'Label9'#4'Left'#2'-'#6'Height'#2
+  +#15#3'Top'#2'='#5'Width'#2'/'#7'Caption'#6#9'Dexterity'#11'ParentColor'#8#0#0
+  +#6'TLabel'#7'Label10'#4'Left'#2'-'#6'Height'#2#15#3'Top'#2']'#5'Width'#2'C'#7
+  +'Caption'#6#12'Constitution'#11'ParentColor'#8#0#0#6'TLabel'#7'Label11'#4'Le'
+  +'ft'#3#180#0#6'Height'#2#15#3'Top'#2#30#5'Width'#2'@'#7'Caption'#6#12'Intell'
+  +'igence'#11'ParentColor'#8#0#0#6'TLabel'#7'Label12'#4'Left'#3#180#0#6'Height'
+  +#2#15#3'Top'#2'='#5'Width'#2'/'#7'Caption'#6#6'Wisdom'#11'ParentColor'#8#0#0
+  +#6'TLabel'#7'Label13'#4'Left'#3#180#0#6'Height'#2#15#3'Top'#2']'#5'Width'#2
+  +'8'#7'Caption'#6#8'Charisma'#11'ParentColor'#8#0#0#9'TSpinEdit'#8'strength'#4
+  +'Left'#2'w'#6'Height'#2#23#3'Top'#2#27#5'Width'#2'$'#5'Color'#4#216#227#248#0
+  +#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8
+  +'MaxValue'#2'c'#10'ParentFont'#8#8'TabOrder'#2#0#5'Value'#2#2#0#0#9'TSpinEdi'
+  +'t'#9'dexterity'#4'Left'#2'w'#6'Height'#2#23#3'Top'#2':'#5'Width'#2'$'#5'Col'
+  +'or'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Fon'
+  +'t.Name'#6#5'Arial'#8'MaxValue'#2'c'#10'ParentFont'#8#8'TabOrder'#2#1#5'Valu'
+  +'e'#2#2#0#0#9'TSpinEdit'#12'constitution'#4'Left'#2'w'#6'Height'#2#23#3'Top'
+  +#2'Z'#5'Width'#2'$'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8'MaxValue'#2'c'#10'ParentFont'#8
+  +#8'TabOrder'#2#2#5'Value'#2#2#0#0#9'TSpinEdit'#12'intelligence'#4'Left'#3#255
+  +#0#6'Height'#2#23#3'Top'#2#27#5'Width'#2'$'#5'Color'#4#216#227#248#0#10'Font'
+  +'.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8'MaxVal'
+  +'ue'#2'c'#10'ParentFont'#8#8'TabOrder'#2#3#5'Value'#2#2#0#0#9'TSpinEdit'#6'w'
+  +'isdom'#4'Left'#3#255#0#6'Height'#2#23#3'Top'#2':'#5'Width'#2'$'#5'Color'#4
+  +#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'
+  +#6#5'Arial'#8'MaxValue'#2'c'#10'ParentFont'#8#8'TabOrder'#2#4#5'Value'#2#2#0
+  +#0#9'TSpinEdit'#8'charisma'#4'Left'#3#255#0#6'Height'#2#23#3'Top'#2'Z'#5'Wid'
+  +'th'#2'$'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Heigh'
+  +'t'#2#246#9'Font.Name'#6#5'Arial'#8'MaxValue'#2'c'#10'ParentFont'#8#8'TabOrd'
+  +'er'#2#5#5'Value'#2#2#0#0#0#242#2#14#6'TPanel'#15'DamageTypePanel'#4'Left'#3
+  +#175#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3#17#1#12'ClientHeight'#2'y'#11'C'
+  +'lientWidth'#3#17#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2
+  +#9#7'Visible'#8#0#6'TLabel'#7'Label14'#4'Left'#2#31#6'Height'#2#14#3'Top'#2
+  +'L'#5'Width'#2'C'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#12'Damage t'
+  +'ype:'#11'ParentColor'#8#0#0#6'TLabel'#24'DamageTypeIntDescription'#4'Left'#2
+  +'9'#6'Height'#2#14#3'Top'#2#25#5'Width'#2')'#9'Alignment'#7#14'taRightJustif'
+  +'y'#7'Caption'#6#7'Amount:'#11'ParentColor'#8#0#0#9'TSpinEdit'#13'DamageType'
+  +'Int'#4'Left'#3#130#0#6'Height'#2#23#3'Top'#2#20#5'Width'#2'-'#5'Color'#4#216
+  +#227#248#0#8'MinValue'#2#1#8'TabOrder'#2#0#5'Value'#2#5#0#0#9'TComboBox'#13
+  +'DamageTypeBox'#4'Left'#3#130#0#6'Height'#2#31#3'Top'#2'E'#5'Width'#2'x'#5'C'
+  +'olor'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'
+  +#1#6#4'Acid'#6#11'Bludgeoning'#6#4'Cold'#6#6'Divine'#6#10'Electrical'#6#4'Fi'
+  +'re'#6#7'Magical'#6#8'Negative'#6#8'Piercing'#6#8'Positive'#6#8'Slashing'#6#5
+  +'Sonic'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#4'Acid'#0#0
+  +#0#242#2#15#6'TPanel'#19'DamageIncreasePanel'#4'Left'#3#175#1#6'Height'#2'y'
+  +#3'Top'#2' '#5'Width'#3#17#1#12'ClientHeight'#2'y'#11'ClientWidth'#3#17#1#5
+  +'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#10#7'Visible'#8#0#6
+  +'TLabel'#7'Label15'#4'Left'#2#20#6'Height'#2#14#3'Top'#2#26#5'Width'#2'L'#9
+  +'Alignment'#7#14'taRightJustify'#7'Caption'#6#13'Damage bonus:'#11'ParentCol'
+  +'or'#8#0#0#6'TLabel'#7'Label16'#4'Left'#2#31#6'Height'#2#14#3'Top'#2'L'#5'Wi'
+  +'dth'#2'C'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#12'Damage type:'#11
+  +'ParentColor'#8#0#0#9'TComboBox'#14'DamageBonusBox'#4'Left'#3#130#0#6'Height'
+  +#2#31#3'Top'#2#19#5'Width'#2'U'#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9
+  +'ItemIndex'#2#0#13'Items.Strings'#1#6#2'+1'#6#2'+2'#6#2'+3'#6#2'+4'#6#2'+5'#6
+  +#2'+6'#6#2'+7'#6#2'+8'#6#2'+9'#6#3'+10'#6#3'+11'#6#3'+12'#6#3'+13'#6#3'+14'#6
+  +#3'+15'#6#3'+16'#6#3'+17'#6#3'+18'#6#3'+19'#6#3'+20'#6#4'+1d4'#6#4'+1d6'#6#4
+  +'+1d8'#6#5'+1d10'#6#5'+1d12'#6#4'+2d4'#6#4'+2d6'#6#4'+2d8'#6#5'+2d10'#6#5'+2'
+  +'d12'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#4'Text'#6#2'+1'#0#0#9
+  +'TComboBox'#16'DamageIncTypeBox'#4'Left'#3#130#0#6'Height'#2#31#3'Top'#2'E'#5
+  +'Width'#2'x'#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13
+  +'Items.Strings'#1#6#4'Acid'#6#11'Bludgeoning'#6#4'Cold'#6#6'Divine'#6#10'Ele'
+  ,'ctrical'#6#4'Fire'#6#7'Magical'#6#8'Negative'#6#8'Piercing'#6#8'Positive'#6
+  +#8'Slashing'#6#5'Sonic'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#1#4'Te'
+  +'xt'#6#4'Acid'#0#0#0#242#2#16#6'TPanel'#20'DamageReductionPanel'#4'Left'#3
+  +#175#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3#17#1#12'ClientHeight'#2'y'#11'C'
+  +'lientWidth'#3#17#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2
+  +#11#7'Visible'#8#0#6'TLabel'#7'Label17'#4'Left'#2'B'#6'Height'#2#14#3'Top'#2
+  +'4'#5'Width'#2'Q'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#16'Power to'
+  +' pierce:'#11'ParentColor'#8#0#0#6'TLabel'#7'Label18'#4'Left'#2#30#6'Height'
+  +#2#14#3'Top'#2#9#5'Width'#2'u'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6
+  +#23'Amount reduced per hit:'#11'ParentColor'#8#0#0#6'TLabel'#16'LabelReductL'
+  +'imit'#4'Left'#2')'#6'Height'#2#14#3'Top'#2'V'#5'Width'#2'j'#9'Alignment'#7
+  +#14'taRightJustify'#7'Caption'#6#24'Overall reduction limit:'#11'ParentColor'
+  +#8#0#0#9'TSpinEdit'#15'DamageReduction'#4'Left'#3#180#0#6'Height'#2#23#3'Top'
+  +#2#5#5'Width'#2'A'#5'Color'#4#216#227#248#0#8'MaxValue'#3#15''''#8'MinValue'
+  +#2#1#8'TabOrder'#2#0#5'Value'#2#5#0#0#9'TComboBox'#14'DamagePowerBox'#4'Left'
+  +#3#180#0#6'Height'#2#31#3'Top'#2'-'#5'Width'#2'A'#5'Color'#4#216#227#248#0#10
+  +'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#2'+1'#6#2'+2'#6#2'+3'
+  +#6#2'+4'#6#2'+5'#6#2'+6'#6#2'+7'#6#2'+8'#6#2'+9'#6#3'+10'#6#3'+11'#6#3'+12'#6
+  +#3'+13'#6#3'+14'#6#3'+15'#6#3'+16'#6#3'+17'#6#3'+18'#6#3'+19'#6#3'+20'#0#5'S'
+  +'tyle'#7#14'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#2'+1'#0#0#9'TSpinEdit'
+  +#17'DamageReductLimit'#4'Left'#3#180#0#6'Height'#2#23#3'Top'#2'V'#5'Width'#2
+  +'A'#5'Color'#4#216#227#248#0#8'MaxValue'#3#31'N'#8'TabOrder'#2#2#0#0#11'TSta'
+  +'ticText'#15'TextReductLimit'#4'Left'#2#27#6'Height'#2#20#3'Top'#2'e'#5'Widt'
+  +'h'#3#138#0#9'Alignment'#7#8'taCenter'#7'Caption'#6#22'Use zero for no limit'
+  +'.'#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2
+  +#3#0#0#0#242#2#17#6'TPanel'#19'SingleConstantPanel'#4'Left'#3#144#1#6'Height'
+  +#2'Y'#3'Top'#2'0'#5'Width'#3'O'#1#12'ClientHeight'#2'Y'#11'ClientWidth'#3'O'
+  +#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#12#7'Visible'#8#0
+  +#6'TLabel'#25'SingleConstantDescription'#4'Left'#2#15#6'Height'#2#14#3'Top'#2
+  +#16#5'Width'#3#163#0#7'Caption'#6'2Select:                                  '
+  +'         '#11'ParentColor'#8#0#0#9'TComboBox'#11'ConstantBox'#4'Left'#2#15#6
+  +'Height'#2#31#3'Top'#2'('#5'Width'#3','#1#5'Color'#4#216#227#248#0#10'ItemHe'
+  +'ight'#2#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#0#0#0#242#2#18#6'TP'
+  +'anel'#15'RegeneratePanel'#4'Left'#3#144#1#6'Height'#2'y'#3'Top'#2' '#5'Widt'
+  +'h'#3'O'#1#12'ClientHeight'#2'y'#11'ClientWidth'#3'O'#1#5'Color'#4#216#227
+  +#248#0#11'ParentColor'#8#8'TabOrder'#2#13#7'Visible'#8#0#6'TLabel'#7'Label19'
+  +#4'Left'#2#25#6'Height'#2#14#3'Top'#2#25#5'Width'#3#181#0#9'Alignment'#7#14
+  +'taRightJustify'#7'Caption'#6'''Hit points to regenerate each interval:'#11
+  +'ParentColor'#8#0#0#6'TLabel'#7'Label20'#4'Left'#2'/'#6'Height'#2#14#3'Top'#2
+  +'K'#5'Width'#3#159#0#9'Alignment'#7#14'taRightJustify'#7'Caption'#6'!Length '
+  +'of an interval in seconds:'#11'ParentColor'#8#0#0#9'TSpinEdit'#7'RegenHP'#4
+  +'Left'#3#4#1#6'Height'#2#23#3'Top'#2#20#5'Width'#2'2'#5'Color'#4#216#227#248
+  +#0#8'MaxValue'#3#15''''#8'MinValue'#2#1#8'TabOrder'#2#0#5'Value'#2#1#0#0#9'T'
+  +'SpinEdit'#8'Interval'#4'Left'#3#4#1#6'Height'#2#23#3'Top'#2'F'#5'Width'#2'2'
+  +#5'Color'#4#216#227#248#0#8'MaxValue'#3#15''''#8'MinValue'#2#1#8'TabOrder'#2
+  +#1#5'Value'#2#6#0#0#0#242#2#19#6'TPanel'#9'SavePanel'#4'Left'#3#144#1#6'Heig'
+  +'ht'#2'y'#3'Top'#2' '#5'Width'#3'O'#1#12'ClientHeight'#2'y'#11'ClientWidth'#3
+  +'O'#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#14#7'Visible'
+  +#8#0#6'TLabel'#7'Label21'#4'Left'#2#30#6'Height'#2#14#3'Top'#2'4'#5'Width'#2
+  +'E'#7'Caption'#6#13'Saving throw:'#11'ParentColor'#8#0#0#6'TLabel'#7'Label22'
+  +#4'Left'#2#30#6'Height'#2#14#3'Top'#2#16#5'Width'#2'G'#7'Caption'#6#12'By ho'
+  +'w much:'#11'ParentColor'#8#0#0#6'TLabel'#7'Label23'#4'Left'#2#30#6'Height'#2
+  +#14#3'Top'#2'X'#5'Width'#2'G'#7'Caption'#6#13'Save subtype:'#11'ParentColor'
+  +#8#0#0#9'TSpinEdit'#12'SaveModifier'#4'Left'#2'x'#6'Height'#2#23#3'Top'#2#10
+  +#5'Width'#2'('#5'Color'#4#216#227#248#0#8'MaxValue'#2'c'#8'MinValue'#2#1#8'T'
+  +'abOrder'#2#0#5'Value'#2#1#0#0#9'TComboBox'#15'SavingThrowType'#4'Left'#2'x'
+  +#6'Height'#2#31#3'Top'#2'Q'#5'Width'#3#190#0#5'Color'#4#216#227#248#0#10'Ite'
+  +'mHeight'#2#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#2#0#0#9'TComboBox'
+  +#11'SavingThrow'#4'Left'#2'x'#6'Height'#2#31#3'Top'#2'-'#5'Width'#2'd'#5'Col'
+  +'or'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1
+  +#6#3'All'#6#9'Fortitude'#6#6'Reflex'#6#4'Will'#0#5'Style'#7#14'csDropDownLis'
+  +'t'#8'TabOrder'#2#1#4'Text'#6#3'All'#0#0#0#242#2#20#6'TPanel'#10'SkillPanel'
+  +#4'Left'#3#175#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3#17#1#12'ClientHeight'
+  ,#2'y'#11'ClientWidth'#3#17#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'Ta'
+  +'bOrder'#2#15#7'Visible'#8#0#6'TLabel'#7'Label24'#4'Left'#2'!'#6'Height'#2#14
+  +#3'Top'#2'M'#5'Width'#2'6'#7'Caption'#6#12'Which skill:'#11'ParentColor'#8#0
+  +#0#6'TLabel'#7'Label25'#4'Left'#2#15#6'Height'#2#14#3'Top'#2#25#5'Width'#2'G'
+  +#7'Caption'#6#12'By how much:'#11'ParentColor'#8#0#0#9'TSpinEdit'#10'SkillVa'
+  +'lue'#4'Left'#2'i'#6'Height'#2#23#3'Top'#2#20#5'Width'#2'-'#5'Color'#4#216
+  +#227#248#0#8'MaxValue'#3#255#0#8'MinValue'#2#1#8'TabOrder'#2#0#5'Value'#2#1#0
+  +#0#9'TComboBox'#8'SkillBox'#4'Left'#2'i'#6'Height'#2#31#3'Top'#2'E'#5'Width'
+  +#3#150#0#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Ite'
+  +'ms.Strings'#1#6#10'All skills'#6#14'Animal empathy'#6#8'Appraise'#6#5'Bluff'
+  +#6#13'Concentration'#6#11'Craft armor'#6#10'Craft trap'#6#12'Craft weapon'#6
+  +#12'Disable trap'#6#10'Discipline'#6#4'Heal'#6#4'Hide'#6#10'Intimidate'#6#6
+  +'Listen'#6#4'Lore'#6#13'Move silently'#6#9'Open lock'#6#5'Parry'#6#7'Perform'
+  +#6#8'Persuade'#6#11'Pick pocket'#6#4'Ride'#6#6'Search'#6#8'Set trap'#6#10'Sp'
+  +'ellcraft'#6#4'Spot'#6#5'Taunt'#6#6'Tumble'#6#16'Use magic device'#0#5'Style'
+  +#7#14'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#10'All skills'#0#0#0#242#2#21
+  +#6'TPanel'#17'SpellFailurePanel'#4'Left'#3#144#1#6'Height'#2'y'#3'Top'#2' '#5
+  +'Width'#3'O'#1#12'ClientHeight'#2'y'#11'ClientWidth'#3'O'#1#5'Color'#4#216
+  +#227#248#0#11'ParentColor'#8#8'TabOrder'#2#16#7'Visible'#8#0#6'TLabel'#7'Lab'
+  +'el26'#4'Left'#2'*'#6'Height'#2#14#3'Top'#2'L'#5'Width'#2'k'#9'Alignment'#7
+  +#14'taRightJustify'#7'Caption'#6#22'Affected spell school:'#11'ParentColor'#8
+  +#0#0#6'TLabel'#7'Label27'#4'Left'#2#25#6'Height'#2#14#3'Top'#2#25#5'Width'#2
+  +'|'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#26'Percent chance of fail'
+  +'ing:'#11'ParentColor'#8#0#0#9'TSpinEdit'#10'FailChance'#4'Left'#3#180#0#6'H'
+  +'eight'#2#23#3'Top'#2#20#5'Width'#2'2'#5'Color'#4#216#227#248#0#8'MinValue'#2
+  +#1#8'TabOrder'#2#0#5'Value'#2'd'#0#0#9'TComboBox'#11'SpellSchool'#4'Left'#3
+  +#180#0#6'Height'#2#31#3'Top'#2'F'#5'Width'#3#130#0#5'Color'#4#216#227#248#0
+  +#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#11'All schools'#6
+  +#10'Abjuration'#6#11'Conjuration'#6#10'Divination'#6#11'Enchantment'#6#9'Evo'
+  +'cation'#6#8'Illusion'#6#10'Necromancy'#6#13'Transmutation'#0#5'Style'#7#14
+  +'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#11'All schools'#0#0#0#242#2#22#9
+  +'TGroupBox'#12'GroupApplyTo'#4'Left'#2#15#6'Height'#3#145#0#3'Top'#3#160#0#5
+  +'Width'#3'h'#1#7'Caption'#6'#To whom will the effect be applied?'#12'ClientH'
+  +'eight'#3#129#0#11'ClientWidth'#3'd'#1#5'Color'#4#216#227#248#0#10'Font.Colo'
+  +'r'#7#8'clMaroon'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentCol'
+  +'or'#8#10'ParentFont'#8#8'TabOrder'#2#21#0#12'TRadioButton'#10'RadioOwner'#4
+  +'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#3'Y'#1#8'AutoSize'#8#7'Caption'
+  +#6#23'The owner of the script'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#12'TRadioB'
+  +'utton'#7'RadioPC'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#25#5'Width'#2':'#7'Ca'
+  +'ption'#6#6'The PC'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11'Font.Height'
+  +#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#7#7'TabStop'#9
+  +#0#0#12'TRadioButton'#13'RadioTargeted'#4'Left'#2#7#6'Height'#2#22#3'Top'#2
+  +#25#5'Width'#2'z'#7'Caption'#6#21'The activation target'#10'Font.Color'#7#7
+  +'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'T'
+  +'abOrder'#2#2#7'Visible'#8#0#0#12'TRadioButton'#10'RadioSpawn'#4'Left'#2#7#6
+  +'Height'#2#22#3'Top'#2'2'#5'Width'#3'Y'#1#8'AutoSize'#8#7'Caption'#6#21'The '
+  +'most recent spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font'
+  +'.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#3#0#0#12'TRadioButton'#11
+  +'RadioTagged'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'K'#5'Width'#3#133#0#7'Capt'
+  +'ion'#6#23'An object with the tag:'#10'Font.Color'#7#7'clBlack'#11'Font.Heig'
+  +'ht'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFon'
+  +'t'#8#8'TabOrder'#2#4#0#0#12'TRadioButton'#10'RadioActor'#4'Left'#2#7#6'Heig'
+  +'ht'#2#22#3'Top'#2'd'#5'Width'#3'Y'#1#8'AutoSize'#8#7'Caption'#6#21'The most'
+  +' recent actor'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Nam'
+  +'e'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#5#0#0#12'TRadioButton'#14'Radi'
+  +'oActivator'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#2'm'#7'Caption'#6
+  +#18'The item activator'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9
+  +'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#1#7'Visible'#8#0#0#5'T'
+  +'Edit'#10'EditTagged'#4'Left'#3#150#0#6'Height'#2#23#3'Top'#2'H'#5'Width'#3
+  +#200#0#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeTo'
+  +'ggleChecked'#10'ParentFont'#8#8'TabOrder'#2#6#0#0#0#242#2#23#9'TGroupBox'#13
+  +'GroupDuration'#4'Left'#3#205#0#6'Height'#2'U'#3'Top'#2#8#5'Width'#3#170#0#7
+  ,'Caption'#6#22'This effect will last:'#12'ClientHeight'#2'F'#11'ClientWidth'
+  +#3#166#0#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#1#0#6'TLab'
+  +'el'#12'LabelSeconds'#4'Left'#2's'#6'Height'#2#14#3'Top'#2'&'#5'Width'#2'+'#7
+  +'Caption'#6#7'seconds'#11'ParentColor'#8#0#0#12'TRadioButton'#14'RadioPerman'
+  +'ent'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#5#5'Width'#2'X'#7'Caption'#6#13'un'
+  +'til removed'#8'TabOrder'#2#1#0#0#12'TRadioButton'#14'RadioTemporary'#4'Left'
+  +#2#7#6'Height'#2#22#3'Top'#2'#'#5'Width'#2'&'#7'Caption'#6#3'for'#7'Checked'
+  +#9#8'TabOrder'#2#0#7'TabStop'#9#0#0#9'TSpinEdit'#9'SpinEdit2'#4'Left'#2'2'#6
+  +'Height'#2#23#3'Top'#2'"'#5'Width'#2'<'#5'Color'#4#216#227#248#0#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#8'MaxValue'#4
+  +'?B'#15#0#8'MinValue'#2#1#10'ParentFont'#8#8'TabOrder'#2#2#5'Value'#2'<'#0#0
+  +#0#242#2#24#6'TPanel'#15'ArmorClassPanel'#4'Left'#3#183#1#6'Height'#2'y'#3'T'
+  +'op'#2' '#5'Width'#3#1#1#12'ClientHeight'#2'y'#11'ClientWidth'#3#1#1#5'Color'
+  +#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Na'
+  +'me'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#17#7'Visibl'
+  +'e'#8#0#6'TLabel'#11'LabelACType'#4'Left'#2'3'#6'Height'#2#14#3'Top'#2'M'#5
+  +'Width'#2'+'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#8'AC type:'#11'P'
+  +'arentColor'#8#0#0#6'TLabel'#13'LabelACAmount'#4'Left'#2'#'#6'Height'#2#14#3
+  +'Top'#2#25#5'Width'#2';'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#9'Ho'
+  +'w much?'#11'ParentColor'#8#0#0#9'TSpinEdit'#12'SpinACAmount'#4'Left'#2'}'#6
+  +'Height'#2#23#3'Top'#2#20#5'Width'#2'-'#8'MaxValue'#2#20#8'MinValue'#2#1#8'T'
+  +'abOrder'#2#0#5'Value'#2#1#0#0#9'TComboBox'#11'ComboACType'#4'Left'#2'}'#6'H'
+  +'eight'#2#31#3'Top'#2'F'#5'Width'#2'd'#10'ItemHeight'#2#0#13'Items.Strings'#1
+  +#6#5'Armor'#6#10'Deflection'#6#5'Dodge'#6#7'Natural'#6#6'Shield'#0#5'Style'#7
+  +#14'csDropDownList'#8'TabOrder'#2#1#0#0#0#242#2#25#6'TPanel'#17'DamageResist'
+  +'Panel'#4'Left'#3#144#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3'O'#1#12'Client'
+  +'Height'#2'y'#11'ClientWidth'#3'O'#1#5'Color'#4#216#227#248#0#11'ParentColor'
+  +#8#8'TabOrder'#2#18#7'Visible'#8#0#6'TLabel'#15'LabelResistType'#4'Left'#2'P'
+  +#6'Height'#2#14#3'Top'#2'4'#5'Width'#2'C'#9'Alignment'#7#14'taRightJustify'#7
+  +'Caption'#6#12'Damage type:'#11'ParentColor'#8#0#0#6'TLabel'#21'LabelDamageR'
+  +'esistance'#4'Left'#2#31#6'Height'#2#14#3'Top'#2#9#5'Width'#2't'#9'Alignment'
+  +#7#14'taRightJustify'#7'Caption'#6#24'Amount resisted per hit:'#11'ParentCol'
+  +'or'#8#0#0#6'TLabel'#16'LabelResistLimit'#4'Left'#2'#'#6'Height'#2#14#3'Top'
+  +#2'V'#5'Width'#2'p'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#25'Overal'
+  +'l resistance limit:'#11'ParentColor'#8#0#0#9'TSpinEdit'#20'SpinDamageResist'
+  +'ance'#4'Left'#3#185#0#6'Height'#2#23#3'Top'#2#5#5'Width'#2'A'#5'Color'#4#216
+  +#227#248#0#8'MaxValue'#3#15''''#8'MinValue'#2#1#8'TabOrder'#2#0#5'Value'#2#5
+  +#0#0#9'TComboBox'#16'DamageResistType'#4'Left'#3#185#0#6'Height'#2#31#3'Top'
+  +#2'-'#5'Width'#2'x'#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'
+  +#2#0#13'Items.Strings'#1#6#4'Acid'#6#11'Bludgeoning'#6#4'Cold'#6#6'Divine'#6
+  +#10'Electrical'#6#4'Fire'#6#7'Magical'#6#8'Negative'#6#8'Piercing'#6#8'Posit'
+  +'ive'#6#8'Slashing'#6#5'Sonic'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2
+  +#1#4'Text'#6#4'Acid'#0#0#11'TStaticText'#15'TextResistLimit'#4'Left'#2' '#6
+  +'Height'#2#20#3'Top'#2'e'#5'Width'#3#139#0#9'Alignment'#7#8'taCenter'#7'Capt'
+  +'ion'#6#22'Use zero for no limit.'#5'Color'#7#8'clInfoBk'#10'Font.Color'#7#10
+  +'clInfoText'#11'Font.Height'#2#246#9'Font.Name'#6#5'Arial'#10'ParentFont'#8
+  +#11'ParentColor'#8#8'TabOrder'#2#2#0#0#9'TSpinEdit'#17'DamageResistLimit'#4
+  +'Left'#3#185#0#6'Height'#2#23#3'Top'#2'V'#5'Width'#2'A'#5'Color'#4#216#227
+  +#248#0#8'MaxValue'#3#31'N'#8'TabOrder'#2#3#0#0#0#242#2#26#6'TPanel'#17'Damag'
+  +'eShieldPanel'#4'Left'#3#175#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3#17#1#12
+  +'ClientHeight'#2'y'#11'ClientWidth'#3#17#1#5'Color'#4#216#227#248#0#11'Paren'
+  +'tColor'#8#8'TabOrder'#2#19#7'Visible'#8#0#6'TLabel'#22'LabelDamageShieldBon'
+  +'us'#4'Left'#2#25#6'Height'#2#14#3'Top'#2'4'#5'Width'#2'L'#7'Caption'#6#13'B'
+  +'onus damage:'#11'ParentColor'#8#0#0#6'TLabel'#21'LabelDamageShieldType'#4'L'
+  +'eft'#2'#'#6'Height'#2#14#3'Top'#2']'#5'Width'#2'C'#7'Caption'#6#12'Damage t'
+  +'ype:'#11'ParentColor'#8#0#0#6'TLabel'#21'LabelDamageShieldBase'#4'Left'#2' '
+  +#6'Height'#2#14#3'Top'#2#9#5'Width'#2'F'#7'Caption'#6#12'Base damage:'#11'Pa'
+  +'rentColor'#8#0#0#9'TComboBox'#17'DamageShieldBonus'#4'Left'#3#130#0#6'Heigh'
+  +'t'#2#31#3'Top'#2'-'#5'Width'#2'U'#5'Color'#4#216#227#248#0#10'ItemHeight'#2
+  +#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#2'+1'#6#2'+2'#6#2'+3'#6#2'+4'#6#2
+  +'+5'#6#2'+6'#6#2'+7'#6#2'+8'#6#2'+9'#6#3'+10'#6#3'+11'#6#3'+12'#6#3'+13'#6#3
+  +'+14'#6#3'+15'#6#3'+16'#6#3'+17'#6#3'+18'#6#3'+19'#6#3'+20'#6#4'+1d4'#6#4'+1'
+  +'d6'#6#4'+1d8'#6#5'+1d10'#6#5'+1d12'#6#4'+2d4'#6#4'+2d6'#6#4'+2d8'#6#5'+2d10'
+  +#6#5'+2d12'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#1#4'Text'#6#2'+1'#0
+  ,#0#9'TComboBox'#16'DamageShieldType'#4'Left'#3#130#0#6'Height'#2#31#3'Top'#2
+  +'U'#5'Width'#2'x'#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9'ItemIndex'#2
+  +#0#13'Items.Strings'#1#6#4'Acid'#6#11'Bludgeoning'#6#4'Cold'#6#6'Divine'#6#10
+  +'Electrical'#6#4'Fire'#6#7'Magical'#6#8'Negative'#6#8'Piercing'#6#8'Positive'
+  +#6#8'Slashing'#6#5'Sonic'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#2#4
+  +'Text'#6#4'Acid'#0#0#9'TSpinEdit'#16'SpinDamageShield'#4'Left'#3#130#0#6'Hei'
+  +'ght'#2#23#3'Top'#2#5#5'Width'#2'-'#5'Color'#4#216#227#248#0#8'MaxValue'#3
+  +#231#3#8'TabOrder'#2#0#0#0#0#242#2#27#6'TPanel'#16'SpellShieldPanel'#4'Left'
+  +#3#144#1#6'Height'#2'y'#3'Top'#2' '#5'Width'#3'O'#1#12'ClientHeight'#2'y'#11
+  +'ClientWidth'#3'O'#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2
+  +#20#7'Visible'#8#0#6'TLabel'#22'LabelSpellShieldSchool'#4'Left'#2#15#6'Heigh'
+  +'t'#2#14#3'Top'#2'Z'#5'Width'#3#142#0#7'Caption'#6#27'Absorbs which spell sc'
+  +'hool?'#11'ParentColor'#8#0#0#6'TLabel'#21'LabelSpellShieldLevel'#4'Left'#2
+  +#28#6'Height'#2#14#3'Top'#2#15#5'Width'#2'~'#7'Caption'#6#26'Max. spell leve'
+  +'l absorbed:'#11'ParentColor'#8#0#0#6'TLabel'#21'LabelSpellShieldLimit'#4'Le'
+  +'ft'#2#22#6'Height'#2#14#3'Top'#2'-'#5'Width'#3#131#0#7'Caption'#6#28'Total '
+  +'spell levels absorbed:'#11'ParentColor'#8#0#0#9'TSpinEdit'#20'SpinSpellShie'
+  +'ldLevel'#4'Left'#3#190#0#6'Height'#2#23#3'Top'#2#10#5'Width'#2'#'#5'Color'#4
+  +#216#227#248#0#8'MaxValue'#2#9#8'MinValue'#2#255#8'TabOrder'#2#0#5'Value'#2
+  +#255#0#0#9'TComboBox'#17'SpellShieldSchool'#4'Left'#3#190#0#6'Height'#2#31#3
+  +'Top'#2'P'#5'Width'#3#130#0#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#9'It'
+  +'emIndex'#2#0#13'Items.Strings'#1#6#11'All schools'#6#10'Abjuration'#6#11'Co'
+  +'njuration'#6#10'Divination'#6#11'Enchantment'#6#9'Evocation'#6#8'Illusion'#6
+  +#10'Necromancy'#6#13'Transmutation'#0#5'Style'#7#14'csDropDownList'#8'TabOrd'
+  +'er'#2#2#4'Text'#6#11'All schools'#0#0#9'TSpinEdit'#20'SpinSpellShieldLimit'
+  +#4'Left'#3#190#0#6'Height'#2#23#3'Top'#2'-'#5'Width'#2'2'#5'Color'#4#216#227
+  +#248#0#8'MaxValue'#3#15''''#8'TabOrder'#2#1#0#0#11'TStaticText'#15'TextShiel'
+  +'dLimit'#4'Left'#2' '#6'Height'#2#20#3'Top'#2'<'#5'Width'#3#138#0#9'Alignmen'
+  +'t'#7#8'taCenter'#7'Caption'#6#22'Use zero for no limit.'#5'Color'#7#8'clInf'
+  +'oBk'#10'Font.Color'#7#10'clInfoText'#11'Font.Height'#2#246#9'Font.Name'#6#5
+  +'Arial'#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2#3#0#0#0#242#2#28#6
+  +'TPanel'#18'SpellConstantPanel'#4'Left'#3#144#1#6'Height'#2'Y'#3'Top'#2'0'#5
+  +'Width'#3'O'#1#12'ClientHeight'#2'Y'#11'ClientWidth'#3'O'#1#5'Color'#4#216
+  +#227#248#0#11'ParentColor'#8#8'TabOrder'#2#26#7'Visible'#8#0#6'TLabel'#24'Sp'
+  +'ellConstantDescription'#4'Left'#2#15#6'Height'#2#14#3'Top'#2#16#5'Width'#3
+  +#162#0#7'Caption'#6'!Choose the spell to be immune to:'#11'ParentColor'#8#0#0
+  +#9'TComboBox'#16'SpellConstantBox'#4'Left'#2#15#6'Height'#2#31#3'Top'#2'('#5
+  +'Width'#3','#1#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#5'Style'#7#14'csD'
+  +'ropDownList'#8'TabOrder'#2#0#0#0#0#0
+]);

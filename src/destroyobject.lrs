@@ -1,0 +1,110 @@
+LazarusResources.Add('Tdestroyobj','FORMDATA',[
+  'TPF0'#241#11'Tdestroyobj'#10'destroyobj'#4'Left'#3#191#1#6'Height'#3#154#1#3
+  +'Top'#3#146#0#5'Width'#3'|'#1#13'ActiveControl'#7#10'CheckOwner'#11'BorderSt'
+  +'yle'#7#8'bsDialog'#7'Caption'#6#15'Destroy objects'#12'ClientHeight'#3#154#1
+  +#11'ClientWidth'#3'|'#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'
+  +#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCreate'#8
+  +'Position'#7#16'poMainFormCenter'#0#242#2#0#6'TLabel'#6'Label1'#4'Left'#2#25
+  +#6'Height'#2#17#3'Top'#3#160#0#5'Width'#3#149#0#7'Caption'#6#26'Using which '
+  +'visual effect?'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244#9'Font.N'
+  +'ame'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0#242#2#1#5'TMemo'#5'M'
+  +'emo1'#4'Left'#2#25#6'Height'#2'P'#3'Top'#3#230#0#5'Width'#3'J'#1#5'Color'#4
+  +#216#227#248#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#246#9'Font.Nam'
+  +'e'#6#5'Arial'#13'Lines.Strings'#1#6#130'Define what to destroy, then click '
+  +'"Okay - and more!" to destroy another, or "Okay - exit!" to make this the l'
+  +'ast thing destroyed.'#6#0#6'ZPressing "Close" will (only) clear out what yo'
+  +'u have entered since the last "Okay" button.'#0#10'ParentFont'#8#8'ReadOnly'
+  +#9#8'TabOrder'#2#1#0#0#242#2#2#9'TComboBox'#9'ComboBox1'#4'Left'#2#25#6'Heig'
+  +'ht'#2#31#3'Top'#3#185#0#5'Width'#3'J'#1#5'Color'#4#216#227#248#0#10'ItemHei'
+  +'ght'#2#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#2#0#0#242#2#3#7'TBitBt'
+  +'n'#7'BitBtn1'#4'Left'#2#25#6'Height'#2'!'#3'Top'#3'E'#1#5'Width'#3#150#0#7
+  +'Caption'#6#16'Okay - and more!'#7'Default'#9#7'Enabled'#8#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10'Z'#2#0#0'V'#2#0#0'BMV'#2#0#0#0
+  +#0#0#0'v'#0#0#0'('#0#0#0')'#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#224#1#0#0#0#0#0#0
+  +#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0
+  +#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0
+  +#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwwwww'
+  +'wwwwwwwwp'#0#0#0'wDH'#135'wwwwwwwwwwwwwwwwp'#0#0#0'w"D'#136'wwwwwwwwwwwwwww'
+  +'wp'#0#0#0#162'""H'#135'wwwwwwwwww'#8'wwwwp'#0#0#0#162'""$'#136'wwwwwwwwwp'#7
+  +#135'wwwp'#0#0#0#162'"""H'#135'wwwwwwwwp@xwwwp'#0#0#0#162'"""$'#136'wwwwwwww'
+  +'w'#4#7#135'wwp'#0#0#0#162'""""H'#135'wwwwwww'#136#132'@xwwp'#0#0#0#162'"H'
+  +#162'"$'#136'wwwwwp'#135'x'#132#196#7#135'wp'#0#0#0#162'"H'#138'""H'#135'www'
+  +'p'#135#136#0'D'#204'@'#7'wp'#0#0#0#162'"H'#135#162'"D'#136'www'#7#128#0'L'
+  +#204#204#204#7'wp'#0#0#0'z"H'#135'z"$'#136'wwpp'#0'L'#204#198#204#198#7'wp'#0
+  +#0#0'z"Gww'#162'"H'#135'ww'#0'L'#204#198'dl`wwp'#0#0#0'wwwwwz"$HwpFf'#204'dp'
+  +'f'#7'wwp'#0#0#0'wwwwww'#162'"H'#135'p'#0#6#198'Gt`wwwp'#0#0#0'wwwwwwz"$'#135
+  +'wwvdw'#6#7'wwwp'#0#0#0'wwwwwww'#162'$HwwvGw'#0'wwwwp'#0#0#0'wwwwwwwz"Hwwtww'
+  +'wwwwwp'#0#0#0'wwwwwwww'#162'Hwwwwwwwwwwp'#0#0#0'wwwwwwwwz''wwwwwwwwwwp'#0#0
+  +#0#7'OnClick'#7#19'ButtonClickOkayMore'#10'ParentFont'#8#8'TabOrder'#2#3#0#0
+  +#242#2#4#7'TBitBtn'#7'BitBtn2'#4'Left'#3#205#0#6'Height'#2'!'#3'Top'#3'E'#1#5
+  +'Width'#3#150#0#7'Caption'#6#12'Okay - exit!'#7'Enabled'#8#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0
+  +#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0
+  +#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0
+  +#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0
+  +#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136'wwwwwww'#0
+  +#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0#0#162'""$'
+  +#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0#162'""""H'
+  +#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'ww'#0#0#162
+  +'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162'"H'#135'w'
+  +#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'wwwwwww'#162
+  +'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11'ModalResul'
+  +'t'#2#1#7'OnClick'#7#19'ButtonClickOkayExit'#10'ParentFont'#8#7'Spacing'#2#15
+  +#8'TabOrder'#2#4#0#0#242#2#5#7'TBitBtn'#7'BitBtn3'#4'Left'#2's'#6'Height'#2
+  +'!'#3'Top'#3'o'#1#5'Width'#3#150#0#7'Caption'#6#5'Close'#11'Font.Height'#2
+  +#246#9'Font.Name'#6#5'Arial'#10'Glyph.Data'#10#178#1#0#0#174#1#0#0'BM'#174#1
+  +#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#23#0#0#0#26#0#0#0#1#0#4#0#0#0#0#0'8'#1#0#0#0#0
+  +#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0
+  +#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0
+  +#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wwwwwwwwwwwwwwwww'
+  +'wwwwww{w'#0#0#0#0#0#0#0#0#0#0#11'wx'#240#145#17#17#17#17#17#15#7'pwx'#240
+  +#145#17#17#17#17#17#15#7'xwx'#240#145#17#17#17#17#17#0#7'wwx'#240#145#17#17
+  +#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'pwx'#240#145#17#17#17#17#17
+  +'p'#7'pwx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'
+  +#240#145#1#17#17#17#17#15#7'pwx'#240#144#176#17#17#17#17#15#7'{wx'#240#145#1
+  +#17#17#17#17#15#7'{wx'#240#145#17#17#17#17#17#15#7'{wx'#240#145#17#17#17#17
+  ,#17#0#7'pwx'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17'p'#7'{w'
+  +'x'#240#145#17#17#17#17#17'p'#7'{wx'#240#145#17#17#17#17#17#15#7'pwx'#240#145
+  +#17#17#17#17#17#15#7'pwx'#240#153#153#153#153#153#153#15#7'pwx'#240#0#0#0#0#0
+  +#0#15#7'pwx'#255#255#255#255#255#255#255#255#7'pwx'#136#136#136#136#136#136
+  +#136#136#7'pwwwwwwwwwwwp'#11'ModalResult'#2#2#7'OnClick'#7#16'ButtonClickClo'
+  +'se'#10'ParentFont'#8#7'Spacing'#2#20#8'TabOrder'#2#5#0#0#242#2#6#9'TGroupBo'
+  +'x'#11'GroupTarget'#4'Left'#2#15#6'Height'#3#140#0#3'Top'#2#10#5'Width'#3'^'
+  +#1#7'Caption'#6'''Destroy what? (PCs cannot be destroyed)'#12'ClientHeight'#2
+  +'z'#11'ClientWidth'#3'Z'#1#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244
+  +#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#0#0#9'TCheckBox'#10
+  +'CheckOwner'#4'Left'#2#10#6'Height'#2#22#3'Top'#2#0#5'Width'#3'E'#1#8'AutoSi'
+  +'ze'#8#7'Caption'#6#16'The script owner'#5'Color'#4#216#227#248#0#10'Font.Co'
+  +'lor'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'
+  +#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0#0#9'T'
+  +'CheckBox'#13'CheckTargeted'#4'Left'#2#10#6'Height'#2#22#3'Top'#2#0#5'Width'
+  +#3'E'#1#8'AutoSize'#8#7'Caption'#6#21'The activation target'#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'Ta'
+  +'bOrder'#2#1#7'Visible'#8#0#0#9'TCheckBox'#10'CheckSpawn'#4'Left'#2#10#6'Hei'
+  +'ght'#2#22#3'Top'#2#20#5'Width'#3'E'#1#8'AutoSize'#8#7'Caption'#6#21'The mos'
+  +'t recent spawn'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Fon'
+  +'t.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#10'ToggleOkay'#11'Par'
+  +'entColor'#8#10'ParentFont'#8#8'TabOrder'#2#2#7'Visible'#8#0#0#9'TCheckBox'
+  +#11'CheckTagged'#4'Left'#2#10#6'Height'#2#22#3'Top'#2'*'#5'Width'#2'v'#7'Cap'
+  +'tion'#6#17'An object tagged:'#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'c'
+  +'lBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChange'#7#17'Chec'
+  +'kTaggedChange'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#3#0#0#5'TEd'
+  +'it'#10'EditTagged'#4'Left'#3#145#0#6'Height'#2#26#3'Top'#2'('#5'Width'#3#190
+  +#0#8'AutoSize'#8#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Fon'
+  +'t.Height'#2#246#9'Font.Name'#6#5'Arial'#9'MaxLength'#2' '#8'OnChange'#7#23
+  +'EditChangeToggleChecked'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#9'TCheckBox'
+  +#10'CheckActor'#4'Left'#2#10#6'Height'#2#22#3'Top'#2'P'#5'Width'#3'E'#1#8'Au'
+  +'toSize'#8#7'Caption'#6#21'The most recent actor'#5'Color'#4#216#227#248#0#10
+  +'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'On'
+  +'Change'#7#10'ToggleOkay'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#6
+  +#7'Visible'#8#0#0#9'TCheckBox'#13'CheckWaypoint'#4'Left'#2#30#6'Height'#2#22
+  +#3'Top'#2'<'#5'Width'#2'm'#7'Caption'#6#17'Tag is a waypoint'#5'Color'#4#216
+  +#227#248#0#7'Enabled'#8#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#246#9
+  +'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#5#0#0
+  +#9'TCheckBox'#15'CheckScriptItem'#4'Left'#2#10#6'Height'#2#22#3'Top'#2'd'#5
+  +'Width'#3#158#0#7'Caption'#6#27'The item this script is for'#5'Color'#4#216
+  +#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#17'CheckTaggedChange'#11'ParentColor'#8#10'ParentFont'
+  +#8#8'TabOrder'#2#7#7'Visible'#8#0#0#0#0
+]);

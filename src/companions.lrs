@@ -1,0 +1,344 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tcompanion','FORMDATA',[
+  'TPF0'#241#10'Tcompanion'#9'companion'#4'Left'#3'x'#1#6'Height'#3'&'#2#3'Top'
+  +#3#154#0#5'Width'#3#238#2#13'ActiveControl'#7#8'RadioNew'#11'BorderStyle'#7#8
+  +'bsDialog'#7'Caption'#6#28'Henchmen and other followers'#12'ClientHeight'#3
+  +'&'#2#11'ClientWidth'#3#238#2#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clB'
+  +'lack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnCreate'#7#10'FormCr'
+  +'eate'#8'Position'#7#16'poMainFormCenter'#0#242#2#0#6'TShape'#14'ShapeFakePa'
+  +'nel'#4'Left'#2#15#6'Height'#3#184#1#3'Top'#2'-'#5'Width'#3#208#2#11'Brush.C'
+  +'olor'#4#216#227#248#0#9'Pen.Style'#7#7'psClear'#0#0#242#2#1#6'TBevel'#14'Be'
+  +'velFakePanel'#4'Left'#2#15#6'Height'#3#184#1#3'Top'#2'-'#5'Width'#3#208#2#5
+  +'Shape'#7#7'bsFrame'#5'Style'#7#8'bsRaised'#0#0#242#2#2#6'TPanel'#13'PanelRi'
+  +'ghtNew'#4'Left'#3#129#1#6'Height'#3#174#1#3'Top'#2'2'#5'Width'#3'Y'#1#10'Be'
+  +'velOuter'#7#6'bvNone'#12'ClientHeight'#3#174#1#11'ClientWidth'#3'Y'#1#5'Col'
+  +'or'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#4#0#9'TGroupBox'#16'Gro'
+  +'upAddHenchman'#4'Left'#2#25#6'Height'#3#135#0#3'Top'#2'('#5'Width'#3';'#1#7
+  +'Caption'#6#20'Who is the henchman?'#12'ClientHeight'#2'x'#11'ClientWidth'#3
+  +'7'#1#7'Enabled'#8#8'TabOrder'#2#1#0#12'TRadioButton'#18'RadioAddHenchOwner'
+  +#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#3','#1#8'AutoSize'#8#7'Capti'
+  +'on'#6#23'The owner of the script'#7'Checked'#9#8'TabOrder'#2#0#7'TabStop'#9
+  +#0#0#12'TRadioButton'#21'RadioAddHenchTargeted'#4'Left'#2#7#6'Height'#2#22#3
+  +'Top'#2#0#5'Width'#2'z'#7'Caption'#6#21'The activation target'#8'TabOrder'#2
+  +#1#7'Visible'#8#0#0#12'TRadioButton'#18'RadioAddHenchSpawn'#4'Left'#2#7#6'He'
+  +'ight'#2#22#3'Top'#2#30#5'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#21'The mo'
+  +'st recent spawn'#8'TabOrder'#2#2#7'Visible'#8#0#0#12'TRadioButton'#19'Radio'
+  +'AddHenchTagged'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'<'#5'Width'#3#153#0#7'C'
+  +'aption'#6#26'The nearest object tagged:'#8'OnChange'#7#10'ToggleOkay'#8'Tab'
+  +'Order'#2#3#0#0#12'TRadioButton'#18'RadioAddHenchActor'#4'Left'#2#7#6'Height'
+  +#2#22#3'Top'#2'Z'#5'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#21'The most rec'
+  +'ent actor'#8'TabOrder'#2#5#7'Visible'#8#0#0#5'TEdit'#18'EditAddHenchTagged'
+  +#4'Left'#3#170#0#6'Height'#2#23#3'Top'#2':'#5'Width'#3#135#0#5'Color'#4#216
+  +#227#248#0#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeToggleChecked'#8'Tab'
+  +'Order'#2#4#0#0#0#9'TCheckBox'#16'CheckAddHenchman'#4'Left'#2#5#6'Height'#2
+  +#22#3'Top'#2#10#5'Width'#2'j'#7'Caption'#6#14'Add a henchman'#5'Color'#4#216
+  +#227#248#0#8'OnChange'#7#23'CheckChangeToggleEnable'#11'ParentColor'#8#8'Tab'
+  +'Order'#2#0#0#0#9'TCheckBox'#13'CheckDominate'#4'Left'#2#5#6'Height'#2#22#3
+  +'Top'#3#195#0#5'Width'#2'y'#7'Caption'#6#19'Dominate a creature'#5'Color'#4
+  +#216#227#248#0#8'OnChange'#7#23'CheckChangeToggleEnable'#11'ParentColor'#8#8
+  +'TabOrder'#2#2#0#0#9'TGroupBox'#13'GroupDominate'#4'Left'#2#25#6'Height'#2'x'
+  +#3'Top'#3#225#0#5'Width'#3';'#1#7'Caption'#6#23'Who is to be dominated?'#12
+  +'ClientHeight'#2'i'#11'ClientWidth'#3'7'#1#7'Enabled'#8#8'TabOrder'#2#3#0#12
+  +'TRadioButton'#18'RadioDominateOwner'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5
+  +'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the script'#7'Chec'
+  +'ked'#9#8'TabOrder'#2#0#7'TabStop'#9#0#0#12'TRadioButton'#21'RadioDominateTa'
+  +'rgeted'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#2'z'#7'Caption'#6#21
+  +'The activation target'#8'TabOrder'#2#1#7'Visible'#8#0#0#12'TRadioButton'#18
+  +'RadioDominateSpawn'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#25#5'Width'#3','#1#8
+  +'AutoSize'#8#7'Caption'#6#21'The most recent spawn'#8'TabOrder'#2#2#7'Visibl'
+  +'e'#8#0#0#12'TRadioButton'#19'RadioDominateTagged'#4'Left'#2#7#6'Height'#2#22
+  +#3'Top'#2'2'#5'Width'#3#153#0#7'Caption'#6#26'The nearest object tagged:'#8
+  +'OnChange'#7#10'ToggleOkay'#8'TabOrder'#2#3#0#0#12'TRadioButton'#18'RadioDom'
+  +'inateActor'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'K'#5'Width'#3','#1#8'AutoSi'
+  +'ze'#8#7'Caption'#6#21'The most recent actor'#8'TabOrder'#2#5#7'Visible'#8#0
+  +#0#5'TEdit'#18'EditDominateTagged'#4'Left'#3#170#0#6'Height'#2#23#3'Top'#2'/'
+  +#5'Width'#3#135#0#5'Color'#4#216#227#248#0#9'MaxLength'#2' '#8'OnChange'#7#23
+  +'EditChangeToggleChecked'#8'TabOrder'#2#4#0#0#0#11'TRadioGroup'#21'GroupDura'
+  +'tionDominate'#4'Left'#2#25#6'Height'#2'7'#3'Top'#3'h'#1#5'Width'#3';'#1#8'A'
+  +'utoFill'#9#7'Caption'#6'"How long will the domination last?'#28'ChildSizing'
+  +'.LeftRightSpacing'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSizing.'
+  +'EnlargeHorizontal'#7#14'crsScaleChilds'#27'ChildSizing.EnlargeVertical'#7#24
+  +'crsHomogenousSpaceResize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChi'
+  +'lds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Lay'
+  +'out'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerLine'#2#3
+  +#12'ClientHeight'#2'('#11'ClientWidth'#3'7'#1#7'Columns'#2#3#7'Enabled'#8#9
+  +'ItemIndex'#2#1#13'Items.Strings'#1#6#11'Permanently'#6#20'Duration in secon'
+  +'ds:'#0#8'TabOrder'#2#4#0#9'TSpinEdit'#9'SpinEdit2'#4'Left'#3#246#0#6'Height'
+  ,#2#23#3'Top'#2#9#5'Width'#2';'#5'Color'#4#216#227#248#0#8'MaxValue'#4#159#134
+  +#1#0#8'MinValue'#2#1#8'TabOrder'#2#1#5'Value'#3#240#0#0#0#0#0#242#2#3#6'TPan'
+  +'el'#12'PanelLeftNew'#4'Left'#2#20#6'Height'#3#29#1#3'Top'#3#195#0#5'Width'#3
+  +'m'#1#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3#29#1#11'ClientWidth'#3'm'
+  +#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#3#0#6'TLabel'#14
+  +'LabelVFXSummon'#4'Left'#2#20#6'Height'#2#20#3'Top'#3#150#0#5'Width'#3'T'#1#8
+  +'AutoSize'#8#7'Caption'#6'5Use which visual effect when summoning this creat'
+  +'ure?'#5'Color'#4#216#227#248#0#7'Enabled'#8#11'ParentColor'#8#11'Transparen'
+  +'t'#8#0#0#6'TLabel'#17'LabelResRefSummon'#4'Left'#2#20#6'Height'#2#30#3'Top'
+  +#2'n'#5'Width'#3#148#0#7'Caption'#6'-Creature ResRef:'#10'(must have henchma'
+  +'n scripts)'#11'ParentColor'#8#0#0#9'TCheckBox'#12'summonanimal'#4'Left'#2#0
+  +#6'Height'#2#22#3'Top'#2#5#5'Width'#3#197#0#7'Caption'#6' Summon master''s a'
+  +'nimal companion'#5'Color'#4#216#227#248#0#8'OnChange'#7#10'ToggleOkay'#11'P'
+  +'arentColor'#8#8'TabOrder'#2#0#0#0#9'TCheckBox'#14'summonfamiliar'#4'Left'#2
+  +#0#6'Height'#2#22#3'Top'#2#30#5'Width'#3#146#0#7'Caption'#6#24'Summon master'
+  +'''s familiar'#5'Color'#4#216#227#248#0#8'OnChange'#7#10'ToggleOkay'#11'Pare'
+  +'ntColor'#8#8'TabOrder'#2#1#0#0#9'TCheckBox'#11'CheckSummon'#4'Left'#2#0#6'H'
+  +'eight'#2#22#3'Top'#2'P'#5'Width'#2'y'#7'Caption'#6#18'Summon a creature.'#5
+  +'Color'#4#216#227#248#0#8'OnChange'#7#23'CheckChangeToggleEnable'#11'ParentC'
+  +'olor'#8#8'TabOrder'#2#4#0#0#5'TEdit'#10'EditSummon'#4'Left'#3#210#0#6'Heigh'
+  +'t'#2#23#3'Top'#2'n'#5'Width'#3#150#0#8'CharCase'#7#11'ecLowerCase'#5'Color'
+  +#4#216#227#248#0#9'MaxLength'#2#16#8'OnChange'#7#23'EditChangeToggleChecked'
+  +#8'TabOrder'#2#5#0#0#9'TComboBox'#12'BoxVFXSummon'#4'Left'#2#20#6'Height'#2
+  +#27#3'Top'#3#169#0#5'Width'#3'T'#1#7'Enabled'#8#10'ItemHeight'#2#0#5'Style'#7
+  +#14'csDropDownList'#8'TabOrder'#2#7#0#0#11'TRadioGroup'#19'GroupDurationSumm'
+  +'on'#4'Left'#2#20#6'Height'#2'7'#3'Top'#3#215#0#5'Width'#3'T'#1#8'AutoFill'#9
+  +#7'Caption'#6'!How long will the summoning last?'#28'ChildSizing.LeftRightSp'
+  +'acing'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHoriz'
+  +'ontal'#7#14'crsScaleChilds'#27'ChildSizing.EnlargeVertical'#7#24'crsHomogen'
+  +'ousSpaceResize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'#26'Ch'
+  +'ildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7#29
+  +'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerLine'#2#3#12'Clien'
+  +'tHeight'#2'('#11'ClientWidth'#3'P'#1#7'Columns'#2#3#7'Enabled'#8#9'ItemInde'
+  +'x'#2#1#13'Items.Strings'#1#6#11'Permanently'#6#20'Duration in seconds:'#0#8
+  +'TabOrder'#2#8#0#9'TSpinEdit'#9'SpinEdit1'#4'Left'#3#10#1#6'Height'#2#23#3'T'
+  +'op'#2#9#5'Width'#2'@'#5'Color'#4#216#227#248#0#8'MaxValue'#4#159#134#1#0#8
+  +'MinValue'#2#1#8'TabOrder'#2#1#5'Value'#3#240#0#0#0#0#7'TBitBtn'#13'ButtonPa'
+  +'lette'#4'Left'#3#4#1#6'Height'#2#28#3'Top'#2'P'#5'Width'#2'd'#7'Caption'#6#9
+  +'Palettes!'#10'Glyph.Data'#10':'#3#0#0'6'#3#0#0'BM6'#3#0#0#0#0#0#0'6'#0#0#0
+  +'('#0#0#0#16#0#0#0#16#0#0#0#1#0#24#0#0#0#0#0#0#3#0#0#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#223#223#191#128#128#0#128#128#0'@@'#0#128#128'@'#128#128'`@@@@@@@@@'
+  +'@@@@@@@@@'#128#128'`'#128#128' '#128#128#0#128#128#0#255#255#255#192#192#192
+  +#192#192#192'PPP'#0'???'#127#127#127#255#255#127#255#255#127#255#255#127#255
+  +#255#127#255#255#127#255#255'?'#127#127'@@@'#176#176#176#128#128#0#255#255
+  +#255#192#192#192'000'#127#191#191#127#255#255#127#255#255#127#255#255#191'??'
+  +#255#0#0#255#0#0#191#127#127#127#255#255#127#255#255#127#255#255'___'#128#128
+  +' '#255#255#255#144#144#144#127#191#191#127#255#255#127#255#255#127#255#255
+  +#127#255#255#255#0#0#255#0#0#255#0#0#255#0#0#191#127#127#127#255#255#127#255
+  +#255'?'#191#191'```'#255#255#255'?'#127#127#127#255#255#127#191#255#0#0#255
+  +'??'#255'?'#191#255#127#191#191#255'??'#255#0#0#191#127#127#127#255#255#127
+  +#255#255#127#255#255#127#255#255'@@@'#127#127#127#127#255#255#127#255#255#0#0
+  +#255#0#0#255#0#0#255#0'?'#255#127#255#255#127#255#255#127#255#255#127#255#255
+  +#127#255#255#127#255#255#127#255#255#127#255#255'@@@?'#127#127#127#255#255
+  +#127#255#255'??'#255#0#0#255#0#0#255#127#255#255#127#255#255#127#255#255#127
+  +#191#191'P00ooo'#127#255#255#127#255#255#127#255#255'@@@?'#127#127#127#255
+  +#255#127#255#255#127#255#255'?'#127#255#127#191#255#127#255#255#127#255#255
+  +#127#255#255'P00'#128#0#0#176#144#144'?'#127#127#127#255#255#127#255#255'@@'
+  +#0'?'#127#127#127#255#191#0#255#0#0#255#0'?'#255#191#127#255#255#127#255#255
+  +#127#255#255#127#255#255'oooP00'#128#0#0'_'#127#127#127#255#255'?'#127#127
+  +#128#128#0'?'#127#127'?'#255#191#0#255#0#0#255#0#0#255#0'?'#255#127#127#255
+  +#255#127#255#255#127#255#255#127#255#255#127#255#255'_'#191#191#159'??_'#127
+  +#127#144#144#144#128#128#0'?'#127#127#127#255#255'?'#255'?'#0#255#0'?'#255
+  +#127#127#255#255#127#255#255#127#255#255#127#255#255#127#255#255#127#255#255
+  +#127#191#191#128'``'#191#127#127#176#144#144#128#128#0#127#127#127#127#255
+  ,#255#127#255#255#127#255#255#127#255#255#191#127#255#255#0#255#255#0#255#127
+  +#191#255#127#255#255#127#191#191#144#144#144#192#192#192#176#144#144#0#0#0' '
+  +' '#0#127#127#127#127#255#255#127#255#255#127#255#255#191'?'#255#255#0#255
+  +#255#0#255#255#0#255#191#191#255#127#255#255'```'#192#192#192#192#192#192#192
+  +#192#192'ooo???'#255#255#255'???'#127#255#255#127#255#255#191'?'#255#255#0
+  +#255#255#0#255#191#127#255#127#255#255'?'#127#127#192#192#192#192#192#192#192
+  +#192#192#192#192#192#192#192#192#0#0#0#255#255#255#144#144#144'???'#127#255
+  +#255#127#255#255#127#255#255#127#255#255#127#255#255#127#191#191#144#144#144
+  +#192#192#192#192#192#192#192#192#192#192#192#192#192#192#192'``'#0#255#255
+  +#255#255#255#255#255#255#255#127#127#127'?'#127#127'?'#127#127'?'#127#127'?'
+  +#127#127#191#191#191#255#255#255#255#255#255#255#255#255#255#255#255#255#255
+  +#255#255#255#255#223#223#191#7'OnClick'#7#18'ButtonPaletteClick'#7'Spacing'#2
+  +#10#8'TabOrder'#2#6#0#0#9'TCheckBox'#23'CheckSummonPaladinMount'#4'Left'#2#0
+  +#6'Height'#2#22#3'Top'#2'7'#5'Width'#3#178#0#7'Caption'#6#29'Summon master'''
+  +'s paladin mount'#5'Color'#4#216#227#248#0#8'OnChange'#7#29'CheckSummonPalad'
+  +'inMountChange'#11'ParentColor'#8#8'TabOrder'#2#2#0#0#9'TCheckBox'#23'CheckR'
+  +'ecordPaladinMount'#4'Left'#3#190#0#6'Height'#2#22#3'Top'#2'7'#5'Width'#3#171
+  +#0#7'Caption'#6#27'Record as most recent spawn'#5'Color'#4#216#227#248#0#7'E'
+  +'nabled'#8#11'ParentColor'#8#8'TabOrder'#2#3#0#0#0#242#2#4#7'TBitBtn'#7'BitB'
+  +'tn2'#4'Left'#3#200#0#6'Height'#2')'#3'Top'#3#243#1#5'Width'#2'x'#7'Caption'
+  +#6#4'Okay'#7'Default'#9#7'Enabled'#8#10'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'
+  +#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0
+  +#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191#191#0
+  +#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0
+  +#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'#136
+  +'wwwwwww'#0#0'wDH'#135'wwwwww'#0#0'w"D'#136'wwwwww'#0#0#162'""H'#135'wwwww'#0
+  +#0#162'""$'#136'wwwww'#0#0#162'"""H'#135'wwww'#0#0#162'"""$'#136'wwww'#0#0
+  +#162'""""H'#135'www'#0#0#162'"H'#162'"$'#136'www'#0#0#162'"H'#138'""H'#135'w'
+  +'w'#0#0#162'"H'#135#162'"D'#136'ww'#0#0'z"H'#135'z"$'#136'ww'#0#0'z"Gww'#162
+  +'"H'#135'w'#0#0'wwwwwz"$Hw'#0#0'wwwwww'#162'"H'#135#0#0'wwwwwwz"$'#135#0#0'w'
+  +'wwwwww'#162'$H'#0#0'wwwwwwwz"H'#0#0'wwwwwwww'#162'H'#0#0'wwwwwwwwz'''#0#0#11
+  +'ModalResult'#2#1#7'OnClick'#7#12'BitBtn2Click'#7'Spacing'#2#15#8'TabOrder'#2
+  +#7#0#0#242#2#5#7'TBitBtn'#7'BitBtn3'#4'Left'#3#174#1#6'Height'#2')'#3'Top'#3
+  +#243#1#5'Width'#2'x'#7'Caption'#6#6'Cancel'#10'Glyph.Data'#10'j'#1#0#0'f'#1#0
+  +#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0#0#20#0#0#0#1#0#4#0#0#0#0#0#240
+  +#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0#0#0#0#191#0#0#191#0#0#0#191
+  +#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192#192#0#128#128#128#0#0#0#255
+  +#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0'wx'
+  +#136#135'ww'#136'www'#0#0'wp'#136#135'ww'#136#135'ww'#0#0'y'#17#8#136'w'#145
+  +#8#136'ww'#0#0'y'#17#0#136#135#145#0#136#135'w'#0#0'y'#17#16#8#137#17#16#8'w'
+  +'w'#0#0'y'#145#17#8#145#17#17#0'ww'#0#0'w'#145#17#16#17#17#17#7'ww'#0#0'wy'
+  +#17#17#17#17#7'www'#0#0'wy'#145#17#17#17#135'www'#0#0'ww'#153#17#17#16#136'w'
+  +'ww'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17
+  +#17#17#8#136'ww'#0#0'ww'#145#17#153#17#0#136#135'w'#0#0'wy'#17#16#137#145#16
+  +#8#136'w'#0#0'wy'#17#24'w'#153#17#0#136#135#0#0'wq'#17#24'wy'#17#16#136#135#0
+  +#0'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153'wwwy'#145'ww'#0#0'wwwwwww'#153'ww'#0
+  +#0#11'ModalResult'#2#2#7'Spacing'#2#15#8'TabOrder'#2#8#0#0#242#2#6#12'TRadio'
+  +'Button'#8'RadioNew'#4'Left'#3#200#0#6'Height'#2#22#3'Top'#2#9#5'Width'#2'q'
+  +#7'Caption'#6#14'New associates'#7'Checked'#9#10'Font.Color'#7#8'clMaroon'#11
+  +'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnChange'#7#24'RadioChangeTogg'
+  +'leVisible'#10'ParentFont'#8#8'TabOrder'#2#0#7'TabStop'#9#0#0#242#2#7#12'TRa'
+  +'dioButton'#13'RadioExisting'#4'Left'#3#168#1#6'Height'#2#22#3'Top'#2#9#5'Wi'
+  +'dth'#3#131#0#7'Caption'#6#19'Existing associates'#10'Font.Color'#7#8'clMaro'
+  +'on'#11'Font.Height'#2#244#9'Font.Name'#6#5'Arial'#8'OnChange'#7#24'RadioCha'
+  +'ngeToggleVisible'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#242#2#8#6'TPanel'#17
+  +'PanelLeftExisting'#4'Left'#2#20#6'Height'#3#29#1#3'Top'#3#195#0#5'Width'#3
+  +'m'#1#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3#29#1#11'ClientWidth'#3'm'
+  +#1#5'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#5#7'Visible'#8#0
+  +#9'TCheckBox'#13'destroyanimal'#4'Left'#2#0#6'Height'#2#22#3'Top'#2#0#5'Widt'
+  +'h'#3#183#0#7'Caption'#6#29'Unsummon the animal companion'#5'Color'#4#216#227
+  +#248#0#8'OnChange'#7#10'ToggleOkay'#11'ParentColor'#8#8'TabOrder'#2#0#0#0#9
+  +'TCheckBox'#15'destroyfamiliar'#4'Left'#2#0#6'Height'#2#22#3'Top'#2#19#5'Wid'
+  +'th'#3#9#1#7'Caption'#6'1Unsummon the familiar (will first be unpossessed)'#5
+  +'Color'#4#216#227#248#0#8'OnChange'#7#21'destroyfamiliarChange'#11'ParentCol'
+  ,'or'#8#8'TabOrder'#2#1#0#0#9'TCheckBox'#15'releasesummoned'#4'Left'#2#0#6'He'
+  +'ight'#2#22#3'Top'#2'9'#5'Width'#3#194#0#7'Caption'#6#30'Unsummon the summon'
+  +'ed creature'#5'Color'#4#216#227#248#0#8'OnChange'#7#10'ToggleOkay'#11'Paren'
+  +'tColor'#8#8'TabOrder'#2#3#0#0#9'TCheckBox'#21'CheckReleaseDominated'#4'Left'
+  +#2#0#6'Height'#2#22#3'Top'#2'L'#5'Width'#3#177#0#7'Caption'#6#30'Release the'
+  +' dominated creature'#5'Color'#4#216#227#248#0#8'OnChange'#7#23'CheckChangeT'
+  +'oggleEnable'#11'ParentColor'#8#8'TabOrder'#2#4#0#0#9'TCheckBox'#28'CheckDes'
+  +'troyReleaseDominated'#4'Left'#3#225#0#6'Height'#2#22#3'Top'#2'L'#5'Width'#2
+  +'Z'#7'Caption'#6#14'and destroy it'#5'Color'#4#216#227#248#0#7'Enabled'#8#11
+  +'ParentColor'#8#8'TabOrder'#2#5#0#0#9'TCheckBox'#16'CheckRemHenchman'#4'Left'
+  +#2#0#6'Height'#2#22#3'Top'#2'_'#5'Width'#2't'#7'Caption'#6#16'Release henchm'
+  +'en'#5'Color'#4#216#227#248#0#8'OnChange'#7#23'CheckChangeToggleEnable'#11'P'
+  +'arentColor'#8#8'TabOrder'#2#6#0#0#9'TCheckBox'#23'CheckDestroyRemHenchman'#4
+  +'Left'#3#225#0#6'Height'#2#22#3'Top'#2'_'#5'Width'#2'l'#7'Caption'#6#16'and '
+  +'destroy them'#5'Color'#4#216#227#248#0#7'Enabled'#8#11'ParentColor'#8#8'Tab'
+  +'Order'#2#7#0#0#9'TGroupBox'#16'GroupRemHenchman'#4'Left'#2#20#6'Height'#3
+  +#145#0#3'Top'#2's'#5'Width'#3'T'#1#7'Caption'#6#23'Release which henchman?'
+  +#12'ClientHeight'#3#130#0#11'ClientWidth'#3'P'#1#7'Enabled'#8#8'TabOrder'#2#8
+  +#0#12'TRadioButton'#18'RadioRemHenchOwner'#4'Left'#2#7#6'Height'#2#22#3'Top'
+  +#2#25#5'Width'#3'@'#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the script'
+  +#8'TabOrder'#2#6#0#0#12'TRadioButton'#21'RadioRemHenchTargeted'#4'Left'#2#7#6
+  +'Height'#2#22#3'Top'#2#25#5'Width'#2'z'#7'Caption'#6#21'The activation targe'
+  +'t'#8'TabOrder'#2#1#7'Visible'#8#0#0#12'TRadioButton'#18'RadioRemHenchSpawn'
+  +#4'Left'#2#7#6'Height'#2#22#3'Top'#2'2'#5'Width'#3'@'#1#8'AutoSize'#8#7'Capt'
+  +'ion'#6#21'The most recent spawn'#8'TabOrder'#2#2#7'Visible'#8#0#0#12'TRadio'
+  +'Button'#19'RadioRemHenchTagged'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'K'#5'Wi'
+  +'dth'#3#158#0#7'Caption'#6#26'All henchmen whose tag is:'#8'OnChange'#7#10'T'
+  +'oggleOkay'#8'TabOrder'#2#3#0#0#12'TRadioButton'#18'RadioRemHenchActor'#4'Le'
+  +'ft'#2#7#6'Height'#2#22#3'Top'#2'd'#5'Width'#3'@'#1#8'AutoSize'#8#7'Caption'
+  +#6#21'The most recent actor'#8'TabOrder'#2#4#7'Visible'#8#0#0#5'TEdit'#18'Ed'
+  +'itRemHenchTagged'#4'Left'#3#170#0#6'Height'#2#23#3'Top'#2'H'#5'Width'#3#160
+  +#0#5'Color'#4#216#227#248#0#9'MaxLength'#2' '#8'OnChange'#7#23'EditChangeTog'
+  +'gleChecked'#8'TabOrder'#2#5#0#0#12'TRadioButton'#16'RadioRemHenchAll'#4'Lef'
+  +'t'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#2'Y'#7'Caption'#6#12'All henchmen'
+  +#7'Checked'#9#8'TabOrder'#2#0#7'TabStop'#9#0#0#0#7'TButton'#4'nuke'#4'Left'#2
+  +#0#6'Height'#2#20#3'Top'#3#9#1#5'Width'#3#150#0#7'Caption'#6#22'Release all '
+  +'associates'#7'OnClick'#7#9'nukeClick'#8'TabOrder'#2#9#0#0#9'TCheckBox'#24'C'
+  +'heckReleasePaladinMount'#4'Left'#2#0#6'Height'#2#22#3'Top'#2'&'#5'Width'#3
+  +#164#0#7'Caption'#6#26'Unsummon the paladin mount'#5'Color'#4#216#227#248#0#8
+  +'OnChange'#7#21'destroyfamiliarChange'#7'OnClick'#7#10'ToggleOkay'#11'Parent'
+  +'Color'#8#8'TabOrder'#2#2#0#0#0#242#2#9#6'TPanel'#18'PanelRightExisting'#4'L'
+  +'eft'#3#129#1#6'Height'#3#174#1#3'Top'#2'2'#5'Width'#3'Y'#1#10'BevelOuter'#7
+  +#6'bvNone'#12'ClientHeight'#3#174#1#11'ClientWidth'#3'Y'#1#5'Color'#4#216#227
+  +#248#0#11'ParentColor'#8#8'TabOrder'#2#6#7'Visible'#8#0#6'TLabel'#17'LabelCl'
+  +'assLevelup'#4'Left'#2#25#6'Height'#2#14#3'Top'#3'['#1#5'Width'#2'H'#7'Capti'
+  +'on'#6#14'In what class?'#7'Enabled'#8#11'ParentColor'#8#0#0#6'TLabel'#19'La'
+  +'belPackageLevelup'#4'Left'#2#25#6'Height'#2#14#3'Top'#3#128#1#5'Width'#2'o'
+  +#7'Caption'#6#20'Using which package?'#7'Enabled'#8#11'ParentColor'#8#0#0#9
+  +'TCheckBox'#9'unpossess'#4'Left'#2#5#6'Height'#2#22#3'Top'#2#10#5'Width'#3
+  +#214#0#7'Caption'#6'&Make the master unpossess his familiar'#5'Color'#4#216
+  +#227#248#0#8'OnChange'#7#15'unpossessChange'#11'ParentColor'#8#8'TabOrder'#2
+  +#0#0#0#9'TCheckBox'#12'CheckLevelup'#4'Left'#2#5#6'Height'#2#22#3'Top'#2'2'#5
+  +'Width'#2'v'#7'Caption'#6#17'Level up henchmen'#5'Color'#4#216#227#248#0#8'O'
+  +'nChange'#7#23'CheckChangeToggleEnable'#11'ParentColor'#8#8'TabOrder'#2#1#0#0
+  +#11'TStaticText'#15'TextLevelupNote'#4'Left'#2#25#6'Height'#2'-'#3'Top'#2'F'
+  +#5'Width'#3';'#1#7'Caption'#6'aNOTE:'#10'Leveling may fail if the creature w'
+  +'as created in the Toolset with more than a single level.'#5'Color'#7#8'clIn'
+  +'foBk'#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#245#9'Font.Name'#6#5'A'
+  +'rial'#10'ParentFont'#8#11'ParentColor'#8#8'TabOrder'#2#2#0#0#11'TRadioGroup'
+  +#19'GroupHowMuchLevelup'#4'Left'#2#25#6'Height'#2'K'#3'Top'#2'x'#5'Width'#3
+  +#250#0#8'AutoFill'#9#7'Caption'#6#11'Level up...'#28'ChildSizing.LeftRightSp'
+  +'acing'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHoriz'
+  +'ontal'#7#24'crsHomogenousSpaceResize'#27'ChildSizing.EnlargeVertical'#7#24
+  +'crsHomogenousChildResize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChi'
+  ,'lds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Lay'
+  +'out'#7#29'cclTopToBottomThenLeftToRight'#27'ChildSizing.ControlsPerLine'#2#2
+  +#12'ClientHeight'#2'<'#11'ClientWidth'#3#246#0#12'ColumnLayout'#7#24'clVerti'
+  +'calThenHorizontal'#7'Enabled'#8#9'ItemIndex'#2#0#13'Items.Strings'#1#6#23't'
+  +'o master''s level minus'#6#17'this many levels:'#0#8'TabOrder'#2#3#0#9'TSpi'
+  +'nEdit'#17'SpinRelativeLevel'#4'Left'#3#166#0#6'Height'#2#24#3'Top'#2#6#5'Wi'
+  +'dth'#2'2'#8'MaxValue'#2#9#8'TabOrder'#2#0#0#0#9'TSpinEdit'#17'SpinAbsoluteL'
+  +'evel'#4'Left'#3#166#0#6'Height'#2#24#3'Top'#2#30#5'Width'#2'2'#8'MaxValue'#2
+  +'('#8'MinValue'#2#1#8'TabOrder'#2#3#5'Value'#2#1#0#0#0#9'TGroupBox'#15'Group'
+  +'WhoLevelup'#4'Left'#2#25#6'Height'#3#130#0#3'Top'#3#200#0#5'Width'#3';'#1#7
+  +'Caption'#6#14'Level up whom?'#12'ClientHeight'#2's'#11'ClientWidth'#3'7'#1#7
+  +'Enabled'#8#8'TabOrder'#2#4#0#12'TRadioButton'#15'RadioLevelOwner'#4'Left'#2
+  +#7#6'Height'#2#22#3'Top'#2#22#5'Width'#3','#1#8'AutoSize'#8#7'Caption'#6#23
+  +'The owner of the script'#8'TabOrder'#2#6#0#0#12'TRadioButton'#18'RadioLevel'
+  +'Targeted'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#22#5'Width'#2'z'#7'Caption'#6
+  +#21'The activation target'#8'TabOrder'#2#1#7'Visible'#8#0#0#12'TRadioButton'
+  +#15'RadioLevelSpawn'#4'Left'#2#7#6'Height'#2#22#3'Top'#2','#5'Width'#3','#1#8
+  +'AutoSize'#8#7'Caption'#6#21'The most recent spawn'#8'TabOrder'#2#2#7'Visibl'
+  +'e'#8#0#0#12'TRadioButton'#16'RadioLevelTagged'#4'Left'#2#7#6'Height'#2#22#3
+  +'Top'#2'B'#5'Width'#3#158#0#7'Caption'#6#26'All henchmen whose tag is:'#8'On'
+  +'Change'#7#10'ToggleOkay'#8'TabOrder'#2#3#0#0#12'TRadioButton'#15'RadioLevel'
+  +'Actor'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'X'#5'Width'#3','#1#8'AutoSize'#8
+  +#7'Caption'#6#21'The most recent actor'#8'TabOrder'#2#4#7'Visible'#8#0#0#5'T'
+  +'Edit'#15'EditLevelTagged'#4'Left'#3#170#0#6'Height'#2#23#3'Top'#2'?'#5'Widt'
+  +'h'#3#135#0#5'Color'#4#216#227#248#0#9'MaxLength'#2' '#8'OnChange'#7#23'Edit'
+  +'ChangeToggleChecked'#8'TabOrder'#2#5#0#0#12'TRadioButton'#13'RadioLevelAll'
+  +#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0#5'Width'#2'Y'#7'Caption'#6#12'All hen'
+  +'chmen'#7'Checked'#9#8'TabOrder'#2#0#7'TabStop'#9#0#0#0#9'TComboBox'#15'BoxC'
+  +'lassLevelup'#4'Left'#3#160#0#6'Height'#2#27#3'Top'#3'S'#1#5'Width'#3#180#0#7
+  +'Enabled'#8#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#13'Def'
+  +'ault class'#6#9'Barbarian'#6#4'Bard'#6#6'Cleric'#6#5'Druid'#6#7'Fighter'#6#4
+  +'Monk'#6#7'Paladin'#6#6'Ranger'#6#5'Rogue'#6#8'Sorcerer'#6#6'Wizard'#6#13'Ar'
+  +'cane Archer'#6#8'Assassin'#6#10'Blackguard'#6#15'Divine Champion'#6#15'Drag'
+  +'on Disciple'#6#16'Dwarven Defender'#6#6'Harper'#6#11'Pale Master'#6#20'Purp'
+  +'le Dragon Knight'#6#12'Shadowdancer'#6#7'Shifter'#6#13'Weapon Master'#6#10
+  +'Aberration'#6#6'Animal'#6#5'Beast'#6#8'Commoner'#6#9'Construct'#6#6'Dragon'
+  +#6#9'Elemental'#6#3'Fey'#6#5'Giant'#6#8'Humanoid'#6#13'Magical Beast'#6#9'Mo'
+  +'nstrous'#6#4'Ooze'#6#8'Outsider'#6#12'Shapechanger'#6#6'Undead'#6#6'Vermin'
+  +#0#8'OnChange'#7#21'BoxClassLevelupChange'#5'Style'#7#14'csDropDownList'#8'T'
+  +'abOrder'#2#5#4'Text'#6#13'Default class'#0#0#9'TComboBox'#17'BoxPackageLeve'
+  +'lup'#4'Left'#3#160#0#6'Height'#2#27#3'Top'#3'w'#1#5'Width'#3#180#0#7'Enable'
+  +'d'#8#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#19'Preselect'
+  +'ed package'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#6#4'Text'#6#19'Pr'
+  +'eselected package'#0#0#9'TCheckBox'#18'CheckSpellsLevelup'#4'Left'#2#25#6'H'
+  +'eight'#2#22#3'Top'#3#149#1#5'Width'#3#193#0#7'Caption'#6'%Leveling replenis'
+  +'hes all spell slots?'#7'Enabled'#8#8'TabOrder'#2#7#0#0#0#242#2#10#6'TPanel'
+  +#11'PanelMaster'#4'Left'#2#20#6'Height'#3#145#0#3'Top'#2'2'#5'Width'#3'h'#1
+  +#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3#145#0#11'ClientWidth'#3'h'#1#5
+  +'Color'#4#216#227#248#0#11'ParentColor'#8#8'TabOrder'#2#2#0#9'TGroupBox'#11
+  +'GroupMaster'#4'Left'#2#0#6'Height'#3#145#0#3'Top'#2#0#5'Width'#3'h'#1#7'Cap'
+  +'tion'#6#18'Who is the master?'#12'ClientHeight'#3#129#0#11'ClientWidth'#3'd'
+  +#1#5'Color'#4'y'#149#223#0#10'Font.Color'#7#8'clMaroon'#11'Font.Height'#2#244
+  +#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOrder'#2#0#0
+  +#12'TRadioButton'#16'RadioMasterOwner'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#0
+  +#5'Width'#3'T'#1#8'AutoSize'#8#7'Caption'#6#23'The owner of the script'#10'F'
+  +'ont.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnC'
+  +'hange'#7#22'RadioMasterOwnerChange'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#12
+  +'TRadioButton'#13'RadioMasterPC'#4'Left'#2#7#6'Height'#2#22#3'Top'#2#25#5'Wi'
+  +'dth'#2':'#7'Caption'#6#6'The PC'#7'Checked'#9#10'Font.Color'#7#7'clBlack'#11
+  +'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8'TabOrder'#2#7
+  +#7'TabStop'#9#0#0#12'TRadioButton'#19'RadioMasterTargeted'#4'Left'#2#7#6'Hei'
+  +'ght'#2#22#3'Top'#2#25#5'Width'#2'z'#7'Caption'#6#21'The activation target'
+  +#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8
+  +'OnChange'#7#25'RadioMasterTargetedChange'#10'ParentFont'#8#8'TabOrder'#2#2#7
+  ,'Visible'#8#0#0#12'TRadioButton'#16'RadioMasterSpawn'#4'Left'#2#7#6'Height'#2
+  +#22#3'Top'#2'2'#5'Width'#3'T'#1#8'AutoSize'#8#7'Caption'#6#21'The most recen'
+  +'t spawn'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5
+  +'Arial'#8'OnChange'#7#22'RadioMasterSpawnChange'#10'ParentFont'#8#8'TabOrder'
+  +#2#3#7'Visible'#8#0#0#12'TRadioButton'#17'RadioMasterTagged'#4'Left'#2#7#6'H'
+  +'eight'#2#22#3'Top'#2'K'#5'Width'#3#133#0#7'Caption'#6#23'An object with the'
+  +' tag:'#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'A'
+  +'rial'#8'OnChange'#7#10'ToggleOkay'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#12
+  +'TRadioButton'#16'RadioMasterActor'#4'Left'#2#7#6'Height'#2#22#3'Top'#2'd'#5
+  +'Width'#3'T'#1#8'AutoSize'#8#7'Caption'#6#21'The most recent actor'#10'Font.'
+  +'Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'OnChang'
+  +'e'#7#22'RadioMasterActorChange'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visible'
+  +#8#0#0#12'TRadioButton'#20'RadioMasterActivator'#4'Left'#2#7#6'Height'#2#22#3
+  +'Top'#2#0#5'Width'#2'm'#7'Caption'#6#18'The item activator'#10'Font.Color'#7
+  +#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#10'ParentFont'#8#8
+  +'TabOrder'#2#1#7'Visible'#8#0#0#5'TEdit'#16'EditMasterTagged'#4'Left'#3#160#0
+  +#6'Height'#2#23#3'Top'#2'H'#5'Width'#3#190#0#5'Color'#4#216#227#248#0#10'Fon'
+  +'t.Color'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#9'MaxLe'
+  +'ngth'#2' '#8'OnChange'#7#23'EditChangeToggleChecked'#10'ParentFont'#8#8'Tab'
+  +'Order'#2#6#0#0#0#0#0
+]);

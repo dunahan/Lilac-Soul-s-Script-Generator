@@ -1,0 +1,47 @@
+LazarusResources.Add('Tchoose_blacksmith','FORMDATA',[
+  'TPF0'#18'Tchoose_blacksmith'#17'choose_blacksmith'#4'Left'#3#191#1#6'Height'
+  +#3'E'#1#3'Top'#3#13#1#5'Width'#3'b'#2#13'ActiveControl'#7#9'ComboBox1'#11'Bo'
+  +'rderStyle'#7#8'bsDialog'#7'Caption'#6#25'Blacksmith script chooser'#12'Clie'
+  +'ntHeight'#3'E'#1#11'ClientWidth'#3'b'#2#5'Color'#4'y'#149#223#0#10'Font.Col'
+  +'or'#7#7'clBlack'#11'Font.Height'#2#245#9'Font.Name'#6#5'Arial'#8'Position'#7
+  +#16'poMainFormCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TLabel'#6'Label1'#4'L'
+  +'eft'#2#15#6'Height'#2#17#3'Top'#2#15#5'Width'#3#4#1#7'Caption'#6'.Paste a s'
+  +'cript here to continue working on it:'#10'Font.Color'#7#7'clBlack'#11'Font.'
+  +'Height'#2#244#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#0#0
+  +#6'TLabel'#11'LabelDoWhat'#4'Left'#3''''#1#6'Height'#2#19#3'Top'#2'#'#5'Widt'
+  +'h'#3#162#0#7'Caption'#6#23'What do you want to do?'#10'Font.Color'#7#8'clMa'
+  +'roon'#11'Font.Height'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'Pa'
+  +'rentFont'#8#0#0#9'TComboBox'#9'ComboBox1'#4'Left'#3''''#1#6'Height'#2#31#3
+  +'Top'#2'7'#5'Width'#3','#1#5'Color'#4#216#227#248#0#10'ItemHeight'#2#0#13'It'
+  +'ems.Strings'#1#6#30'Create a new blacksmith script'#6'&Continue the script '
+  +'pasted to the left'#6'+Load a script to continue from an .nss file'#0#8'OnC'
+  +'hange'#7#15'ComboBox1Change'#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#0#0
+  +#0#5'TMemo'#10'copywindow'#4'Left'#2#15#6'Height'#3#19#1#3'Top'#2'#'#5'Width'
+  +#3#4#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#7'clBlack'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#11'courier new'#10'ParentFont'#8#10'ScrollBars'#7#10'ssA'
+  +'utoBoth'#8'TabOrder'#2#1#8'WordWrap'#8#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3
+  +#129#1#6'Height'#2'('#3'Top'#3#14#1#5'Width'#2'x'#7'Caption'#6#6'Cancel'#10
+  +'Glyph.Data'#10'j'#1#0#0'f'#1#0#0'BMf'#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0#20#0#0
+  +#0#20#0#0#0#1#0#4#0#0#0#0#0#240#0#0#0#0#0#0#0#0#0#0#0#16#0#0#0#16#0#0#0#0#0#0
+  +#0#0#0#191#0#0#191#0#0#0#191#191#0#191#0#0#0#191#0#191#0#191#191#0#0#192#192
+  +#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0
+  +#255#255#0#0#255#255#255#0'wx'#136#135'ww'#136'www'#0#0'wp'#136#135'ww'#136
+  +#135'ww'#0#0'y'#17#8#136'w'#145#8#136'ww'#0#0'y'#17#0#136#135#145#0#136#135
+  +'w'#0#0'y'#17#16#8#137#17#16#8'ww'#0#0'y'#145#17#8#145#17#17#0'ww'#0#0'w'#145
+  +#17#16#17#17#17#7'ww'#0#0'wy'#17#17#17#17#7'www'#0#0'wy'#145#17#17#17#135'ww'
+  +'w'#0#0'ww'#153#17#17#16#136'www'#0#0'wwy'#17#17#16#136#135'ww'#0#0'wwy'#17
+  +#17#16#136#135'ww'#0#0'wwy'#17#17#17#8#136'ww'#0#0'ww'#145#17#153#17#0#136
+  +#135'w'#0#0'wy'#17#16#137#145#16#8#136'w'#0#0'wy'#17#24'w'#153#17#0#136#135#0
+  +#0'wq'#17#24'wy'#17#16#136#135#0#0'wq'#17#7'ww'#145#17#8'w'#0#0'wy'#153'wwwy'
+  +#145'ww'#0#0'wwwwwww'#153'ww'#0#0#11'ModalResult'#2#2#7'Spacing'#2#15#8'TabO'
+  +'rder'#2#2#0#0#6'TPanel'#6'Panel1'#4'Left'#3'6'#1#6'Height'#3#145#0#3'Top'#2
+  +'i'#5'Width'#3#14#1#10'BevelWidth'#2#3#12'ClientHeight'#3#145#0#11'ClientWid'
+  +'th'#3#14#1#5'Color'#4#216#227#248#0#10'Font.Color'#7#5'clRed'#11'Font.Heigh'
+  +'t'#2#243#9'Font.Name'#6#5'Arial'#11'ParentColor'#8#10'ParentFont'#8#8'TabOr'
+  +'der'#2#3#7'Visible'#8#0#6'TLabel'#14'LabelBadScript'#4'Left'#2#5#6'Height'#3
+  +#135#0#3'Top'#2#5#5'Width'#3#4#1#9'Alignment'#7#8'taCenter'#8'AutoSize'#8#7
+  +'Caption'#6'mThis script is corrupt or'#10'not made with a compatible versio'
+  +'n'#10'of the Script Generator.'#10#10'Choose another option.'#6'Layout'#7#8
+  +'tlCenter'#11'ParentColor'#8#0#0#0#11'TOpenDialog'#7'loadnss'#6'Filter'#6#29
+  +'NWN script files (.nss)|*.nss'#4'left'#3'.'#2#3'top'#2#9#0#0#0
+]);

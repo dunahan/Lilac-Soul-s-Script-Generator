@@ -1,0 +1,2399 @@
+inherited ifchoose: Tifchoose
+  Left = 376
+  Height = 500
+  Top = 154
+  Width = 550
+  ActiveControl = PanelCompundInfo
+  BorderStyle = bsDialog
+  Caption = 'Choose ''if'' condition'
+  ClientHeight = 500
+  ClientWidth = 550
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  object LabelCondition: TLabel[0]
+    Left = 70
+    Height = 16
+    Top = 151
+    Width = 134
+    Caption = 'Choose your condition:'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timepanel: TPanel[1]
+    Left = 75
+    Height = 180
+    Top = 190
+    Width = 400
+    ClientHeight = 180
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 18
+    Visible = False
+    object Label17: TLabel
+      Left = 10
+      Height = 15
+      Top = 10
+      Width = 253
+      Caption = 'The next event(s) will only occur if it is currently'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object MemoTimeOfDay: TMemo
+      Left = 190
+      Height = 75
+      Top = 75
+      Width = 200
+      Color = 11924981
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Lines.Strings = (
+        'Dusk and dawn are each one hour long. (Which hour can be changed in the module''s "Advanced" properties.) Night and day fill the remaining hours.'
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 4
+    end
+    object RadioTimeOfDay: TRadioButton
+      Left = 10
+      Height = 22
+      Top = 40
+      Width = 124
+      Caption = 'a certain time of day.'
+      Checked = True
+      OnChange = RadioChangeToggleVisible
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioHoursOfDay: TRadioButton
+      Left = 170
+      Height = 22
+      Top = 40
+      Width = 190
+      Caption = 'between certain hours (inclusive).'
+      OnChange = RadioChangeToggleVisible
+      TabOrder = 1
+    end
+    object PanelTimeOfDay: TPanel
+      Left = 30
+      Height = 65
+      Top = 75
+      Width = 135
+      BevelOuter = bvNone
+      ClientHeight = 65
+      ClientWidth = 135
+      TabOrder = 2
+      object nightcheck: TCheckBox
+        Left = 75
+        Height = 22
+        Top = 35
+        Width = 48
+        Caption = 'Night'
+        OnChange = ToggleOkay
+        TabOrder = 3
+      end
+      object daycheck: TCheckBox
+        Left = 75
+        Height = 22
+        Top = 5
+        Width = 43
+        Caption = 'Day'
+        OnChange = ToggleOkay
+        TabOrder = 1
+      end
+      object duskcheck: TCheckBox
+        Left = 5
+        Height = 22
+        Top = 35
+        Width = 48
+        Caption = 'Dusk'
+        OnChange = ToggleOkay
+        TabOrder = 2
+      end
+      object dawncheck: TCheckBox
+        Left = 5
+        Height = 22
+        Top = 5
+        Width = 53
+        Caption = 'Dawn'
+        OnChange = ToggleOkay
+        TabOrder = 0
+      end
+    end
+    object PanelHoursOfDay: TPanel
+      Left = 30
+      Height = 65
+      Top = 75
+      Width = 135
+      BevelOuter = bvNone
+      ClientHeight = 65
+      ClientWidth = 135
+      TabOrder = 3
+      Visible = False
+      object Label15: TLabel
+        Left = 25
+        Height = 14
+        Top = 10
+        Width = 28
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object Label16: TLabel
+        Left = 25
+        Height = 14
+        Top = 40
+        Width = 15
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object fromhour: TSpinEdit
+        Left = 70
+        Height = 23
+        Top = 5
+        Width = 40
+        Font.Height = -11
+        Font.Name = 'Arial'
+        MaxValue = 23
+        ParentFont = False
+        TabOrder = 0
+        Value = 12
+      end
+      object tohour: TSpinEdit
+        Left = 70
+        Height = 23
+        Top = 35
+        Width = 40
+        Font.Height = -11
+        Font.Name = 'Arial'
+        MaxValue = 23
+        ParentFont = False
+        TabOrder = 1
+        Value = 12
+      end
+    end
+    object MemoHoursOfDay: TMemo
+      Left = 190
+      Height = 75
+      Top = 75
+      Width = 200
+      Color = 11924981
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Lines.Strings = (
+        'The interval can be a single hour. It can also wrap around midnight.'
+        ''
+        'It cannot do both though. :)'
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 5
+      Visible = False
+    end
+  end
+  object ComboBox1: TComboBox[2]
+    Left = 225
+    Height = 31
+    Top = 145
+    Width = 255
+    Color = 16311256
+    ItemHeight = 0
+    Items.Strings = (
+      'Ability restriction'
+      'Alignment restriction'
+      'Class restriction'
+      'Deity restriction'
+      'Feat restriction'
+      'Gender restriction'
+      'Gold restriction'
+      'Item restriction'
+      'Journal restriction'
+      'Level (character) restriction'
+      'Level (class) restriction'
+      'Local variable check'
+      'Race restriction'
+      'Randomness (percentage chance)'
+      'Randomness (roll a die)'
+      'Saving throw'
+      'Skill check'
+      'Subrace restriction'
+      'Time restriction'
+    )
+    OnChange = ComboBox1Change
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn[3]
+    Left = 110
+    Height = 35
+    Top = 450
+    Width = 120
+    Caption = 'Okay'
+    Default = True
+    Enabled = False
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888777777
+      777777770000774448877777777777770000772244887777777777770000A222
+      22488777777777770000A22222248877777777770000A2222222488777777777
+      0000A22222222488777777770000A22222222248877777770000A22248A22224
+      887777770000A222488A2222488777770000A2224887A2224488777700007A22
+      48877A222488777700007A22477777A222488777000077777777777A22244877
+      0000777777777777A222488700007777777777777A2224870000777777777777
+      77A224480000777777777777777A224800007777777777777777A24800007777
+      7777777777777A270000
+    }
+    ModalResult = 1
+    OnClick = ClickOkay
+    Spacing = 10
+    TabOrder = 19
+  end
+  object BitBtn2: TBitBtn[4]
+    Left = 320
+    Height = 35
+    Top = 450
+    Width = 120
+    Cancel = True
+    Caption = 'Cancel'
+    Glyph.Data = {
+      66010000424D6601000000000000760000002800000014000000140000000100
+      040000000000F000000000000000000000001000000010000000000000000000
+      BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777888877777
+      8877777700007770888777778887777700007911088877910888777700007911
+      0088879100888777000079111008891110087777000079911108911111007777
+      0000779111101111110777770000777911111111077777770000777991111111
+      8777777700007777991111108877777700007777791111108887777700007777
+      7911111088877777000077777911111108887777000077779111991100888777
+      0000777911108991100888770000777911187799110088870000777111187779
+      1110888700007771110777779111087700007779997777777991777700007777
+      77777777779977770000
+    }
+    ModalResult = 2
+    Spacing = 10
+    TabOrder = 20
+  end
+  object subracepanel: TPanel[5]
+    Left = 85
+    Height = 120
+    Top = 220
+    Width = 380
+    ClientHeight = 120
+    ClientWidth = 380
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 17
+    Visible = False
+    object LabelSubraceRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 305
+      Caption = 'The following event(s) will happen if the PC''s subrace'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioGroup2: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 40
+      Width = 75
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 71
+      ItemIndex = 0
+      Items.Strings = (
+        'is'
+        'is not'
+      )
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 110
+      Height = 23
+      Top = 54
+      Width = 250
+      Color = 16311256
+      MaxLength = 32
+      TabOrder = 1
+    end
+    object SubraceCase: TCheckBox
+      Left = 110
+      Height = 22
+      Top = 78
+      Width = 101
+      Caption = 'Case sensitive?'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object PanelCompundInfo: TPanel[6]
+    Left = 45
+    Height = 115
+    Top = 15
+    Width = 460
+    BevelOuter = bvNone
+    ClientHeight = 115
+    ClientWidth = 460
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 21
+    object BevelCompoundInfo: TBevel
+      Left = 0
+      Height = 115
+      Top = 0
+      Width = 460
+    end
+    object TextCompoundInfo: TStaticText
+      Left = 10
+      Height = 105
+      Top = 5
+      Width = 450
+      Caption = 'Note:'#10'You cannot make multiple conditions in one statement with this program (the "if THIS and THAT then..." structure). Instead, make a nested "if", as in'#10'      if THIS then'#10'              if THAT then...'#10'(i.e. one "if" inside another "if").'
+      Font.Color = clInfoText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object PanelFinishingInfo: TPanel[7]
+    Left = 45
+    Height = 55
+    Top = 380
+    Width = 460
+    BevelOuter = bvNone
+    ClientHeight = 55
+    ClientWidth = 460
+    Color = clInfoBk
+    Font.Color = clInfoText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 22
+    object BevelFinishingInfo: TBevel
+      Left = 0
+      Height = 55
+      Top = 0
+      Width = 460
+    end
+    object TextFinishingInfo: TStaticText
+      Left = 10
+      Height = 45
+      Top = 5
+      Width = 450
+      Caption = 'After you create this, everything you script will only happen if the condition set here is met. In the event chooser, you will find a button to finish the "if" statement.'
+      Font.Color = clInfoText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object skillcheckpanel: TPanel[8]
+    Left = 100
+    Height = 170
+    Top = 195
+    Width = 350
+    ClientHeight = 170
+    ClientWidth = 350
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 16
+    Visible = False
+    object Label24: TLabel
+      Left = 20
+      Height = 16
+      Top = 21
+      Width = 84
+      Caption = 'Skill to check:'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label25: TLabel
+      Left = 20
+      Height = 15
+      Top = 65
+      Width = 49
+      Caption = 'Difficulty:'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label26: TLabel
+      Left = 20
+      Height = 15
+      Top = 90
+      Width = 289
+      Caption = '(d20 + skill must be at least the difficulty for success)'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object skilllist: TComboBox
+      Left = 120
+      Height = 31
+      Top = 15
+      Width = 150
+      Color = 16311256
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object difficulty: TSpinEdit
+      Left = 120
+      Height = 24
+      Top = 60
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 255
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 20
+    end
+    object CheckShowSkillRoll: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 130
+      Width = 149
+      Caption = 'Let the player see the roll.'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object savepanel: TPanel[9]
+    Left = 112
+    Height = 140
+    Top = 210
+    Width = 325
+    ClientHeight = 140
+    ClientWidth = 325
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 15
+    Visible = False
+    object Label22: TLabel
+      Left = 20
+      Height = 16
+      Top = 15
+      Width = 198
+      Caption = 'The PC must pass a saving throw.'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 227
+      Height = 16
+      Top = 51
+      Width = 23
+      Caption = 'DC:'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelSaveWhich: TLabel
+      Left = 20
+      Height = 16
+      Top = 51
+      Width = 75
+      Caption = 'Which save?'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelSaveVersus: TLabel
+      Left = 20
+      Height = 16
+      Top = 100
+      Width = 62
+      Caption = 'Save type:'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object savetype: TComboBox
+      Left = 115
+      Height = 31
+      Top = 45
+      Width = 95
+      Color = 16311256
+      ItemHeight = 0
+      Items.Strings = (
+        'Reflex'
+        'Will'
+        'Fortitude'
+      )
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object SpinEdit3: TSpinEdit
+      Left = 260
+      Height = 24
+      Top = 47
+      Width = 45
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 99
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 15
+    end
+    object ComboBox3: TComboBox
+      Left = 115
+      Height = 31
+      Top = 94
+      Width = 190
+      Color = 16311256
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 2
+    end
+  end
+  object PanelDice: TPanel[10]
+    Left = 50
+    Height = 170
+    Top = 195
+    Width = 450
+    Caption = 'Die rolls cannot be chained to other conditions with an else-if.'
+    ClientHeight = 170
+    ClientWidth = 450
+    Color = 16311256
+    Font.Color = clMaroon
+    Font.Height = -15
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 23
+    Visible = False
+    object dierollpanel: TPanel
+      Left = 0
+      Height = 170
+      Top = 0
+      Width = 450
+      ClientHeight = 170
+      ClientWidth = 450
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      object Label21: TLabel
+        Left = 25
+        Height = 15
+        Top = 45
+        Width = 236
+        Caption = 'The following event(s) happens on a roll of:'
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object LabelDieToRoll: TLabel
+        Left = 25
+        Height = 16
+        Top = 15
+        Width = 73
+        Caption = 'Roll this die:'
+        Font.Color = clMaroon
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object die: TComboBox
+        Left = 110
+        Height = 31
+        Top = 9
+        Width = 70
+        Color = 16311256
+        ItemHeight = 0
+        Items.Strings = (
+          'd2'
+          'd3'
+          'd4'
+          'd6'
+          'd8'
+          'd10'
+          'd12'
+          'd20'
+          'd100'
+        )
+        OnChange = dieChange
+        Style = csDropDownList
+        TabOrder = 0
+      end
+      object ScrollDieRolls: TScrollBox
+        Left = 25
+        Height = 90
+        Top = 70
+        Width = 420
+        BorderStyle = bsNone
+        ClientHeight = 90
+        ClientWidth = 420
+        TabOrder = 1
+        object GroupDieRolls: TCheckGroup
+          Left = 0
+          Height = 90
+          Top = 0
+          Width = 400
+          AutoFill = True
+          ChildSizing.LeftRightSpacing = 6
+          ChildSizing.TopBottomSpacing = 2
+          ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+          ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 10
+          Columns = 10
+          OnItemClick = ToggleOkayItem
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object randompanel: TPanel[11]
+    Left = 125
+    Height = 140
+    Top = 210
+    Width = 300
+    ClientHeight = 140
+    ClientWidth = 300
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 14
+    Visible = False
+    object Label20: TLabel
+      Left = 50
+      Height = 19
+      Top = 60
+      Width = 108
+      Caption = 'Percent chance:'
+      Font.Color = clMaroon
+      Font.Height = -15
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpinEdit2: TSpinEdit
+      Left = 175
+      Height = 24
+      Top = 57
+      Width = 40
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 99
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 0
+      Value = 50
+    end
+  end
+  object racerestriction: TPanel[12]
+    Left = 75
+    Height = 160
+    Top = 200
+    Width = 400
+    ClientHeight = 160
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 13
+    Visible = False
+    object LabelRaceRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 246
+      Caption = 'The following event(s) will happen if the PC'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object racecond: TRadioGroup
+      Left = 20
+      Height = 35
+      Top = 35
+      Width = 360
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 31
+      ClientWidth = 356
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'is one of these races.'
+        'is not one of these races.'
+      )
+      TabOrder = 0
+    end
+    object halflingX: TCheckBox
+      Left = 260
+      Height = 22
+      Top = 75
+      Width = 59
+      Caption = 'Halfling'
+      OnChange = ToggleOkay
+      TabOrder = 6
+    end
+    object dwarfX: TCheckBox
+      Left = 75
+      Height = 22
+      Top = 100
+      Width = 55
+      Caption = 'Dwarf'
+      OnChange = ToggleOkay
+      TabOrder = 2
+    end
+    object elfX: TCheckBox
+      Left = 75
+      Height = 22
+      Top = 75
+      Width = 36
+      Caption = 'Elf'
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object GnomeX: TCheckBox
+      Left = 75
+      Height = 22
+      Top = 125
+      Width = 58
+      Caption = 'Gnome'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object halfelfX: TCheckBox
+      Left = 165
+      Height = 22
+      Top = 75
+      Width = 59
+      Caption = 'Half-elf'
+      OnChange = ToggleOkay
+      TabOrder = 4
+    end
+    object HumanX: TCheckBox
+      Left = 260
+      Height = 22
+      Top = 100
+      Width = 57
+      Caption = 'Human'
+      OnChange = ToggleOkay
+      TabOrder = 7
+    end
+    object halforcX: TCheckBox
+      Left = 165
+      Height = 22
+      Top = 100
+      Width = 63
+      Caption = 'Half-orc'
+      OnChange = ToggleOkay
+      TabOrder = 5
+    end
+  end
+  object localpanel: TPanel[13]
+    Left = 25
+    Height = 180
+    Top = 190
+    Width = 500
+    ClientHeight = 180
+    ClientWidth = 500
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 12
+    Visible = False
+    object Label18: TLabel
+      Left = 15
+      Height = 16
+      Top = 10
+      Width = 302
+      Caption = 'The following event(s) will happen if the local variable'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelLocalName: TLabel
+      Left = 20
+      Height = 15
+      Top = 35
+      Width = 37
+      Caption = 'called:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelLocalType: TLabel
+      Left = 20
+      Height = 15
+      Top = 70
+      Width = 39
+      Caption = 'of type:'
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object intname: TEdit
+      Left = 75
+      Height = 23
+      Top = 32
+      Width = 270
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 80
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 0
+    end
+    object ComboLocalType: TComboBox
+      Left = 75
+      Height = 27
+      Top = 64
+      Width = 270
+      Color = 16311256
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Integer (number without decimals)'
+        'Float (number with decimals)'
+        'String (text)'
+      )
+      OnChange = ComboLocalTypeChange
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'Integer (number without decimals)'
+    end
+    object GroupLocalCompare: TRadioGroup
+      Left = 20
+      Height = 70
+      Top = 100
+      Width = 190
+      AutoFill = True
+      Caption = 'is'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 55
+      ClientWidth = 186
+      Columns = 2
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      TabOrder = 2
+      object RadioLocalEqual: TRadioButton
+        Left = 6
+        Height = 21
+        Top = 6
+        Width = 77
+        Caption = 'exactly'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object RadioLocalNotEqual: TRadioButton
+        Left = 83
+        Height = 21
+        Top = 6
+        Width = 97
+        Caption = 'different than'
+        TabOrder = 1
+      end
+      object RadioLocalLess: TRadioButton
+        Left = 6
+        Height = 22
+        Top = 27
+        Width = 77
+        Caption = 'less than'
+        TabOrder = 2
+      end
+      object RadioLocalGreater: TRadioButton
+        Left = 83
+        Height = 22
+        Top = 27
+        Width = 97
+        Caption = 'greater than'
+        TabOrder = 3
+      end
+    end
+    object CheckLocalCaseSensitive: TCheckBox
+      Left = 90
+      Height = 22
+      Top = 150
+      Width = 101
+      Caption = 'Case sensitive?'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+      Visible = False
+    end
+    object EditLocalValue: TEdit
+      Left = 215
+      Height = 23
+      Top = 125
+      Width = 130
+      MaxLength = 80
+      OnChange = EditLocalValueChange
+      TabOrder = 4
+      Text = '0'
+    end
+    object PanelPartyInfo: TPanel
+      Left = 360
+      Height = 75
+      Top = 100
+      Width = 130
+      BevelInner = bvLowered
+      ClientHeight = 75
+      ClientWidth = 130
+      Color = clInfoBk
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+      Visible = False
+      object TextPartyInfo: TStaticText
+        Left = 5
+        Height = 35
+        Top = 5
+        Width = 120
+        Caption = 'Be sure to click the "Party Info" button!'
+        Font.Color = clInfoText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 1
+      end
+      object ButtonPartyInfo: TBitBtn
+        Left = 15
+        Height = 30
+        Top = 40
+        Width = 100
+        Caption = 'Party Info'
+        Glyph.Data = {
+          36030000424D3603000000000000360000002800000010000000100000000100
+          1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+          FFFFFF606060606060606060DF60DFBF3F7F9090909090906060606060606060
+          60606060606060606060FFFFFFFFFFFF6060606060606060606060607F007FFF
+          BF3F3F003F808080606060606060606060606060606060606060FFFFFFFFFFFF
+          606060606060606060606060DF60DFFFFF00BF3F7F606060B0B0B06060606060
+          60606060606060606060FFFFFF505050B0B0B0B0B0B0B0B0B0B0B0B0DF60DFFF
+          FF00FFBF3F3F003F808080B0B0B0B0B0B0B0B0B0B0B0B0B0B0B0FFFFFF606060
+          6060606060606060606060609F209FFFFF00FFFF00BF3F7F2020206060606060
+          606060606060606060600000000000000000000000000000000000007F007FFF
+          FF00FFFF00FFBF3F3F003F0000000000000000000000000000007F007FFF3FBF
+          FF7F7FFF7F7FFF7F7FFF7F7FFF3FBFFF007FFF007FFF007FFF00BFFF7F7FFF7F
+          7FFF7F7FFF7F7FBF00BFFFFFFF3F003FFF7F7FFFFF00FFFF00FFFF00FF7F7FFF
+          0000FF0000FF0000FF003FFFBF3FFFFF00FFFF00EF6FAF606060FFFFFFFFFFFF
+          FFFFFFBF3F7FFFBF3FFFFF00FF7F7FFF0000FF0000FF0000FF0000FF3F7FFFFF
+          00BF3F7F606060606060FFFFFFFFFFFFFFFFFFFFFFFF3F003FFF7F7FFF7F7FFF
+          0000FF0000FF0000FF0000FF003FBF3F7F808080606060606060FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFBF00BFFF003FFF0000FF0000FF0000FF3F7FBF3F
+          7F404040606060606060FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F007FFF
+          BF3FFF007FFF0000FF3F7FFFFF00FFBF3F5F205F808080606060FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFF7F007FFFFF00FFFF00BF00BFFFBF3FFFFF00FFFF
+          00BF3F7F404040606060FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7F007FFF
+          FF00BF3F7FFFFFFF3F003FFF7F7FFFFF00FFBF3F5F205F808080FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFF7F007FBF3F7FFFFFFFFFFFFFFFFFFFFFFFFFBF3F
+          7FFFBF3FBF3F7F404040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F003FFF3FBF5F205F
+        }
+        OnClick = ButtonPartyInfoClick
+        Spacing = 5
+        TabOrder = 0
+      end
+    end
+    object GroupLocalParty: TRadioGroup
+      Left = 360
+      Height = 65
+      Top = 30
+      Width = 130
+      AutoFill = True
+      Caption = 'on:'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 50
+      ClientWidth = 126
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'the PC (only)'
+        'the PC''s party'
+      )
+      OnClick = GroupLocalPartyClick
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 5
+    end
+  end
+  object levelbyclassrestriction: TPanel[14]
+    Left = 65
+    Height = 130
+    Top = 215
+    Width = 420
+    ClientHeight = 130
+    ClientWidth = 420
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 11
+    Visible = False
+    object Label27: TLabel
+      Left = 180
+      Height = 16
+      Top = 69
+      Width = 47
+      Caption = 'levels in'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelLevelByClass: TLabel
+      Left = 15
+      Height = 16
+      Top = 10
+      Width = 271
+      Caption = 'The following event(s) will happen if the PC has'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object levelclasscond: TRadioGroup
+      Left = 20
+      Height = 75
+      Top = 40
+      Width = 100
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 71
+      ClientWidth = 96
+      ItemIndex = 0
+      Items.Strings = (
+        'exactly'
+        'less than'
+        'more than'
+      )
+      TabOrder = 0
+    end
+    object levels: TSpinEdit
+      Left = 135
+      Height = 24
+      Top = 65
+      Width = 40
+      Color = 16311256
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 40
+      ParentFont = False
+      TabOrder = 1
+      Value = 5
+    end
+    object levelclass: TComboBox
+      Left = 240
+      Height = 31
+      Top = 63
+      Width = 170
+      Color = 16311256
+      ItemHeight = 0
+      Items.Strings = (
+        'Barbarian'
+        'Bard'
+        'Cleric'
+        'Druid'
+        'Fighter'
+        'Monk'
+        'Paladin'
+        'Ranger'
+        'Rogue'
+        'Sorcerer'
+        'Wizard'
+        'Arcane archer'
+        'Assassin'
+        'Blackguard'
+        'Champion of Torm'
+        'Dwarven defender'
+        'Harper scout'
+        'Pale master'
+        'Purple dragon knight'
+        'Red dragon disciple'
+        'Shadowdancer'
+        'Shifter'
+        'Weapon master'
+      )
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 2
+    end
+  end
+  object levelrestriction: TPanel[15]
+    Left = 145
+    Height = 180
+    Top = 190
+    Width = 260
+    ClientHeight = 180
+    ClientWidth = 260
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 10
+    Visible = False
+    object Label5: TLabel
+      Left = 20
+      Height = 16
+      Top = 125
+      Width = 11
+      Caption = 'is'
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelLevelRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 10
+      Width = 202
+      Caption = 'The following event(s) will happen if'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object levelcond: TRadioGroup
+      Left = 50
+      Height = 60
+      Top = 105
+      Width = 100
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 96
+      ItemIndex = 0
+      Items.Strings = (
+        'at least'
+        'at most'
+      )
+      TabOrder = 2
+    end
+    object levelvalue: TSpinEdit
+      Left = 165
+      Height = 24
+      Top = 120
+      Width = 40
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 40
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 0
+      Value = 10
+    end
+    object GroupLevelParty: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 35
+      Width = 185
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 181
+      Color = 16311256
+      ItemIndex = 0
+      Items.Strings = (
+        'the PC''s level'
+        'the PC''s party''s average level'
+      )
+      ParentColor = False
+      TabOrder = 1
+    end
+  end
+  object journalint: TPanel[16]
+    Left = 75
+    Height = 180
+    Top = 190
+    Width = 400
+    ClientHeight = 180
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 9
+    Visible = False
+    object Label11: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 277
+      Caption = 'The following event(s) will happen if the player is'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 40
+      Height = 15
+      Top = 108
+      Width = 162
+      Caption = 'of the journal category tagged'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label13: TLabel
+      Left = 15
+      Height = 14
+      Top = 160
+      Width = 327
+      Caption = 'Note: Being at ID 1 or higher means that the quest has been started.'
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelJournalStage: TLabel
+      Left = 150
+      Height = 16
+      Top = 63
+      Width = 57
+      Caption = 'ID (stage)'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 225
+      Height = 24
+      Top = 59
+      Width = 55
+      Font.Height = -12
+      Font.Name = 'Arial'
+      MaxValue = 1000
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 0
+      Value = 1
+    end
+    object journaltag: TEdit
+      Left = 40
+      Height = 23
+      Top = 125
+      Width = 200
+      MaxLength = 32
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object GroupJournalCompare: TRadioGroup
+      Left = 40
+      Height = 70
+      Top = 35
+      Width = 100
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 66
+      ClientWidth = 96
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ItemIndex = 1
+      Items.Strings = (
+        'at least at'
+        'exactly at'
+        'before'
+      )
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object itemrestriction: TPanel[17]
+    Left = 50
+    Height = 180
+    Top = 190
+    Width = 450
+    ClientHeight = 180
+    ClientWidth = 450
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 8
+    Visible = False
+    object Label7: TLabel
+      Left = 20
+      Height = 15
+      Top = 108
+      Width = 83
+      Caption = 'an item tagged'
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelItemRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 202
+      Caption = 'The following event(s) will happen if'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 150
+      Height = 60
+      Top = 40
+      Width = 120
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 116
+      ItemIndex = 0
+      Items.Strings = (
+        'has'
+        'does not have'
+      )
+      TabOrder = 0
+    end
+    object itemtag: TEdit
+      Left = 115
+      Height = 23
+      Top = 105
+      Width = 155
+      Font.Height = -11
+      Font.Name = 'Arial'
+      MaxLength = 32
+      OnChange = ToggleOkay
+      ParentFont = False
+      TabOrder = 1
+    end
+    object CheckBox1: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 145
+      Width = 122
+      Caption = 'Equipped in this slot:'
+      Color = 16311256
+      OnChange = CheckBox1Click
+      ParentColor = False
+      TabOrder = 2
+    end
+    object ComboBox2: TComboBox
+      Left = 165
+      Height = 27
+      Top = 140
+      Width = 235
+      Color = 16311256
+      Enabled = False
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 3
+    end
+    object BitBtn3: TBitBtn
+      Left = 305
+      Height = 30
+      Top = 60
+      Width = 110
+      Caption = 'Palettes!'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000DFDFBF808000
+        8080004040008080408080604040404040404040404040404040404040408080
+        60808020808000808000FFFFFFC0C0C0C0C0C0505050003F3F3F7F7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF3F7F7F404040B0B0B0808000FFFFFFC0C0C0
+        3030307FBFBF7FFFFF7FFFFF7FFFFFBF3F3FFF0000FF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF5F5F5F808020FFFFFF9090907FBFBF7FFFFF7FFFFF7FFFFF7FFFFFFF
+        0000FF0000FF0000FF0000BF7F7F7FFFFF7FFFFF3FBFBF606060FFFFFF3F7F7F
+        7FFFFF7FBFFF0000FF3F3FFF3FBFFF7FBFBFFF3F3FFF0000BF7F7F7FFFFF7FFF
+        FF7FFFFF7FFFFF4040407F7F7F7FFFFF7FFFFF0000FF0000FF0000FF003FFF7F
+        FFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF4040403F7F7F7FFFFF
+        7FFFFF3F3FFF0000FF0000FF7FFFFF7FFFFF7FFFFF7FBFBF5030306F6F6F7FFF
+        FF7FFFFF7FFFFF4040403F7F7F7FFFFF7FFFFF7FFFFF3F7FFF7FBFFF7FFFFF7F
+        FFFF7FFFFF503030800000B090903F7F7F7FFFFF7FFFFF4040003F7F7F7FFFBF
+        00FF0000FF003FFFBF7FFFFF7FFFFF7FFFFF7FFFFF6F6F6F5030308000005F7F
+        7F7FFFFF3F7F7F8080003F7F7F3FFFBF00FF0000FF0000FF003FFF7F7FFFFF7F
+        FFFF7FFFFF7FFFFF7FFFFF5FBFBF9F3F3F5F7F7F9090908080003F7F7F7FFFFF
+        3FFF3F00FF003FFF7F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF8060
+        60BF7F7FB090908080007F7F7F7FFFFF7FFFFF7FFFFF7FFFFFBF7FFFFF00FFFF
+        00FF7FBFFF7FFFFF7FBFBF909090C0C0C0B090900000002020007F7F7F7FFFFF
+        7FFFFF7FFFFFBF3FFFFF00FFFF00FFFF00FFBFBFFF7FFFFF606060C0C0C0C0C0
+        C0C0C0C06F6F6F3F3F3FFFFFFF3F3F3F7FFFFF7FFFFFBF3FFFFF00FFFF00FFBF
+        7FFF7FFFFF3F7F7FC0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF909090
+        3F3F3F7FFFFF7FFFFF7FFFFF7FFFFF7FFFFF7FBFBF909090C0C0C0C0C0C0C0C0
+        C0C0C0C0C0C0C0606000FFFFFFFFFFFFFFFFFF7F7F7F3F7F7F3F7F7F3F7F7F3F
+        7F7FBFBFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFDFBF
+      }
+      OnClick = Button3Click
+      Spacing = 10
+      TabOrder = 5
+    end
+    object TextItemPalettes: TStaticText
+      Left = 280
+      Height = 50
+      Top = 10
+      Width = 160
+      Alignment = taCenter
+      Caption = 'Click here to choose an item from the custom or standard palette.'
+      Color = 11924981
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentColor = False
+      TabOrder = 4
+    end
+    object GroupItemParty: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 40
+      Width = 120
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 116
+      ItemIndex = 0
+      Items.Strings = (
+        'the PC'
+        'the PC''s party'
+      )
+      TabOrder = 7
+    end
+    object EditItemName: TLabeledEdit
+      Left = 280
+      Height = 23
+      Top = 105
+      Width = 160
+      Color = 16311256
+      EditLabel.AnchorSideLeft.Control = EditItemName
+      EditLabel.AnchorSideBottom.Control = EditItemName
+      EditLabel.Left = 280
+      EditLabel.Height = 14
+      EditLabel.Top = 91
+      EditLabel.Width = 100
+      EditLabel.Caption = 'Item name (optional):'
+      EditLabel.ParentColor = False
+      LabelSpacing = 0
+      MaxLength = 80
+      TabOrder = 6
+    end
+  end
+  object goldrestriction: TPanel[18]
+    Left = 75
+    Height = 120
+    Top = 220
+    Width = 400
+    ClientHeight = 120
+    ClientWidth = 400
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 7
+    Visible = False
+    object Label6: TLabel
+      Left = 306
+      Height = 16
+      Top = 75
+      Width = 71
+      Caption = 'gold pieces.'
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelGoldRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 202
+      Caption = 'The following event(s) will happen if'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object goldcond: TRadioGroup
+      Left = 150
+      Height = 60
+      Top = 40
+      Width = 120
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 116
+      ItemIndex = 0
+      Items.Strings = (
+        'has at least'
+        'has less than'
+      )
+      TabOrder = 0
+    end
+    object goldvalue: TSpinEdit
+      Left = 280
+      Height = 25
+      Top = 45
+      Width = 105
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 2147483647
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 1
+      Value = 1000
+    end
+    object GroupGoldParty: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 40
+      Width = 120
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 116
+      ItemIndex = 0
+      Items.Strings = (
+        'the PC'
+        'the PC''s party'
+      )
+      TabOrder = 2
+    end
+  end
+  object GenderPanel: TPanel[19]
+    Left = 115
+    Height = 100
+    Top = 230
+    Width = 320
+    ClientHeight = 100
+    ClientWidth = 320
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 6
+    Visible = False
+    object LabelGenderRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 260
+      Caption = 'The following event(s) will happen if the PC is'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Gender: TRadioGroup
+      Left = 60
+      Height = 35
+      Top = 45
+      Width = 200
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 31
+      ClientWidth = 196
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'female'
+        'male'
+      )
+      TabOrder = 0
+    end
+  end
+  object featpanel: TPanel[20]
+    Left = 70
+    Height = 180
+    Top = 190
+    Width = 410
+    ClientHeight = 180
+    ClientWidth = 410
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 5
+    Visible = False
+    object LabelFeatRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 246
+      Caption = 'The following event(s) will happen if the PC'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioGroup4: TRadioGroup
+      Left = 20
+      Height = 30
+      Top = 40
+      Width = 200
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 26
+      ClientWidth = 196
+      Columns = 3
+      ItemIndex = 0
+      Items.Strings = (
+        'has'
+        'does not have'
+      )
+      TabOrder = 0
+    end
+    object featbox: TComboBox
+      Left = 20
+      Height = 31
+      Top = 80
+      Width = 370
+      Color = 16311256
+      ItemHeight = 0
+      OnChange = ToggleOkay
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object GroupFeatType: TRadioGroup
+      Left = 20
+      Height = 45
+      Top = 125
+      Width = 370
+      AutoFill = True
+      Caption = 'Feat type (affects what is in the drop-down)'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 30
+      ClientWidth = 366
+      Columns = 3
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 0
+      Items.Strings = (
+        'General feats'
+        'Special (class/race/etc.) feats'
+        'Epic feats'
+      )
+      OnClick = GroupFeatTypeClick
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object deitypanel: TPanel[21]
+    Left = 90
+    Height = 120
+    Top = 220
+    Width = 370
+    ClientHeight = 120
+    ClientWidth = 370
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 4
+    Visible = False
+    object LabelDeityRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 287
+      Caption = 'The following event(s) will happen if the PC''s deity'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object RadioGroup3: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 40
+      Width = 75
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 71
+      ItemIndex = 0
+      Items.Strings = (
+        'is'
+        'is not'
+      )
+      TabOrder = 2
+    end
+    object Edit2: TEdit
+      Left = 105
+      Height = 23
+      Top = 53
+      Width = 250
+      Color = 16311256
+      MaxLength = 80
+      TabOrder = 0
+    end
+    object DeityCase: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 78
+      Width = 101
+      Caption = 'Case sensitive?'
+      Checked = True
+      State = cbChecked
+      TabOrder = 1
+    end
+  end
+  object classrestriction: TPanel[22]
+    Left = 15
+    Height = 180
+    Top = 190
+    Width = 520
+    ClientHeight = 180
+    ClientWidth = 520
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 3
+    Visible = False
+    object LabelClassRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 10
+      Width = 246
+      Caption = 'The following event(s) will happen if the PC'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object classcond: TRadioGroup
+      Left = 20
+      Height = 55
+      Top = 30
+      Width = 225
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 51
+      ClientWidth = 221
+      ItemIndex = 0
+      Items.Strings = (
+        'has one of these classes'
+        'has none of these classes'
+      )
+      TabOrder = 0
+    end
+    object FighterX: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 90
+      Width = 57
+      Caption = 'Fighter'
+      OnChange = ToggleOkay
+      TabOrder = 5
+    end
+    object BarbarianX: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 90
+      Width = 71
+      Caption = 'Barbarian'
+      OnChange = ToggleOkay
+      TabOrder = 1
+    end
+    object BardX: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 112
+      Width = 47
+      Caption = 'Bard'
+      OnChange = ToggleOkay
+      TabOrder = 2
+    end
+    object ClericX: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 134
+      Width = 51
+      Caption = 'Cleric'
+      OnChange = ToggleOkay
+      TabOrder = 3
+    end
+    object DruidX: TCheckBox
+      Left = 20
+      Height = 22
+      Top = 156
+      Width = 49
+      Caption = 'Druid'
+      OnChange = ToggleOkay
+      TabOrder = 4
+    end
+    object RangerX: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 156
+      Width = 59
+      Caption = 'Ranger'
+      OnChange = ToggleOkay
+      TabOrder = 8
+    end
+    object PaladinX: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 134
+      Width = 58
+      Caption = 'Paladin'
+      OnChange = ToggleOkay
+      TabOrder = 7
+    end
+    object MonkX: TCheckBox
+      Left = 105
+      Height = 22
+      Top = 112
+      Width = 49
+      Caption = 'Monk'
+      OnChange = ToggleOkay
+      TabOrder = 6
+    end
+    object WizardX: TCheckBox
+      Left = 175
+      Height = 22
+      Top = 134
+      Width = 58
+      Caption = 'Wizard'
+      OnChange = ToggleOkay
+      TabOrder = 11
+    end
+    object SorcererX: TCheckBox
+      Left = 175
+      Height = 22
+      Top = 112
+      Width = 67
+      Caption = 'Sorcerer'
+      OnChange = ToggleOkay
+      TabOrder = 10
+    end
+    object RogueX: TCheckBox
+      Left = 175
+      Height = 22
+      Top = 90
+      Width = 55
+      Caption = 'Rogue'
+      OnChange = ToggleOkay
+      TabOrder = 9
+    end
+    object arcanearcherx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 30
+      Width = 95
+      Caption = 'Arcane archer'
+      OnChange = ToggleOkay
+      TabOrder = 12
+    end
+    object assassinx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 55
+      Width = 70
+      Caption = 'Assassin'
+      OnChange = ToggleOkay
+      TabOrder = 13
+    end
+    object blackguardx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 80
+      Width = 78
+      Caption = 'Blackguard'
+      OnChange = ToggleOkay
+      TabOrder = 14
+    end
+    object harperscoutx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 155
+      Width = 87
+      Caption = 'Harper scout'
+      OnChange = ToggleOkay
+      TabOrder = 17
+    end
+    object shadowdancerx: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 105
+      Width = 99
+      Caption = 'Shadowdancer'
+      OnChange = ToggleOkay
+      TabOrder = 21
+    end
+    object tormx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 105
+      Width = 110
+      Caption = 'Champion of Torm'
+      OnChange = ToggleOkay
+      TabOrder = 15
+    end
+    object defenderx: TCheckBox
+      Left = 250
+      Height = 22
+      Top = 130
+      Width = 116
+      Caption = 'Dwarven defender'
+      OnChange = ToggleOkay
+      TabOrder = 16
+    end
+    object palemasterx: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 30
+      Width = 80
+      Caption = 'Pale master'
+      OnChange = ToggleOkay
+      TabOrder = 18
+    end
+    object dragonx: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 80
+      Width = 119
+      Caption = 'Red dragon disciple'
+      OnChange = ToggleOkay
+      TabOrder = 20
+    end
+    object shifterx: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 130
+      Width = 56
+      Caption = 'Shifter'
+      OnChange = ToggleOkay
+      TabOrder = 22
+    end
+    object weaponmasterx: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 155
+      Width = 100
+      Caption = 'Weapon master'
+      OnChange = ToggleOkay
+      TabOrder = 23
+    end
+    object PurpleDragonX: TCheckBox
+      Left = 380
+      Height = 22
+      Top = 55
+      Width = 122
+      Caption = 'Purple dragon knight'
+      OnChange = ToggleOkay
+      TabOrder = 19
+    end
+  end
+  object alignmentpanel: TPanel[23]
+    Left = 55
+    Height = 180
+    Top = 190
+    Width = 440
+    ClientHeight = 180
+    ClientWidth = 440
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 2
+    Visible = False
+    object LabelAlignmentRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 315
+      Caption = 'The following event(s) will happen if the PC''s alignment'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object AlignmentShader: TShape
+      Left = 27
+      Height = 66
+      Top = 75
+      Width = 291
+      Brush.Color = 14652793
+      ParentShowHint = False
+    end
+    object BevelAlignment: TBevel
+      Left = 26
+      Height = 68
+      Top = 74
+      Width = 293
+      Style = bsRaised
+    end
+    object alignment: TRadioGroup
+      Left = 20
+      Height = 100
+      Top = 70
+      Width = 400
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousChildResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 4
+      ClientHeight = 96
+      ClientWidth = 396
+      Columns = 4
+      Font.Color = clBlack
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ItemIndex = 5
+      Items.Strings = (
+        'Lawful good'
+        'Neutral good'
+        'Chaotic good'
+        'Any good'
+        'Lawful neutral'
+        'True neutral'
+        'Chaotic neutral'
+        'Neutral (G/E)'
+        'Lawful evil'
+        'Neutral evil'
+        'Chaotic evil'
+        'Any evil'
+        'Any lawful'
+        'Neutral (L/C)'
+        'Any chaotic'
+        'Any neutral'
+      )
+      ParentFont = False
+      TabOrder = 0
+    end
+    object alignmentconditional: TRadioGroup
+      Left = 145
+      Height = 35
+      Top = 32
+      Width = 150
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 31
+      ClientWidth = 146
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'is'
+        'is not'
+      )
+      TabOrder = 1
+    end
+  end
+  object abilitypanel: TPanel[24]
+    Left = 55
+    Height = 180
+    Top = 190
+    Width = 440
+    ClientHeight = 180
+    ClientWidth = 440
+    Color = 16311256
+    ParentColor = False
+    TabOrder = 1
+    Visible = False
+    object Label14: TLabel
+      Left = 20
+      Height = 16
+      Top = 125
+      Width = 11
+      Caption = 'is'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelAbilityRestriction: TLabel
+      Left = 15
+      Height = 16
+      Top = 15
+      Width = 255
+      Caption = 'The following event(s) will happen if the PC''s'
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object abilitychoice: TRadioGroup
+      Left = 20
+      Height = 60
+      Top = 35
+      Width = 330
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+      ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 56
+      ClientWidth = 326
+      Columns = 3
+      Items.Strings = (
+        'Charisma'
+        'Constitution'
+        'Dexterity'
+        'Intelligence'
+        'Strength'
+        'Wisdom'
+      )
+      OnClick = ToggleOkay
+      TabOrder = 0
+    end
+    object abilitycondition: TRadioGroup
+      Left = 40
+      Height = 60
+      Top = 105
+      Width = 85
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 81
+      ItemIndex = 0
+      Items.Strings = (
+        'at least'
+        'at most'
+      )
+      TabOrder = 1
+    end
+    object ability: TSpinEdit
+      Left = 135
+      Height = 25
+      Top = 120
+      Width = 50
+      Font.Height = -13
+      Font.Name = 'Arial'
+      MaxValue = 255
+      MinValue = 3
+      ParentFont = False
+      TabOrder = 2
+      Value = 15
+    end
+    object abilitygroup: TRadioGroup
+      Left = 200
+      Height = 60
+      Top = 105
+      Width = 225
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 56
+      ClientWidth = 221
+      Color = 16311256
+      ItemIndex = 0
+      Items.Strings = (
+        'Current (modified) ability score'
+        'Base ability score (no modifiers)'
+      )
+      ParentColor = False
+      TabOrder = 3
+    end
+  end
+end

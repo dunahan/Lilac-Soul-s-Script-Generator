@@ -1,0 +1,49 @@
+object ErfNameForm: TErfNameForm
+  Left = 447
+  Height = 162
+  Top = 170
+  Width = 254
+  ActiveControl = Edit1
+  BorderStyle = bsDialog
+  Caption = 'Script name'
+  ClientHeight = 162
+  ClientWidth = 254
+  Color = 14652793
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 40
+    Height = 17
+    Top = 40
+    Width = 185
+    AutoSize = False
+    Caption = 'Please enter a name for the script:'
+    Color = 16311256
+    ParentColor = False
+    Transparent = False
+  end
+  object Edit1: TEdit
+    Left = 40
+    Height = 24
+    Top = 56
+    Width = 185
+    Color = 16311256
+    CharCase = ecLowerCase
+    MaxLength = 16
+    OnChange = Edit1Change
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 96
+    Width = 75
+    Default = True
+    Enabled = False
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 1
+  end
+end

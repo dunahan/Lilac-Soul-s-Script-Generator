@@ -1,0 +1,17 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TErfNameForm','FORMDATA',[
+  'TPF0'#12'TErfNameForm'#11'ErfNameForm'#4'Left'#3#191#1#6'Height'#3#162#0#3'T'
+  +'op'#3#170#0#5'Width'#3#254#0#13'ActiveControl'#7#5'Edit1'#11'BorderStyle'#7
+  +#8'bsDialog'#7'Caption'#6#11'Script name'#12'ClientHeight'#3#162#0#11'Client'
+  +'Width'#3#254#0#5'Color'#4'y'#149#223#0#10'Font.Color'#7#7'clBlack'#11'Font.'
+  +'Height'#2#245#9'Font.Name'#6#5'Arial'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TLab'
+  +'el'#6'Label1'#4'Left'#2'('#6'Height'#2#17#3'Top'#2'('#5'Width'#3#185#0#8'Au'
+  +'toSize'#8#7'Caption'#6'#Please enter a name for the script:'#5'Color'#4#216
+  +#227#248#0#11'ParentColor'#8#11'Transparent'#8#0#0#5'TEdit'#5'Edit1'#4'Left'
+  +#2'('#6'Height'#2#24#3'Top'#2'8'#5'Width'#3#185#0#5'Color'#4#216#227#248#0#8
+  +'CharCase'#7#11'ecLowerCase'#9'MaxLength'#2#16#8'OnChange'#7#11'Edit1Change'
+  +#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'`'#6'Height'#2#30#3'Top'
+  +#2'`'#5'Width'#2'K'#7'Default'#9#7'Enabled'#8#4'Kind'#7#4'bkOK'#11'ModalResu'
+  +'lt'#2#1#8'TabOrder'#2#1#0#0#0
+]);
