@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NWN Script Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────────────────
+   ROOT & THEME
+───────────────────────────────────────────────────────── */
+:root {
+  --bg:         #0e0f13;
+  --bg2:        #14161c;
+  --bg3:        #1c1f28;
+  --bg4:        #22263200;
+  --border:     #2e3347;
+  --border2:    #3d4462;
+  --gold:       #c8a84b;
+  --gold2:      #e8c96b;
+  --gold-dim:   #6b5820;
+  --teal:       #4ec9b0;
+  --teal-dim:   #1e4d44;
+  --red:        #e06c75;
+  --blue:       #61afef;
+  --purple:     #c678dd;
+  --green:      #98c379;
+  --text:       #cdd3e0;
+  --text-dim:   #7a8499;
+  --text-bright:#f0f4ff;
+  --code-bg:    #0a0c10;
+  --radius:     4px;
+  --mono:       'Share Tech Mono', 'Courier New', monospace;
+  --serif:      'Cinzel', serif;
+  --body:       'Crimson Pro', Georgia, serif;
+  --shadow:     0 4px 24px rgba(0,0,0,.6);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 15px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* subtle parchment texture */
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(200,168,75,.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(78,201,176,.03) 0%, transparent 60%);
+}
+
+/* ─────────────────────────────────────────────────────────
+   HEADER
+───────────────────────────────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, var(--bg2) 0%, transparent 100%);
+  flex-shrink: 0;
+}
+
+.header-rune {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 6px var(--gold-dim));
+}
+
+.header-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .08em;
+  text-shadow: 0 0 20px rgba(200,168,75,.3);
+}
+
+.header-sub {
+  font-size: .8rem;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  letter-spacing: .05em;
+}
+
+.header-badge {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--teal);
+  border: 1px solid var(--teal-dim);
+  padding: .15rem .6rem;
+  border-radius: 2px;
+  letter-spacing: .05em;
+}
+
+/* ─────────────────────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────────────────────── */
+.app {
+  display: grid;
+  grid-template-columns: 240px 1fr minmax(340px, 33vw);
+  grid-template-rows: 1fr auto;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────
+   LEFT PANEL — Script Type
+───────────────────────────────────────────────────────── */
+.panel-left {
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg2);
+}
+
+.panel-header {
+  padding: .6rem 1rem;
+  font-family: var(--serif);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, rgba(200,168,75,.06) 0%, transparent 100%);
+  flex-shrink: 0;
+}
+
+.panel-scroll { overflow-y: auto; flex: 1; padding: .5rem; }
+.panel-scroll::-webkit-scrollbar { width: 4px; }
+.panel-scroll::-webkit-scrollbar-track { background: transparent; }
+.panel-scroll::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Script type groups */
+.type-group { margin-bottom: .1rem; }
+
+.type-group-label {
+  display: flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: .65rem;
+  color: var(--text-dim);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .45rem .5rem .25rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: color .12s, background .12s;
+  user-select: none;
+}
+.type-group-label:hover { color: var(--text); background: rgba(255,255,255,.03); }
+
+.type-group-chevron {
+  font-size: .55rem;
+  opacity: .45;
+  transition: transform .18s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.type-group.collapsed .type-group-chevron { transform: rotate(-90deg); }
+
+.type-group-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows .18s ease;
+  overflow: hidden;
+}
+.type-group.collapsed .type-group-body { grid-template-rows: 0fr; }
+.type-group-inner { overflow: hidden; min-height: 0; }
+
+.type-btn {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: 100%;
+  padding: .45rem .75rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: .9rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background .12s, color .12s;
+}
+.type-btn:hover { background: rgba(255,255,255,.04); color: var(--text-bright); }
+.type-btn.active {
+  background: rgba(200,168,75,.12);
+  color: var(--gold2);
+  border-left: 2px solid var(--gold);
+}
+.type-btn.active .type-icon { color: var(--gold); }
+
+.type-icon {
+  font-size: .95rem;
+  width: 1.2rem;
+  text-align: center;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.type-name { font-size: .88rem; line-height: 1.2; }
+.type-desc { font-size: .7rem; color: var(--text-dim); font-family: var(--mono); }
+
+/* ─────────────────────────────────────────────────────────
+   CENTRE PANEL — Builder
+───────────────────────────────────────────────────────── */
+.panel-centre {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* Script context bar */
+.context-bar {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem 1rem;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.ctx-label {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.ctx-tag {
+  font-family: var(--mono);
+  font-size: .72rem;
+  padding: .1rem .5rem;
+  border-radius: 2px;
+  border: 1px solid var(--border2);
+  color: var(--teal);
+  background: rgba(78,201,176,.07);
+}
+
+.ctx-tag.none { color: var(--text-dim); border-color: var(--border); background: none; }
+
+/* Welcome state */
+.welcome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  opacity: .6;
+}
+
+.welcome-rune { font-size: 3rem; }
+.welcome-title { font-family: var(--serif); font-size: 1.1rem; color: var(--gold); }
+.welcome-text { font-size: .9rem; color: var(--text-dim); max-width: 340px; line-height: 1.7; }
+
+/* Builder scroll */
+.builder-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: .75rem;
+}
+.builder-scroll.visible { display: flex; }
+.builder-scroll::-webkit-scrollbar { width: 4px; }
+.builder-scroll::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Module card */
+.module-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.module-card:focus-within { border-color: var(--border2); }
+
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem .9rem;
+  background: linear-gradient(90deg, rgba(200,168,75,.05) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+}
+
+.module-header:hover { background: linear-gradient(90deg, rgba(200,168,75,.09) 0%, transparent 100%); }
+
+/* collapsed state */
+.module-card.collapsed .module-header { border-bottom-color: transparent; }
+
+.module-chevron {
+  font-size: .65rem;
+  color: var(--text-dim);
+  transition: transform .2s ease;
+  flex-shrink: 0;
+}
+.module-card.collapsed .module-chevron { transform: rotate(-90deg); }
+
+.module-summary {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--teal);
+  margin-left: .3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+  opacity: 0;
+  transition: opacity .15s;
+  pointer-events: none;
+}
+.module-card.collapsed .module-summary { opacity: 1; }
+
+/* height animation via grid trick */
+.module-body-wrap {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows .2s ease;
+  overflow: hidden;
+}
+.module-card.collapsed .module-body-wrap { grid-template-rows: 0fr; }
+.module-body-inner { overflow: hidden; min-height: 0; }
+
+.module-title {
+  font-family: var(--serif);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: .06em;
+}
+
+.module-subtitle {
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+
+.module-body { padding: .9rem; display: flex; flex-direction: column; gap: .65rem; }
+
+/* Form controls */
+.field { display: flex; flex-direction: column; gap: .25rem; }
+
+.field-row {
+  display: grid;
+  gap: .5rem;
+}
+.field-row.cols-2 { grid-template-columns: 1fr 1fr; }
+.field-row.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+label {
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--text-dim);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-bright);
+  font-family: var(--mono);
+  font-size: .82rem;
+  padding: .4rem .6rem;
+  width: 100%;
+  transition: border-color .12s;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--gold-dim);
+  box-shadow: 0 0 0 2px rgba(200,168,75,.1);
+}
+
+select option { background: var(--bg3); }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: .9rem;
+  height: .9rem;
+  accent-color: var(--gold);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  font-family: var(--body);
+  font-size: .85rem;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.radio-opt {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  cursor: pointer;
+  padding: .3rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .12s, background .12s;
+}
+
+.radio-opt:hover { border-color: var(--border2); background: rgba(255,255,255,.02); }
+.radio-opt.selected { border-color: var(--gold-dim); background: rgba(200,168,75,.08); }
+
+.radio-opt input { display: none; }
+
+.radio-label {
+  font-family: var(--body);
+  font-size: .85rem;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Add action button strip */
+.action-strip {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  padding: .5rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem .65rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--body);
+  font-size: .82rem;
+  cursor: pointer;
+  transition: all .12s;
+}
+
+.action-btn:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold2);
+  background: rgba(200,168,75,.06);
+}
+
+.action-btn .icon { font-size: .8rem; }
+
+/* Generate button */
+.btn-generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .6rem 1.5rem;
+  background: linear-gradient(135deg, rgba(200,168,75,.2) 0%, rgba(200,168,75,.08) 100%);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--radius);
+  color: var(--gold2);
+  font-family: var(--serif);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: all .15s;
+  align-self: flex-start;
+}
+
+.btn-generate:hover {
+  background: linear-gradient(135deg, rgba(200,168,75,.3) 0%, rgba(200,168,75,.15) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(200,168,75,.2);
+}
+
+.btn-generate:active { transform: translateY(1px); }
+
+/* Divider */
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: .25rem 0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   RIGHT PANEL — Code Output
+───────────────────────────────────────────────────────── */
+.panel-right {
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg2);
+}
+
+.output-toolbar {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem .75rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.output-title {
+  font-family: var(--serif);
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.btn-small {
+  padding: .25rem .6rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: .68rem;
+  cursor: pointer;
+  letter-spacing: .04em;
+  transition: all .12s;
+}
+.btn-small:hover { border-color: var(--border2); color: var(--text); background: rgba(255,255,255,.03); }
+.btn-small.active { border-color: var(--teal-dim); color: var(--teal); background: rgba(78,201,176,.07); }
+
+.code-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: .9rem;
+  font-family: var(--mono);
+  font-size: .8rem;
+  line-height: 1.7;
+  white-space: pre;
+  color: var(--text);
+  background: var(--code-bg);
+}
+
+.code-output::-webkit-scrollbar { width: 4px; }
+.code-output::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Syntax highlighting via spans */
+.code-output .kw   { color: #c678dd; }  /* keywords: void, int, object, return */
+.code-output .fn   { color: #61afef; }  /* function calls */
+.code-output .fn a { color: #61afef; text-decoration: none; border-bottom: 1px dotted #3d5a7a; }
+.code-output .fn a:hover { color: var(--teal); border-color: var(--teal); }
+.code-output .str  { color: #98c379; }  /* strings */
+.code-output .num  { color: #d19a66; }  /* numbers */
+.code-output .cmt  { color: #5c6370; font-style: italic; }  /* comments */
+.code-output .cst  { color: #e5c07b; }  /* constants */
+.code-output .type { color: #e06c75; }  /* types */
+.code-output .var  { color: var(--text); }
+
+.code-placeholder {
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: .8rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--mono);
+}
+
+/* Script history list */
+.history-list {
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .3rem .75rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--text-dim);
+  transition: background .1s;
+}
+.history-item:hover { background: rgba(255,255,255,.03); color: var(--text); }
+.history-item .hist-fn { color: var(--blue); }
+.history-item .hist-del {
+  margin-left: auto;
+  opacity: 0;
+  color: var(--red);
+  cursor: pointer;
+  font-size: .9rem;
+  line-height: 1;
+}
+.history-item:hover .hist-del { opacity: 1; }
+
+/* ─────────────────────────────────────────────────────────
+   BOTTOM STATUS BAR
+───────────────────────────────────────────────────────── */
+.statusbar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .25rem 1rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: .65rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.status-ok { color: var(--green); }
+.status-warn { color: var(--gold); }
+.status-err { color: var(--red); }
+.status-spacer { flex: 1; }
+.status-lexicon a { color: var(--teal); text-decoration: none; }
+.status-lexicon a:hover { text-decoration: underline; }
+
+/* ─────────────────────────────────────────────────────────
+   TOOLTIPS
+───────────────────────────────────────────────────────── */
+[data-tip] { position: relative; }
+[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: .7rem;
+  padding: .3rem .6rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .app { grid-template-columns: 220px 1fr minmax(300px, 33vw); }
+}
+@media (max-width: 860px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    height: auto;
+    overflow: visible;
+  }
+  .panel-left { max-height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
+  .panel-right { max-height: 280px; border-left: none; border-top: 1px solid var(--border); }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════ -->
+<header>
+  <span class="header-rune">⚔</span>
+  <div>
+    <div class="header-title">NWN Script Generator</div>
+    <div class="header-sub">Lilac Soul / The Krit — Web Port</div>
+  </div>
+  <span class="header-badge">NWN:EE compatible</span>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     APP GRID
+════════════════════════════════════════════════════ -->
+<div class="app">
+
+  <!-- ── LEFT: Script Type Chooser ── -->
+  <aside class="panel-left">
+    <div class="panel-header">① Script Type</div>
+    <div class="panel-scroll" id="typeList"></div>
+  </aside>
+
+  <!-- ── CENTRE: Builder ── -->
+  <main class="panel-centre">
+
+    <div class="context-bar" id="contextBar">
+      <span class="ctx-label">Context</span>
+      <span class="ctx-tag none" id="ctxEvent">No event selected</span>
+      <span class="ctx-tag none" id="ctxVars" style="display:none"></span>
+    </div>
+
+    <!-- Welcome -->
+    <div class="welcome" id="welcomePane">
+      <div class="welcome-rune">📜</div>
+      <div class="welcome-title">Choose a Script Type</div>
+      <div class="welcome-text">
+        Select an event type on the left to begin. Then add actions from
+        the module palette, configure each one, and generate your NWScript code.
+      </div>
+    </div>
+
+    <!-- Builder -->
+    <div class="builder-scroll" id="builderScroll">
+
+      <!-- Module palette (add actions) -->
+      <div class="module-card">
+        <div class="module-header" onclick="toggleCard(this)">
+          <span class="module-title">② Add Actions</span>
+          <span class="module-subtitle">click a module to insert</span>
+        </div>
+        <div class="module-body">
+          <div class="action-strip" id="actionStrip"></div>
+        </div>
+      </div>
+
+      <!-- Dynamic module slots go here -->
+      <div id="moduleSlots"></div>
+
+      <!-- Generate -->
+      <div style="display:flex;gap:.75rem;align-items:center;flex-wrap:wrap">
+        <button class="btn-generate" onclick="generateScript()">⚡ Generate Script</button>
+        <button class="btn-small" onclick="clearAll()" style="font-size:.75rem;padding:.4rem .9rem">
+          Clear All
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── RIGHT: Code Output ── -->
+  <aside class="panel-right">
+    <div class="output-toolbar">
+      <span class="output-title">③ Output</span>
+      <button class="btn-small" id="btnLinks" onclick="toggleLinks()" data-tip="Toggle NWNLexicon links">Links</button>
+      <button class="btn-small" onclick="copyCode()" data-tip="Copy to clipboard">Copy</button>
+      <button class="btn-small" onclick="downloadCode()" data-tip="Download .nss file">↓ .nss</button>
+    </div>
+    <div class="code-output" id="codeOutput">
+      <div class="code-placeholder">// Generated script will appear here.</div>
+    </div>
+    <div class="history-list" id="historyList"></div>
+  </aside>
+
+  <!-- ── STATUS BAR ── -->
+  <div class="statusbar">
+    <span id="statusMsg" class="status-ok">Ready</span>
+    <span class="status-spacer"></span>
+    <span class="status-lexicon">
+      <a href="https://nwnlexicon.com" target="_blank" rel="noopener">NWNLexicon</a>
+    </span>
+    <span>GPL-2.0</span>
+  </div>
+
+</div><!-- .app -->
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+// ─── State ──────────────────────────────────────────
+const state = {
+  scriptType: null,      // selected script type object
+  modules: [],           // list of {id, type, config} added by user
+  showLinks: true,       // toggle NWNLexicon hyperlinks in output
+  history: [],           // past generated scripts
+  nextId: 0,
+};
+
+// ─── Script Types ───────────────────────────────────
+// Derived from typechoose.pas, EventHelper.pas, event.pas
+const SCRIPT_TYPES = [
+  {
+    group: 'Creature Events',
+    types: [
+      {
+        id: 'on_enter',
+        name: 'OnEnter / OnExit',
+        icon: '🚪',
+        desc: 'trigger, area',
+        vars: [
+          'object oPC = GetEnteringObject();',
+        ],
+        comment: 'Fires when a creature enters (or exits) a trigger or area.',
+      },
+      {
+        id: 'on_used',
+        name: 'OnUsed',
+        icon: '🖱',
+        desc: 'placeable',
+        vars: [
+          'object oPC = GetLastUsedBy();',
+        ],
+        comment: 'Fires when a placeable is used (clicked).',
+      },
+      {
+        id: 'on_death',
+        name: 'OnDeath',
+        icon: '💀',
+        desc: 'creature',
+        vars: [
+          'object oPC = GetLastKiller();',
+        ],
+        comment: 'Fires when a creature dies.',
+      },
+      {
+        id: 'on_attacked',
+        name: 'OnPhysAttacked',
+        icon: '⚔',
+        desc: 'creature',
+        vars: [
+          'object oPC = GetLastAttacker();',
+        ],
+        comment: 'Fires when a creature is physically attacked.',
+      },
+      {
+        id: 'on_damaged',
+        name: 'OnDamaged',
+        icon: '🩸',
+        desc: 'creature',
+        vars: [
+          'object oPC = GetLastDamager();',
+          'int nDamage = GetLastDamage();',
+        ],
+        comment: 'Fires when a creature takes damage.',
+      },
+      {
+        id: 'on_heartbeat',
+        name: 'OnHeartbeat',
+        icon: '💓',
+        desc: 'creature / placeable',
+        vars: [
+          'object oSelf = OBJECT_SELF;',
+        ],
+        comment: 'Fires every 6 seconds. Use sparingly for performance.',
+      },
+      {
+        id: 'on_spawn',
+        name: 'OnSpawn',
+        icon: '✨',
+        desc: 'creature',
+        vars: [],
+        comment: 'Fires when a creature spawns in.',
+      },
+      {
+        id: 'on_spellcastat',
+        name: 'OnSpellCastAt',
+        icon: '🔮',
+        desc: 'creature / placeable',
+        vars: [
+          'object oPC = GetLastSpellCaster();',
+          'int nSpell = GetLastSpell();',
+          'int bHarmful = GetLastSpellHarmful();',
+        ],
+        comment: 'Fires when a spell is cast at this object.',
+      },
+      {
+        id: 'on_rested',
+        name: 'OnRested',
+        icon: '🌙',
+        desc: 'creature',
+        vars: [
+          'int nRestType = GetLastRestEventType();',
+        ],
+        comment: 'Fires on rest events (start/finish/cancel).',
+      },
+      {
+        id: 'on_disturbed',
+        name: 'OnDisturbed',
+        icon: '🎒',
+        desc: 'creature',
+        vars: [
+          'object oPC = GetLastDisturbed();',
+          'object oItem = GetInventoryDisturbItem();',
+          'int nType = GetInventoryDisturbType();',
+        ],
+        comment: 'Fires when the creature\'s inventory is disturbed.',
+      },
+    ],
+  },
+  {
+    group: 'Conversation',
+    types: [
+      {
+        id: 'on_conversation',
+        name: 'OnConversation',
+        icon: '💬',
+        desc: 'creature / placeable',
+        vars: [
+          'object oPC = GetPCSpeaker();',
+        ],
+        comment: 'Fires in a conversation node (Action Taken or Condition).',
+      },
+      {
+        id: 'text_appears_when',
+        name: 'Text Appears When',
+        icon: '❓',
+        desc: 'conditional',
+        vars: [
+          'object oPC = GetPCSpeaker();',
+        ],
+        isConditional: true,
+        comment: 'Returns TRUE/FALSE to show/hide a conversation reply.',
+      },
+    ],
+  },
+  {
+    group: 'Item Events',
+    types: [
+      {
+        id: 'on_activate_item',
+        name: 'OnActivateItem',
+        icon: '💎',
+        desc: 'item script',
+        vars: [
+          'object oPC = GetItemActivator();',
+          'object oItem = GetItemActivated();',
+          'object oTarget = GetItemActivatedTarget();',
+          'location lTarget = GetItemActivatedTargetLocation();',
+        ],
+        comment: 'Fires when a player activates a special item.',
+      },
+      {
+        id: 'on_acquire',
+        name: 'OnAcquireItem',
+        icon: '⬆',
+        desc: 'module',
+        vars: [
+          'object oPC = GetModuleItemAcquiredBy();',
+          'object oItem = GetModuleItemAcquired();',
+          'object oFrom = GetModuleItemAcquiredFrom();',
+          'int nStack = GetModuleItemAcquiredStackSize();',
+        ],
+        comment: 'Fires when any PC picks up an item (module-level).',
+      },
+      {
+        id: 'on_unacquire',
+        name: 'OnUnacquireItem',
+        icon: '⬇',
+        desc: 'module',
+        vars: [
+          'object oPC = GetModuleItemLostBy();',
+          'object oItem = GetModuleItemUnacquired();',
+        ],
+        comment: 'Fires when any PC loses an item (module-level).',
+      },
+      {
+        id: 'on_equip',
+        name: 'OnEquipItem',
+        icon: '🛡',
+        desc: 'module',
+        vars: [
+          'object oPC = GetPCItemLastEquippedBy();',
+          'object oItem = GetPCItemLastEquipped();',
+        ],
+        comment: 'Fires when any PC equips an item (module-level).',
+      },
+      {
+        id: 'on_unequip',
+        name: 'OnUnequipItem',
+        icon: '🔓',
+        desc: 'module',
+        vars: [
+          'object oPC = GetPCItemLastUnequippedBy();',
+          'object oItem = GetPCItemLastUnequipped();',
+        ],
+        comment: 'Fires when any PC unequips an item (module-level).',
+      },
+    ],
+  },
+  {
+    group: 'Area / Placeable',
+    types: [
+      {
+        id: 'on_open',
+        name: 'OnOpen / OnClose',
+        icon: '🚪',
+        desc: 'door / placeable',
+        vars: [
+          'object oPC = GetLastOpenedBy();',
+        ],
+        comment: 'Fires when a door or placeable container is opened.',
+      },
+      {
+        id: 'on_lock',
+        name: 'OnLock / OnUnlock',
+        icon: '🔒',
+        desc: 'door / placeable',
+        vars: [
+          'object oPC = GetLastLocked();',
+        ],
+        comment: 'Fires when a door or placeable is locked or unlocked.',
+      },
+      {
+        id: 'on_trap_triggered',
+        name: 'OnTrapTriggered',
+        icon: '💥',
+        desc: 'trigger',
+        vars: [
+          'object oPC = GetEnteringObject();',
+        ],
+        comment: 'Fires when a trap trigger is triggered.',
+      },
+      {
+        id: 'on_user_defined',
+        name: 'OnUserDefined',
+        icon: '🔔',
+        desc: 'any object',
+        vars: [
+          'int nEvent = GetUserDefinedEventNumber();',
+        ],
+        comment: 'Fires via SignalEvent / EventUserDefined.',
+      },
+    ],
+  },
+  {
+    group: 'Module Level',
+    types: [
+      {
+        id: 'on_module_load',
+        name: 'OnModuleLoad',
+        icon: '⚙',
+        desc: 'module',
+        vars: [],
+        comment: 'Fires once when the module is loaded. Good for initialisation.',
+      },
+      {
+        id: 'on_client_enter',
+        name: 'OnClientEnter',
+        icon: '🌐',
+        desc: 'module',
+        vars: [
+          'object oPC = GetEnteringObject();',
+        ],
+        comment: 'Fires when a player connects to the server.',
+      },
+      {
+        id: 'on_client_exit',
+        name: 'OnClientExit',
+        icon: '🚶',
+        desc: 'module',
+        vars: [
+          'object oPC = GetExitingObject();',
+        ],
+        comment: 'Fires when a player disconnects.',
+      },
+      {
+        id: 'on_player_death',
+        name: 'OnPlayerDeath',
+        icon: '⚰',
+        desc: 'module',
+        vars: [
+          'object oPC = GetLastPlayerDied();',
+          'object oKiller = GetLastPlayerKiller();',
+        ],
+        comment: 'Fires when a player character dies.',
+      },
+      {
+        id: 'on_player_rest',
+        name: 'OnPlayerRest',
+        icon: '🏕',
+        desc: 'module',
+        vars: [
+          'object oPC = GetLastPCRested();',
+          'int nRestType = GetLastRestEventType();',
+        ],
+        comment: 'Fires on player rest events.',
+      },
+    ],
+  },
+];
+
+// ─── Action Modules ─────────────────────────────────
+// Each module has: id, label, icon, category, buildFn, codeFn
+const ACTION_MODULES = [
+  {
+    id: 'journal',
+    label: 'Journal Entry',
+    icon: '📖',
+    category: 'Quest',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { tag: '', stage: 1, who: 0, allOrNothing: false };
+      return `
+        <div class="field">
+          <label>Quest Tag</label>
+          <input type="text" id="${slotId}_tag" placeholder="my_quest_tag"
+            value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)">
+        </div>
+        <div class="field">
+          <label>Stage Number</label>
+          <input type="number" id="${slotId}_stage" min="0" max="9999" value="${cfg.stage}"
+            oninput="updateCfg('${slotId}','stage',parseInt(this.value)||1)">
+        </div>
+        <div class="field">
+          <label>Update for</label>
+          <div class="radio-group" id="${slotId}_who">
+            ${['Player only','Whole party','All players'].map((l,i)=>`
+              <label class="radio-opt ${cfg.who===i?'selected':''}">
+                <input type="radio" name="${slotId}_who" value="${i}"
+                  ${cfg.who===i?'checked':''}
+                  onchange="updateCfg('${slotId}','who',${i});syncRadios('${slotId}_who')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" id="${slotId}_aon" ${cfg.allOrNothing?'checked':''}
+            onchange="updateCfg('${slotId}','allOrNothing',this.checked)">
+          <span class="checkbox-label">All-or-nothing (don't override higher stages)</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const tag = cfg.tag || 'QUEST_TAG';
+      const who = ['the player\'s journal','the party\'s journals','all players\' journals'][cfg.who||0];
+      const partyBool = (cfg.who||0) === 1 ? 'TRUE' : 'FALSE';
+      const allBool   = (cfg.who||0) === 2 ? 'TRUE' : 'FALSE';
+      const aonBool   = cfg.allOrNothing ? 'TRUE' : 'FALSE';
+      return [
+        `// Update ${who}.`,
+        `AddJournalQuestEntry("${tag}", ${cfg.stage||1}, oPC, ${partyBool}, ${allBool}, ${aonBool});`,
+      ];
+    },
+  },
+  {
+    id: 'teleport',
+    label: 'Teleport PC',
+    icon: '🌀',
+    category: 'Movement',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { dest: 'waypoint', tag: '', who: 0, vfx: true, clearActions: true };
+      const isWP = (cfg.dest === 'waypoint');
+      return `
+        <div class="field">
+          <label>Destination</label>
+          <div class="radio-group" id="${slotId}_dest">
+            ${[['waypoint','Waypoint tag'],['stored','Stored location']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.dest===v?'selected':''}">
+                <input type="radio" name="${slotId}_dest" value="${v}"
+                  ${cfg.dest===v?'checked':''}
+                  onchange="updateCfg('${slotId}','dest','${v}');syncRadios('${slotId}_dest');toggleById('${slotId}_tagRow','${v}'==='waypoint')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field" id="${slotId}_tagRow" style="display:${isWP?'flex':'none'}">
+          <label>Waypoint Tag</label>
+          <input type="text" id="${slotId}_tag" placeholder="WP_DESTINATION"
+            value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)">
+        </div>
+        <div class="field">
+          <label>Who to teleport</label>
+          <div class="radio-group" id="${slotId}_who">
+            ${['PC only','PC + associates'].map((l,i)=>`
+              <label class="radio-opt ${cfg.who===i?'selected':''}">
+                <input type="radio" name="${slotId}_who" value="${i}"
+                  ${cfg.who===i?'checked':''}
+                  onchange="updateCfg('${slotId}','who',${i});syncRadios('${slotId}_who')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field-row cols-2">
+          <label class="checkbox-row">
+            <input type="checkbox" ${cfg.vfx?'checked':''}
+              onchange="updateCfg('${slotId}','vfx',this.checked)">
+            <span class="checkbox-label">Play teleport VFX</span>
+          </label>
+          <label class="checkbox-row">
+            <input type="checkbox" ${cfg.clearActions?'checked':''}
+              onchange="updateCfg('${slotId}','clearActions',this.checked)">
+            <span class="checkbox-label">Clear actions first</span>
+          </label>
+        </div>`;
+    },
+    codeLines(cfg) {
+      const lines = [];
+      const dest = cfg.dest === 'waypoint'
+        ? `GetWaypointByTag("${cfg.tag||'WP_DESTINATION'}")`
+        : `lStoredLoc /* set stored location before calling */`;
+      if (cfg.clearActions) {
+        lines.push(`ClearAllActions();`);
+      }
+      if (cfg.vfx) {
+        lines.push(`ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_UNSUMMON), oPC);`);
+      }
+      lines.push(`JumpToObject(${dest});`);
+      if (cfg.who === 1) {
+        lines.push(
+          `// Jump associates too.`,
+          `int nI = 1;`,
+          `object oAssoc = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oPC, nI);`,
+          `while (GetIsObjectValid(oAssoc)) {`,
+          `    AssignCommand(oAssoc, JumpToObject(${dest}));`,
+          `    oAssoc = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oPC, ++nI);`,
+          `}`,
+        );
+      }
+      return lines;
+    },
+  },
+  {
+    id: 'local_var',
+    label: 'Local Variable',
+    icon: '📦',
+    category: 'Variables',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { op: 'set', varType: 'int', obj: 'oPC', tag: '', varName: '', intVal: 0, strVal: '', floatVal: '0.0' };
+      const isGet = cfg.op === 'get';
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Operation</label>
+            <select onchange="updateCfg('${slotId}','op',this.value);rebuildModule('${slotId}')">
+              ${['set','get','delete'].map(v=>`<option value="${v}" ${cfg.op===v?'selected':''}>${v.toUpperCase()}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label>Type</label>
+            <select onchange="updateCfg('${slotId}','varType',this.value);rebuildModule('${slotId}')">
+              ${['int','float','string','object'].map(v=>`<option value="${v}" ${cfg.varType===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Target Object</label>
+          <select onchange="updateCfg('${slotId}','obj',this.value)">
+            ${['oPC','OBJECT_SELF','oItem','oTarget'].map(v=>`<option value="${v}" ${cfg.obj===v?'selected':''}>${v}</option>`).join('')}
+            <option value="tagged" ${cfg.obj==='tagged'?'selected':''}>Object by tag…</option>
+          </select>
+        </div>
+        ${cfg.obj==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)" placeholder="object_tag"></div>`:''}
+        <div class="field">
+          <label>Variable Name</label>
+          <input type="text" value="${esc(cfg.varName)}" placeholder="MY_VAR_NAME"
+            oninput="updateCfg('${slotId}','varName',this.value)">
+        </div>
+        ${!isGet && cfg.varType === 'int' ? `<div class="field"><label>Value</label><input type="number" value="${cfg.intVal}" oninput="updateCfg('${slotId}','intVal',parseInt(this.value)||0)"></div>` : ''}
+        ${!isGet && cfg.varType === 'float' ? `<div class="field"><label>Value</label><input type="text" value="${esc(cfg.floatVal)}" placeholder="1.0" oninput="updateCfg('${slotId}','floatVal',this.value)"></div>` : ''}
+        ${!isGet && cfg.varType === 'string' ? `<div class="field"><label>Value</label><input type="text" value="${esc(cfg.strVal)}" oninput="updateCfg('${slotId}','strVal',this.value)"></div>` : ''}`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.obj === 'tagged' ? `GetObjectByTag("${cfg.tag||'OBJ_TAG'}")` : (cfg.obj || 'oPC');
+      const name = cfg.varName || 'MY_VAR';
+      const t = cfg.varType || 'int';
+      const T = t.charAt(0).toUpperCase() + t.slice(1);
+      if (cfg.op === 'delete') return [`DeleteLocalInt(${obj}, "${name}");`.replace('Int', T)];
+      if (cfg.op === 'get')    return [`${t} ${name.toLowerCase()} = GetLocal${T}(${obj}, "${name}");`];
+      // set
+      const val = t==='int' ? (cfg.intVal||0)
+                : t==='float' ? (cfg.floatVal||'0.0')
+                : t==='string' ? `"${cfg.strVal||''}"`
+                : 'OBJECT_INVALID';
+      return [`SetLocal${T}(${obj}, "${name}", ${val});`];
+    },
+  },
+  {
+    id: 'popup',
+    label: 'Floating Text',
+    icon: '💬',
+    category: 'Communication',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { mode: 'floating', text: '', token: '', bBroadcast: false };
+      return `
+        <div class="field">
+          <label>Mode</label>
+          <div class="radio-group" id="${slotId}_mode">
+            ${[['floating','Floating text'],['speak','SpeakString'],['sendmsg','SendMessageToPC']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.mode===v?'selected':''}">
+                <input type="radio" name="${slotId}_mode" value="${v}"
+                  ${cfg.mode===v?'checked':''}
+                  onchange="updateCfg('${slotId}','mode','${v}');syncRadios('${slotId}_mode')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field">
+          <label>Message Text</label>
+          <input type="text" value="${esc(cfg.text)}" placeholder="Your message here..."
+            oninput="updateCfg('${slotId}','text',this.value)">
+        </div>
+        ${cfg.mode==='floating'?`
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.bBroadcast?'checked':''}
+            onchange="updateCfg('${slotId}','bBroadcast',this.checked)">
+          <span class="checkbox-label">Broadcast to all nearby players</span>
+        </label>`:''}`;
+    },
+    codeLines(cfg) {
+      const text = cfg.text || 'Hello, adventurer!';
+      if (cfg.mode === 'floating')
+        return [`FloatingTextStringOnCreature("${text}", oPC, ${cfg.bBroadcast?'TRUE':'FALSE'});`];
+      if (cfg.mode === 'speak')
+        return [`SpeakString("${text}");`];
+      return [`SendMessageToPC(oPC, "${text}");`];
+    },
+  },
+  {
+    id: 'destroy',
+    label: 'Destroy Object',
+    icon: '💥',
+    category: 'Objects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oItem', tag: '', delay: 0.0 };
+      return `
+        <div class="field">
+          <label>Object to destroy</label>
+          <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+            ${['oPC','oItem','oTarget','OBJECT_SELF'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+            <option value="tagged" ${cfg.target==='tagged'?'selected':''}>Object by tag…</option>
+          </select>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)" placeholder="object_tag"></div>`:''}
+        <div class="field">
+          <label>Delay (seconds, 0 = immediate)</label>
+          <input type="number" min="0" step="0.1" value="${cfg.delay||0}"
+            oninput="updateCfg('${slotId}','delay',parseFloat(this.value)||0)">
+        </div>`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'OBJ_TAG'}")` : (cfg.target||'oItem');
+      return [`DestroyObject(${obj}, ${parseFloat(cfg.delay||0).toFixed(1)}f);`];
+    },
+  },
+  {
+    id: 'give_xp',
+    label: 'Give XP',
+    icon: '⭐',
+    category: 'Rewards',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { amount: 100, who: 0 };
+      return `
+        <div class="field">
+          <label>XP Amount</label>
+          <input type="number" min="0" value="${cfg.amount||100}"
+            oninput="updateCfg('${slotId}','amount',parseInt(this.value)||0)">
+        </div>
+        <div class="field">
+          <label>Give to</label>
+          <div class="radio-group" id="${slotId}_who">
+            ${['PC only','Whole party'].map((l,i)=>`
+              <label class="radio-opt ${cfg.who===i?'selected':''}">
+                <input type="radio" name="${slotId}_who" value="${i}"
+                  ${cfg.who===i?'checked':''}
+                  onchange="updateCfg('${slotId}','who',${i});syncRadios('${slotId}_who')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>`;
+    },
+    codeLines(cfg) {
+      if ((cfg.who||0) === 1) {
+        return [
+          `// Give XP to whole party.`,
+          `object oMember = GetFirstFactionMember(oPC, TRUE);`,
+          `while (GetIsObjectValid(oMember)) {`,
+          `    GiveXPToCreature(oMember, ${cfg.amount||100});`,
+          `    oMember = GetNextFactionMember(oPC, TRUE);`,
+          `}`,
+        ];
+      }
+      return [`GiveXPToCreature(oPC, ${cfg.amount||100});`];
+    },
+  },
+
+  // ── Apply Effect ──────────────────────────────────────────────────────────
+  {
+    id: 'effect',
+    label: 'Apply Effect',
+    icon: '✨',
+    category: 'Effects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { effect: 'Haste', target: 'oPC', tag: '', duration: 'permanent',
+                     seconds: 10, subtype: 'magical', param1: '', param2: '', param3: '' };
+
+      // Effects with no extra params
+      const SIMPLE = ['Blindness','Charmed','Confused','Cutscene Ghost','Cutscene Immobilize',
+        'Cutscene Paralyze','Dazed','Deaf','Death','Entangle','Ethereal','Frightened',
+        'Haste','Knockdown','Paralyze','Petrify','Resurrection','See Invisible','Silence',
+        'Sleep','Slow','Stunned','Time Stop','True Seeing','Turned','Ultravision'];
+      const PERCENT = ['Concealment','Miss Chance','Movement Speed Decrease','Movement Speed Increase',
+        'Spell Failure'];
+      const NUMBER  = ['Attack Decrease','Attack Increase','Heal','Modify Attacks',
+        'Negative Level','Sanctuary','Spell Resistance Decrease','Spell Resistance Increase',
+        'Temporary Hitpoints','Turn Resistance Decrease','Turn Resistance Increase',
+        'Dispel Magic All','Dispel Magic Best'];
+      const ALL_EFFECTS = [...SIMPLE,...PERCENT,...NUMBER,
+        'Ability Decrease','Ability Increase','AC Decrease','AC Increase',
+        'Curse','Damage Decrease','Damage Immunity Decrease','Damage Immunity Increase',
+        'Damage Increase','Damage Reduction','Damage Resistance','Damage Shield',
+        'Disease','Immunity','Invisibility','Poison','Polymorph','Regenerate',
+        'Saving Throw Decrease','Saving Throw Increase','Skill Decrease','Skill Increase',
+        'Spell Immunity','Spell Level Absorption'].sort();
+
+      const needsTarget = cfg.effect && (PERCENT.includes(cfg.effect) || NUMBER.includes(cfg.effect));
+      const e = cfg.effect || 'Haste';
+
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Effect</label>
+            <select onchange="updateCfg('${slotId}','effect',this.value);rebuildModule('${slotId}')">
+              ${ALL_EFFECTS.map(v=>`<option value="${v}" ${e===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label>Apply to</label>
+            <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+              ${['oPC','OBJECT_SELF','oActivator','oActTarget'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+              <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+            </select>
+          </div>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)" placeholder="creature_tag"></div>`:''}
+        <div class="field">
+          <label>Duration</label>
+          <div class="radio-group" id="${slotId}_dur">
+            ${[['instant','Instant'],['permanent','Permanent'],['temporary','Temporary']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.duration===v?'selected':''}">
+                <input type="radio" name="${slotId}_dur" value="${v}"
+                  ${cfg.duration===v?'checked':''}
+                  onchange="updateCfg('${slotId}','duration','${v}');syncRadios('${slotId}_dur');toggleById('${slotId}_secRow','${v}'==='temporary')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field" id="${slotId}_secRow" style="display:${cfg.duration==='temporary'?'':'none'}">
+          <label>Duration (seconds)</label>
+          <input type="number" min="1" value="${cfg.seconds||10}"
+            oninput="updateCfg('${slotId}','seconds',parseFloat(this.value)||10)">
+        </div>
+        ${PERCENT.includes(e)?`<div class="field"><label>Percent value</label><input type="number" min="1" max="100" value="${cfg.param1||50}" oninput="updateCfg('${slotId}','param1',this.value)"></div>`:''}
+        ${NUMBER.includes(e)?`<div class="field"><label>Amount</label><input type="number" min="1" value="${cfg.param1||5}" oninput="updateCfg('${slotId}','param1',this.value)"></div>`:''}
+        <div class="field">
+          <label>Subtype</label>
+          <div class="radio-group" id="${slotId}_sub">
+            ${[['magical','Magical'],['extraordinary','Extraordinary'],['supernatural','Supernatural']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.subtype===v?'selected':''}">
+                <input type="radio" name="${slotId}_sub" value="${v}"
+                  ${cfg.subtype===v?'checked':''}
+                  onchange="updateCfg('${slotId}','subtype','${v}');syncRadios('${slotId}_sub')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>`;
+    },
+    codeLines(cfg) {
+      const e = cfg.effect || 'Haste';
+      const fnName = 'Effect' + e.replace(/\s+/g, '');
+      const PERCENT = ['Concealment','Miss Chance','Movement Speed Decrease','Movement Speed Increase','Spell Failure'];
+      const NUMBER  = ['Attack Decrease','Attack Increase','Heal','Modify Attacks',
+        'Negative Level','Sanctuary','Spell Resistance Decrease','Spell Resistance Increase',
+        'Temporary Hitpoints','Turn Resistance Decrease','Turn Resistance Increase',
+        'Dispel Magic All','Dispel Magic Best'];
+      const param = PERCENT.includes(e)||NUMBER.includes(e) ? `${cfg.param1||5}` : '';
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      let effectCall = `${fnName}(${param})`;
+      if (cfg.subtype === 'extraordinary') effectCall = `ExtraordinaryEffect(${effectCall})`;
+      else if (cfg.subtype === 'supernatural') effectCall = `SupernaturalEffect(${effectCall})`;
+      const durType = cfg.duration === 'instant' ? 'DURATION_TYPE_INSTANT'
+                    : cfg.duration === 'temporary' ? 'DURATION_TYPE_TEMPORARY'
+                    : 'DURATION_TYPE_PERMANENT';
+      const durParam = cfg.duration === 'temporary' ? `, ${parseFloat(cfg.seconds||10).toFixed(1)}` : '';
+      return [
+        `// Apply ${e.toLowerCase()} effect.`,
+        `effect eEffect = ${effectCall};`,
+        `ApplyEffectToObject(${durType}, eEffect, ${obj}${durParam});`,
+      ];
+    },
+  },
+
+  // ── Remove Effect ─────────────────────────────────────────────────────────
+  {
+    id: 'remove_effect',
+    label: 'Remove Effect',
+    icon: '🚫',
+    category: 'Effects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oPC', tag: '', mode: 'type', effectType: 'EFFECT_TYPE_HASTE' };
+      const EFFECT_TYPES = [
+        'EFFECT_TYPE_ABILITY_DECREASE','EFFECT_TYPE_ABILITY_INCREASE',
+        'EFFECT_TYPE_AC_DECREASE','EFFECT_TYPE_AC_INCREASE',
+        'EFFECT_TYPE_ATTACK_DECREASE','EFFECT_TYPE_ATTACK_INCREASE',
+        'EFFECT_TYPE_BLINDNESS','EFFECT_TYPE_CHARMED','EFFECT_TYPE_CONFUSED',
+        'EFFECT_TYPE_CURSE','EFFECT_TYPE_DAZED','EFFECT_TYPE_DEAF',
+        'EFFECT_TYPE_DISEASE','EFFECT_TYPE_DOMINATED','EFFECT_TYPE_ENTANGLE',
+        'EFFECT_TYPE_ETHEREAL','EFFECT_TYPE_FRIGHTENED','EFFECT_TYPE_HASTE',
+        'EFFECT_TYPE_IMMUNITY','EFFECT_TYPE_INVISIBILITY','EFFECT_TYPE_KNOCKDOWN',
+        'EFFECT_TYPE_MOVEMENT_SPEED_DECREASE','EFFECT_TYPE_MOVEMENT_SPEED_INCREASE',
+        'EFFECT_TYPE_NEGATIVELEVEL','EFFECT_TYPE_PARALYZE','EFFECT_TYPE_PETRIFY',
+        'EFFECT_TYPE_POISON','EFFECT_TYPE_POLYMORPH','EFFECT_TYPE_REGENERATE',
+        'EFFECT_TYPE_SILENCE','EFFECT_TYPE_SLEEP','EFFECT_TYPE_SLOW',
+        'EFFECT_TYPE_STUNNED','EFFECT_TYPE_TRUESEEING',
+      ];
+      return `
+        <div class="field">
+          <label>Remove from</label>
+          <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+            ${['oPC','OBJECT_SELF','oActivator','oActTarget'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+            <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+          </select>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)" placeholder="creature_tag"></div>`:''}
+        <div class="field">
+          <label>Mode</label>
+          <div class="radio-group" id="${slotId}_mode">
+            ${[['type','By effect type'],['all','Remove all effects']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.mode===v?'selected':''}">
+                <input type="radio" name="${slotId}_mode" value="${v}"
+                  ${cfg.mode===v?'checked':''}
+                  onchange="updateCfg('${slotId}','mode','${v}');syncRadios('${slotId}_mode');rebuildModule('${slotId}')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        ${cfg.mode!=='all'?`
+        <div class="field">
+          <label>Effect type</label>
+          <select onchange="updateCfg('${slotId}','effectType',this.value)">
+            ${EFFECT_TYPES.map(v=>`<option value="${v}" ${cfg.effectType===v?'selected':''}>${v}</option>`).join('')}
+          </select>
+        </div>`:''}`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      if (cfg.mode === 'all') {
+        return [
+          `// Remove all effects.`,
+          `effect eEffect = GetFirstEffect(${obj});`,
+          `while (GetIsEffectValid(eEffect)) {`,
+          `    RemoveEffect(${obj}, eEffect);`,
+          `    eEffect = GetNextEffect(${obj});`,
+          `}`,
+        ];
+      }
+      return [
+        `// Remove effects of type ${cfg.effectType||'EFFECT_TYPE_HASTE'}.`,
+        `effect eEffect = GetFirstEffect(${obj});`,
+        `while (GetIsEffectValid(eEffect)) {`,
+        `    effect eNext = GetNextEffect(${obj});`,
+        `    if (GetEffectType(eEffect) == ${cfg.effectType||'EFFECT_TYPE_HASTE'})`,
+        `        RemoveEffect(${obj}, eEffect);`,
+        `    eEffect = eNext;`,
+        `}`,
+      ];
+    },
+  },
+
+  // ── Damage ────────────────────────────────────────────────────────────────
+  {
+    id: 'damage',
+    label: 'Damage',
+    icon: '🩸',
+    category: 'Combat',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oPC', tag: '', amount: 10, dice: 'flat', diceNum: 1,
+                     damageType: 'DAMAGE_TYPE_MAGICAL', vfx: 'none' };
+      const DMGTYPES = ['DAMAGE_TYPE_BLUDGEONING','DAMAGE_TYPE_PIERCING','DAMAGE_TYPE_SLASHING',
+        'DAMAGE_TYPE_MAGICAL','DAMAGE_TYPE_ACID','DAMAGE_TYPE_COLD','DAMAGE_TYPE_DIVINE',
+        'DAMAGE_TYPE_ELECTRICAL','DAMAGE_TYPE_FIRE','DAMAGE_TYPE_NEGATIVE',
+        'DAMAGE_TYPE_POSITIVE','DAMAGE_TYPE_SONIC'];
+      const DICE = [['flat','Flat amount'],['d4','d4'],['d6','d6'],['d8','d8'],
+                    ['d10','d10'],['d12','d12'],['d20','d20']];
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Target</label>
+            <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+              ${['oPC','OBJECT_SELF','oActivator','oActTarget'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+              <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Damage type</label>
+            <select onchange="updateCfg('${slotId}','damageType',this.value)">
+              ${DMGTYPES.map(v=>`<option value="${v}" ${cfg.damageType===v?'selected':''}>${v.replace('DAMAGE_TYPE_','')}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)" placeholder="target_tag"></div>`:''}
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Amount / dice count</label>
+            <input type="number" min="1" value="${cfg.amount||10}"
+              oninput="updateCfg('${slotId}','amount',parseInt(this.value)||1)">
+          </div>
+          <div class="field">
+            <label>Dice type</label>
+            <select onchange="updateCfg('${slotId}','dice',this.value)">
+              ${DICE.map(([v,l])=>`<option value="${v}" ${cfg.dice===v?'selected':''}>${l}</option>`).join('')}
+            </select>
+          </div>
+        </div>`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      const dmgExpr = cfg.dice === 'flat'
+        ? String(cfg.amount||10)
+        : (cfg.amount===1 ? `${cfg.dice}()` : `${cfg.dice}(${cfg.amount||1})`);
+      return [
+        `// Deal ${cfg.dice==='flat'?cfg.amount||10:cfg.amount+'×'+cfg.dice} ${(cfg.damageType||'').replace('DAMAGE_TYPE_','')} damage.`,
+        `effect eDamage = EffectDamage(${dmgExpr}, ${cfg.damageType||'DAMAGE_TYPE_MAGICAL'});`,
+        `ApplyEffectToObject(DURATION_TYPE_INSTANT, eDamage, ${obj});`,
+      ];
+    },
+  },
+
+  // ── Spawn Creature ────────────────────────────────────────────────────────
+  {
+    id: 'spawn_creature',
+    label: 'Spawn Creature',
+    icon: '👾',
+    category: 'Objects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { resref: '', waypoint: '', location: 'waypoint', active: true };
+      return `
+        <div class="field">
+          <label>Creature ResRef</label>
+          <input type="text" value="${esc(cfg.resref)}" placeholder="nw_skeleton"
+            oninput="updateCfg('${slotId}','resref',this.value)">
+        </div>
+        <div class="field">
+          <label>Spawn location</label>
+          <div class="radio-group" id="${slotId}_loc">
+            ${[['waypoint','At waypoint tag'],['self','At OBJECT_SELF'],['pc','Near PC']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.location===v?'selected':''}">
+                <input type="radio" name="${slotId}_loc" value="${v}"
+                  ${cfg.location===v?'checked':''}
+                  onchange="updateCfg('${slotId}','location','${v}');syncRadios('${slotId}_loc');toggleById('${slotId}_wpRow','${v}'==='waypoint')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field" id="${slotId}_wpRow" style="display:${cfg.location==='waypoint'?'':'none'}">
+          <label>Waypoint Tag</label>
+          <input type="text" value="${esc(cfg.waypoint)}" placeholder="WP_SPAWN_POINT"
+            oninput="updateCfg('${slotId}','waypoint',this.value)">
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.active?'checked':''}
+            onchange="updateCfg('${slotId}','active',this.checked)">
+          <span class="checkbox-label">Store spawned creature in oSpawn variable</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const resref = cfg.resref || 'nw_skeleton';
+      const loc = cfg.location === 'waypoint'
+        ? `GetLocation(GetWaypointByTag("${cfg.waypoint||'WP_SPAWN_POINT'}"))` 
+        : cfg.location === 'pc' ? `GetLocation(oPC)` : `GetLocation(OBJECT_SELF)`;
+      if (cfg.active) {
+        return [
+          `// Spawn creature and store reference.`,
+          `object oSpawn = CreateObject(OBJECT_TYPE_CREATURE, "${resref}", ${loc});`,
+        ];
+      }
+      return [
+        `// Spawn creature.`,
+        `CreateObject(OBJECT_TYPE_CREATURE, "${resref}", ${loc});`,
+      ];
+    },
+  },
+
+  // ── Apply Visual Effect ───────────────────────────────────────────────────
+  {
+    id: 'vfx',
+    label: 'Visual Effect',
+    icon: '💫',
+    category: 'Effects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oPC', tag: '', vfxType: 'impact', vfxConst: 'VFX_IMP_MAGIC_PROTECTION' };
+      const COMMON_VFX = {
+        impact: ['VFX_IMP_MAGIC_PROTECTION','VFX_IMP_HEALING_S','VFX_IMP_HEALING_M',
+          'VFX_IMP_HEALING_L','VFX_IMP_HEALING_X','VFX_IMP_DEATH','VFX_IMP_FLAME_S',
+          'VFX_IMP_FLAME_M','VFX_IMP_FROST_S','VFX_IMP_LIGHTNING_S','VFX_IMP_POISON_S',
+          'VFX_IMP_ACID_S','VFX_IMP_SONIC','VFX_IMP_BLIND_DEAF_M','VFX_IMP_UNSUMMON',
+          'VFX_IMP_CHARM','VFX_IMP_CONFUSION_S','VFX_IMP_SLEEP'],
+        duration: ['VFX_DUR_BLUR','VFX_DUR_HASTE','VFX_DUR_SLOW','VFX_DUR_GLOBE_MINOR',
+          'VFX_DUR_MAGIC_RESISTANCE','VFX_DUR_AURA_GREEN','VFX_DUR_AURA_RED',
+          'VFX_DUR_AURA_BLUE','VFX_DUR_AURA_YELLOW','VFX_DUR_GLOW_LIGHT_BLUE',
+          'VFX_DUR_GLOW_LIGHT_GREEN','VFX_DUR_GLOW_LIGHT_RED','VFX_DUR_INVISIBILITY',
+          'VFX_DUR_SANCTUARY','VFX_DUR_DARKNESS'],
+      };
+      const list = COMMON_VFX[cfg.vfxType] || COMMON_VFX.impact;
+      return `
+        <div class="field">
+          <label>Target</label>
+          <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+            ${['oPC','OBJECT_SELF','oActivator','oActTarget'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+            <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+          </select>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)"></div>`:''}
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>VFX category</label>
+            <select onchange="updateCfg('${slotId}','vfxType',this.value);rebuildModule('${slotId}')">
+              <option value="impact" ${cfg.vfxType==='impact'?'selected':''}>Impact (instant)</option>
+              <option value="duration" ${cfg.vfxType==='duration'?'selected':''}>Duration (persistent)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Effect constant</label>
+            <select onchange="updateCfg('${slotId}','vfxConst',this.value)">
+              ${list.map(v=>`<option value="${v}" ${cfg.vfxConst===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+        </div>`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      const durType = cfg.vfxType === 'impact' ? 'DURATION_TYPE_INSTANT' : 'DURATION_TYPE_PERMANENT';
+      return [
+        `// Apply visual effect.`,
+        `ApplyEffectToObject(${durType}, EffectVisualEffect(${cfg.vfxConst||'VFX_IMP_MAGIC_PROTECTION'}), ${obj});`,
+      ];
+    },
+  },
+
+  // ── Set Alignment ─────────────────────────────────────────────────────────
+  {
+    id: 'alignment',
+    label: 'Adjust Alignment',
+    icon: '⚖',
+    category: 'Character',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { axis: 'ALIGNMENT_GOOD', amount: 10, target: 'oPC', allParty: false };
+      const AXES = ['ALIGNMENT_GOOD','ALIGNMENT_EVIL','ALIGNMENT_LAWFUL','ALIGNMENT_CHAOTIC','ALIGNMENT_NEUTRAL'];
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Direction</label>
+            <select onchange="updateCfg('${slotId}','axis',this.value)">
+              ${AXES.map(v=>`<option value="${v}" ${cfg.axis===v?'selected':''}>${v.replace('ALIGNMENT_','')}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label>Amount (1–100)</label>
+            <input type="number" min="1" max="100" value="${cfg.amount||10}"
+              oninput="updateCfg('${slotId}','amount',parseInt(this.value)||10)">
+          </div>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.allParty?'checked':''}
+            onchange="updateCfg('${slotId}','allParty',this.checked)">
+          <span class="checkbox-label">Apply to all party members</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const axis = cfg.axis || 'ALIGNMENT_GOOD';
+      const amount = cfg.amount || 10;
+      const dir = axis.replace('ALIGNMENT_','').toLowerCase();
+      if (cfg.allParty) {
+        return [
+          `// Adjust alignment (${dir}) for whole party.`,
+          `object oMember = GetFirstFactionMember(oPC, TRUE);`,
+          `while (GetIsObjectValid(oMember)) {`,
+          `    AdjustAlignment(oMember, ${axis}, ${amount});`,
+          `    oMember = GetNextFactionMember(oPC, TRUE);`,
+          `}`,
+        ];
+      }
+      return [
+        `// The PC has become more ${dir}.`,
+        `AdjustAlignment(oPC, ${axis}, ${amount});`,
+      ];
+    },
+  },
+
+  // ── Adjust Reputation ─────────────────────────────────────────────────────
+  {
+    id: 'reputation',
+    label: 'Adjust Reputation',
+    icon: '🤝',
+    category: 'Character',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oPC', npcTag: '', amount: 10, allParty: false, useTag: false };
+      return `
+        <div class="field">
+          <label>NPC / Faction creature</label>
+          <div class="radio-group" id="${slotId}_who">
+            ${[['self','OBJECT_SELF'],['tagged','By tag…']].map(([v,l])=>`
+              <label class="radio-opt ${(cfg.useTag?(v==='tagged'):(v==='self'))?'selected':''}">
+                <input type="radio" name="${slotId}_who" value="${v}"
+                  ${(cfg.useTag?(v==='tagged'):(v==='self'))?'checked':''}
+                  onchange="updateCfg('${slotId}','useTag','${v}'==='tagged');syncRadios('${slotId}_who');toggleById('${slotId}_tagRow','${v}'==='tagged')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field" id="${slotId}_tagRow" style="display:${cfg.useTag?'':'none'}">
+          <label>NPC Tag</label>
+          <input type="text" value="${esc(cfg.npcTag)}" placeholder="merchant_npc"
+            oninput="updateCfg('${slotId}','npcTag',this.value)">
+        </div>
+        <div class="field">
+          <label>Amount (positive = friendlier, negative = hostile)</label>
+          <input type="number" min="-100" max="100" value="${cfg.amount||10}"
+            oninput="updateCfg('${slotId}','amount',parseInt(this.value)||10)">
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.allParty?'checked':''}
+            onchange="updateCfg('${slotId}','allParty',this.checked)">
+          <span class="checkbox-label">Adjust for whole party</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const npc = cfg.useTag ? `GetObjectByTag("${cfg.npcTag||'NPC_TAG'}")` : 'OBJECT_SELF';
+      const fn = cfg.allParty ? 'AdjustReputationWithParty' : 'AdjustReputation';
+      return [
+        `// Adjust NPC's reputation toward ${cfg.allParty?'party':'PC'}.`,
+        `${fn}(oPC, ${npc}, ${cfg.amount||10});`,
+      ];
+    },
+  },
+
+  // ── Lock / Unlock ─────────────────────────────────────────────────────────
+  {
+    id: 'lock',
+    label: 'Lock / Unlock',
+    icon: '🔒',
+    category: 'Objects',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'self', tag: '', action: 'lock', setPlot: false };
+      return `
+        <div class="field">
+          <label>Target object</label>
+          <div class="radio-group" id="${slotId}_tgt">
+            ${[['self','OBJECT_SELF'],['tagged','By tag…']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.target===v?'selected':''}">
+                <input type="radio" name="${slotId}_tgt" value="${v}"
+                  ${cfg.target===v?'checked':''}
+                  onchange="updateCfg('${slotId}','target','${v}');syncRadios('${slotId}_tgt');toggleById('${slotId}_tagRow','${v}'==='tagged')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field" id="${slotId}_tagRow" style="display:${cfg.target==='tagged'?'':'none'}">
+          <label>Tag</label>
+          <input type="text" value="${esc(cfg.tag)}" placeholder="door_or_container_tag"
+            oninput="updateCfg('${slotId}','tag',this.value)">
+        </div>
+        <div class="field">
+          <label>Action</label>
+          <div class="radio-group" id="${slotId}_act">
+            ${[['lock','Lock'],['unlock','Unlock'],['toggle','Toggle']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.action===v?'selected':''}">
+                <input type="radio" name="${slotId}_act" value="${v}"
+                  ${cfg.action===v?'checked':''}
+                  onchange="updateCfg('${slotId}','action','${v}');syncRadios('${slotId}_act')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.setPlot?'checked':''}
+            onchange="updateCfg('${slotId}','setPlot',this.checked)">
+          <span class="checkbox-label">Also set plot flag (invulnerable)</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'DOOR_TAG'}")` : 'OBJECT_SELF';
+      const lines = [`// ${cfg.action==='lock'?'Lock':'Unlock'} object.`];
+      if (cfg.action === 'toggle') {
+        lines.push(`SetLocked(${obj}, !GetLocked(${obj}));`);
+      } else {
+        lines.push(`SetLocked(${obj}, ${cfg.action==='lock'?'TRUE':'FALSE'});`);
+      }
+      if (cfg.setPlot) lines.push(`SetPlotFlag(${obj}, TRUE);`);
+      return lines;
+    },
+  },
+
+  // ── Henchman / Associate ─────────────────────────────────────────────────
+  {
+    id: 'companion',
+    label: 'Henchman',
+    icon: '🧑‍🤝‍🧑',
+    category: 'Associates',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { action: 'add', npcTag: '', destroyOnRemove: false };
+      return `
+        <div class="field">
+          <label>Action</label>
+          <div class="radio-group" id="${slotId}_act">
+            ${[['add','Add henchman'],['remove','Remove henchman']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.action===v?'selected':''}">
+                <input type="radio" name="${slotId}_act" value="${v}"
+                  ${cfg.action===v?'checked':''}
+                  onchange="updateCfg('${slotId}','action','${v}');syncRadios('${slotId}_act');rebuildModule('${slotId}')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        <div class="field">
+          <label>NPC Tag</label>
+          <input type="text" value="${esc(cfg.npcTag)}" placeholder="companion_tag"
+            oninput="updateCfg('${slotId}','npcTag',this.value)">
+        </div>
+        ${cfg.action==='remove'?`
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.destroyOnRemove?'checked':''}
+            onchange="updateCfg('${slotId}','destroyOnRemove',this.checked)">
+          <span class="checkbox-label">Destroy NPC after removing</span>
+        </label>`:''}`;
+    },
+    codeLines(cfg) {
+      const tag = cfg.npcTag || 'COMPANION_TAG';
+      if (cfg.action === 'add') {
+        return [
+          `// Add henchman to PC.`,
+          `object oHench = GetObjectByTag("${tag}");`,
+          `AddHenchman(oPC, oHench);`,
+        ];
+      }
+      const lines = [
+        `// Remove henchman from PC.`,
+        `object oHench = GetObjectByTag("${tag}");`,
+        `RemoveHenchman(oPC, oHench);`,
+      ];
+      if (cfg.destroyOnRemove) lines.push(`DestroyObject(oHench);`);
+      return lines;
+    },
+  },
+
+  // ── Ambient Sound / Music ─────────────────────────────────────────────────
+  {
+    id: 'sound',
+    label: 'Sound / Music',
+    icon: '🔊',
+    category: 'Environment',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { mode: 'ambient_play', track: '' };
+      return `
+        <div class="field">
+          <label>Action</label>
+          <select onchange="updateCfg('${slotId}','mode',this.value);rebuildModule('${slotId}')">
+            ${[
+              ['ambient_play','Play ambient sound'],['ambient_stop','Stop ambient sound'],
+              ['music_play','Play background music'],['music_stop','Stop background music'],
+              ['music_battle','Play battle music'],['music_stop_battle','Stop battle music'],
+              ['sound_play','PlaySound (2D)'],
+            ].map(([v,l])=>`<option value="${v}" ${cfg.mode===v?'selected':''}>${l}</option>`).join('')}
+          </select>
+        </div>
+        ${['sound_play'].includes(cfg.mode)?`
+        <div class="field">
+          <label>Sound resref</label>
+          <input type="text" value="${esc(cfg.track)}" placeholder="as_cv_tavern01"
+            oninput="updateCfg('${slotId}','track',this.value)">
+        </div>`:''}`;
+    },
+    codeLines(cfg) {
+      const area = `GetArea(oPC)`;
+      switch(cfg.mode) {
+        case 'ambient_play':  return [`AmbientSoundPlay(${area});`];
+        case 'ambient_stop':  return [`AmbientSoundStop(${area});`];
+        case 'music_play':    return [`MusicBackgroundPlay(${area});`];
+        case 'music_stop':    return [`MusicBackgroundStop(${area});`];
+        case 'music_battle':  return [`MusicBattlePlay(${area});`];
+        case 'music_stop_battle': return [`MusicBattleStop(${area});`];
+        case 'sound_play':    return [`PlaySound("${cfg.track||'sound_resref'}");`];
+        default: return [`// Sound action`];
+      }
+    },
+  },
+
+  // ── Floating Message / Speak ───────────────────────────────────────────────
+  {
+    id: 'speak',
+    label: 'NPC Speak',
+    icon: '🗣',
+    category: 'Communication',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { text: '', volume: 'TALKVOLUME_TALK', target: 'OBJECT_SELF' };
+      const VOLUMES = ['TALKVOLUME_TALK','TALKVOLUME_WHISPER','TALKVOLUME_SHOUT',
+        'TALKVOLUME_SILENT_SHOUT','TALKVOLUME_SILENT_TALK'];
+      return `
+        <div class="field">
+          <label>Text to speak</label>
+          <input type="text" value="${esc(cfg.text)}" placeholder="Halt, adventurer!"
+            oninput="updateCfg('${slotId}','text',this.value)">
+        </div>
+        <div class="field">
+          <label>Volume / range</label>
+          <select onchange="updateCfg('${slotId}','volume',this.value)">
+            ${VOLUMES.map(v=>`<option value="${v}" ${cfg.volume===v?'selected':''}>${v.replace('TALKVOLUME_','')}</option>`).join('')}
+          </select>
+        </div>`;
+    },
+    codeLines(cfg) {
+      return [
+        `// NPC speaks.`,
+        `SpeakString("${cfg.text||'Hello!'}", ${cfg.volume||'TALKVOLUME_TALK'});`,
+      ];
+    },
+  },
+
+  // ── Cast Spell ────────────────────────────────────────────────────────────
+  {
+    id: 'spellcast',
+    label: 'Cast Spell',
+    icon: '🔮',
+    category: 'Combat',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { spell: 'SPELL_MAGIC_MISSILE', target: 'oPC', tag: '', fake: false, projectile: 'PROJECTILE_PATH_TYPE_DEFAULT' };
+      const COMMON_SPELLS = ['SPELL_MAGIC_MISSILE','SPELL_FIREBALL','SPELL_LIGHTNING_BOLT',
+        'SPELL_CONE_OF_COLD','SPELL_FLAME_ARROW','SPELL_MELF_ACID_ARROW',
+        'SPELL_CURE_LIGHT_WOUNDS','SPELL_CURE_MODERATE_WOUNDS','SPELL_CURE_SERIOUS_WOUNDS',
+        'SPELL_CURE_CRITICAL_WOUNDS','SPELL_HEAL','SPELL_HARM',
+        'SPELL_HOLD_PERSON','SPELL_SLEEP','SPELL_WEB',
+        'SPELL_STONESKIN','SPELL_HASTE','SPELL_SLOW','SPELL_BLESS','SPELL_PRAYER'];
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Spell</label>
+            <select onchange="updateCfg('${slotId}','spell',this.value)">
+              ${COMMON_SPELLS.map(v=>`<option value="${v}" ${cfg.spell===v?'selected':''}>${v.replace('SPELL_','').replace(/_/g,' ')}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label>Target</label>
+            <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+              ${['oPC','OBJECT_SELF','oActivator','oActTarget'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+              <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+            </select>
+          </div>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)"></div>`:''}
+        <label class="checkbox-row">
+          <input type="checkbox" ${cfg.fake?'checked':''}
+            onchange="updateCfg('${slotId}','fake',this.checked)">
+          <span class="checkbox-label">Use fake spell cast (visual only, no effect)</span>
+        </label>`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      const fn = cfg.fake ? 'ActionCastFakeSpellAtObject' : 'ActionCastSpellAtObject';
+      return [
+        `// Cast spell at target.`,
+        `AssignCommand(OBJECT_SELF, ${fn}(${cfg.spell||'SPELL_MAGIC_MISSILE'}, ${obj}));`,
+      ];
+    },
+  },
+
+  // ── Give / Take Gold ──────────────────────────────────────────────────────
+  {
+    id: 'gold',
+    label: 'Give / Take Gold',
+    icon: '💰',
+    category: 'Rewards',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { action: 'give', amount: 100 };
+      return `
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Action</label>
+            <div class="radio-group" id="${slotId}_act">
+              ${[['give','Give'],['take','Take']].map(([v,l])=>`
+                <label class="radio-opt ${cfg.action===v?'selected':''}">
+                  <input type="radio" name="${slotId}_act" value="${v}"
+                    ${cfg.action===v?'checked':''}
+                    onchange="updateCfg('${slotId}','action','${v}');syncRadios('${slotId}_act')">
+                  <span class="radio-label">${l}</span>
+                </label>`).join('')}
+            </div>
+          </div>
+          <div class="field">
+            <label>Amount (GP)</label>
+            <input type="number" min="1" value="${cfg.amount||100}"
+              oninput="updateCfg('${slotId}','amount',parseInt(this.value)||1)">
+          </div>
+        </div>`;
+    },
+    codeLines(cfg) {
+      if (cfg.action === 'take') {
+        return [
+          `// Take gold from PC.`,
+          `TakeGoldFromCreature(${cfg.amount||100}, oPC, TRUE);`,
+        ];
+      }
+      return [
+        `// Give gold to PC.`,
+        `GiveGoldToCreature(oPC, ${cfg.amount||100});`,
+      ];
+    },
+  },
+
+  // ── Create / Destroy Item ─────────────────────────────────────────────────
+  {
+    id: 'item',
+    label: 'Create / Destroy Item',
+    icon: '🗡',
+    category: 'Items',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { action: 'create', resref: '', target: 'oPC', tag: '', quantity: 1 };
+      return `
+        <div class="field">
+          <label>Action</label>
+          <div class="radio-group" id="${slotId}_act">
+            ${[['create','Create item'],['destroy','Destroy item by tag']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.action===v?'selected':''}">
+                <input type="radio" name="${slotId}_act" value="${v}"
+                  ${cfg.action===v?'checked':''}
+                  onchange="updateCfg('${slotId}','action','${v}');syncRadios('${slotId}_act');rebuildModule('${slotId}')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        ${cfg.action==='create'?`
+        <div class="field"><label>Item ResRef</label>
+          <input type="text" value="${esc(cfg.resref)}" placeholder="nw_it_msmlmisc01"
+            oninput="updateCfg('${slotId}','resref',this.value)">
+        </div>
+        <div class="field-row cols-2">
+          <div class="field"><label>Give to</label>
+            <select onchange="updateCfg('${slotId}','target',this.value)">
+              ${['oPC','OBJECT_SELF','oActivator'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field"><label>Quantity</label>
+            <input type="number" min="1" value="${cfg.quantity||1}"
+              oninput="updateCfg('${slotId}','quantity',parseInt(this.value)||1)">
+          </div>
+        </div>`:
+        `<div class="field"><label>Item Tag</label>
+          <input type="text" value="${esc(cfg.tag)}" placeholder="item_tag"
+            oninput="updateCfg('${slotId}','tag',this.value)">
+        </div>`}`;
+    },
+    codeLines(cfg) {
+      if (cfg.action === 'destroy') {
+        return [
+          `// Destroy item by tag.`,
+          `DestroyObject(GetItemPossessedBy(oPC, "${cfg.tag||'ITEM_TAG'}"));`,
+        ];
+      }
+      return [
+        `// Create item and give to ${cfg.target||'oPC'}.`,
+        `CreateItemOnObject("${cfg.resref||'item_resref'}", ${cfg.target||'oPC'}, ${cfg.quantity||1});`,
+      ];
+    },
+  },
+
+  // ── Set Appearance ────────────────────────────────────────────────────────
+  {
+    id: 'appearance',
+    label: 'Set Appearance',
+    icon: '🎭',
+    category: 'Character',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { target: 'oPC', tag: '', mode: 'appearance', appearance: 'APPEARANCE_TYPE_HUMAN_MALE',
+                     phenotype: '0', name: '' };
+      const COMMON_APP = ['APPEARANCE_TYPE_HUMAN_MALE','APPEARANCE_TYPE_HUMAN_FEMALE',
+        'APPEARANCE_TYPE_ELF_MALE','APPEARANCE_TYPE_ELF_FEMALE',
+        'APPEARANCE_TYPE_DWARF_MALE','APPEARANCE_TYPE_DWARF_FEMALE',
+        'APPEARANCE_TYPE_HALFLING_MALE','APPEARANCE_TYPE_HALFLING_FEMALE',
+        'APPEARANCE_TYPE_SKELETON','APPEARANCE_TYPE_ZOMBIE','APPEARANCE_TYPE_GHOUL',
+        'APPEARANCE_TYPE_DRAGON_RED','APPEARANCE_TYPE_DRAGON_BLUE','APPEARANCE_TYPE_DRAGON_GREEN',
+        'APPEARANCE_TYPE_WOLF','APPEARANCE_TYPE_BEAR_BROWN','APPEARANCE_TYPE_TROLL'];
+      return `
+        <div class="field">
+          <label>Target</label>
+          <select onchange="updateCfg('${slotId}','target',this.value);rebuildModule('${slotId}')">
+            ${['oPC','OBJECT_SELF','oActivator'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+            <option value="tagged" ${cfg.target==='tagged'?'selected':''}>By tag…</option>
+          </select>
+        </div>
+        ${cfg.target==='tagged'?`<div class="field"><label>Tag</label><input type="text" value="${esc(cfg.tag)}" oninput="updateCfg('${slotId}','tag',this.value)"></div>`:''}
+        <div class="field">
+          <label>Change</label>
+          <div class="radio-group" id="${slotId}_mode">
+            ${[['appearance','Appearance type'],['name','Name'],['description','Description']].map(([v,l])=>`
+              <label class="radio-opt ${cfg.mode===v?'selected':''}">
+                <input type="radio" name="${slotId}_mode" value="${v}"
+                  ${cfg.mode===v?'checked':''}
+                  onchange="updateCfg('${slotId}','mode','${v}');syncRadios('${slotId}_mode');rebuildModule('${slotId}')">
+                <span class="radio-label">${l}</span>
+              </label>`).join('')}
+          </div>
+        </div>
+        ${cfg.mode==='appearance'?`
+        <div class="field">
+          <label>Appearance constant</label>
+          <select onchange="updateCfg('${slotId}','appearance',this.value)">
+            ${COMMON_APP.map(v=>`<option value="${v}" ${cfg.appearance===v?'selected':''}>${v.replace('APPEARANCE_TYPE_','').replace(/_/g,' ')}</option>`).join('')}
+          </select>
+        </div>`:
+        `<div class="field"><label>${cfg.mode==='name'?'New name':'Description text'}</label>
+          <input type="text" value="${esc(cfg.name)}" placeholder="${cfg.mode==='name'?'New Name':'Description...'}"
+            oninput="updateCfg('${slotId}','name',this.value)">
+        </div>`}`;
+    },
+    codeLines(cfg) {
+      const obj = cfg.target === 'tagged' ? `GetObjectByTag("${cfg.tag||'TARGET_TAG'}")` : (cfg.target||'oPC');
+      if (cfg.mode === 'name')        return [`SetName(${obj}, "${cfg.name||'New Name'}");`];
+      if (cfg.mode === 'description') return [`SetDescription(${obj}, "${cfg.name||'Description'}");`];
+      return [
+        `// Change creature appearance.`,
+        `SetCreatureAppearanceType(${obj}, ${cfg.appearance||'APPEARANCE_TYPE_HUMAN_MALE'});`,
+      ];
+    },
+  },
+
+  // ── Delay Command ─────────────────────────────────────────────────────────
+  {
+    id: 'delay',
+    label: 'Delay Command',
+    icon: '⏱',
+    category: 'Timing',
+    buildHTML(slotId, cfg) {
+      cfg = cfg || { seconds: 3.0, command: 'DestroyObject(OBJECT_SELF)', target: 'OBJECT_SELF' };
+      return `
+        <div class="field">
+          <label>Delay (seconds)</label>
+          <input type="number" min="0.1" step="0.1" value="${cfg.seconds||3.0}"
+            oninput="updateCfg('${slotId}','seconds',parseFloat(this.value)||1.0)">
+        </div>
+        <div class="field">
+          <label>Execute on object</label>
+          <select onchange="updateCfg('${slotId}','target',this.value)">
+            ${['OBJECT_SELF','oPC','oActivator'].map(v=>`<option value="${v}" ${cfg.target===v?'selected':''}>${v}</option>`).join('')}
+          </select>
+        </div>
+        <div class="field">
+          <label>Command (NWScript expression)</label>
+          <input type="text" value="${esc(cfg.command)}" placeholder="DestroyObject(OBJECT_SELF)"
+            oninput="updateCfg('${slotId}','command',this.value)">
+        </div>`;
+    },
+    codeLines(cfg) {
+      return [
+        `// Execute after ${cfg.seconds||3.0} second(s).`,
+        `DelayCommand(${parseFloat(cfg.seconds||3.0).toFixed(1)}f, AssignCommand(${cfg.target||'OBJECT_SELF'}, ${cfg.command||'DestroyObject(OBJECT_SELF)'}));`,
+      ];
+    },
+  },
+];
+
+// ─── Helpers ─────────────────────────────────────────
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function setStatus(msg, cls='status-ok') {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  el.className = cls;
+}
+
+function toggleCard(header) {
+  const body = header.nextElementSibling;
+  body.style.display = body.style.display === 'none' ? '' : 'none';
+}
+
+function toggleById(id, show) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = show ? '' : 'none';
+}
+
+function syncRadios(groupId) {
+  const group = document.getElementById(groupId);
+  if (!group) return;
+  group.querySelectorAll('.radio-opt').forEach(opt => {
+    const radio = opt.querySelector('input[type=radio]');
+    opt.classList.toggle('selected', radio && radio.checked);
+  });
+}
+
+// ─── Type List Render ─────────────────────────────────
+function toggleTypeGroup(el) {
+  el.closest('.type-group').classList.toggle('collapsed');
+}
+
+function renderTypeList() {
+  const list = document.getElementById('typeList');
+  list.innerHTML = SCRIPT_TYPES.map(group => `
+    <div class="type-group">
+      <div class="type-group-label" onclick="toggleTypeGroup(this)">
+        ${group.group}
+        <span class="type-group-chevron">&#9660;</span>
+      </div>
+      <div class="type-group-body">
+        <div class="type-group-inner">
+          ${group.types.map(t => `
+            <button class="type-btn" data-typeid="${t.id}" onclick="selectType('${t.id}')">
+              <span class="type-icon">${t.icon}</span>
+              <span>
+                <div class="type-name">${t.name}</div>
+                <div class="type-desc">${t.desc}</div>
+              </span>
+            </button>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ─── Select Script Type ───────────────────────────────
+function selectType(typeId) {
+  const allTypes = SCRIPT_TYPES.flatMap(g => g.types);
+  state.scriptType = allTypes.find(t => t.id === typeId) || null;
+  if (!state.scriptType) return;
+
+  // Update type button active state, then collapse that group
+  document.querySelectorAll('.type-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.typeid === typeId);
+  });
+  // Collapse the group containing the selected button after a short delay
+  setTimeout(() => {
+    const activeBtn = document.querySelector('.type-btn.active');
+    if (activeBtn) {
+      const group = activeBtn.closest('.type-group');
+      if (group) group.classList.add('collapsed');
+    }
+  }, 250);
+
+  // Show context bar
+  document.getElementById('ctxEvent').textContent = state.scriptType.name;
+  document.getElementById('ctxEvent').className = 'ctx-tag';
+
+  const varsEl = document.getElementById('ctxVars');
+  if (state.scriptType.vars.length) {
+    varsEl.textContent = state.scriptType.vars[0].split(' ')[1] || '';
+    varsEl.style.display = '';
+  } else {
+    varsEl.style.display = 'none';
+  }
+
+  // Show builder
+  document.getElementById('welcomePane').style.display = 'none';
+  document.getElementById('builderScroll').classList.add('visible');
+
+  // Re-render action strip
+  renderActionStrip();
+
+  // Rebuild modules (keep existing if same context)
+  renderModuleSlots();
+
+  // Auto-generate if we have modules
+  if (state.modules.length) generateScript();
+
+  setStatus(`Script type: ${state.scriptType.name}`, 'status-ok');
+}
+
+// ─── Action Strip ─────────────────────────────────────
+function renderActionStrip() {
+  const strip = document.getElementById('actionStrip');
+  strip.innerHTML = ACTION_MODULES.map(m => `
+    <button class="action-btn" onclick="addModule('${m.id}')" data-tip="Add ${m.label}">
+      <span class="icon">${m.icon}</span>${m.label}
+    </button>`).join('');
+}
+
+// ─── Module Slots ─────────────────────────────────────
+function addModule(moduleId) {
+  const def = ACTION_MODULES.find(m => m.id === moduleId);
+  if (!def) return;
+  const slotId = `slot_${state.nextId++}`;
+  state.modules.push({ slotId, moduleId, cfg: {} });
+  renderModuleSlots();
+  generateScript();
+  // Scroll to new module
+  setTimeout(() => {
+    const el = document.getElementById(slotId);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 50);
+}
+
+function removeModule(slotId) {
+  state.modules = state.modules.filter(m => m.slotId !== slotId);
+  renderModuleSlots();
+  generateScript();
+}
+
+function moveModule(slotId, dir) {
+  const idx = state.modules.findIndex(m => m.slotId === slotId);
+  if (idx < 0) return;
+  const swap = idx + dir;
+  if (swap < 0 || swap >= state.modules.length) return;
+  [state.modules[idx], state.modules[swap]] = [state.modules[swap], state.modules[idx]];
+  renderModuleSlots();
+  generateScript();
+}
+
+// Debounce timers per slot for auto-collapse
+const _collapseTimers = {};
+
+function updateCfg(slotId, key, val) {
+  const mod = state.modules.find(m => m.slotId === slotId);
+  if (mod) mod.cfg[key] = val;
+  generateScript();
+
+  // Update the summary text immediately (even while expanded)
+  const card = document.getElementById(slotId);
+  if (card) {
+    const def = ACTION_MODULES.find(m => m.id === mod?.moduleId);
+    const summaryEl = card.querySelector('.module-summary');
+    if (summaryEl && def) summaryEl.textContent = moduleSummary(def, mod.cfg);
+  }
+
+  // Auto-collapse after 900ms of inactivity on this slot
+  clearTimeout(_collapseTimers[slotId]);
+  _collapseTimers[slotId] = setTimeout(() => {
+    const c = document.getElementById(slotId);
+    if (c && !c.classList.contains('collapsed')) {
+      c.classList.add('collapsed');
+    }
+  }, 900);
+}
+
+function rebuildModule(slotId) {
+  const mod = state.modules.find(m => m.slotId === slotId);
+  if (!mod) return;
+  const def = ACTION_MODULES.find(m => m.id === mod.moduleId);
+  if (!def) return;
+  // Preserve collapsed state
+  const card = document.getElementById(slotId);
+  const wasCollapsed = card?.classList.contains('collapsed') ?? false;
+  const body = card?.querySelector('.module-body');
+  if (body) body.innerHTML = def.buildHTML(slotId, mod.cfg);
+  // Update summary
+  const summaryEl = card?.querySelector('.module-summary');
+  if (summaryEl) summaryEl.textContent = moduleSummary(def, mod.cfg);
+  generateScript();
+}
+
+// Build a short human-readable summary of a module's current config.
+function moduleSummary(def, cfg) {
+  try {
+    const lines = def.codeLines(cfg);
+    // Pick the first non-comment line, strip leading spaces
+    const codeLine = lines.find(l => !l.trim().startsWith('//')) || lines[0] || '';
+    // Trim to ~40 chars
+    const trimmed = codeLine.replace(/\s+/g, ' ').trim();
+    return trimmed.length > 42 ? trimmed.slice(0, 42) + '…' : trimmed;
+  } catch { return ''; }
+}
+
+function toggleModule(slotId) {
+  const card = document.getElementById(slotId);
+  if (!card) return;
+  card.classList.toggle('collapsed');
+}
+
+function renderModuleSlots() {
+  const container = document.getElementById('moduleSlots');
+  if (!state.modules.length) {
+    container.innerHTML = '';
+    return;
+  }
+  // Remember which slots were collapsed before re-render
+  const collapsedIds = new Set(
+    state.modules
+      .filter(m => document.getElementById(m.slotId)?.classList.contains('collapsed'))
+      .map(m => m.slotId)
+  );
+
+  container.innerHTML = state.modules.map((mod, idx) => {
+    const def = ACTION_MODULES.find(m => m.id === mod.moduleId);
+    if (!def) return '';
+    const isCollapsed = collapsedIds.has(mod.slotId);
+    const summary = isCollapsed ? moduleSummary(def, mod.cfg) : '';
+    return `
+      <div class="module-card${isCollapsed ? ' collapsed' : ''}" id="${mod.slotId}">
+        <div class="module-header" onclick="toggleModule('${mod.slotId}')">
+          <span class="type-icon">${def.icon}</span>
+          <span class="module-title">${def.label}</span>
+          <span class="module-summary">${esc(summary)}</span>
+          <span class="module-subtitle" style="display:flex;gap:.3rem;margin-left:auto" onclick="event.stopPropagation()">
+            ${idx > 0 ? `<button class="btn-small" onclick="moveModule('${mod.slotId}',-1)" data-tip="Move up">↑</button>` : ''}
+            ${idx < state.modules.length-1 ? `<button class="btn-small" onclick="moveModule('${mod.slotId}',1)" data-tip="Move down">↓</button>` : ''}
+            <button class="btn-small" style="color:var(--red);border-color:var(--red)"
+              onclick="removeModule('${mod.slotId}')" data-tip="Remove">✕</button>
+          </span>
+          <span class="module-chevron">▼</span>
+        </div>
+        <div class="module-body-wrap">
+          <div class="module-body-inner">
+            <div class="module-body">${def.buildHTML(mod.slotId, mod.cfg)}</div>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// ─── Code Generation ──────────────────────────────────
+function generateScript() {
+  if (!state.scriptType) return;
+
+  const st = state.scriptType;
+  const isConditional = !!st.isConditional;
+  const fnSig = isConditional
+    ? 'int StartingConditional()'
+    : 'void main()';
+
+  const lines = [];
+
+  // Header comment
+  lines.push(`// Script: ${st.name}`);
+  lines.push(`// Event:  ${st.desc}`);
+  if (st.comment) lines.push(`// ${st.comment}`);
+  lines.push('');
+
+  // Includes (detect if needed)
+  const allCode = state.modules.map(m => {
+    const def = ACTION_MODULES.find(d => d.id === m.moduleId);
+    return def ? def.codeLines(m.cfg).join('\n') : '';
+  }).join('\n');
+
+  if (allCode.includes('GetNearestObjectByTag') || allCode.includes('GetFaction')) {
+    lines.push('#include "nw_i0_tool"');
+    lines.push('');
+  }
+
+  // Function signature
+  lines.push(fnSig);
+  lines.push('{');
+
+  // Variable declarations
+  if (st.vars.length) {
+    st.vars.forEach(v => lines.push(`    ${v}`));
+    lines.push('');
+  }
+
+  // Module code
+  if (state.modules.length === 0) {
+    lines.push('    // Add actions from the palette above.');
+  } else {
+    state.modules.forEach((mod, i) => {
+      const def = ACTION_MODULES.find(d => d.id === mod.moduleId);
+      if (!def) return;
+      if (i > 0) lines.push('');
+      const codeLines = def.codeLines(mod.cfg);
+      codeLines.forEach(l => lines.push(l.startsWith('//') ? `    ${l}` : `    ${l}`));
+    });
+  }
+
+  if (isConditional) {
+    lines.push('');
+    lines.push('    return TRUE;');
+  }
+
+  lines.push('}');
+
+  const rawCode = lines.join('\n');
+
+  // Render with syntax highlighting
+  renderCode(rawCode);
+
+  // Add to history
+  if (state.modules.length > 0) {
+    const summary = state.modules.map(m => {
+      const def = ACTION_MODULES.find(d => d.id === m.moduleId);
+      return def ? def.label : m.moduleId;
+    }).join(', ');
+    addHistory(st.name, summary, rawCode);
+  }
+
+  setStatus(`Script generated — ${lines.length} lines`, 'status-ok');
+}
+
+// ─── Syntax Highlighting ──────────────────────────────
+const KEYWORDS = new Set(['void','int','float','string','object','location','effect','talent','action','itemproperty','return','if','else','while','for','TRUE','FALSE']);
+const NWS_TYPES = new Set(['void','int','float','string','object','location','effect','talent','action','itemproperty']);
+
+function highlightNWScript(code) {
+  // Escape HTML first, then process line by line to avoid
+  // regex passes corrupting span tags injected by earlier passes.
+  let s = code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  s = s.split('\n').map(line => {
+    const trimmed = line.trimStart();
+
+    // Full comment line — wrap and return, skip all other passes
+    if (trimmed.startsWith('//')) {
+      return '<span class="cmt">' + line + '</span>';
+    }
+
+    // Detect inline comment (// not inside a string)
+    let codepart = line, cmtpart = '';
+    const cmtIdx = findInlineComment(line);
+    if (cmtIdx !== -1) {
+      codepart = line.slice(0, cmtIdx);
+      cmtpart  = line.slice(cmtIdx);
+    }
+
+    // Strings (global flag)
+    codepart = codepart.replace(/"([^"]*)"/g, '<span class="str">"$1"</span>');
+
+    // Function calls — UpperCamelCase before open paren
+    codepart = codepart.replace(/\b([A-Z][a-zA-Z0-9]+)\s*(?=\()/g, (match, fn) => {
+      if (state.showLinks) {
+        const url = 'https://nwnlexicon.com/index.php?title=' + encodeURIComponent(fn);
+        return '<span class="fn"><a href="' + url + '" target="_blank" rel="noopener">' + fn + '</a></span>';
+      }
+      return '<span class="fn">' + fn + '</span>';
+    });
+
+    // ALL_CAPS constants (min 4 chars)
+    codepart = codepart.replace(/\b([A-Z][A-Z0-9_]{3,})\b/g, '<span class="cst">$1</span>');
+
+    // Keywords / types
+    codepart = codepart.replace(
+      /\b(void|int|float|string|object|location|effect|action|return|if|else|while|for|TRUE|FALSE)\b/g,
+      '<span class="kw">$1</span>'
+    );
+
+    // Numbers
+    codepart = codepart.replace(/\b(\d+(?:\.\d+)?f?)\b/g, '<span class="num">$1</span>');
+
+    return cmtpart ? codepart + '<span class="cmt">' + cmtpart + '</span>' : codepart;
+  }).join('\n');
+
+  return s;
+}
+
+// Returns index of the first // not inside double quotes, or -1.
+function findInlineComment(line) {
+  let inStr = false;
+  for (let i = 0; i < line.length - 1; i++) {
+    if (line[i] === '"') inStr = !inStr;
+    if (!inStr && line[i] === '/' && line[i+1] === '/') return i;
+  }
+  return -1;
+}
+function renderCode(raw) {
+  const output = document.getElementById('codeOutput');
+  output.innerHTML = highlightNWScript(raw);
+}
+
+// ─── History ─────────────────────────────────────────
+function addHistory(eventName, summary, code) {
+  // Deduplicate by content
+  const last = state.history[state.history.length - 1];
+  if (last && last.code === code) return;
+
+  const id = `hist_${Date.now()}`;
+  state.history.push({ id, eventName, summary, code });
+  if (state.history.length > 12) state.history.shift();
+  renderHistory();
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  if (state.history.length === 0) { list.innerHTML = ''; return; }
+  list.innerHTML = [...state.history].reverse().map(h => `
+    <div class="history-item" onclick="loadHistory('${h.id}')">
+      <span class="hist-fn">${h.eventName}</span>
+      <span style="opacity:.5">·</span>
+      <span>${h.summary.slice(0,40)}${h.summary.length>40?'…':''}</span>
+      <span class="hist-del" onclick="event.stopPropagation();deleteHistory('${h.id}')">✕</span>
+    </div>`).join('');
+}
+
+function loadHistory(id) {
+  const entry = state.history.find(h => h.id === id);
+  if (entry) renderCode(entry.code);
+}
+
+function deleteHistory(id) {
+  state.history = state.history.filter(h => h.id !== id);
+  renderHistory();
+}
+
+// ─── Toolbar Actions ─────────────────────────────────
+function toggleLinks() {
+  state.showLinks = !state.showLinks;
+  document.getElementById('btnLinks').classList.toggle('active', state.showLinks);
+  generateScript();
+}
+
+function copyCode() {
+  const output = document.getElementById('codeOutput');
+  const text = output.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    setStatus('Copied to clipboard!', 'status-ok');
+    setTimeout(() => setStatus('Ready'), 1500);
+  }).catch(() => {
+    setStatus('Copy failed — select text manually', 'status-warn');
+  });
+}
+
+function downloadCode() {
+  const output = document.getElementById('codeOutput');
+  const text = output.innerText;
+  const typeName = state.scriptType ? state.scriptType.id : 'script';
+  const filename = `${typeName}_generated.nss`;
+  // Use octet-stream so the browser respects the .nss extension
+  const blob = new Blob([text], { type: 'application/octet-stream' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  setStatus(`Downloaded ${filename}`, 'status-ok');
+}
+
+function clearAll() {
+  state.modules = [];
+  renderModuleSlots();
+  if (state.scriptType) generateScript();
+  setStatus('Cleared all modules', 'status-warn');
+}
+
+// ─── Init ─────────────────────────────────────────────
+renderTypeList();
+document.getElementById('btnLinks').classList.add('active');
+</script>
+</body>
+</html>
